@@ -9,6 +9,11 @@
             "Name":"MosCow",
             "caps":[1,2],
             "info":"Una prueba pdj"
+        },
+        {
+            "Name":"Card Maker",
+            "caps":[1,2,3,4],
+            "info":"Un manhawa de cartas OwO"
         }
     ]
 }
