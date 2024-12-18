@@ -1,0 +1,14 @@
+{
+    "Proyectos":[
+        {
+            "Name":"Elden ring",
+            "caps":[1,2,3,4],
+            "info":"Esto es una prueba"
+        },
+        {
+            "Name":"MosCow",
+            "caps":[1,2],
+            "info":"Una prueba pdj"
+        }
+    ]
+}

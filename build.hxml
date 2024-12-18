@@ -1,0 +1,4 @@
+-main Server
+-php bin
+-cp src
+-lib tink_web
