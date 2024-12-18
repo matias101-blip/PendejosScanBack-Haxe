@@ -14,6 +14,11 @@
             "Name":"Card Maker",
             "caps":[1,2,3,4],
             "info":"Un manhawa de cartas OwO"
+        },
+        {
+            "Name":"Tap water",
+            "caps":[1,2,3],
+            "info":"No leean esta wea"
         }
     ]
 }
