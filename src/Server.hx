@@ -1,3 +1,5 @@
+import sys.io.File;
+import php.Const;
 import php.Global;
 import haxe.Json;
 import tjson.TJSON;
@@ -14,8 +16,10 @@ typedef Proyectos = {
 
 class Server{
     static function main() {
+        Global.header("Access-Control-Allow-Origin: *");
+        Global.header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+        Global.header("Access-Control-Allow-Headers: Content-Type, Authorization");
         var container = PhpContainer.inst; 
-        //var container =  PhpContainer.inst; //use PhpContainer instead of NodeContainer when targeting PHP
         var router = new Router<Root>(new Root());
         container.run(function(req) {
             return router.route(Context.ofRequest(req))
@@ -33,6 +37,7 @@ class Root {
     }
   
 
+    // Ruta que maneja la peticion de informacion
     @:get('/proyectos')
     @:get('/proyectos/$name')
     public function manga(name:String = "") {
@@ -55,6 +60,15 @@ class Root {
         });
     }
 
+    @:get('/img/$nombre/$capitulo/$pag')
+    @:get('/img')
+    public function Leer(nombre:String="Tap_Water_Polution",capitulo:Int=1,pag:String="03.jpg") {
+        var imgDir:String = Const.__DIR__ + '/public/$nombre/$capitulo/$pag'+".svg";
+        var dataImg = File.getBytes(imgDir);
+        Global.header("Content-Type: image/svg+xml");
+        return dataImg;
+    }
+
     @:get('/api/user')
     public function Usuario() {
         var user = {
@@ -65,8 +79,4 @@ class Root {
         return user;
     }
 
-    @:get('/api/hola')
-    public function Trace() {
-        return '<h1>Hola mundo</h1>';
-    }
 }
