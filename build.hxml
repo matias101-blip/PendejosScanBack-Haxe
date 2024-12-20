@@ -2,3 +2,4 @@
 -php bin
 -cp src
 -lib tink_web
+-lib tjson
