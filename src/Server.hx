@@ -7,9 +7,9 @@ import tink.http.Response;
 import tink.web.routing.*;
 
 typedef Proyectos = {
-    var Name:String;
-    var caps:Array<Int>;
-    var info:String;
+    var nombre:String;
+    var portada:String;
+    var resumen:String;
 } 
 
 class Server{
@@ -42,7 +42,7 @@ class Root {
                 var resBody:Array<Proyectos> = TJSON.parse(res.body.toBytes().toString());
                 if (name.length != 0){
                     for (obj in resBody){
-                        if (obj.Name == name){
+                        if (obj.nombre == name){
                             return TJSON.encode(obj,'fancy');
                         }
                     }
