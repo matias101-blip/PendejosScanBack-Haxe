@@ -1,3 +1,5 @@
+import php.FilesystemIterator;
+import haxe.io.Bytes;
 import sys.io.File;
 import php.Const;
 import php.Global;
@@ -61,22 +63,39 @@ class Root {
     }
 
     @:get('/img/$nombre/$capitulo/$pag')
-    @:get('/img')
-    public function Leer(nombre:String="Tap_Water_Polution",capitulo:Int=1,pag:String="03.jpg") {
+    public function Leer(nombre:String,capitulo:Int,pag:String) {
+        var dataImg:Bytes;
         var imgDir:String = Const.__DIR__ + '/public/$nombre/$capitulo/$pag'+".svg";
-        var dataImg = File.getBytes(imgDir);
+        if (Global.file_exists(imgDir)){
+            dataImg = File.getBytes(imgDir);
+        }
+        else{ 
+            dataImg = File.getBytes(Const.__DIR__ + '/public/errors/oops.svg');
+            Global.error_log("AAAAAAA Monikaa");
+        }
+        
         Global.header("Content-Type: image/svg+xml");
         return dataImg;
+    
+
     }
 
-    @:get('/api/user')
-    public function Usuario() {
-        var user = {
-            name:"Matias",
-            apellido:"Murcia"
+    @:get('api/$nombre/$capitulo')
+    public function Hojas(nombre:String,capitulo:Int) {
+        var hojas:Array<Int> = [];
+        final baseDir:String = Const.__DIR__ + '/public/$nombre/$capitulo';
+        if (Global.is_dir(baseDir)){
+            var iterator = new FilesystemIterator(baseDir);
+            while (iterator.valid()){
+               hojas.push(Std.parseInt(iterator.getFilename().split(".")[0]));
+               iterator.next();
+            }
+            hojas.sort((a,b) -> a-b);
+            return Json.stringify({"Succes":true,"Hojas":hojas});
+        }else{
+            return Json.stringify({"Succes":false});
         }
 
-        return user;
     }
 
 }
