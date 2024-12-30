@@ -5,56 +5,64 @@
       "portada": "Tap-Water.png",
       "resumen": "En un futuro distópico, la contaminación del agua causa mutaciones en los recién nacidos, quienes nacen con órganos sexuales ambiguos. Las Naciones Unidas decretan que, al alcanzar la mayoría de edad, cada persona podrá elegir su sexo. Sin embargo, esta medida lleva a una serie de tragedias y caos social.",
       "folder": "Tap_Water_Pollution",
-      "generos": ["Terror", "Seinen", "Gore", "Psicológico"]
+      "generos": ["Terror", "Seinen", "Gore", "Psicológico"],
+      "capitulos": [1, 2, 3, 4]
     },
     {
       "nombre": "Unwanted Crush",
       "portada": "Unwanted.png",
       "resumen": "Un joven experimenta una fascinación no deseada por una chica de su escuela, pero las consecuencias de sus sentimientos lo llevan a enfrentar oscuros secretos sobre la persona que cree amar, involucrando elementos de horror psicológico y drama.",
       "folder": "Unwanted_Crush",
-      "generos": ["Terror", "Seinen", "Psicológico", "Drama"]
+      "generos": ["Terror", "Seinen", "Psicológico", "Drama"],
+      "capitulos": [1, 2, 3]
     },
     {
       "nombre": "Placer Predestinado",
       "portada": "Placer.png",
       "resumen": "En una sociedad donde la predestinación rige todos los aspectos de la vida, un hombre intenta escapar de su futuro amoroso impuesto. Pero los hilos del destino lo llevan a enfrentarse a lo inesperado, mezclando elementos de romance con tensión psicológica.",
       "folder": "Placer_Predestinado",
-      "generos": ["Romance", "Seinen", "Psicológico", "Drama"]
+      "generos": ["Romance", "Seinen", "Psicológico", "Drama"],
+      "capitulos": [1, 2, 3]
     },
     {
       "nombre": "Our Ball Moonrise",
       "portada": "Our-Ball.png",
       "resumen": "Un grupo de amigos comienza a jugar un deporte extraño relacionado con la luna, donde los movimientos reflejan los ciclos del cosmos. Mientras más juegan, más descubren de sí mismos y de sus oscuros secretos, en un relato que fusiona lo deportivo con lo sobrenatural.",
       "folder": "Our_Ball_Moonrise",
-      "generos": ["Deportes", "Seinen", "Sobrenatural", "Psicológico"]
+      "generos": ["Deportes", "Seinen", "Sobrenatural", "Psicológico"],
+      "capitulos": []
     },
     {
       "nombre": "On a Leash",
       "portada": "On-a-Leash.png",
       "resumen": "En una sociedad donde los roles están claramente definidos, un joven intenta liberarse de las cadenas de una relación abusiva y codependiente. Su lucha interna por encontrar su propia identidad se convierte en una espiral de tensión emocional y dolor.",
       "folder": "On_a_Leash",
-      "generos": ["Drama", "Seinen", "Psicológico", "Romance"]
+      "generos": ["Drama", "Seinen", "Psicológico", "Romance"],
+      "capitulos": [1, 2, 3]
     },
     {
       "nombre": "Survival Countdown",
       "portada": "Survival.png",
       "resumen": "En un mundo post-apocalíptico, los supervivientes deben enfrentarse a criaturas mutadas y a la constante amenaza de extinción. Un grupo de jóvenes, dotados con habilidades especiales, luchan por encontrar un refugio mientras enfrentan sus propios demonios internos.",
       "folder": "Survival_Countdown",
-      "generos": ["Acción", "Seinen", "Gore", "Apocalíptico"]
+      "generos": ["Acción", "Seinen", "Gore", "Apocalíptico"],
+      "capitulos": [1, 2, 3]
     },
     {
       "nombre": "Mijeong Relation Ships",
       "portada": "Mijeong.png",
       "resumen": "Mijeong es un joven que se encuentra atrapado en un triángulo amoroso entre dos personas de su pasado. Las tensiones y los secretos poco a poco salen a la luz, revelando traiciones y la inevitable ruptura entre ellos.",
       "folder": "Mijeong_Relation_Ships",
-      "generos": ["Romance", "Seinen", "Drama", "Psicológico"]
+      "generos": ["Romance", "Seinen", "Drama", "Psicológico"],
+      "capitulos": [1, 2, 3]
     },
     {
       "nombre": "Infection Zone",
       "portada": "Infection-Zone.png",
       "resumen": "Una infección desconocida comienza a propagarse por todo el mundo, transformando a las personas en criaturas de pesadilla. Un grupo de sobrevivientes se encuentra atrapado en una zona de cuarentena, mientras luchan por su supervivencia y descubren secretos oscuros detrás de la plaga.",
       "folder": "Infection_Zone",
-      "generos": ["Terror", "Seinen", "Gore", "Apocalíptico"]
+      "generos": ["Terror", "Seinen", "Gore", "Apocalíptico"],
+      "capitulos": [1, 2, 3]
     }
   ],
   "Users": [{ "Nick": "Hunter" }, { "Nick": "Nyna" }]
