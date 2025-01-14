@@ -9,6 +9,7 @@ import tink.http.Client;
 import tink.http.containers.*;
 import tink.http.Response;
 import tink.web.routing.*;
+import BaseData;
 
 typedef Proyectos = {
     var nombre:String;
@@ -35,7 +36,7 @@ class Root {
 
     @:get('/')
     public function home() {
-       return "Estas en el inicio";
+      return BaseData.Home();
     }
   
 
@@ -83,6 +84,8 @@ class Root {
     @:get('api/$nombre/$capitulo')
     public function Hojas(nombre:String,capitulo:Int) {
         var hojas:Array<Int> = [];
+        nombre = StringTools.replace(nombre," ","_");
+        Global.error_log(nombre);
         final baseDir:String = Const.__DIR__ + '/public/$nombre/$capitulo';
         if (Global.is_dir(baseDir)){
             var iterator = new FilesystemIterator(baseDir);
@@ -91,7 +94,7 @@ class Root {
                iterator.next();
             }
             hojas.sort((a,b) -> a-b);
-            return Json.stringify({"Succes":true,"Hojas":hojas});
+            return Json.stringify({"Succes":true,"Hojas":hojas,"name":nombre});
         }else{
             return Json.stringify({"Succes":false});
         }
