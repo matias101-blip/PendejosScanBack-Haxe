@@ -17,7 +17,7 @@ class BaseData{
     }
 
     public static function Home() {
-        var resultado:SQLite3Result = dbProyectos.query("SELECT * FROM Proyectos");
+        var resultado:SQLite3Result = dbProyectos.query("SELECT Nombre, Portada FROM Proyectos");
         var data: Array<NativeAssocArray<String>> = [];
         var row:EitherType<Bool,NativeAssocArray<String>> = resultado.fetchArray(1);
         while (row != false){
@@ -32,9 +32,9 @@ class BaseData{
             while(iteradorKey.hasNext()){
                 var pair = iteradorKey.next();
                 if (pair.key == "Capitulos"|| pair.key == "Generos"){
-                    Item.set(pair.key,TJSON.parse(pair.value));
+                    Item.set(pair.key.toLowerCase(),TJSON.parse(pair.value));
                 }else{
-                    Item.set(pair.key,pair.value);
+                    Item.set(pair.key.toLowerCase(),pair.value);
                 }
             }
             datos.push(Item);  

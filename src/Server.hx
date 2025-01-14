@@ -44,29 +44,21 @@ class Root {
     @:get('/proyectos')
     @:get('/proyectos/$name')
     public function manga(name:String = "") {
-        final url = 'https://my-json-server.typicode.com/matias101-blip/PendejosScanBack-Haxe/Proyectos';
-        return Client.fetch(url).all().map(function(o) switch o {
-            case Success(res):
-                var resBody:Array<Proyectos> = TJSON.parse(res.body.toBytes().toString());
-                if (name.length != 0){
-                    for (obj in resBody){
-                        if (obj.nombre == name){
-                            return TJSON.encode(obj,'fancy');
-                        }
-                    }
-                    return Json.stringify({'nope':false});
-                }else{
-                    return TJSON.encode(resBody, 'fancy');
-                }
-            case Failure(error):
-                return 'Fail!!!: $error';
-        });
+        return BaseData.Home();
     }
 
+    @:get('/img/$nombre/$portada')
     @:get('/img/$nombre/$capitulo/$pag')
-    public function Leer(nombre:String,capitulo:Int,pag:String) {
+    public function Leer(nombre:String,capitulo:Int = null,pag:String = null,portada:String = null) { 
+        var imgDir:String = "";
+        if (capitulo == null){
+            Global.error_log("Hay no");
+            imgDir = Const.__DIR__ + '/public/$nombre/$capitulo/$portada'+".png";
+        }else{
+            Global.error_log("Hay si");
+            imgDir = Const.__DIR__ + '/public/$nombre/$capitulo/$pag'+".svg";
+        }
         var dataImg:Bytes;
-        var imgDir:String = Const.__DIR__ + '/public/$nombre/$capitulo/$pag'+".svg";
         if (Global.file_exists(imgDir)){
             dataImg = File.getBytes(imgDir);
         }
