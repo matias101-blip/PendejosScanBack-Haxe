@@ -66,7 +66,7 @@ class BaseData {
 	/**
 	 * @param string $Nombre
 	 * 
-	 * @return string
+	 * @return mixed
 	 */
 	public static function ListCaps ($Nombre) {
 		#src/BaseData.hx:59: lines 59-60

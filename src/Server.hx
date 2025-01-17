@@ -36,8 +36,7 @@ class Root {
 
     @:get('/')
     public function home() {
-        var ListCaps = BaseData.ListCaps("Injecting Magical Power through My Caressing Skill");
-        return 'CAPS!! $ListCaps';
+        return 'CAPS!!';
     }
   
 

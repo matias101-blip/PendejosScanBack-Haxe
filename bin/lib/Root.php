@@ -24,34 +24,34 @@ class Root {
 	 * @return string
 	 */
 	public function Hojas ($nombre, $capitulo) {
-		#src/Server.hx:93: characters 9-35
+		#src/Server.hx:92: characters 9-35
 		$hojas = new \Array_hx();
-		#src/Server.hx:94: characters 9-58
+		#src/Server.hx:93: characters 9-58
 		$capitulo = \StringTools::replace($capitulo, "-", ".");
-		#src/Server.hx:95: characters 9-53
+		#src/Server.hx:94: characters 9-53
 		$nombre = \StringTools::replace($nombre, " ", "_");
-		#src/Server.hx:96: characters 9-76
+		#src/Server.hx:95: characters 9-76
 		$baseDir = __DIR__ . ("/public/" . ($nombre??'null') . "/" . ($capitulo??'null'));
-		#src/Server.hx:97: lines 97-108
+		#src/Server.hx:96: lines 96-107
 		if (is_dir($baseDir)) {
-			#src/Server.hx:98: characters 13-60
+			#src/Server.hx:97: characters 13-60
 			$iterator = new \FilesystemIterator($baseDir);
-			#src/Server.hx:99: lines 99-102
+			#src/Server.hx:98: lines 98-101
 			while ($iterator->valid()) {
-				#src/Server.hx:100: characters 16-78
+				#src/Server.hx:99: characters 16-78
 				$x = \Std::parseInt((HxString::split($iterator->getFilename(), ".")->arr[0] ?? null));
 				$hojas->arr[$hojas->length++] = $x;
-				#src/Server.hx:101: characters 16-31
+				#src/Server.hx:100: characters 16-31
 				$iterator->next();
 			}
-			#src/Server.hx:103: characters 13-37
+			#src/Server.hx:102: characters 13-37
 			usort($hojas->arr, function ($a, $b) {
-				#src/Server.hx:103: characters 33-36
+				#src/Server.hx:102: characters 33-36
 				return $a - $b;
 			});
-			#src/Server.hx:104: characters 13-85
+			#src/Server.hx:103: characters 13-85
 			$ListCaps = \BaseData::ListCaps(\StringTools::replace($nombre, "_", " "));
-			#src/Server.hx:105: characters 20-101
+			#src/Server.hx:104: characters 20-101
 			return Json::phpJsonEncode(new HxAnon([
 				"Succes" => true,
 				"Hojas" => $hojas,
@@ -59,7 +59,7 @@ class Root {
 				"capitulos" => $ListCaps,
 			]), null, null);
 		} else {
-			#src/Server.hx:107: characters 20-52
+			#src/Server.hx:106: characters 20-52
 			return Json::phpJsonEncode(new HxAnon(["Succes" => false]), null, null);
 		}
 	}
@@ -73,56 +73,56 @@ class Root {
 	 * @return Bytes
 	 */
 	public function Leer ($nombre, $capitulo = null, $pag = null, $portada = null) {
-		#src/Server.hx:54: characters 9-32
+		#src/Server.hx:53: characters 9-32
 		$imgDir = "";
-		#src/Server.hx:55: characters 9-27
+		#src/Server.hx:54: characters 9-27
 		$dataImg = null;
-		#src/Server.hx:56: characters 9-53
+		#src/Server.hx:55: characters 9-53
 		$nombre = \StringTools::replace($nombre, " ", "_");
-		#src/Server.hx:57: characters 9-34
+		#src/Server.hx:56: characters 9-34
 		error_log($portada);
-		#src/Server.hx:58: lines 58-64
+		#src/Server.hx:57: lines 57-63
 		if ($capitulo === null) {
-			#src/Server.hx:59: characters 13-59
+			#src/Server.hx:58: characters 13-59
 			$portada = \StringTools::replace($portada, "-", ".");
-			#src/Server.hx:60: characters 13-64
+			#src/Server.hx:59: characters 13-64
 			$imgDir = __DIR__ . ("/public/" . ($nombre??'null') . "/" . ($portada??'null'));
 		} else {
-			#src/Server.hx:62: characters 13-61
+			#src/Server.hx:61: characters 13-61
 			$capitulo = \StringTools::replace($capitulo, "-", ".");
-			#src/Server.hx:63: characters 13-77
+			#src/Server.hx:62: characters 13-77
 			$imgDir = __DIR__ . ("/public/" . ($nombre??'null') . "/" . ($capitulo??'null') . "/" . ($pag??'null')) . ".svg";
 		}
-		#src/Server.hx:66: lines 66-72
+		#src/Server.hx:65: lines 65-71
 		if (file_exists($imgDir)) {
-			#src/Server.hx:67: characters 13-44
+			#src/Server.hx:66: characters 13-44
 			$dataImg = File::getBytes($imgDir);
 		} else {
-			#src/Server.hx:70: characters 13-79
+			#src/Server.hx:69: characters 13-79
 			$dataImg = File::getBytes(__DIR__ . "/public/errors/oops.svg");
-			#src/Server.hx:71: characters 13-48
+			#src/Server.hx:70: characters 13-48
 			error_log("AAAAAAA Monikaa");
 		}
-		#src/Server.hx:74: characters 9-31
+		#src/Server.hx:73: characters 9-31
 		$type = "";
-		#src/Server.hx:75: characters 17-42
+		#src/Server.hx:74: characters 17-42
 		$__hx__switch = (pathinfo($imgDir, 4));
 		if ($__hx__switch === "jpg") {
-			#src/Server.hx:79: characters 17-29
+			#src/Server.hx:78: characters 17-29
 			$type = "jpg";
 		} else if ($__hx__switch === "png") {
-			#src/Server.hx:77: characters 17-29
+			#src/Server.hx:76: characters 17-29
 			$type = "png";
 		} else if ($__hx__switch === "svg") {
-			#src/Server.hx:83: characters 17-33
+			#src/Server.hx:82: characters 17-33
 			$type = "svg+xml";
 		} else if ($__hx__switch === "webp") {
-			#src/Server.hx:81: characters 17-29
+			#src/Server.hx:80: characters 17-29
 			$type = "webp";
 		}
-		#src/Server.hx:85: characters 9-51
+		#src/Server.hx:84: characters 9-51
 		header("Content-Type: image/" . ($type??'null'));
-		#src/Server.hx:86: characters 9-23
+		#src/Server.hx:85: characters 9-23
 		return $dataImg;
 	}
 
@@ -130,10 +130,8 @@ class Root {
 	 * @return string
 	 */
 	public function home () {
-		#src/Server.hx:39: characters 9-96
-		$ListCaps = \BaseData::ListCaps("Injecting Magical Power through My Caressing Skill");
-		#src/Server.hx:40: characters 9-34
-		return "CAPS!! " . ($ListCaps??'null');
+		#src/Server.hx:39: characters 9-24
+		return "CAPS!!";
 	}
 
 	/**
@@ -142,12 +140,12 @@ class Root {
 	 * @return string
 	 */
 	public function manga ($name = null) {
-		#src/Server.hx:48: characters 16-76
+		#src/Server.hx:47: characters 16-76
 		if ($name === null) {
-			#src/Server.hx:48: characters 33-48
+			#src/Server.hx:47: characters 33-48
 			return \BaseData::Home();
 		} else {
-			#src/Server.hx:48: characters 51-76
+			#src/Server.hx:47: characters 51-76
 			return \BaseData::getProyect($name);
 		}
 	}
