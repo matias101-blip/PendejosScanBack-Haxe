@@ -130,8 +130,8 @@ class Root {
 	 * @return string
 	 */
 	public function home () {
-		#src/Server.hx:39: characters 9-24
-		return "CAPS!!";
+		#src/Server.hx:39: characters 9-73
+		return "Nyna esta es tu hpta, paguina, ahora dame a la niña >:v";
 	}
 
 	/**
