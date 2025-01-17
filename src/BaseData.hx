@@ -9,7 +9,7 @@ import tjson.TJSON;
 
 
 class BaseData{
-    static final dbProyectos = new SQLite3(Const.__DIR__ + "/public/Proyectos.db");
+    static final dbProyectos = new SQLite3("/home/sinherani/PendejosScanBack-Haxe/public/Proyectos.db");
     public static function Select() {
         var resultado:SQLite3Result = dbProyectos.querySingle("SELECT Capitulos FROM Proyectos WHERE Nombre ='Aizawa Koharu tiene prisa por morir'");
         Global.error_log(Std.string(resultado));
