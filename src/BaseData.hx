@@ -31,14 +31,33 @@ class BaseData{
             var iteradorKey = item.keyValueIterator();
             while(iteradorKey.hasNext()){
                 var pair = iteradorKey.next();
-                if (pair.key == "Capitulos"|| pair.key == "Generos"){
-                    Item.set(pair.key.toLowerCase(),TJSON.parse(pair.value));
-                }else{
-                    Item.set(pair.key.toLowerCase(),pair.value);
-                }
+                Item.set(pair.key.toLowerCase(),pair.value);
             }
             datos.push(Item);  
         }
         return Std.string(TJSON.encode(datos, "fancy"));
+    }
+
+    public static function getProyect(name:String) {
+        var consulta:SQLite3Result = dbProyectos.query('SELECT * FROM Proyectos WHERE Nombre = "$name"');
+        var data:NativeAssocArray<String> = consulta.fetchArray(1);
+        consulta.finalize();
+        var Item:Map<String,Any> = new Map();
+        var iteratorKey = data.keyValueIterator();
+        while (iteratorKey.hasNext()){
+            var pair = iteratorKey.next();
+            if (pair.key == "Capitulos"|| pair.key == "Generos"){
+                    Item.set(pair.key.toLowerCase(),TJSON.parse(pair.value));
+            }else{
+                    Item.set(pair.key.toLowerCase(),pair.value);
+            }
+        }
+        return Std.string(TJSON.encode(Item,"fancy"));
+    }
+
+    public static function ListCaps(Nombre:String) {
+        var consulta = dbProyectos.querySingle("SELECT Capitulos FROM Proyectos WHERE Nombre = '"
+        +Nombre +"'");
+        return consulta;
     }
 }

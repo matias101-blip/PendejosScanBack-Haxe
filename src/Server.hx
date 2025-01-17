@@ -36,29 +36,33 @@ class Root {
 
     @:get('/')
     public function home() {
-      return BaseData.Home();
+        var ListCaps = BaseData.ListCaps("Injecting Magical Power through My Caressing Skill");
+        return 'CAPS!! $ListCaps';
     }
   
 
     // Ruta que maneja la peticion de informacion
     @:get('/proyectos')
     @:get('/proyectos/$name')
-    public function manga(name:String = "") {
-        return BaseData.Home();
+    public function manga(name:String = null) {
+        return (name == null) ? BaseData.Home() : BaseData.getProyect(name);
     }
 
     @:get('/img/$nombre/$portada')
     @:get('/img/$nombre/$capitulo/$pag')
-    public function Leer(nombre:String,capitulo:Int = null,pag:String = null,portada:String = null) { 
+    public function Leer(nombre:String,capitulo:String = null,pag:String = null,portada:String = null) { 
         var imgDir:String = "";
+        var dataImg:Bytes;
+        nombre = StringTools.replace(nombre," ","_");
+        Global.error_log(portada);
         if (capitulo == null){
-            Global.error_log("Hay no");
-            imgDir = Const.__DIR__ + '/public/$nombre/$capitulo/$portada'+".png";
+            portada = StringTools.replace(portada,"-",".");
+            imgDir = Const.__DIR__ + '/public/$nombre/$portada';
         }else{
-            Global.error_log("Hay si");
+            capitulo = StringTools.replace(capitulo,"-",".");
             imgDir = Const.__DIR__ + '/public/$nombre/$capitulo/$pag'+".svg";
         }
-        var dataImg:Bytes;
+
         if (Global.file_exists(imgDir)){
             dataImg = File.getBytes(imgDir);
         }
@@ -67,17 +71,28 @@ class Root {
             Global.error_log("AAAAAAA Monikaa");
         }
         
-        Global.header("Content-Type: image/svg+xml");
+        var type: String = "";
+        switch (Global.pathinfo(imgDir,4)){
+            case "png":
+                type = "png";
+            case "jpg":
+                type = "jpg";
+            case "webp":
+                type ="webp";
+            case "svg":
+                type = "svg+xml";
+        }
+        Global.header('Content-Type: image/$type');
         return dataImg;
     
 
     }
 
     @:get('api/$nombre/$capitulo')
-    public function Hojas(nombre:String,capitulo:Int) {
+    public function Hojas(nombre:String,capitulo:String) {
         var hojas:Array<Int> = [];
+        capitulo = StringTools.replace(capitulo, "-",".");
         nombre = StringTools.replace(nombre," ","_");
-        Global.error_log(nombre);
         final baseDir:String = Const.__DIR__ + '/public/$nombre/$capitulo';
         if (Global.is_dir(baseDir)){
             var iterator = new FilesystemIterator(baseDir);
@@ -86,7 +101,8 @@ class Root {
                iterator.next();
             }
             hojas.sort((a,b) -> a-b);
-            return Json.stringify({"Succes":true,"Hojas":hojas,"name":nombre});
+            final ListCaps = BaseData.ListCaps(StringTools.replace(nombre,"_"," "));
+            return Json.stringify({"Succes":true,"Hojas":hojas,"name":nombre, "capitulos":ListCaps});
         }else{
             return Json.stringify({"Succes":false});
         }
