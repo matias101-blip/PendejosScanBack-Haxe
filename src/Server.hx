@@ -36,7 +36,7 @@ class Root {
 
     @:get('/')
     public function home() {
-        return 'Nyna esta es tu hpta, paguina, ahora dame a la niña >:v';
+        return 'Nyna esta es tu hpta pagina, ahora dame a la niña >:v';
     }
   
 
