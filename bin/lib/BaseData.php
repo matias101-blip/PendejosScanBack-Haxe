@@ -139,7 +139,7 @@ class BaseData {
 		$called = true;
 
 
-		self::$dbProyectos = new \SQLite3(__DIR__ . "/public/Proyectos.db");
+		self::$dbProyectos = new \SQLite3("/home/sinherani/PendejosScanBack-Haxe/public/Proyectos.db");
 	}
 }
 
