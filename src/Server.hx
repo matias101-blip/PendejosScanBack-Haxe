@@ -50,23 +50,24 @@ class Root {
     @:get('/img/$nombre/$portada')
     @:get('/img/$nombre/$capitulo/$pag')
     public function Leer(nombre:String,capitulo:String = null,pag:String = null,portada:String = null) { 
+        final Root = "/mnt/proyectos";
         var imgDir:String = "";
         var dataImg:Bytes;
         nombre = StringTools.replace(nombre," ","_");
         Global.error_log(portada);
         if (capitulo == null){
             portada = StringTools.replace(portada,"-",".");
-            imgDir = Const.__DIR__ + '/public/$nombre/$portada';
+            imgDir = Root + '/$nombre/$portada';
         }else{
             capitulo = StringTools.replace(capitulo,"-",".");
-            imgDir = Const.__DIR__ + '/public/$nombre/$capitulo/$pag'+".svg";
+            imgDir = Root + '/$nombre/$capitulo/$pag'+".svg";
         }
 
         if (Global.file_exists(imgDir)){
             dataImg = File.getBytes(imgDir);
         }
         else{ 
-            dataImg = File.getBytes(Const.__DIR__ + '/public/errors/oops.svg');
+            dataImg = File.getBytes(Root + '/errors/oops.svg');
             Global.error_log("AAAAAAA Monikaa");
         }
         
@@ -89,10 +90,11 @@ class Root {
 
     @:get('api/$nombre/$capitulo')
     public function Hojas(nombre:String,capitulo:String) {
+        final Root = "/mnt/proyectos";
         var hojas:Array<Int> = [];
         capitulo = StringTools.replace(capitulo, "-",".");
         nombre = StringTools.replace(nombre," ","_");
-        final baseDir:String = Const.__DIR__ + '/public/$nombre/$capitulo';
+        final baseDir:String = Root + '/$nombre/$capitulo';
         if (Global.is_dir(baseDir)){
             var iterator = new FilesystemIterator(baseDir);
             while (iterator.valid()){

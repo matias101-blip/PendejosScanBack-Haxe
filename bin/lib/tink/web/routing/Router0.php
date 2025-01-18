@@ -39,7 +39,7 @@ class Router0 {
 	 * @return FutureObject
 	 */
 	public function Hojas ($ctx, $nombre, $capitulo) {
-		#src/Server.hx:91: lines 91-109
+		#src/Server.hx:92: lines 92-111
 		$d = $this->target;
 		$d1 = null;
 		$_g = function ($s) {
@@ -85,7 +85,7 @@ class Router0 {
 		}
 		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:541: lines 541-544
 		return Promise_Impl_::next(new SyncFuture(new LazyConst(Outcome::Success($d->Hojas($d1, $d2)))), function ($v) {
-			#src/Server.hx:91: lines 91-109
+			#src/Server.hx:92: lines 92-111
 			return new SyncFuture(new LazyConst(Outcome::Success(Response_Impl_::ofString($v))));
 		});
 	}
@@ -100,7 +100,7 @@ class Router0 {
 	 * @return FutureObject
 	 */
 	public function Leer ($ctx, $nombre, $capitulo = null, $pag = null, $portada = null) {
-		#src/Server.hx:52: lines 52-88
+		#src/Server.hx:52: lines 52-89
 		$d = $this->target;
 		$d1 = null;
 		$_g = function ($s) {
@@ -128,7 +128,7 @@ class Router0 {
 		if ($capitulo === null) {
 			$d2 = null;
 		} else {
-			#src/Server.hx:52: lines 52-88
+			#src/Server.hx:52: lines 52-89
 			$_g1 = function ($s) {
 				return $s;
 			};
@@ -147,7 +147,7 @@ class Router0 {
 				#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:320: lines 320-323
 				$d2 = $v;
 			} else if ($__hx__switch === 1) {
-				#src/Server.hx:52: lines 52-88
+				#src/Server.hx:52: lines 52-89
 				$e = $_g2->params[0];
 				return new SyncFuture(new LazyConst(Outcome::Failure($e)));
 			}
@@ -157,7 +157,7 @@ class Router0 {
 		if ($pag === null) {
 			$d3 = null;
 		} else {
-			#src/Server.hx:52: lines 52-88
+			#src/Server.hx:52: lines 52-89
 			$_g2 = function ($s) {
 				return $s;
 			};
@@ -176,7 +176,7 @@ class Router0 {
 				#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:320: lines 320-323
 				$d3 = $v;
 			} else if ($__hx__switch === 1) {
-				#src/Server.hx:52: lines 52-88
+				#src/Server.hx:52: lines 52-89
 				$e = $_g3->params[0];
 				return new SyncFuture(new LazyConst(Outcome::Failure($e)));
 			}
@@ -186,7 +186,7 @@ class Router0 {
 		if ($portada === null) {
 			$d4 = null;
 		} else {
-			#src/Server.hx:52: lines 52-88
+			#src/Server.hx:52: lines 52-89
 			$_g3 = function ($s) {
 				return $s;
 			};
@@ -205,14 +205,14 @@ class Router0 {
 				#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:320: lines 320-323
 				$d4 = $v;
 			} else if ($__hx__switch === 1) {
-				#src/Server.hx:52: lines 52-88
+				#src/Server.hx:52: lines 52-89
 				$e = $_g4->params[0];
 				return new SyncFuture(new LazyConst(Outcome::Failure($e)));
 			}
 		}
 		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:541: lines 541-544
 		return Promise_Impl_::next(new SyncFuture(new LazyConst(Outcome::Success($d->Leer($d1, $d2, $d3, $d4)))), function ($v) {
-			#src/Server.hx:52: lines 52-88
+			#src/Server.hx:52: lines 52-89
 			return new SyncFuture(new LazyConst(Outcome::Success(Response_Impl_::ofBytes($v))));
 		});
 	}
@@ -308,7 +308,7 @@ class Router0 {
 								#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:93: characters 19-25
 								$capitulo = $_g3;
 								$nombre = $_g2;
-								#src/Server.hx:90: characters 11-34
+								#src/Server.hx:91: characters 11-34
 								return $this->Hojas($ctx, $nombre, $capitulo);
 							} else {
 								#src/Server.hx:26: characters 26-38
