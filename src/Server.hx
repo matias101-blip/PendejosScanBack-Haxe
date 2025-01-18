@@ -42,7 +42,6 @@ class Root {
 
     // Ruta que maneja la peticion de informacion
     @:get('/proyectos')
-    @:get('/proyectos/$name')
     public function manga(name:String = null) {
         return (name == null) ? BaseData.Home() : BaseData.getProyect(name);
     }
