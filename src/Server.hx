@@ -36,7 +36,9 @@ class Root {
 
     @:get('/')
     public function home() {
-        return 'Nyna esta es tu hpta pagina, ahora dame a la niña >:v';
+        final Root = "/mnt/proyectos";
+        var exist = Global.file_exists(Root + "/Moscow_2160/portada.webp");
+        return "Esta carpeta existe? " + Std.string(exist);
     }
   
 
@@ -54,7 +56,6 @@ class Root {
         var imgDir:String = "";
         var dataImg:Bytes;
         nombre = StringTools.replace(nombre," ","_");
-        Global.error_log(portada);
         if (capitulo == null){
             portada = StringTools.replace(portada,"-",".");
             imgDir = Root + '/$nombre/$portada';
