@@ -134,8 +134,8 @@ class Root {
 	public function home () {
 		#src/Server.hx:39: characters 9-39
 		$Root = "/mnt/proyectos";
-		#src/Server.hx:40: characters 9-76
-		$exist = file_exists(($Root??'null') . "/Moscow_2160/portada.webp");
+		#src/Server.hx:40: characters 9-63
+		$exist = file_exists(($Root??'null') . "/Moscow_2160");
 		#src/Server.hx:41: characters 9-59
 		return "Esta carpeta existe? " . \Std::string($exist);
 	}
