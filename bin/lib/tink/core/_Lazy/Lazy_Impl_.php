@@ -24,9 +24,9 @@ final class Lazy_Impl_ {
 	 * @return LazyObject
 	 */
 	public static function flatMap ($this1, $f) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Lazy.hx:27: characters 5-60
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Lazy.hx:27: characters 5-60
 		return new LazyFunc(function () use (&$f, &$this1) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Lazy.hx:27: characters 34-53
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Lazy.hx:27: characters 34-53
 			return Lazy_Impl_::get($f($this1->get()));
 		}, $this1);
 	}
@@ -37,7 +37,7 @@ final class Lazy_Impl_ {
 	 * @return LazyObject
 	 */
 	public static function fromNoise ($l) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Lazy.hx:18: characters 5-18
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Lazy.hx:18: characters 5-18
 		return $l;
 	}
 
@@ -47,9 +47,9 @@ final class Lazy_Impl_ {
 	 * @return mixed
 	 */
 	public static function get ($this1) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Lazy.hx:13: characters 5-19
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Lazy.hx:13: characters 5-19
 		$this1->compute();
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Lazy.hx:14: characters 5-22
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Lazy.hx:14: characters 5-22
 		return $this1->get();
 	}
 
@@ -59,7 +59,7 @@ final class Lazy_Impl_ {
 	 * @return bool
 	 */
 	public static function get_computed ($this1) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Lazy.hx:10: characters 7-31
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Lazy.hx:10: characters 7-31
 		return $this1->isComputed();
 	}
 
@@ -70,9 +70,9 @@ final class Lazy_Impl_ {
 	 * @return LazyObject
 	 */
 	public static function map ($this1, $f) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Lazy.hx:24: characters 5-54
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Lazy.hx:24: characters 5-54
 		return new LazyFunc(function () use (&$f, &$this1) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Lazy.hx:24: characters 34-47
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Lazy.hx:24: characters 34-47
 			return $f($this1->get());
 		}, $this1);
 	}
@@ -83,7 +83,7 @@ final class Lazy_Impl_ {
 	 * @return LazyObject
 	 */
 	public static function ofConst ($c) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Lazy.hx:31: characters 5-28
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Lazy.hx:31: characters 5-28
 		return new LazyConst($c);
 	}
 
@@ -93,7 +93,7 @@ final class Lazy_Impl_ {
 	 * @return LazyObject
 	 */
 	public static function ofFunc ($f) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Lazy.hx:21: characters 5-27
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Lazy.hx:21: characters 5-27
 		return new LazyFunc($f);
 	}
 

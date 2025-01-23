@@ -26,7 +26,7 @@ class FutureObject {
 	 * @return FutureStatus
 	 */
 	public function getStatus () {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:394: characters 5-21
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:394: characters 5-21
 		return FutureStatus::NeverEver();
 	}
 
@@ -36,7 +36,7 @@ class FutureObject {
 	 * @return LinkObject
 	 */
 	public function handle ($callback) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:396: characters 5-16
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:396: characters 5-16
 		return null;
 	}
 }

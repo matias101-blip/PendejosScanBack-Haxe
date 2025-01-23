@@ -26,14 +26,14 @@ class Header {
 	 * @return void
 	 */
 	public function __construct ($fields = null) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:70: lines 70-73
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:70: lines 70-73
 		$tmp = null;
 		if ($fields === null) {
 			$tmp = new \Array_hx();
 		} else {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:72: characters 12-13
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:72: characters 12-13
 			$v = $fields;
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:70: lines 70-73
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:70: lines 70-73
 			$tmp = $v;
 		}
 		$this->fields = $tmp;
@@ -45,38 +45,38 @@ class Header {
 	 * @return Outcome
 	 */
 	public function accepts ($type) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:126: characters 5-37
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:126: characters 5-37
 		$prefix = (HxString::split($type, "/")->arr[0] ?? null);
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:127: lines 127-136
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:127: lines 127-136
 		return OutcomeTools::map($this->byName("accept"), function ($v) use (&$prefix, &$type) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:128: lines 128-134
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:128: lines 128-134
 			$_g = 0;
 			$_g1 = HeaderValue_Impl_::parse($v);
 			while ($_g < $_g1->length) {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:128: characters 11-16
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:128: characters 11-16
 				$entry = ($_g1->arr[$_g] ?? null);
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:128: lines 128-134
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:128: lines 128-134
 				++$_g;
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:129: characters 9-68
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:129: characters 9-68
 				if (($entry->value === "*/*") || ($entry->value === $type)) {
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:129: characters 57-68
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:129: characters 57-68
 					return true;
 				}
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:130: characters 16-38
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:130: characters 16-38
 				$_g2 = HxString::split($entry->value, "/");
 				if ($_g2->length === 2) {
 					if (($_g2->arr[1] ?? null) === "*") {
-						#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:131: characters 17-18
+						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:131: characters 17-18
 						$p = ($_g2->arr[0] ?? null);
-						#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:131: lines 131-132
+						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:131: lines 131-132
 						if ($prefix === $p) {
-							#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:131: characters 42-53
+							#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:131: characters 42-53
 							return true;
 						}
 					}
 				}
 			}
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:135: characters 7-19
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:135: characters 7-19
 			return false;
 		});
 	}
@@ -91,11 +91,11 @@ class Header {
 	 * @return Outcome
 	 */
 	public function byName ($name) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:89: characters 19-28
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:89: characters 19-28
 		$_g = $this->get($name);
 		$__hx__switch = ($_g->length);
 		if ($__hx__switch === 0) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:91: characters 9-70
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:91: characters 9-70
 			return Outcome::Failure(new TypedError(422, "No " . ($name??'null') . " header found", new HxAnon([
 				"fileName" => "tink/http/Header.hx",
 				"lineNumber" => 91,
@@ -103,14 +103,14 @@ class Header {
 				"methodName" => "byName",
 			])));
 		} else if ($__hx__switch === 1) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:92: characters 13-14
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:92: characters 13-14
 			$v = ($_g->arr[0] ?? null);
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:93: characters 9-19
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:93: characters 9-19
 			return Outcome::Success($v);
 		} else {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:94: characters 12-13
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:94: characters 12-13
 			$v = $_g;
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:95: characters 9-85
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:95: characters 9-85
 			return Outcome::Failure(new TypedError(422, "Multiple entries for " . ($name??'null') . " header", new HxAnon([
 				"fileName" => "tink/http/Header.hx",
 				"lineNumber" => 95,
@@ -130,7 +130,7 @@ class Header {
 	 * @return Header
 	 */
 	public function concat ($fields) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:113: characters 5-50
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:113: characters 5-50
 		return new Header($this->fields->concat($fields));
 	}
 
@@ -140,7 +140,7 @@ class Header {
 	 * @return Outcome
 	 */
 	public function contentType () {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:102: characters 5-58
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:102: characters 5-58
 		return OutcomeTools::map($this->byName("content-type"), Boot::getStaticClosure(ContentType::class, 'ofString'));
 	}
 
@@ -154,23 +154,23 @@ class Header {
 	 * @return string[]|\Array_hx
 	 */
 	public function get ($name) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:81: characters 12-59
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:81: characters 12-59
 		$_g = new \Array_hx();
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:81: characters 13-58
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:81: characters 13-58
 		$_g1 = 0;
 		$_g2 = $this->fields;
 		while ($_g1 < $_g2->length) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:81: characters 18-19
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:81: characters 18-19
 			$f = ($_g2->arr[$_g1] ?? null);
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:81: characters 13-58
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:81: characters 13-58
 			++$_g1;
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:81: characters 31-58
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:81: characters 31-58
 			if ($f->name === $name) {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:81: characters 51-58
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:81: characters 51-58
 				$_g->arr[$_g->length++] = $f->value;
 			}
 		}
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:81: characters 12-59
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:81: characters 12-59
 		return $_g;
 	}
 
@@ -180,15 +180,15 @@ class Header {
 	 * @return Outcome
 	 */
 	public function getContentLength () {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:119: characters 19-41
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:119: characters 19-41
 		$_g = $this->byName("content-length");
 		$__hx__switch = ($_g->index);
 		if ($__hx__switch === 0) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:120: characters 20-35
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:120: characters 20-35
 			$_hx_tmp = \Std::parseInt($_g->params[0]);
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:120: lines 120-121
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:120: lines 120-121
 			if ($_hx_tmp === null) {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:120: characters 46-118
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:120: characters 46-118
 				return Outcome::Failure(new TypedError(422, "Invalid Content-Length Header", new HxAnon([
 					"fileName" => "tink/http/Header.hx",
 					"lineNumber" => 120,
@@ -196,15 +196,15 @@ class Header {
 					"methodName" => "getContentLength",
 				])));
 			} else {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:121: characters 39-40
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:121: characters 39-40
 				$v = $_hx_tmp;
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:121: characters 43-53
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:121: characters 43-53
 				return Outcome::Success($v);
 			}
 		} else if ($__hx__switch === 1) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:122: characters 20-21
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:122: characters 20-21
 			$e = $_g->params[0];
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:122: characters 24-34
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:122: characters 24-34
 			return Outcome::Failure($e);
 		}
 	}
@@ -213,7 +213,7 @@ class Header {
 	 * @return string
 	 */
 	public function get_LINEBREAK () {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:140: characters 37-50
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:140: characters 37-50
 		return "\x0D\x0A";
 	}
 
@@ -223,7 +223,7 @@ class Header {
 	 * @return string
 	 */
 	public function headerNotFound ($name) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:146: characters 5-35
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:146: characters 5-35
 		return "No " . ($name??'null') . " header found";
 	}
 
@@ -231,7 +231,7 @@ class Header {
 	 * @return ArrayIterator
 	 */
 	public function iterator () {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:105: characters 12-29
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:105: characters 12-29
 		return new ArrayIterator($this->fields);
 	}
 
@@ -239,21 +239,21 @@ class Header {
 	 * @return string
 	 */
 	public function toString () {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:143: characters 12-44
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:143: characters 12-44
 		$_g = new \Array_hx();
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:143: characters 13-43
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:143: characters 13-43
 		$_g1 = 0;
 		$_g2 = $this->fields;
 		while ($_g1 < $_g2->length) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:143: characters 18-19
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:143: characters 18-19
 			$f = ($_g2->arr[$_g1] ?? null);
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:143: characters 13-43
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:143: characters 13-43
 			++$_g1;
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:143: characters 31-43
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:143: characters 31-43
 			$x = $f->toString();
 			$_g->arr[$_g->length++] = $x;
 		}
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:143: characters 5-84
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:143: characters 5-84
 		return ($_g->join("\x0D\x0A")??'null') . "\x0D\x0A" . "\x0D\x0A";
 	}
 

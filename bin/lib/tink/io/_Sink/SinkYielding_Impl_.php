@@ -31,7 +31,7 @@ final class SinkYielding_Impl_ {
 	 * @return SinkObject
 	 */
 	public static function dirty ($this1) {
-		#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Sink.hx:30: characters 5-21
+		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:30: characters 5-21
 		return $this1;
 	}
 
@@ -41,29 +41,29 @@ final class SinkYielding_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function end ($this1) {
-		#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Sink.hx:23: lines 23-27
+		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:23: lines 23-27
 		if ($this1->get_sealed()) {
-			#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Sink.hx:23: characters 24-29
+			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:23: characters 24-29
 			return new SyncFuture(new LazyConst(Outcome::Success(false)));
 		} else {
-			#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Sink.hx:24: lines 24-27
+			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:24: lines 24-27
 			return Future_Impl_::map($this1->consume(Source_Impl_::$EMPTY, new HxAnon(["end" => true])), function ($r) {
 				$__hx__switch = ($r->index);
 				if ($__hx__switch === 0) {
-					#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Sink.hx:25: characters 41-54
+					#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:25: characters 41-54
 					return Outcome::Success(true);
 				} else if ($__hx__switch === 1) {
-					#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Sink.hx:25: characters 37-38
+					#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:25: characters 37-38
 					$_g = $r->params[0];
 					$_g = $r->params[1];
-					#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Sink.hx:25: characters 41-54
+					#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:25: characters 41-54
 					return Outcome::Success(true);
 				} else if ($__hx__switch === 2) {
-					#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Sink.hx:26: characters 28-29
+					#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:26: characters 28-29
 					$_g = $r->params[1];
-					#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Sink.hx:26: characters 25-26
+					#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:26: characters 25-26
 					$e = $r->params[0];
-					#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Sink.hx:26: characters 32-42
+					#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:26: characters 32-42
 					return Outcome::Failure($e);
 				}
 			});
@@ -76,7 +76,7 @@ final class SinkYielding_Impl_ {
 	 * @return SinkObject
 	 */
 	public static function ofError ($e) {
-		#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Sink.hx:33: characters 5-28
+		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:33: characters 5-28
 		return new ErrorSink($e);
 	}
 
@@ -88,21 +88,21 @@ final class SinkYielding_Impl_ {
 	 * @return SinkObject
 	 */
 	public static function ofOutput ($name, $target, $options = null) {
-		#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Sink.hx:59: lines 59-62
+		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:59: lines 59-62
 		$tmp = null;
 		if ($options === null) {
 			$tmp = Worker_Impl_::get();
 		} else {
-			#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Sink.hx:59: characters 60-67
+			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:59: characters 60-67
 			$_g = $options->worker;
-			#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Sink.hx:60: lines 60-61
+			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:60: lines 60-61
 			if ($_g === null) {
-				#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Sink.hx:59: lines 59-62
+				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:59: lines 59-62
 				$tmp = Worker_Impl_::get();
 			} else {
-				#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Sink.hx:61: characters 22-23
+				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:61: characters 22-23
 				$w = $_g;
-				#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Sink.hx:59: lines 59-62
+				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:59: lines 59-62
 				$tmp = $w;
 			}
 		}
@@ -115,18 +115,18 @@ final class SinkYielding_Impl_ {
 	 * @return SinkObject
 	 */
 	public static function ofPromised ($p) {
-		#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Sink.hx:36: lines 36-39
+		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:36: lines 36-39
 		return new FutureSink(Future_Impl_::map($p, function ($o) {
 			$__hx__switch = ($o->index);
 			if ($__hx__switch === 0) {
-				#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Sink.hx:37: characters 20-21
+				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:37: characters 20-21
 				$v = $o->params[0];
-				#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Sink.hx:37: characters 24-25
+				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:37: characters 24-25
 				return $v;
 			} else if ($__hx__switch === 1) {
-				#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Sink.hx:38: characters 20-21
+				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:38: characters 20-21
 				$e = $o->params[0];
-				#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Sink.hx:38: characters 24-34
+				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:38: characters 24-34
 				return SinkYielding_Impl_::ofError($e);
 			}
 		}));

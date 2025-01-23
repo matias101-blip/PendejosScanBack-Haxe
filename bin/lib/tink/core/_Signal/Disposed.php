@@ -19,7 +19,7 @@ class Disposed extends AlreadyDisposed implements SignalObject {
 	 * @return void
 	 */
 	public function __construct () {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:155: lines 155-161
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:155: lines 155-161
 		parent::__construct();
 	}
 
@@ -29,7 +29,7 @@ class Disposed extends AlreadyDisposed implements SignalObject {
 	 * @return LinkObject
 	 */
 	public function listen ($cb) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:160: characters 5-16
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:160: characters 5-16
 		return null;
 	}
 

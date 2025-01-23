@@ -20,7 +20,7 @@ class SimpleStyle implements EncodeStyle {
 	 * @return string
 	 */
 	public function beginArray ($depth) {
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:538: characters 3-13
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:538: characters 3-13
 		return "[";
 	}
 
@@ -30,7 +30,7 @@ class SimpleStyle implements EncodeStyle {
 	 * @return string
 	 */
 	public function beginObject ($depth) {
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:532: characters 3-13
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:532: characters 3-13
 		return "{";
 	}
 
@@ -40,7 +40,7 @@ class SimpleStyle implements EncodeStyle {
 	 * @return string
 	 */
 	public function endArray ($depth) {
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:541: characters 3-13
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:541: characters 3-13
 		return "]";
 	}
 
@@ -50,7 +50,7 @@ class SimpleStyle implements EncodeStyle {
 	 * @return string
 	 */
 	public function endObject ($depth) {
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:535: characters 3-13
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:535: characters 3-13
 		return "}";
 	}
 
@@ -60,7 +60,7 @@ class SimpleStyle implements EncodeStyle {
 	 * @return string
 	 */
 	public function entrySeperator ($depth) {
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:547: characters 3-13
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:547: characters 3-13
 		return ",";
 	}
 
@@ -70,7 +70,7 @@ class SimpleStyle implements EncodeStyle {
 	 * @return string
 	 */
 	public function firstEntry ($depth) {
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:544: characters 3-12
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:544: characters 3-12
 		return "";
 	}
 
@@ -80,7 +80,7 @@ class SimpleStyle implements EncodeStyle {
 	 * @return string
 	 */
 	public function keyValueSeperator ($depth) {
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:550: characters 3-13
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:550: characters 3-13
 		return ":";
 	}
 }

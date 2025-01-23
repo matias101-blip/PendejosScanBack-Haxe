@@ -15,17 +15,17 @@ class ProgressStatusTools {
 	 * @return ProgressStatus
 	 */
 	public static function map ($p, $f) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Progress.hx:199: lines 199-202
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:199: lines 199-202
 		$__hx__switch = ($p->index);
 		if ($__hx__switch === 0) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Progress.hx:200: characters 23-24
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:200: characters 23-24
 			$v = $p->params[0];
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Progress.hx:200: characters 27-40
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:200: characters 27-40
 			return ProgressStatus::InProgress($v);
 		} else if ($__hx__switch === 1) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Progress.hx:201: characters 21-22
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:201: characters 21-22
 			$v = $p->params[0];
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Progress.hx:201: characters 25-39
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:201: characters 25-39
 			return ProgressStatus::Finished($f($v));
 		}
 	}

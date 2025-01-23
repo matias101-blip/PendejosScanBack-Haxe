@@ -18,17 +18,17 @@ class HeaderField extends NamedWith {
 	 * @return HeaderField
 	 */
 	public static function ofString ($s) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:259: characters 19-33
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:259: characters 19-33
 		$_g = HxString::indexOf($s, ":");
 		if ($_g === -1) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:261: characters 9-33
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:261: characters 9-33
 			return new HeaderField(\mb_strtolower($s), null);
 		} else {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:262: characters 12-13
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:262: characters 12-13
 			$v = $_g;
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:263: characters 25-39
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:263: characters 25-39
 			$this1 = \mb_strtolower(\mb_substr($s, 0, $v));
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:263: characters 9-64
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:263: characters 9-64
 			return new HeaderField($this1, \trim(\mb_substr($s, $v + 1, null)));
 		}
 	}
@@ -44,18 +44,18 @@ class HeaderField extends NamedWith {
 	 * @return HeaderField
 	 */
 	public static function setCookie ($key, $value, $options = null) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:272: lines 272-273
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:272: lines 272-273
 		if ($options === null) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:273: characters 7-20
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:273: characters 7-20
 			$options = new HxAnon();
 		}
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:275: characters 5-31
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:275: characters 5-31
 		$buf = new \StringBuf();
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:284: characters 5-55
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:284: characters 5-55
 		$buf->add((\rawurlencode($key)??'null') . "=" . (\rawurlencode($value)??'null'));
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:286: lines 286-287
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:286: lines 286-287
 		if ($options->expires !== null) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:287: characters 7-57
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:287: characters 7-57
 			$value = HeaderValue_Impl_::ofDate($options->expires);
 			if ($value !== null) {
 				$buf->add("; ");
@@ -63,35 +63,35 @@ class HeaderField extends NamedWith {
 				$buf->add($value);
 			}
 		}
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:289: characters 5-39
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:289: characters 5-39
 		$value = $options->domain;
 		if ($value !== null) {
 			$buf->add("; ");
 			$buf->add("domain=");
 			$buf->add($value);
 		}
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:290: characters 5-35
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:290: characters 5-35
 		$value = $options->path;
 		if ($value !== null) {
 			$buf->add("; ");
 			$buf->add("path=");
 			$buf->add($value);
 		}
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:292: characters 5-46
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:292: characters 5-46
 		if ($options->secure) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:292: characters 25-46
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:292: characters 25-46
 			$buf->add("; ");
 			$buf->add("secure");
 			$buf->add("");
 		}
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:293: characters 5-60
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:293: characters 5-60
 		if ($options->scriptable !== true) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:293: characters 37-60
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:293: characters 37-60
 			$buf->add("; ");
 			$buf->add("HttpOnly");
 			$buf->add("");
 		}
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:295: characters 5-55
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:295: characters 5-55
 		return new HeaderField("set-cookie", $buf->b);
 	}
 
@@ -102,7 +102,7 @@ class HeaderField extends NamedWith {
 	 * @return void
 	 */
 	public function __construct ($name, $value) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:251: lines 251-297
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:251: lines 251-297
 		parent::__construct($name, $value);
 	}
 
@@ -110,12 +110,12 @@ class HeaderField extends NamedWith {
 	 * @return string
 	 */
 	public function toString () {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:255: lines 255-256
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:255: lines 255-256
 		if ($this->value === null) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:255: characters 26-30
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:255: characters 26-30
 			return $this->name;
 		} else {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:256: characters 13-26
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:256: characters 13-26
 			return "" . ($this->name??'null') . ": " . ($this->value??'null');
 		}
 	}

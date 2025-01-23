@@ -33,9 +33,9 @@ class SimpleDisposable implements OwnedDisposable {
 	 * @return void
 	 */
 	public function __construct ($dispose) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:47: characters 47-49
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:47: characters 47-49
 		$this->disposeHandlers = new \Array_hx();
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:60: characters 5-21
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:60: characters 5-21
 		$this->f = $dispose;
 	}
 
@@ -43,28 +43,28 @@ class SimpleDisposable implements OwnedDisposable {
 	 * @return void
 	 */
 	public function dispose () {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:63: characters 12-27
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:63: characters 12-27
 		$_g = $this->disposeHandlers;
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:64: lines 64-71
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:64: lines 64-71
 		if ($_g !== null) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:65: characters 12-13
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:65: characters 12-13
 			$v = $_g;
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:66: characters 9-31
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:66: characters 9-31
 			$this->disposeHandlers = null;
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:67: characters 9-19
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:67: characters 9-19
 			$f = $this->f;
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:68: characters 9-22
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:68: characters 9-22
 			$this->f = Boot::getStaticClosure(SimpleDisposable::class, 'noop');
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:69: characters 9-12
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:69: characters 9-12
 			$f();
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:70: lines 70-71
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:70: lines 70-71
 			$_g = 0;
 			while ($_g < $v->length) {
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:70: characters 14-15
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:70: characters 14-15
 				$h = ($v->arr[$_g] ?? null);
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:70: lines 70-71
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:70: lines 70-71
 				++$_g;
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:71: characters 11-14
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:71: characters 11-14
 				$h();
 			}
 		}
@@ -74,7 +74,7 @@ class SimpleDisposable implements OwnedDisposable {
 	 * @return bool
 	 */
 	public function get_disposed () {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:51: characters 7-37
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:51: characters 7-37
 		return $this->disposeHandlers === null;
 	}
 
@@ -84,16 +84,16 @@ class SimpleDisposable implements OwnedDisposable {
 	 * @return void
 	 */
 	public function ondispose ($d) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:54: characters 12-27
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:54: characters 12-27
 		$_g = $this->disposeHandlers;
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:55: lines 55-56
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:55: lines 55-56
 		if ($_g === null) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:55: characters 18-21
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:55: characters 18-21
 			$d();
 		} else {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:56: characters 12-13
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:56: characters 12-13
 			$v = $_g;
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:56: characters 15-24
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:56: characters 15-24
 			$v->arr[$v->length++] = $d;
 		}
 	}

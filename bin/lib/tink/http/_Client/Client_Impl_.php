@@ -18,7 +18,7 @@ final class Client_Impl_ {
 	 * @return ClientObject
 	 */
 	public static function augment ($this1, $pipeline) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Client.hx:23: characters 5-70
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:23: characters 5-70
 		return CustomClient::create($this1, $pipeline->before, $pipeline->after);
 	}
 
@@ -29,7 +29,7 @@ final class Client_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function fetch ($url, $options = null) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Client.hx:19: characters 5-37
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:19: characters 5-37
 		return Fetch::fetch($url, $options);
 	}
 }

@@ -32,7 +32,7 @@ class LocalContainerClient implements ClientObject {
 	 * @return void
 	 */
 	public function __construct ($container) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/clients/LocalContainerClient.hx:15: characters 5-31
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/LocalContainerClient.hx:15: characters 5-31
 		$this->container = $container;
 	}
 
@@ -42,17 +42,17 @@ class LocalContainerClient implements ClientObject {
 	 * @return FutureObject
 	 */
 	public function request ($req) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/clients/LocalContainerClient.hx:19: characters 14-23
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/LocalContainerClient.hx:19: characters 14-23
 		$this1 = $this->container;
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/clients/LocalContainerClient.hx:21: characters 35-52
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/LocalContainerClient.hx:21: characters 35-52
 		$req1 = $req->header->method;
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/clients/LocalContainerClient.hx:21: characters 54-82
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/LocalContainerClient.hx:21: characters 54-82
 		$this2 = $req->header->url;
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/clients/LocalContainerClient.hx:21: characters 9-130
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/LocalContainerClient.hx:21: characters 9-130
 		$this3 = new IncomingRequestHeader($req1, Url_Impl_::fromString(($this2->query === null ? $this2->path : ((($this2->path === null ? "null" : $this2->path))??'null') . "?" . ((($this2->query === null ? "null" : $this2->query))??'null'))), "HTTP/1.1", $req->header->fields);
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/clients/LocalContainerClient.hx:19: lines 19-28
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/LocalContainerClient.hx:19: lines 19-28
 		return Future_Impl_::flatMap($this1->serve(new IncomingRequest("127.0.0.1", $this3, IncomingRequestBody::Plain($req->body))), function ($res) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/clients/LocalContainerClient.hx:24: lines 24-27
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/LocalContainerClient.hx:24: lines 24-27
 			return new SyncFuture(new LazyConst(Outcome::Success(new IncomingResponse($res->header, $res->body))));
 		});
 	}

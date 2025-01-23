@@ -24,9 +24,9 @@ class MPair {
 	 * @return void
 	 */
 	public function __construct ($a, $b) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Pair.hx:28: characters 5-15
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Pair.hx:28: characters 5-15
 		$this->a = $a;
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Pair.hx:29: characters 5-15
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Pair.hx:29: characters 5-15
 		$this->b = $b;
 	}
 }

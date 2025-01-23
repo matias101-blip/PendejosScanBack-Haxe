@@ -15,7 +15,7 @@ final class Stack_Impl_ {
 	 * @return string
 	 */
 	public static function toString ($this1) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Error.hx:189: lines 189-193
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Error.hx:189: lines 189-193
 		return "Error stack not available. Compile with -D error_stack.";
 	}
 }

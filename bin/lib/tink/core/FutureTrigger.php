@@ -26,11 +26,11 @@ final class FutureTrigger extends FutureObject {
 	 * @return void
 	 */
 	public function __construct () {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:446: characters 32-39
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:446: characters 32-39
 		$this->status = FutureStatus::Awaited();
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:450: characters 5-12
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:450: characters 5-12
 		parent::__construct();
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:451: characters 5-39
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:451: characters 5-39
 		$this->list = new CallbackList(true);
 	}
 
@@ -38,7 +38,7 @@ final class FutureTrigger extends FutureObject {
 	 * @return FutureObject
 	 */
 	public function asFuture () {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:467: characters 5-16
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:467: characters 5-16
 		return $this;
 	}
 
@@ -46,7 +46,7 @@ final class FutureTrigger extends FutureObject {
 	 * @return FutureStatus
 	 */
 	public function getStatus () {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:455: characters 5-18
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:455: characters 5-18
 		return $this->status;
 	}
 
@@ -56,19 +56,19 @@ final class FutureTrigger extends FutureObject {
 	 * @return LinkObject
 	 */
 	public function handle ($callback) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:458: characters 19-25
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:458: characters 19-25
 		$_g = $this->status;
 		if ($_g->index === 3) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:459: characters 18-24
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:459: characters 18-24
 			$result = $_g->params[0];
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:460: characters 9-32
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:460: characters 9-32
 			Callback_Impl_::invoke($callback, Lazy_Impl_::get($result));
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:461: characters 9-13
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:461: characters 9-13
 			return null;
 		} else {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:462: characters 12-13
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:462: characters 12-13
 			$v = $_g;
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:463: characters 9-27
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:463: characters 9-27
 			$_this = $this->list;
 			if ($_this->disposeHandlers === null) {
 				return null;
@@ -99,19 +99,19 @@ final class FutureTrigger extends FutureObject {
 	 * @return bool
 	 */
 	public function trigger ($result) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:473: characters 19-25
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:473: characters 19-25
 		$_g = $this->status;
 		if ($_g->index === 3) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:474: characters 18-19
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:474: characters 18-19
 			$_g1 = $_g->params[0];
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:474: characters 22-27
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:474: characters 22-27
 			return false;
 		} else {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:476: characters 9-31
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:476: characters 9-31
 			$this->status = FutureStatus::Ready(new LazyConst($result));
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:477: characters 9-28
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:477: characters 9-28
 			$this->list->invoke($result);
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:478: characters 9-13
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:478: characters 9-13
 			return true;
 		}
 	}

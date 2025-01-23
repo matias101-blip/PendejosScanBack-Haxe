@@ -29,11 +29,11 @@ class LinkPair implements LinkObject {
 	 * @return void
 	 */
 	public function __construct ($a, $b) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:122: characters 24-29
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:122: characters 24-29
 		$this->dissolved = false;
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:124: characters 5-15
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:124: characters 5-15
 		$this->a = $a;
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:125: characters 5-15
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:125: characters 5-15
 		$this->b = $b;
 	}
 
@@ -41,23 +41,23 @@ class LinkPair implements LinkObject {
 	 * @return void
 	 */
 	public function cancel () {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:129: lines 129-135
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:129: lines 129-135
 		if (!$this->dissolved) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:130: characters 7-23
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:130: characters 7-23
 			$this->dissolved = true;
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:131: characters 7-17
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:131: characters 7-17
 			$this1 = $this->a;
 			if ($this1 !== null) {
 				$this1->cancel();
 			}
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:132: characters 7-17
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:132: characters 7-17
 			$this1 = $this->b;
 			if ($this1 !== null) {
 				$this1->cancel();
 			}
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:133: characters 7-15
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:133: characters 7-15
 			$this->a = null;
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:134: characters 7-15
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:134: characters 7-15
 			$this->b = null;
 		}
 	}

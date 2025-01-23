@@ -25,12 +25,12 @@ class ChunkBase {
 	 * @return ChunkCursor
 	 */
 	public function getCursor () {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/chunk/ChunkBase.hx:9: lines 9-10
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/chunk/ChunkBase.hx:9: lines 9-10
 		if ($this->flattened === null) {
-			#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/chunk/ChunkBase.hx:10: characters 7-35
+			#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/chunk/ChunkBase.hx:10: characters 7-35
 			$this->flatten($this->flattened = new \Array_hx());
 		}
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/chunk/ChunkBase.hx:11: characters 5-48
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/chunk/ChunkBase.hx:11: characters 5-48
 		return ChunkCursor::create((clone $this->flattened));
 	}
 }

@@ -15,7 +15,7 @@ final class Noise_Impl_ {
 	 * @return mixed
 	 */
 	public static function ofAny ($t) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Noise.hx:6: characters 5-17
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Noise.hx:6: characters 5-17
 		return null;
 	}
 }

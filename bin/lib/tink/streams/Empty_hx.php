@@ -20,7 +20,7 @@ class Empty_hx extends StreamBase {
 	 * @return StreamObject
 	 */
 	public static function make () {
-		#/home/thehunter101/haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:276: characters 5-47
+		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:276: characters 5-47
 		return Empty_hx::$inst;
 	}
 
@@ -28,7 +28,7 @@ class Empty_hx extends StreamBase {
 	 * @return void
 	 */
 	public function __construct () {
-		#/home/thehunter101/haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:262: characters 18-20
+		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:262: characters 18-20
 		parent::__construct();
 	}
 
@@ -38,7 +38,7 @@ class Empty_hx extends StreamBase {
 	 * @return FutureObject
 	 */
 	public function forEach ($handler) {
-		#/home/thehunter101/haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:271: characters 5-33
+		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:271: characters 5-33
 		return new SyncFuture(new LazyConst(Conclusion::Depleted()));
 	}
 
@@ -46,7 +46,7 @@ class Empty_hx extends StreamBase {
 	 * @return bool
 	 */
 	public function get_depleted () {
-		#/home/thehunter101/haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:265: characters 5-16
+		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:265: characters 5-16
 		return true;
 	}
 
@@ -54,7 +54,7 @@ class Empty_hx extends StreamBase {
 	 * @return FutureObject
 	 */
 	public function next () {
-		#/home/thehunter101/haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:268: characters 5-33
+		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:268: characters 5-33
 		return new SyncFuture(new LazyConst(Step::End()));
 	}
 

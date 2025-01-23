@@ -25,7 +25,7 @@ final class Callback_Impl_ {
 	 * @return \Closure
 	 */
 	public static function _new ($f) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:7: character 3
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:7: character 3
 		return $f;
 	}
 
@@ -35,7 +35,7 @@ final class Callback_Impl_ {
 	 * @return void
 	 */
 	public static function defer ($f) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:50: characters 7-29
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:50: characters 7-29
 		Timer::delay($f, 0);
 	}
 
@@ -45,16 +45,16 @@ final class Callback_Impl_ {
 	 * @return \Closure
 	 */
 	public static function fromMany ($callbacks) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:31: lines 31-34
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:31: lines 31-34
 		return function ($v) use (&$callbacks) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:33: lines 33-34
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:33: lines 33-34
 			$_g = 0;
 			while ($_g < $callbacks->length) {
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:33: characters 14-22
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:33: characters 14-22
 				$callback = ($callbacks->arr[$_g] ?? null);
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:33: lines 33-34
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:33: lines 33-34
 				++$_g;
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:34: characters 11-29
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:34: characters 11-29
 				Callback_Impl_::invoke($callback, $v);
 			}
 		};
@@ -66,9 +66,9 @@ final class Callback_Impl_ {
 	 * @return \Closure
 	 */
 	public static function fromNiladic ($f) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:28: characters 5-48
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:28: characters 5-48
 		return function ($_) use (&$f) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:28: characters 45-48
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:28: characters 45-48
 			$f();
 		};
 	}
@@ -80,16 +80,16 @@ final class Callback_Impl_ {
 	 * @return void
 	 */
 	public static function invoke ($this1, $data) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:25: characters 5-41
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:25: characters 5-41
 		if (Callback_Impl_::$depth < 500) {
 			Callback_Impl_::$depth++;
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:25: characters 30-40
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:25: characters 30-40
 			$this1($data);
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:25: characters 5-41
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:25: characters 5-41
 			Callback_Impl_::$depth--;
 		} else {
 			Callback_Impl_::defer(function () use (&$data, &$this1) {
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:25: characters 30-40
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:25: characters 30-40
 				$this1($data);
 			});
 		}
@@ -101,7 +101,7 @@ final class Callback_Impl_ {
 	 * @return \Closure
 	 */
 	public static function toFunction ($this1) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:11: characters 5-16
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:11: characters 5-16
 		return $this1;
 	}
 }

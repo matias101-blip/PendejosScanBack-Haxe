@@ -29,13 +29,13 @@ final class FetchResponse_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function all ($this1) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:120: lines 120-128
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:120: lines 120-128
 		return Promise_Impl_::next($this1, function ($r) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:121: lines 121-127
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:121: lines 121-127
 			return Promise_Impl_::next(RealSourceTools::all($r->body), function ($chunk) use (&$r) {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:123: lines 123-126
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:123: lines 123-126
 				if ($r->header->statusCode >= 400) {
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:124: characters 7-77
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:124: characters 7-77
 					return new SyncFuture(new LazyConst(Outcome::Failure(TypedError::withData($r->header->statusCode, $r->header->reason, $chunk->toString(), new HxAnon([
 						"fileName" => "tink/http/Fetch.hx",
 						"lineNumber" => 124,
@@ -43,7 +43,7 @@ final class FetchResponse_Impl_ {
 						"methodName" => "all",
 					])))));
 				} else {
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:126: characters 7-44
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:126: characters 7-44
 					return new SyncFuture(new LazyConst(Outcome::Success(new Message($r->header, $chunk))));
 				}
 			});
@@ -56,13 +56,13 @@ final class FetchResponse_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function progress ($this1) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:133: lines 133-160
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:133: lines 133-160
 		return Promise_Impl_::next($this1, function ($r) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:135: lines 135-159
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:135: lines 135-159
 			if ($r->header->statusCode >= 400) {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:136: characters 6-118
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:136: characters 6-118
 				return Promise_Impl_::next(RealSourceTools::all($r->body), function ($chunk) use (&$r) {
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:136: characters 40-117
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:136: characters 40-117
 					return new SyncFuture(new LazyConst(Outcome::Failure(TypedError::withData($r->header->statusCode, $r->header->reason, $chunk->toString(), new HxAnon([
 						"fileName" => "tink/http/Fetch.hx",
 						"lineNumber" => 136,
@@ -71,45 +71,45 @@ final class FetchResponse_Impl_ {
 					])))));
 				});
 			} else {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:139: characters 7-15
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:139: characters 7-15
 				$r1 = $r->header;
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:138: lines 138-159
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:138: lines 138-159
 				return new SyncFuture(new LazyConst(Outcome::Success(new Message($r1, Progress_Impl_::make(function ($progress, $finish) use (&$r) {
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:141: lines 141-144
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:141: lines 141-144
 					$total = null;
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:141: characters 27-54
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:141: characters 27-54
 					$_g = $r->header->getContentLength();
 					$__hx__switch = ($_g->index);
 					if ($__hx__switch === 0) {
-						#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:142: characters 22-25
+						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:142: characters 22-25
 						$len = $_g->params[0];
-						#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:141: lines 141-144
+						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:141: lines 141-144
 						$total = Option::Some($len);
 					} else if ($__hx__switch === 1) {
-						#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:143: characters 22-23
+						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:143: characters 22-23
 						$_g1 = $_g->params[0];
-						#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:141: lines 141-144
+						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:141: lines 141-144
 						$total = Option::None();
 					}
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:145: characters 8-32
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:145: characters 8-32
 					$chunk = Chunk_Impl_::$EMPTY;
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:146: characters 8-37
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:146: characters 8-37
 					$progress($chunk->getLength(), $total);
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:147: lines 147-157
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:147: lines 147-157
 					return Source_Impl_::chunked($r->body)->forEach(Handler_Impl_::ofSafeSync(function ($part) use (&$total, &$progress, &$chunk) {
-						#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:149: characters 10-30
+						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:149: characters 10-30
 						$chunk = Chunk_Impl_::concat($chunk, $part);
-						#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:150: characters 10-39
+						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:150: characters 10-39
 						$progress($chunk->getLength(), $total);
-						#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:151: characters 10-23
+						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:151: characters 10-23
 						return Handled::Resume();
 					}))->handle(function ($o) use (&$finish, &$chunk) {
-						#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:153: lines 153-157
+						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:153: lines 153-157
 						$__hx__switch = ($o->index);
 						if ($__hx__switch === 0) {
-							#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:156: characters 22-23
+							#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:156: characters 22-23
 							$_g = $o->params[0];
-							#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:156: characters 26-67
+							#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:156: characters 26-67
 							$finish(Outcome::Failure(new TypedError(null, "unreachable", new HxAnon([
 								"fileName" => "tink/http/Fetch.hx",
 								"lineNumber" => 156,
@@ -117,12 +117,12 @@ final class FetchResponse_Impl_ {
 								"methodName" => "progress",
 							]))));
 						} else if ($__hx__switch === 2) {
-							#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:155: characters 22-23
+							#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:155: characters 22-23
 							$e = $o->params[0];
-							#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:155: characters 26-44
+							#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:155: characters 26-44
 							$finish(Outcome::Failure($e));
 						} else if ($__hx__switch === 3) {
-							#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:154: characters 25-47
+							#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Fetch.hx:154: characters 25-47
 							$finish(Outcome::Success($chunk));
 						}
 					});

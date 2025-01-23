@@ -22,7 +22,7 @@ final class ProgressValue_Impl_ {
 	 * @return MPair
 	 */
 	public static function _new ($value, $total) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Progress.hx:154: character 3
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:154: character 3
 		return new MPair($value, $total);
 	}
 
@@ -32,7 +32,7 @@ final class ProgressValue_Impl_ {
 	 * @return Option
 	 */
 	public static function get_total ($this1) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Progress.hx:167: characters 5-18
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:167: characters 5-18
 		return $this1->b;
 	}
 
@@ -42,7 +42,7 @@ final class ProgressValue_Impl_ {
 	 * @return float
 	 */
 	public static function get_value ($this1) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Progress.hx:164: characters 5-18
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:164: characters 5-18
 		return $this1->a;
 	}
 
@@ -54,7 +54,7 @@ final class ProgressValue_Impl_ {
 	 * @return Option
 	 */
 	public static function normalize ($this1) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Progress.hx:161: characters 12-51
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:161: characters 12-51
 		$o = $this1->b;
 		if ($o->index === 0) {
 			$v = $o->params[0];

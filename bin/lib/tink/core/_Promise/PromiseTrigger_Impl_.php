@@ -16,7 +16,7 @@ final class PromiseTrigger_Impl_ {
 	 * @return FutureTrigger
 	 */
 	public static function _new () {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Promise.hx:354: character 3
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:354: character 3
 		return new FutureTrigger();
 	}
 
@@ -26,7 +26,7 @@ final class PromiseTrigger_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function asPromise ($this1) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Promise.hx:363: characters 54-76
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:363: characters 54-76
 		return $this1;
 	}
 
@@ -37,7 +37,7 @@ final class PromiseTrigger_Impl_ {
 	 * @return bool
 	 */
 	public static function reject ($this1, $e) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Promise.hx:361: characters 5-36
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:361: characters 5-36
 		return $this1->trigger(Outcome::Failure($e));
 	}
 
@@ -48,7 +48,7 @@ final class PromiseTrigger_Impl_ {
 	 * @return bool
 	 */
 	public static function resolve ($this1, $v) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Promise.hx:358: characters 5-36
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:358: characters 5-36
 		return $this1->trigger(Outcome::Success($v));
 	}
 }

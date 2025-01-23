@@ -16,9 +16,9 @@ final class Recover_Impl_ {
 	 * @return \Closure
 	 */
 	public static function ofSync ($f) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Promise.hx:334: characters 5-34
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:334: characters 5-34
 		return function ($e) use (&$f) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Promise.hx:334: characters 17-34
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:334: characters 17-34
 			return new SyncFuture(new LazyConst($f($e)));
 		};
 	}

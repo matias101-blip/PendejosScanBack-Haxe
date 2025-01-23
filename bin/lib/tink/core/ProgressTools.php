@@ -16,7 +16,7 @@ class ProgressTools {
 	 * @return FutureObject
 	 */
 	public static function asPromise ($p) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Progress.hx:218: characters 5-20
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:218: characters 5-20
 		return $p->result;
 	}
 }

@@ -19,7 +19,7 @@ class SinkBase implements SinkObject {
 	 * @return FutureObject
 	 */
 	public function consume ($source, $options) {
-		#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Sink.hx:116: characters 12-17
+		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:116: characters 12-17
 		throw Exception::thrown("not implemented");
 	}
 
@@ -27,7 +27,7 @@ class SinkBase implements SinkObject {
 	 * @return bool
 	 */
 	public function get_sealed () {
-		#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Sink.hx:113: characters 27-38
+		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:113: characters 27-38
 		return true;
 	}
 }

@@ -45,7 +45,7 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function _flatMap ($f, $map) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:365: characters 5-26
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:365: characters 5-26
 		return Future_Impl_::flatMap($f, $map);
 	}
 
@@ -56,7 +56,7 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function _map ($f, $map) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:368: characters 5-22
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:368: characters 5-22
 		return Future_Impl_::map($f, $map);
 	}
 
@@ -72,9 +72,9 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function _new ($wakeup) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:50: character 3
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:50: character 3
 		return new SuspendableFuture(function ($yield, $destroy) use (&$wakeup) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:51: characters 54-67
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:51: characters 54-67
 			return $wakeup($yield);
 		});
 	}
@@ -86,18 +86,18 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function _tryFailingFlatMap ($f, $map) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:347: lines 347-350
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:347: lines 347-350
 		return Future_Impl_::flatMap($f, function ($o) use (&$map) {
 			$__hx__switch = ($o->index);
 			if ($__hx__switch === 0) {
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:348: characters 20-21
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:348: characters 20-21
 				$d = $o->params[0];
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:348: characters 24-30
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:348: characters 24-30
 				return $map($d);
 			} else if ($__hx__switch === 1) {
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:349: characters 20-21
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:349: characters 20-21
 				$f = $o->params[0];
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:349: characters 24-47
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:349: characters 24-47
 				return new SyncFuture(new LazyConst(Outcome::Failure($f)));
 			}
 		});
@@ -110,9 +110,9 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function _tryFailingMap ($f, $map) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:359: characters 5-53
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:359: characters 5-53
 		return Future_Impl_::map($f, function ($o) use (&$map) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:359: characters 31-52
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:359: characters 31-52
 			return OutcomeTools::flatMap($o, OutcomeMapper_Impl_::withSameError($map));
 		});
 	}
@@ -124,18 +124,18 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function _tryFlatMap ($f, $map) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:353: lines 353-356
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:353: lines 353-356
 		return Future_Impl_::flatMap($f, function ($o) use (&$map) {
 			$__hx__switch = ($o->index);
 			if ($__hx__switch === 0) {
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:354: characters 20-21
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:354: characters 20-21
 				$d = $o->params[0];
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:354: characters 24-43
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:354: characters 24-43
 				return Future_Impl_::map($map($d), Boot::getStaticClosure(Outcome::class, 'Success'));
 			} else if ($__hx__switch === 1) {
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:355: characters 20-21
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:355: characters 20-21
 				$f = $o->params[0];
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:355: characters 24-47
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:355: characters 24-47
 				return new SyncFuture(new LazyConst(Outcome::Failure($f)));
 			}
 		});
@@ -148,9 +148,9 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function _tryMap ($f, $map) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:362: characters 5-49
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:362: characters 5-49
 		return Future_Impl_::map($f, function ($o) use (&$map) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:362: characters 31-48
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:362: characters 31-48
 			return OutcomeTools::map($o, $map);
 		});
 	}
@@ -164,9 +164,9 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function and ($a, $b) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:344: characters 5-61
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:344: characters 5-61
 		return Future_Impl_::merge($a, $b, function ($a, $b) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:344: characters 46-60
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:344: characters 46-60
 			return new MPair($a, $b);
 		});
 	}
@@ -179,7 +179,7 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function asPromise ($s) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:200: characters 5-13
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:200: characters 5-13
 		return $s;
 	}
 
@@ -190,18 +190,18 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function async ($init, $lazy = false) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:315: lines 315-318
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:315: lines 315-318
 		if ($lazy === null) {
 			$lazy = false;
 		}
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:316: characters 5-34
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:316: characters 5-34
 		$ret = Future_Impl_::irreversible($init);
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:317: characters 12-42
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:317: characters 12-42
 		if ($lazy) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:317: characters 22-25
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:317: characters 22-25
 			return $ret;
 		} else {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:317: characters 31-42
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:317: characters 31-42
 			$ret->eager();
 			return $ret;
 		}
@@ -214,15 +214,15 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function delay ($ms, $value) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:379: characters 12-102
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:379: characters 12-102
 		$this1 = Future_Impl_::irreversible(function ($cb) use (&$ms, &$value) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:379: characters 45-93
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:379: characters 45-93
 			Timer::delay(function () use (&$cb, &$value) {
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:379: characters 73-88
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:379: characters 73-88
 				$cb(Lazy_Impl_::get($value));
 			}, $ms);
 		});
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:379: characters 12-102
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:379: characters 12-102
 		$this1->eager();
 		return $this1;
 	}
@@ -236,9 +236,9 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function eager ($this1) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:67: characters 5-17
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:67: characters 5-17
 		$this1->eager();
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:68: characters 5-16
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:68: characters 5-16
 		return $this1;
 	}
 
@@ -251,7 +251,7 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function either ($a, $b) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:338: characters 5-57
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:338: characters 5-57
 		return Future_Impl_::first(Future_Impl_::map($a, Boot::getStaticClosure(Either::class, 'Left')), Future_Impl_::map($b, Boot::getStaticClosure(Either::class, 'Right')));
 	}
 
@@ -264,59 +264,59 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function first ($this1, $that) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:80: characters 20-36
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:80: characters 20-36
 		$_g = $this1;
 		$_g1 = $_g->getStatus();
 		$__hx__switch = ($_g1->index);
 		if ($__hx__switch === 3) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:83: characters 33-34
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:83: characters 33-34
 			$_g2 = $_g1->params[0];
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:80: characters 38-42
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:80: characters 38-42
 			$_g1 = $that->getStatus();
 			$__hx__switch = ($_g1->index);
 			if ($__hx__switch === 3) {
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:84: characters 36-37
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:84: characters 36-37
 				$_g2 = $_g1->params[0];
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:82: characters 13-14
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:82: characters 13-14
 				$v = $_g;
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:85: characters 10-11
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:85: characters 10-11
 				return $v;
 			} else if ($__hx__switch === 4) {
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:82: characters 13-14
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:82: characters 13-14
 				$v = $_g;
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:85: characters 10-11
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:85: characters 10-11
 				return $v;
 			} else {
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:82: characters 13-14
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:82: characters 13-14
 				$v = $_g;
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:85: characters 10-11
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:85: characters 10-11
 				return $v;
 			}
 		} else if ($__hx__switch === 4) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:81: characters 36-37
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:81: characters 36-37
 			$v = $that;
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:85: characters 10-11
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:85: characters 10-11
 			return $v;
 		} else {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:80: characters 38-42
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:80: characters 38-42
 			$_g1 = $that->getStatus();
 			$__hx__switch = ($_g1->index);
 			if ($__hx__switch === 3) {
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:84: characters 36-37
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:84: characters 36-37
 				$_g2 = $_g1->params[0];
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:81: characters 36-37
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:81: characters 36-37
 				$v = $that;
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:85: characters 10-11
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:85: characters 10-11
 				return $v;
 			} else if ($__hx__switch === 4) {
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:82: characters 13-14
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:82: characters 13-14
 				$v = $_g;
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:85: characters 10-11
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:85: characters 10-11
 				return $v;
 			} else {
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:87: characters 9-89
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:87: characters 9-89
 				return new SuspendableFuture(function ($yield, $_) use (&$that, &$this1) {
-					#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:87: characters 49-88
+					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:87: characters 49-88
 					$this2 = $this1->handle($yield);
 					return new LinkPair($this2, $that->handle($yield));
 				});
@@ -335,39 +335,39 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function flatMap ($this1, $next, $gather = null) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:106: characters 19-25
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:106: characters 19-25
 		$_g = $this1->getStatus();
 		$__hx__switch = ($_g->index);
 		if ($__hx__switch === 3) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:108: characters 18-19
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:108: characters 18-19
 			$l = $_g->params[0];
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:109: characters 9-84
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:109: characters 9-84
 			return new SuspendableFuture(function ($yield, $_) use (&$next, &$l) {
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:109: characters 48-83
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:109: characters 48-83
 				return $next(Lazy_Impl_::get($l))->handle(function ($v) use (&$yield) {
-					#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:109: characters 74-82
+					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:109: characters 74-82
 					$yield($v);
 				});
 			});
 		} else if ($__hx__switch === 4) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:107: characters 23-30
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:107: characters 23-30
 			return Future_Impl_::never();
 		} else {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:111: lines 111-118
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:111: lines 111-118
 			return new SuspendableFuture(function ($yield, $destroy) use (&$next, &$this1) {
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:112: characters 11-47
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:112: characters 11-47
 				$inner = new CallbackLinkRef();
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:113: lines 113-116
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:113: lines 113-116
 				$outer = $this1->handle(function ($v) use (&$yield, &$next, &$inner, &$destroy) {
-					#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:113: characters 49-56
+					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:113: characters 49-56
 					$_g = $next($v);
 					if ($_g->getStatus()->index === 4) {
-						#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:114: characters 41-50
+						#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:114: characters 41-50
 						$destroy();
 					} else {
-						#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:115: characters 18-19
+						#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:115: characters 18-19
 						$f = $_g;
-						#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:115: characters 21-49
+						#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:115: characters 21-49
 						$param = $f->handle($yield);
 						$this1 = $inner->link;
 						if ($this1 !== null) {
@@ -376,7 +376,7 @@ final class Future_Impl_ {
 						$inner->link = $param;
 					}
 				});
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:117: characters 11-28
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:117: characters 11-28
 				return new LinkPair($outer, $inner);
 			});
 		}
@@ -390,9 +390,9 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function flatten ($f) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:167: characters 5-29
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:167: characters 5-29
 		return Future_Impl_::flatMap($f, function ($v) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:167: characters 27-28
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:167: characters 27-28
 			return $v;
 		});
 	}
@@ -403,7 +403,7 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function gather ($this1) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:141: characters 5-16
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:141: characters 5-16
 		return $this1;
 	}
 
@@ -413,7 +413,7 @@ final class Future_Impl_ {
 	 * @return FutureStatus
 	 */
 	public static function get_status ($this1) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:39: characters 7-30
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:39: characters 7-30
 		return $this1->getStatus();
 	}
 
@@ -428,7 +428,7 @@ final class Future_Impl_ {
 	 * @return LinkObject
 	 */
 	public static function handle ($this1, $callback) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:59: characters 5-33
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:59: characters 5-33
 		return $this1->handle($callback);
 	}
 
@@ -442,7 +442,7 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function inParallel ($futures, $concurrency = null) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:212: characters 5-38
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:212: characters 5-38
 		return Future_Impl_::many($futures, $concurrency);
 	}
 
@@ -455,7 +455,7 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function inSequence ($futures) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:219: characters 5-28
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:219: characters 5-28
 		return Future_Impl_::many($futures, 1);
 	}
 
@@ -469,11 +469,11 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function irreversible ($init) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:326: characters 5-71
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:326: characters 5-71
 		return new SuspendableFuture(function ($yield, $_) use (&$init) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:326: characters 50-61
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:326: characters 50-61
 			$init($yield);
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:326: characters 63-67
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:326: characters 63-67
 			return null;
 		});
 	}
@@ -484,7 +484,7 @@ final class Future_Impl_ {
 	 * @return bool
 	 */
 	public static function isFuture ($maybeFuture) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:311: characters 5-41
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:311: characters 5-41
 		return ($maybeFuture instanceof FutureObject);
 	}
 
@@ -494,7 +494,7 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function lazy ($l) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:301: characters 5-29
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:301: characters 5-29
 		return new SyncFuture($l);
 	}
 
@@ -505,9 +505,9 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function many ($a, $concurrency = null) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:222: characters 5-65
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:222: characters 5-65
 		return Future_Impl_::processMany($a, $concurrency, Boot::getStaticClosure(Outcome::class, 'Success'), function ($o) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:222: characters 54-64
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:222: characters 54-64
 			return OutcomeTools::orNull($o);
 		});
 	}
@@ -523,29 +523,29 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function map ($this1, $f, $gather = null) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:95: characters 19-25
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:95: characters 19-25
 		$_g = $this1->getStatus();
 		$__hx__switch = ($_g->index);
 		if ($__hx__switch === 3) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:97: characters 18-19
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:97: characters 18-19
 			$l = $_g->params[0];
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:97: characters 40-48
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:97: characters 40-48
 			$this2 = $l;
 			$f1 = $f;
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:97: characters 22-49
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:97: characters 22-49
 			return new SyncFuture(new LazyFunc(function () use (&$f1, &$this2) {
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:97: characters 40-48
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:97: characters 40-48
 				return $f1($this2->get());
 			}, $this2));
 		} else if ($__hx__switch === 4) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:96: characters 23-30
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:96: characters 23-30
 			return Future_Impl_::never();
 		} else {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:98: characters 16-85
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:98: characters 16-85
 			return new SuspendableFuture(function ($yield, $_) use (&$f, &$this1) {
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:98: characters 55-84
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:98: characters 55-84
 				return $this1->handle(function ($v) use (&$f, &$yield) {
-					#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:98: characters 72-83
+					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:98: characters 72-83
 					$yield($f($v));
 				});
 			});
@@ -562,39 +562,39 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function merge ($this1, $that, $combine) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:147: characters 20-26
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:147: characters 20-26
 		$_g = $this1->getStatus();
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:147: characters 28-39
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:147: characters 28-39
 		$_g1 = $that->getStatus();
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:147: characters 20-26
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:147: characters 20-26
 		if ($_g->index === 4) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:148: characters 45-52
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:148: characters 45-52
 			return Future_Impl_::never();
 		} else if ($_g1->index === 4) {
 			return Future_Impl_::never();
 		} else {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:150: lines 150-159
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:150: lines 150-159
 			return new SuspendableFuture(function ($yield, $_) use (&$that, &$this1, &$combine) {
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:151: lines 151-156
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:151: lines 151-156
 				$check = function ($v = null) use (&$yield, &$that, &$this1, &$combine) {
-					#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:152: characters 28-34
+					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:152: characters 28-34
 					$_g = $this1->getStatus();
-					#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:152: characters 36-47
+					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:152: characters 36-47
 					$_g1 = $that->getStatus();
-					#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:152: characters 28-34
+					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:152: characters 28-34
 					if ($_g->index === 3) {
-						#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:152: characters 36-47
+						#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:152: characters 36-47
 						if ($_g1->index === 3) {
-							#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:153: characters 37-38
+							#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:153: characters 37-38
 							$b = $_g1->params[0];
-							#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:153: characters 27-28
+							#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:153: characters 27-28
 							$a = $_g->params[0];
-							#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:154: characters 17-37
+							#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:154: characters 17-37
 							$yield($combine(Lazy_Impl_::get($a), Lazy_Impl_::get($b)));
 						}
 					}
 				};
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:158: characters 11-50
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:158: characters 11-50
 				$this2 = $this1->handle($check);
 				return new LinkPair($this2, $that->handle($check));
 			});
@@ -605,7 +605,7 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function never () {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:35: characters 5-27
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:35: characters 5-27
 		return Future_Impl_::$NEVER_INST;
 	}
 
@@ -615,7 +615,7 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function neverToAny ($l) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:191: characters 5-18
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:191: characters 5-18
 		return $l;
 	}
 
@@ -629,7 +629,7 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function next ($this1, $n) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:130: characters 5-22
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:130: characters 5-22
 		return Future_Impl_::flatMap($this1, $n);
 	}
 
@@ -639,14 +639,14 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function noise ($this1) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:73: lines 73-74
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:73: lines 73-74
 		if ($this1->getStatus()->index === 4) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:73: characters 36-43
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:73: characters 36-43
 			return Future_Impl_::never();
 		} else {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:74: characters 12-27
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:74: characters 12-27
 			return Future_Impl_::map($this1, function ($_) {
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:74: characters 21-26
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:74: characters 21-26
 				return null;
 			});
 		}
@@ -658,7 +658,7 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function ofAny ($v) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:194: characters 5-26
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:194: characters 5-26
 		return new SyncFuture(new LazyConst($v));
 	}
 
@@ -669,7 +669,7 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function ofMany ($futures, $gather = null) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:204: characters 5-31
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:204: characters 5-31
 		return Future_Impl_::inSequence($futures);
 	}
 
@@ -682,7 +682,7 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function or ($a, $b) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:332: characters 5-22
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:332: characters 5-22
 		return Future_Impl_::first($a, $b);
 	}
 
@@ -695,164 +695,164 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function processMany ($a, $concurrency, $fn, $lift) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:225: lines 225-297
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:225: lines 225-297
 		if ($a->length === 0) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:226: characters 16-46
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:226: characters 16-46
 			return new SyncFuture(new LazyConst($lift(Outcome::Success(new \Array_hx()))));
 		} else {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:227: lines 227-295
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:227: lines 227-295
 			$wakeup = function ($yield) use (&$lift, &$fn, &$concurrency, &$a) {
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:228: lines 228-239
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:228: lines 228-239
 				$links = new \Array_hx();
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:229: characters 19-42
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:229: characters 19-42
 				$_g = new \Array_hx();
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:229: characters 20-41
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:229: characters 20-41
 				$_g1 = 0;
 				while ($_g1 < $a->length) {
-					#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:229: characters 25-26
+					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:229: characters 25-26
 					$x = ($a->arr[$_g1] ?? null);
-					#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:229: characters 20-41
+					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:229: characters 20-41
 					++$_g1;
-					#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:229: characters 33-41
+					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:229: characters 33-41
 					$_g->arr[$_g->length++] = null;
 				}
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:228: lines 228-239
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:228: lines 228-239
 				$ret = $_g;
 				$index = 0;
 				$pending = 0;
 				$done = false;
 				$concurrency1 = null;
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:233: lines 233-239
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:233: lines 233-239
 				if ($concurrency === null) {
-					#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:228: lines 228-239
+					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:228: lines 228-239
 					$concurrency1 = $a->length;
 				} else {
-					#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:235: characters 20-21
+					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:235: characters 20-21
 					$v = $concurrency;
-					#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:228: lines 228-239
+					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:228: lines 228-239
 					$concurrency1 = ($v < 1 ? 1 : ($v > $a->length ? $a->length : $v));
 				}
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:246: lines 246-254
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:246: lines 246-254
 				$fireWhenReady = function () use (&$yield, &$lift, &$pending, &$index, &$ret, &$done) {
-					#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:248: lines 248-254
+					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:248: lines 248-254
 					if ($index === $ret->length) {
-						#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:249: lines 249-253
+						#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:249: lines 249-253
 						if ($pending === 0) {
-							#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:250: characters 17-41
+							#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:250: characters 17-41
 							$v = $lift(Outcome::Success($ret));
 							$done = true;
 							$yield($v);
-							#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:251: characters 17-21
+							#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:251: characters 17-21
 							return true;
 						} else {
-							#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:253: characters 20-25
+							#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:253: characters 20-25
 							return false;
 						}
 					} else {
-						#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:254: characters 18-23
+						#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:254: characters 18-23
 						return false;
 					}
 				};
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:256: lines 256-289
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:256: lines 256-289
 				$step = null;
 				$step = function () use (&$step, &$yield, &$lift, &$pending, &$index, &$fireWhenReady, &$fn, &$ret, &$done, &$links, &$a) {
-					#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:257: lines 257-289
+					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:257: lines 257-289
 					if (!$done && !$fireWhenReady()) {
-						#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:258: lines 258-289
+						#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:258: lines 258-289
 						while ($index < $ret->length) {
 							unset($index1, $check);
-							#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:260: characters 27-34
+							#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:260: characters 27-34
 							$index += 1;
-							#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:260: characters 15-35
+							#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:260: characters 15-35
 							$index1 = $index - 1;
-							#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:261: characters 15-32
+							#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:261: characters 15-32
 							$p = ($a->arr[$index1] ?? null);
-							#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:263: lines 263-272
+							#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:263: lines 263-272
 							$check = function ($o) use (&$yield, &$lift, &$index1, &$fireWhenReady, &$fn, &$ret, &$done, &$links) {
-								#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:264: characters 24-29
+								#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:264: characters 24-29
 								$_g = $fn($o);
 								$__hx__switch = ($_g->index);
 								if ($__hx__switch === 0) {
-									#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:265: characters 32-33
+									#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:265: characters 32-33
 									$v = $_g->params[0];
-									#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:266: characters 21-35
+									#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:266: characters 21-35
 									$ret->offsetSet($index1, $v);
-									#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:267: characters 21-36
+									#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:267: characters 21-36
 									$fireWhenReady();
 								} else if ($__hx__switch === 1) {
-									#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:268: characters 32-33
+									#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:268: characters 32-33
 									$e = $_g->params[0];
-									#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:269: lines 269-270
+									#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:269: lines 269-270
 									$_g = 0;
 									while ($_g < $links->length) {
-										#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:269: characters 26-27
+										#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:269: characters 26-27
 										$l = ($links->arr[$_g] ?? null);
-										#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:269: lines 269-270
+										#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:269: lines 269-270
 										++$_g;
-										#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:270: characters 23-33
+										#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:270: characters 23-33
 										if ($l !== null) {
 											$l->cancel();
 										}
 									}
-									#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:271: characters 21-43
+									#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:271: characters 21-43
 									$v = $lift(Outcome::Failure($e));
 									$done = true;
 									$yield($v);
 								}
 							};
-							#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:274: characters 22-30
+							#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:274: characters 22-30
 							$_g = $p->getStatus();
 							if ($_g->index === 3) {
-								#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:275: characters 28-35
+								#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:275: characters 28-35
 								$_hx_tmp = null;
 								$_hx_tmp = Lazy_Impl_::get($_g->params[0]);
-								#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:275: characters 39-40
+								#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:275: characters 39-40
 								$v = $_hx_tmp;
-								#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:276: characters 19-27
+								#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:276: characters 19-27
 								$check($v);
-								#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:277: characters 19-38
+								#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:277: characters 19-38
 								if (!$done) {
-									#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:277: characters 30-38
+									#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:277: characters 30-38
 									continue;
 								}
 							} else {
-								#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:279: characters 19-28
+								#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:279: characters 19-28
 								$pending += 1;
-								#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:280: lines 280-286
+								#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:280: lines 280-286
 								$x = $p->handle(function ($o) use (&$step, &$pending, &$done, &$check) {
-									#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:282: characters 23-32
+									#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:282: characters 23-32
 									$pending -= 1;
-									#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:283: characters 23-31
+									#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:283: characters 23-31
 									$check($o);
-									#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:284: characters 23-40
+									#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:284: characters 23-40
 									if (!$done) {
-										#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:284: characters 34-40
+										#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:284: characters 34-40
 										$step();
 									}
 								});
-								#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:280: lines 280-286
+								#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:280: lines 280-286
 								$links->arr[$links->length++] = $x;
 							}
-							#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:288: characters 15-20
+							#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:288: characters 15-20
 							break;
 						}
 					}
 				};
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:291: characters 19-23
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:291: characters 19-23
 				$_g = 0;
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:291: characters 23-34
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:291: characters 23-34
 				$_g1 = $concurrency1;
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:291: lines 291-292
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:291: lines 291-292
 				while ($_g < $_g1) {
-					#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:291: characters 19-34
+					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:291: characters 19-34
 					$i = $_g++;
-					#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:292: characters 11-17
+					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:292: characters 11-17
 					$step();
 				}
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:294: characters 9-21
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:294: characters 9-21
 				return CallbackLink_Impl_::fromMany($links);
 			};
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:227: lines 227-295
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:227: lines 227-295
 			return new SuspendableFuture(function ($yield, $destroy) use (&$wakeup) {
 				return $wakeup($yield);
 			});
@@ -866,9 +866,9 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function swap ($this1, $v) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:123: characters 5-23
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:123: characters 5-23
 		return Future_Impl_::map($this1, function ($_) use (&$v) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:123: characters 21-22
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:123: characters 21-22
 			return $v;
 		});
 	}
@@ -882,7 +882,7 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function sync ($v) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:308: characters 12-19
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:308: characters 12-19
 		return new SyncFuture(new LazyConst($v));
 	}
 
@@ -892,7 +892,7 @@ final class Future_Impl_ {
 	 * @return FutureTrigger
 	 */
 	public static function trigger () {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:375: characters 5-31
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:375: characters 5-31
 		return new FutureTrigger();
 	}
 
@@ -906,11 +906,11 @@ final class Future_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function withSideEffect ($this1, $c) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:137: characters 5-41
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:137: characters 5-41
 		return Future_Impl_::map($this1, function ($v) use (&$c) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:137: characters 23-34
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:137: characters 23-34
 			Callback_Impl_::invoke($c, $v);
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:137: characters 36-37
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:137: characters 36-37
 			return $v;
 		});
 	}

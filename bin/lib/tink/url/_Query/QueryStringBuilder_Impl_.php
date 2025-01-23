@@ -12,7 +12,7 @@ final class QueryStringBuilder_Impl_ {
 	 * @return string[]|\Array_hx
 	 */
 	public static function _new () {
-		#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Query.hx:62: character 3
+		#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Query.hx:62: character 3
 		return new \Array_hx();
 	}
 
@@ -24,9 +24,9 @@ final class QueryStringBuilder_Impl_ {
 	 * @return string[]|\Array_hx
 	 */
 	public static function add ($this1, $name, $value) {
-		#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Query.hx:67: characters 5-42
+		#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Query.hx:67: characters 5-42
 		$this1->arr[$this1->length++] = ($name??'null') . "=" . ($value??'null');
-		#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Query.hx:68: characters 5-21
+		#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Query.hx:68: characters 5-21
 		return $this1;
 	}
 
@@ -36,7 +36,7 @@ final class QueryStringBuilder_Impl_ {
 	 * @return string[]|\Array_hx
 	 */
 	public static function copy ($this1) {
-		#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Query.hx:75: characters 5-28
+		#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Query.hx:75: characters 5-28
 		return (clone $this1);
 	}
 
@@ -47,7 +47,7 @@ final class QueryStringBuilder_Impl_ {
 	 * @return string
 	 */
 	public static function toString ($this1, $sep = "&") {
-		#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Query.hx:72: characters 5-26
+		#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Query.hx:72: characters 5-26
 		if ($sep === null) {
 			$sep = "&";
 		}

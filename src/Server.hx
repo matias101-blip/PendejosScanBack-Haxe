@@ -61,7 +61,8 @@ class Root {
             imgDir = Root + '/$nombre/$portada';
         }else{
             capitulo = StringTools.replace(capitulo,"-",".");
-            imgDir = Root + '/$nombre/$capitulo/$pag'+".svg";
+            pag = StringTools.replace(pag,"-",".");
+            imgDir = Root + '/$nombre/$capitulo/$pag';
         }
 
         if (Global.file_exists(imgDir)){

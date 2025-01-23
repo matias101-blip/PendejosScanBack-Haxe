@@ -15,7 +15,7 @@ final class HeaderName_Impl_ {
 	 * @return string
 	 */
 	public static function _new ($s) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:241: character 3
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:241: character 3
 		return $s;
 	}
 
@@ -25,7 +25,7 @@ final class HeaderName_Impl_ {
 	 * @return string
 	 */
 	public static function ofString ($s) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:244: characters 12-43
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:244: characters 12-43
 		return \mb_strtolower($s);
 	}
 }

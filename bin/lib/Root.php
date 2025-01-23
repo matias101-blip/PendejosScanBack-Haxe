@@ -24,36 +24,36 @@ class Root {
 	 * @return string
 	 */
 	public function Hojas ($nombre, $capitulo) {
-		#src/Server.hx:94: characters 9-39
+		#src/Server.hx:95: characters 9-39
 		$Root = "/mnt/proyectos";
-		#src/Server.hx:95: characters 9-35
+		#src/Server.hx:96: characters 9-35
 		$hojas = new \Array_hx();
-		#src/Server.hx:96: characters 9-58
+		#src/Server.hx:97: characters 9-58
 		$capitulo = \StringTools::replace($capitulo, "-", ".");
-		#src/Server.hx:97: characters 9-53
+		#src/Server.hx:98: characters 9-53
 		$nombre = \StringTools::replace($nombre, " ", "_");
-		#src/Server.hx:98: characters 9-60
+		#src/Server.hx:99: characters 9-60
 		$baseDir = ($Root??'null') . ("/" . ($nombre??'null') . "/" . ($capitulo??'null'));
-		#src/Server.hx:99: lines 99-110
+		#src/Server.hx:100: lines 100-111
 		if (is_dir($baseDir)) {
-			#src/Server.hx:100: characters 13-60
+			#src/Server.hx:101: characters 13-60
 			$iterator = new \FilesystemIterator($baseDir);
-			#src/Server.hx:101: lines 101-104
+			#src/Server.hx:102: lines 102-105
 			while ($iterator->valid()) {
-				#src/Server.hx:102: characters 16-78
+				#src/Server.hx:103: characters 16-78
 				$x = \Std::parseInt((HxString::split($iterator->getFilename(), ".")->arr[0] ?? null));
 				$hojas->arr[$hojas->length++] = $x;
-				#src/Server.hx:103: characters 16-31
+				#src/Server.hx:104: characters 16-31
 				$iterator->next();
 			}
-			#src/Server.hx:105: characters 13-37
+			#src/Server.hx:106: characters 13-37
 			usort($hojas->arr, function ($a, $b) {
-				#src/Server.hx:105: characters 33-36
+				#src/Server.hx:106: characters 33-36
 				return $a - $b;
 			});
-			#src/Server.hx:106: characters 13-85
+			#src/Server.hx:107: characters 13-85
 			$ListCaps = \BaseData::ListCaps(\StringTools::replace($nombre, "_", " "));
-			#src/Server.hx:107: characters 20-101
+			#src/Server.hx:108: characters 20-101
 			return Json::phpJsonEncode(new HxAnon([
 				"Succes" => true,
 				"Hojas" => $hojas,
@@ -61,7 +61,7 @@ class Root {
 				"capitulos" => $ListCaps,
 			]), null, null);
 		} else {
-			#src/Server.hx:109: characters 20-52
+			#src/Server.hx:110: characters 20-52
 			return Json::phpJsonEncode(new HxAnon(["Succes" => false]), null, null);
 		}
 	}
@@ -83,7 +83,7 @@ class Root {
 		$dataImg = null;
 		#src/Server.hx:58: characters 9-53
 		$nombre = \StringTools::replace($nombre, " ", "_");
-		#src/Server.hx:59: lines 59-65
+		#src/Server.hx:59: lines 59-66
 		if ($capitulo === null) {
 			#src/Server.hx:60: characters 13-59
 			$portada = \StringTools::replace($portada, "-", ".");
@@ -92,39 +92,41 @@ class Root {
 		} else {
 			#src/Server.hx:63: characters 13-61
 			$capitulo = \StringTools::replace($capitulo, "-", ".");
-			#src/Server.hx:64: characters 13-61
-			$imgDir = ($Root??'null') . ("/" . ($nombre??'null') . "/" . ($capitulo??'null') . "/" . ($pag??'null')) . ".svg";
+			#src/Server.hx:64: characters 13-51
+			$pag = \StringTools::replace($pag, "-", ".");
+			#src/Server.hx:65: characters 13-54
+			$imgDir = ($Root??'null') . ("/" . ($nombre??'null') . "/" . ($capitulo??'null') . "/" . ($pag??'null'));
 		}
-		#src/Server.hx:67: lines 67-73
+		#src/Server.hx:68: lines 68-74
 		if (file_exists($imgDir)) {
-			#src/Server.hx:68: characters 13-44
+			#src/Server.hx:69: characters 13-44
 			$dataImg = File::getBytes($imgDir);
 		} else {
-			#src/Server.hx:71: characters 13-63
+			#src/Server.hx:72: characters 13-63
 			$dataImg = File::getBytes(($Root??'null') . "/errors/oops.svg");
-			#src/Server.hx:72: characters 13-48
+			#src/Server.hx:73: characters 13-48
 			error_log("AAAAAAA Monikaa");
 		}
-		#src/Server.hx:75: characters 9-31
+		#src/Server.hx:76: characters 9-31
 		$type = "";
-		#src/Server.hx:76: characters 17-42
+		#src/Server.hx:77: characters 17-42
 		$__hx__switch = (pathinfo($imgDir, 4));
 		if ($__hx__switch === "jpg") {
-			#src/Server.hx:80: characters 17-29
+			#src/Server.hx:81: characters 17-29
 			$type = "jpg";
 		} else if ($__hx__switch === "png") {
-			#src/Server.hx:78: characters 17-29
+			#src/Server.hx:79: characters 17-29
 			$type = "png";
 		} else if ($__hx__switch === "svg") {
-			#src/Server.hx:84: characters 17-33
+			#src/Server.hx:85: characters 17-33
 			$type = "svg+xml";
 		} else if ($__hx__switch === "webp") {
-			#src/Server.hx:82: characters 17-29
+			#src/Server.hx:83: characters 17-29
 			$type = "webp";
 		}
-		#src/Server.hx:86: characters 9-51
+		#src/Server.hx:87: characters 9-51
 		header("Content-Type: image/" . ($type??'null'));
-		#src/Server.hx:87: characters 9-23
+		#src/Server.hx:88: characters 9-23
 		return $dataImg;
 	}
 

@@ -37,7 +37,7 @@ class EmptyChunk extends ChunkBase implements ChunkObject {
 	 * @return int
 	 */
 	public function getByte ($i) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:15: characters 5-13
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:15: characters 5-13
 		return 0;
 	}
 
@@ -45,7 +45,7 @@ class EmptyChunk extends ChunkBase implements ChunkObject {
 	 * @return int
 	 */
 	public function getLength () {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:18: characters 5-13
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:18: characters 5-13
 		return 0;
 	}
 
@@ -56,7 +56,7 @@ class EmptyChunk extends ChunkBase implements ChunkObject {
 	 * @return ChunkObject
 	 */
 	public function slice ($from, $to) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:21: characters 5-16
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:21: characters 5-16
 		return $this;
 	}
 
@@ -64,7 +64,7 @@ class EmptyChunk extends ChunkBase implements ChunkObject {
 	 * @return Bytes
 	 */
 	public function toBytes () {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:29: characters 5-17
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:29: characters 5-17
 		return EmptyChunk::$EMPTY;
 	}
 
@@ -72,7 +72,7 @@ class EmptyChunk extends ChunkBase implements ChunkObject {
 	 * @return string
 	 */
 	public function toString () {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:26: characters 5-14
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:26: characters 5-14
 		return "";
 	}
 

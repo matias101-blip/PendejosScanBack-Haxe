@@ -21,7 +21,7 @@ class FutureStream extends StreamBase {
 	 * @return void
 	 */
 	public function __construct ($f) {
-		#/home/thehunter101/haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:644: characters 5-15
+		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:644: characters 5-15
 		parent::__construct();
 		$this->f = $f;
 	}
@@ -32,13 +32,13 @@ class FutureStream extends StreamBase {
 	 * @return FutureObject
 	 */
 	public function forEach ($handler) {
-		#/home/thehunter101/haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:649: lines 649-653
+		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:649: lines 649-653
 		$_gthis = $this;
-		#/home/thehunter101/haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:650: lines 650-652
+		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:650: lines 650-652
 		return Future_Impl_::async(function ($cb) use (&$_gthis, &$handler) {
-			#/home/thehunter101/haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:651: characters 7-59
+			#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:651: characters 7-59
 			$_gthis->f->handle(function ($s) use (&$handler, &$cb) {
-				#/home/thehunter101/haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:651: characters 29-58
+				#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:651: characters 29-58
 				$s->forEach($handler)->handle($cb);
 			});
 		});
@@ -48,9 +48,9 @@ class FutureStream extends StreamBase {
 	 * @return FutureObject
 	 */
 	public function next () {
-		#/home/thehunter101/haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:647: characters 5-50
+		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:647: characters 5-50
 		return Future_Impl_::flatMap($this->f, function ($s) {
-			#/home/thehunter101/haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:647: characters 34-49
+			#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:647: characters 34-49
 			return $s->next();
 		});
 	}

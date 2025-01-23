@@ -31,12 +31,12 @@ final class HeaderValue_Impl_ {
 	 * @return string
 	 */
 	public static function basicAuth ($username, $password) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:188: characters 37-74
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:188: characters 37-74
 		$s = "" . ($username??'null') . ":" . ($password??'null');
 		$bytes = \strlen($s);
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:188: characters 23-75
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:188: characters 23-75
 		$result = \base64_encode((new Bytes($bytes, new Container($s)))->toString());
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:188: characters 5-86
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:188: characters 5-86
 		return "Basic " . ($result??'null');
 	}
 
@@ -46,7 +46,7 @@ final class HeaderValue_Impl_ {
 	 * @return StringMap
 	 */
 	public static function getExtension ($this1) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:158: characters 5-33
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:158: characters 5-33
 		return (HeaderValue_Impl_::parse($this1)->arr[0] ?? null)->extensions;
 	}
 
@@ -56,7 +56,7 @@ final class HeaderValue_Impl_ {
 	 * @return string
 	 */
 	public static function ofDate ($d) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:193: characters 5-103
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:193: characters 5-103
 		return \DateTools::format($d, ((HeaderValue_Impl_::$DAYS->arr[$d->getDay()] ?? null)??'null') . ", %d " . ((HeaderValue_Impl_::$MONTHS->arr[$d->getMonth()] ?? null)??'null') . " %Y %H:%M:%S GMT");
 	}
 
@@ -66,7 +66,7 @@ final class HeaderValue_Impl_ {
 	 * @return string
 	 */
 	public static function ofInt ($i) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:196: characters 5-25
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:196: characters 5-25
 		return \Std::string($i);
 	}
 
@@ -78,28 +78,28 @@ final class HeaderValue_Impl_ {
 	 * @return object[]|\Array_hx
 	 */
 	public static function parse ($this1) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:164: lines 164-167
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:164: lines 164-167
 		return HeaderValue_Impl_::parseWith($this1, function ($_, $params) {
 			$_g = new StringMap();
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:164: characters 59-65
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:164: characters 59-65
 			$p = $params;
 			while ($p->hasNext()) {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:164: lines 164-167
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:164: lines 164-167
 				$p1 = $p->next();
 				$key = $p1->name;
 				$value = null;
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:164: characters 84-102
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:164: characters 84-102
 				$_g1 = Portion_Impl_::toString($p1->value);
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:165: characters 12-18
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:165: characters 12-18
 				$quoted = $_g1;
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:165: lines 165-166
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:165: lines 165-166
 				if (HxString::charCodeAt($quoted, 0) === 34) {
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:164: lines 164-167
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:164: lines 164-167
 					$value = \mb_substr($quoted, 1, mb_strlen($quoted) - 2);
 				} else {
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:166: characters 12-13
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:166: characters 12-13
 					$v = $_g1;
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:164: lines 164-167
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:164: lines 164-167
 					$value = $v;
 				}
 				$_g->data[$key] = $value;
@@ -118,51 +118,51 @@ final class HeaderValue_Impl_ {
 	 * @return object[]|\Array_hx
 	 */
 	public static function parseWith ($this1, $parseExtension) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:174: lines 174-185
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:174: lines 174-185
 		$_g = new \Array_hx();
 		$_g1 = 0;
 		$_g2 = HxString::split($this1, ",");
 		while ($_g1 < $_g2->length) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:174: characters 17-18
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:174: characters 17-18
 			$v = ($_g2->arr[$_g1] ?? null);
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:174: lines 174-185
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:174: lines 174-185
 			++$_g1;
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:175: characters 7-19
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:175: characters 7-19
 			$v = \trim($v);
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:176: lines 176-179
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:176: lines 176-179
 			$i = null;
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:176: characters 22-36
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:176: characters 22-36
 			$_g3 = HxString::indexOf($v, ";");
 			if ($_g3 === -1) {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:176: lines 176-179
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:176: lines 176-179
 				$i = mb_strlen($v);
 			} else {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:178: characters 14-15
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:178: characters 14-15
 				$i1 = $_g3;
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:176: lines 176-179
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:176: lines 176-179
 				$i = $i1;
 			}
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:180: characters 7-34
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:180: characters 7-34
 			$value = \mb_substr($v, 0, $i);
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:183: characters 43-75
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:183: characters 43-75
 			$sep = ";";
 			$pos = $i + 1;
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:183: characters 69-74
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:183: characters 69-74
 			if ($pos === null) {
 				$pos = 0;
 			}
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:183: characters 65-66
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:183: characters 65-66
 			if ($sep === null) {
 				$sep = "&";
 			}
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:181: lines 181-184
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:181: lines 181-184
 			$x = new HxAnon([
 				"value" => $value,
 				"extensions" => $parseExtension($value, new QueryStringParser($v, $sep, "=", $pos)),
 			]);
 			$_g->arr[$_g->length++] = $x;
 		}
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:174: lines 174-185
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:174: lines 174-185
 		return $_g;
 	}
 

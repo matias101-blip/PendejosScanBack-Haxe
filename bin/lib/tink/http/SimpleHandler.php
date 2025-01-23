@@ -20,7 +20,7 @@ class SimpleHandler implements HandlerObject {
 	 * @return void
 	 */
 	public function __construct ($f) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Handler.hx:106: characters 5-15
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Handler.hx:106: characters 5-15
 		$this->f = $f;
 	}
 
@@ -30,7 +30,7 @@ class SimpleHandler implements HandlerObject {
 	 * @return FutureObject
 	 */
 	public function process ($req) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Handler.hx:109: characters 5-18
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Handler.hx:109: characters 5-18
 		return ($this->f)($req);
 	}
 }

@@ -38,36 +38,36 @@ class SuspendableFuture extends FutureObject {
 	 * @return void
 	 */
 	public function __construct ($wakeup) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:495: characters 32-41
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:495: characters 32-41
 		$this->status = FutureStatus::Suspended();
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:502: lines 502-516
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:502: lines 502-516
 		$_gthis = $this;
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:503: characters 5-12
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:503: characters 5-12
 		parent::__construct();
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:504: characters 5-25
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:504: characters 5-25
 		$this->wakeup = $wakeup;
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:505: characters 5-44
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:505: characters 5-44
 		$this->callbacks = new CallbackList(true);
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:507: lines 507-511
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:507: lines 507-511
 		$this->callbacks->ondrain = function () use (&$_gthis) {
 			if ($_gthis->status === FutureStatus::Awaited()) {
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:508: characters 7-25
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:508: characters 7-25
 				$_gthis->status = FutureStatus::Suspended();
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:509: characters 7-20
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:509: characters 7-20
 				$this1 = $_gthis->link;
 				if ($this1 !== null) {
 					$this1->cancel();
 				}
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:510: characters 7-18
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:510: characters 7-18
 				$_gthis->link = null;
 			}
 		};
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:512: lines 512-515
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:512: lines 512-515
 		$this->callbacks->onfill = function () use (&$_gthis) {
 			if ($_gthis->status === FutureStatus::Suspended()) {
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:513: characters 7-23
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:513: characters 7-23
 				$_gthis->status = FutureStatus::Awaited();
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:514: characters 7-12
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:514: characters 7-12
 				$_gthis->arm();
 			}
 		};
@@ -77,10 +77,10 @@ class SuspendableFuture extends FutureObject {
 	 * @return void
 	 */
 	public function arm () {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:545: characters 5-44
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:545: characters 5-44
 		$_gthis = $this;
 		$this->link = ($this->wakeup)(function ($x) use (&$_gthis) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:545: characters 24-34
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:545: characters 24-34
 			$_gthis->trigger($x);
 		}, Boot::getInstanceClosure($this, 'destroy'));
 	}
@@ -89,9 +89,9 @@ class SuspendableFuture extends FutureObject {
 	 * @return void
 	 */
 	public function destroy () {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:540: characters 5-24
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:540: characters 5-24
 		$this->callbacks->dispose();
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:541: characters 5-23
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:541: characters 5-23
 		$this->status = FutureStatus::NeverEver();
 	}
 
@@ -99,15 +99,15 @@ class SuspendableFuture extends FutureObject {
 	 * @return void
 	 */
 	public function eager () {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:548: characters 12-18
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:548: characters 12-18
 		$__hx__switch = ($this->status->index);
 		if ($__hx__switch === 0) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:550: characters 9-32
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:550: characters 9-32
 			$this->status = FutureStatus::EagerlyAwaited();
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:551: characters 9-14
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:551: characters 9-14
 			$this->arm();
 		} else if ($__hx__switch === 1) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:553: characters 9-32
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:553: characters 9-32
 			$this->status = FutureStatus::EagerlyAwaited();
 		} else {
 		}
@@ -117,7 +117,7 @@ class SuspendableFuture extends FutureObject {
 	 * @return FutureStatus
 	 */
 	public function getStatus () {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:500: characters 5-23
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:500: characters 5-23
 		return $this->status;
 	}
 
@@ -127,17 +127,17 @@ class SuspendableFuture extends FutureObject {
 	 * @return LinkObject
 	 */
 	public function handle ($callback) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:531: characters 19-25
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:531: characters 19-25
 		$_g = $this->status;
 		if ($_g->index === 3) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:532: characters 18-24
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:532: characters 18-24
 			$result = $_g->params[0];
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:533: characters 9-32
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:533: characters 9-32
 			Callback_Impl_::invoke($callback, Lazy_Impl_::get($result));
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:534: characters 9-13
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:534: characters 9-13
 			return null;
 		} else {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:536: characters 9-32
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:536: characters 9-32
 			$_this = $this->callbacks;
 			if ($_this->disposeHandlers === null) {
 				return null;
@@ -166,23 +166,23 @@ class SuspendableFuture extends FutureObject {
 	 * @return void
 	 */
 	public function trigger ($value) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:519: characters 12-18
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:519: characters 12-18
 		$_g = $this->status;
 		if ($_g->index === 3) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:520: characters 18-19
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:520: characters 18-19
 			$_g1 = $_g->params[0];
 		} else {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:522: characters 9-30
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:522: characters 9-30
 			$this->status = FutureStatus::Ready(new LazyConst($value));
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:523: characters 9-30
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:523: characters 9-30
 			$link = $this->link;
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:524: characters 9-25
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:524: characters 9-25
 			$this->link = null;
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:525: characters 9-22
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:525: characters 9-22
 			$this->wakeup = null;
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:526: characters 9-32
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:526: characters 9-32
 			$this->callbacks->invoke($value);
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:527: characters 9-22
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:527: characters 9-22
 			if ($link !== null) {
 				$link->cancel();
 			}

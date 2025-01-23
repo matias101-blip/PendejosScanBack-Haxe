@@ -49,30 +49,30 @@ class PhpContainer implements Container {
 	 * @return NamedWith[]|\Array_hx
 	 */
 	public static function getParts ($a, $process) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:35: characters 5-49
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:35: characters 5-49
 		$map = Lib::hashOfAssociativeArray($a);
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:36: characters 5-18
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:36: characters 5-18
 		$ret = new \Array_hx();
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:37: characters 18-28
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:37: characters 18-28
 		$data = \array_values(\array_map("strval", \array_keys($map->data)));
 		$_g_current = 0;
 		$_g_length = \count($data);
 		$_g_data = $data;
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:37: lines 37-44
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:37: lines 37-44
 		while ($_g_current < $_g_length) {
 			$name = $_g_data[$_g_current++];
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:38: characters 14-36
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:38: characters 14-36
 			$_g = $process(($map->data[$name] ?? null));
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:39: lines 39-43
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:39: lines 39-43
 			if ($_g !== null) {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:40: characters 14-15
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:40: characters 14-15
 				$v = $_g;
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:40: lines 40-43
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:40: lines 40-43
 				$x = new NamedWith($name, $process(($map->data[$name] ?? null)));
 				$ret->arr[$ret->length++] = $x;
 			}
 		}
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:45: characters 5-15
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:45: characters 5-15
 		return $ret;
 	}
 
@@ -82,7 +82,7 @@ class PhpContainer implements Container {
 	 * @return string
 	 */
 	public static function getServerVar ($key) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:24: lines 24-25
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:24: lines 24-25
 		return $_SERVER[$key];
 	}
 
@@ -96,178 +96,178 @@ class PhpContainer implements Container {
 	 * @return IncomingRequest
 	 */
 	public function getRequest () {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:50: characters 7-79
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:50: characters 7-79
 		$header = Method_Impl_::ofString($_SERVER["REQUEST_METHOD"], function ($_) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:50: characters 68-78
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:50: characters 68-78
 			return "GET";
 		});
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:51: characters 7-34
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:51: characters 7-34
 		$header1 = Url_Impl_::fromString($_SERVER["REQUEST_URI"]);
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:54: lines 54-86
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:54: lines 54-86
 		$header2 = null;
 		if (\function_exists("getallheaders")) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:56: characters 9-136
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:56: characters 9-136
 			$raw = Lib::hashOfAssociativeArray(\getallheaders());
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:58: characters 11-74
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:58: characters 11-74
 			$_g = new \Array_hx();
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:58: characters 25-35
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:58: characters 25-35
 			$data = \array_values(\array_map("strval", \array_keys($raw->data)));
 			$_g_current = 0;
 			$_g_length = \count($data);
 			$_g_data = $data;
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:58: characters 12-73
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:58: characters 12-73
 			while ($_g_current < $_g_length) {
 				$name = $_g_data[$_g_current++];
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:58: characters 53-57
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:58: characters 53-57
 				$this1 = \mb_strtolower($name);
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:58: characters 37-73
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:58: characters 37-73
 				$x = new HeaderField($this1, ($raw->data[$name] ?? null));
 				$_g->arr[$_g->length++] = $x;
 			}
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:54: lines 54-86
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:54: lines 54-86
 			$header2 = $_g;
 		} else {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:61: characters 11-120
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:61: characters 11-120
 			$h = Lib::hashOfAssociativeArray($_SERVER);
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:63: characters 11-28
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:63: characters 11-28
 			$headers = new \Array_hx();
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:65: characters 20-28
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:65: characters 20-28
 			$data = \array_values(\array_map("strval", \array_keys($h->data)));
 			$_g_current = 0;
 			$_g_length = \count($data);
 			$_g_data = $data;
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:65: lines 65-74
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:65: lines 65-74
 			while ($_g_current < $_g_length) {
 				$k = $_g_data[$_g_current++];
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:66: lines 66-72
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:66: lines 66-72
 				$key = null;
 				if ($k === "CONTENT_LENGTH") {
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:68: lines 68-71
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:68: lines 68-71
 					if (!\array_key_exists("HTTP_CONTENT_LENGTH", $h->data)) {
-						#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:66: lines 66-72
+						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:66: lines 66-72
 						$key = "Content-Length";
 					} else if (\mb_substr($k, 0, 5) === "HTTP_") {
 						$key = \StringTools::replace(\mb_substr($k, 5, null), "_", "-");
 					} else {
-						#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:71: characters 23-31
+						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:71: characters 23-31
 						continue;
 					}
 				} else if ($k === "CONTENT_MD5") {
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:69: lines 69-71
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:69: lines 69-71
 					if (!\array_key_exists("HTTP_CONTENT_MD5", $h->data)) {
-						#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:66: lines 66-72
+						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:66: lines 66-72
 						$key = "Content-Md5";
 					} else if (\mb_substr($k, 0, 5) === "HTTP_") {
 						$key = \StringTools::replace(\mb_substr($k, 5, null), "_", "-");
 					} else {
-						#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:71: characters 23-31
+						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:71: characters 23-31
 						continue;
 					}
 				} else if ($k === "CONTENT_TYPE") {
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:67: lines 67-71
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:67: lines 67-71
 					if (!\array_key_exists("HTTP_CONTENT_TYPE", $h->data)) {
-						#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:66: lines 66-72
+						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:66: lines 66-72
 						$key = "Content-Type";
 					} else if (\mb_substr($k, 0, 5) === "HTTP_") {
 						$key = \StringTools::replace(\mb_substr($k, 5, null), "_", "-");
 					} else {
-						#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:71: characters 23-31
+						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:71: characters 23-31
 						continue;
 					}
 				} else {
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:70: lines 70-71
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:70: lines 70-71
 					if (\mb_substr($k, 0, 5) === "HTTP_") {
-						#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:66: lines 66-72
+						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:66: lines 66-72
 						$key = \StringTools::replace(\mb_substr($k, 5, null), "_", "-");
 					} else {
-						#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:71: characters 23-31
+						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:71: characters 23-31
 						continue;
 					}
 				}
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:73: characters 17-20
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:73: characters 17-20
 				$this1 = \mb_strtolower($key);
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:73: characters 13-31
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:73: characters 13-31
 				$x = new HeaderField($this1, ($h->data[$k] ?? null));
 				$headers->arr[$headers->length++] = $x;
 			}
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:75: lines 75-84
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:75: lines 75-84
 			if (!\array_key_exists("HTTP_AUTHORIZATION", $h->data)) {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:76: lines 76-83
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:76: lines 76-83
 				if (\array_key_exists("REDIRECT_HTTP_AUTHORIZATION", $h->data)) {
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:77: characters 22-35
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:77: characters 22-35
 					$this1 = \mb_strtolower("Authorization");
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:77: characters 17-75
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:77: characters 17-75
 					$x = new HeaderField($this1, ($h->data["REDIRECT_HTTP_AUTHORIZATION"] ?? null));
 					$headers->arr[$headers->length++] = $x;
 				} else if (\array_key_exists("PHP_AUTH_USER", $h->data)) {
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:79: characters 17-81
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:79: characters 17-81
 					$basic = (\array_key_exists("PHP_AUTH_PW", $h->data) ? ($h->data["PHP_AUTH_PW"] ?? null) : "");
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:80: characters 22-35
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:80: characters 22-35
 					$this1 = \mb_strtolower("Authorization");
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:80: characters 75-121
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:80: characters 75-121
 					$s = ($h->data["PHP_AUTH_USER"] ?? null);
 					$bytes = \strlen($s);
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:80: characters 49-122
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:80: characters 49-122
 					$result = \base64_encode((new Bytes($bytes, new _BytesDataContainer($s)))->toString());
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:80: characters 17-146
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:80: characters 17-146
 					$x = new HeaderField($this1, "Basic " . ($result??'null') . (":" . ($basic??'null')));
 					$headers->arr[$headers->length++] = $x;
 				} else if (\array_key_exists("PHP_AUTH_DIGEST", $h->data)) {
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:82: characters 22-35
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:82: characters 22-35
 					$this1 = \mb_strtolower("Authorization");
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:82: characters 17-63
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:82: characters 17-63
 					$x = new HeaderField($this1, ($h->data["PHP_AUTH_DIGEST"] ?? null));
 					$headers->arr[$headers->length++] = $x;
 				}
 			}
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:54: lines 54-86
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:54: lines 54-86
 			$header2 = $headers;
 		}
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:49: lines 49-88
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:49: lines 49-88
 		$header3 = new IncomingRequestHeader($header, $header1, "1.1", $header2);
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:91: characters 7-34
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:91: characters 7-34
 		$tmp = $_SERVER["REMOTE_ADDR"];
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:93: characters 14-34
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:93: characters 14-34
 		$_g = $header3->contentType();
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:93: lines 93-136
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:93: lines 93-136
 		$tmp1 = null;
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:93: characters 14-34
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:93: characters 14-34
 		if ($_g->index === 0) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:94: characters 22-65
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:94: characters 22-65
 			$_g1 = $_g->params[0];
 			$_g = "" . ($_g1->type??'null') . "/" . ($_g1->subtype??'null');
 			$_g = $_g1->extensions;
 			$_g = $_g1->raw;
 			if ($_g1->type === "multipart") {
 				if ($_g1->subtype === "form-data") {
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:94: lines 94-133
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:94: lines 94-133
 					if ($header3->method === "POST") {
-						#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:93: lines 93-136
+						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:93: lines 93-136
 						$tmp1 = IncomingRequestBody::Parsed(PhpContainer::getParts($_POST, Boot::getStaticClosure(BodyPart::class, 'Value'))->concat(PhpContainer::getParts($_FILES, function ($v) {
-							#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:103: characters 15-46
+							#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:103: characters 15-46
 							$tmpName = $v["tmp_name"];
-							#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:104: characters 15-39
+							#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:104: characters 15-39
 							$name = $v["name"];
-							#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:107: characters 24-45
+							#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:107: characters 24-45
 							if ($v["error"] === 0) {
-								#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:109: characters 21-95
+								#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:109: characters 21-95
 								$streamName = "uploaded file \"" . ($name??'null') . "\" in temporary location \"" . ($tmpName??'null') . "\"";
-								#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:110: lines 110-126
+								#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:110: lines 110-126
 								return BodyPart::File(new HxAnon([
 									"fileName" => $name,
 									"size" => $v["size"],
 									"mimeType" => $v["type"],
 									"read" => function () use (&$name, &$tmpName) {
-										#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:114: lines 114-117
+										#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:114: lines 114-117
 										$input = File::read($tmpName, true);
 										$options = null;
 										if ($options === null) {
-											#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Source.hx:94: characters 7-14
+											#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:94: characters 7-14
 											$options = new HxAnon();
 										}
-										#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:115: characters 25-29
+										#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:115: characters 25-29
 										$name1 = $name;
-										#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:114: lines 114-117
+										#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:114: lines 114-117
 										$tmp = Worker_Impl_::ensure($options->worker);
 										$_g = $options->chunkSize;
 										$tmp1 = null;
@@ -280,7 +280,7 @@ class PhpContainer implements Container {
 										return new InputSource($name1, $input, $tmp, Bytes::alloc($tmp1), 0);
 									},
 									"saveTo" => function ($path) use (&$streamName, &$tmpName) {
-										#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:118: lines 118-125
+										#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:118: lines 118-125
 										return new SyncFuture(new LazyConst((\move_uploaded_file($tmpName, $path) ? Outcome::Success(null) : Outcome::Failure(new TypedError(null, "Failed to save " . ($streamName??'null') . " to " . ($path??'null'), new HxAnon([
 											"fileName" => "tink/http/containers/PhpContainer.hx",
 											"lineNumber" => 124,
@@ -290,39 +290,39 @@ class PhpContainer implements Container {
 									},
 								]));
 							} else {
-								#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:127: characters 28-32
+								#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:127: characters 28-32
 								return null;
 							}
 						})));
 					} else {
-						#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:133: characters 18-127
+						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:133: characters 18-127
 						$s = \file_get_contents("php://input");
 						$b = \strlen($s);
-						#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:93: lines 93-136
+						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:93: lines 93-136
 						$tmp1 = IncomingRequestBody::Plain(new Single(new LazyConst(ByteChunk::of(new Bytes($b, new _BytesDataContainer($s))))));
 					}
 				} else {
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:133: characters 18-127
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:133: characters 18-127
 					$s = \file_get_contents("php://input");
 					$b = \strlen($s);
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:93: lines 93-136
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:93: lines 93-136
 					$tmp1 = IncomingRequestBody::Plain(new Single(new LazyConst(ByteChunk::of(new Bytes($b, new _BytesDataContainer($s))))));
 				}
 			} else {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:133: characters 18-127
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:133: characters 18-127
 				$s = \file_get_contents("php://input");
 				$b = \strlen($s);
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:93: lines 93-136
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:93: lines 93-136
 				$tmp1 = IncomingRequestBody::Plain(new Single(new LazyConst(ByteChunk::of(new Bytes($b, new _BytesDataContainer($s))))));
 			}
 		} else {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:133: characters 18-127
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:133: characters 18-127
 			$s = \file_get_contents("php://input");
 			$b = \strlen($s);
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:93: lines 93-136
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:93: lines 93-136
 			$tmp1 = IncomingRequestBody::Plain(new Single(new LazyConst(ByteChunk::of(new Bytes($b, new _BytesDataContainer($s))))));
 		}
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:90: lines 90-137
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:90: lines 90-137
 		return new IncomingRequest($tmp, $header3, $tmp1);
 	}
 
@@ -332,27 +332,27 @@ class PhpContainer implements Container {
 	 * @return FutureObject
 	 */
 	public function run ($handler) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:141: lines 141-162
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:141: lines 141-162
 		$_gthis = $this;
 		return Future_Impl_::async(function ($cb) use (&$_gthis, &$handler) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:142: lines 142-161
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:142: lines 142-161
 			$handler->process($_gthis->getRequest())->handle(function ($res) use (&$cb) {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:146: characters 9-69
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:146: characters 9-69
 				http_response_code($res->header->statusCode);
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:150: characters 19-29
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:150: characters 19-29
 				$_g_current = 0;
 				$_g_array = $res->header->fields;
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:150: lines 150-152
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:150: lines 150-152
 				while ($_g_current < $_g_array->length) {
 					$h = ($_g_array->arr[$_g_current++] ?? null);
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:152: characters 11-49
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:152: characters 11-49
 					\header(($h->name??'null') . ": " . ($h->value??'null'));
 				}
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:156: characters 9-178
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:156: characters 9-178
 				$out = SinkYielding_Impl_::ofOutput("output buffer", new FileOutput(\fopen("php://output", "w")));
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:158: lines 158-160
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:158: lines 158-160
 				Source_Impl_::pipeTo($res->body, $out, new HxAnon(["end" => true]))->handle(function ($o) use (&$cb) {
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:159: characters 11-23
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/containers/PhpContainer.hx:159: characters 11-23
 					$cb(ContainerResult::Shutdown());
 				});
 			});

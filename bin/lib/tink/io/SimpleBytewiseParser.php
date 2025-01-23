@@ -19,7 +19,7 @@ class SimpleBytewiseParser extends BytewiseParser {
 	 * @return void
 	 */
 	public function __construct ($f) {
-		#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/StreamParser.hx:152: characters 5-19
+		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/StreamParser.hx:152: characters 5-19
 		$this->_read = $f;
 	}
 
@@ -29,7 +29,7 @@ class SimpleBytewiseParser extends BytewiseParser {
 	 * @return ParseStep
 	 */
 	public function read ($char) {
-		#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/StreamParser.hx:155: characters 5-23
+		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/StreamParser.hx:155: characters 5-23
 		return ($this->_read)($char);
 	}
 }

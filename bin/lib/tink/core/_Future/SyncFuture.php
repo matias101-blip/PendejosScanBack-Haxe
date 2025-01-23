@@ -24,9 +24,9 @@ class SyncFuture extends FutureObject {
 	 * @return void
 	 */
 	public function __construct ($value) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:430: characters 5-12
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:430: characters 5-12
 		parent::__construct();
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:431: characters 5-23
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:431: characters 5-23
 		$this->value = $value;
 	}
 
@@ -34,9 +34,9 @@ class SyncFuture extends FutureObject {
 	 * @return void
 	 */
 	public function eager () {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:440: lines 440-441
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:440: lines 440-441
 		if (!$this->value->isComputed()) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:441: characters 7-18
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:441: characters 7-18
 			Lazy_Impl_::get($this->value);
 		}
 	}
@@ -45,7 +45,7 @@ class SyncFuture extends FutureObject {
 	 * @return FutureStatus
 	 */
 	public function getStatus () {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:427: characters 5-24
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:427: characters 5-24
 		return FutureStatus::Ready($this->value);
 	}
 
@@ -55,9 +55,9 @@ class SyncFuture extends FutureObject {
 	 * @return LinkObject
 	 */
 	public function handle ($cb) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:435: characters 5-21
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:435: characters 5-21
 		Callback_Impl_::invoke($cb, Lazy_Impl_::get($this->value));
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Future.hx:436: characters 5-16
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Future.hx:436: characters 5-16
 		return null;
 	}
 }

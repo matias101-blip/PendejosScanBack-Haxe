@@ -16,7 +16,7 @@ final class Handler_Impl_ {
 	 * @return HandlerObject
 	 */
 	public static function ofFunc ($f) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Handler.hx:29: characters 5-32
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Handler.hx:29: characters 5-32
 		return new SimpleHandler($f);
 	}
 }

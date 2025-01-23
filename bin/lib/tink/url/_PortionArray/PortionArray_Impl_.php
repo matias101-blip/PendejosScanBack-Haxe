@@ -15,20 +15,20 @@ final class PortionArray_Impl_ {
 	 * @return string[]|\Array_hx
 	 */
 	public static function toStringArray ($this1) {
-		#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/PortionArray.hx:7: characters 10-39
+		#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/PortionArray.hx:7: characters 10-39
 		$_g = new \Array_hx();
-		#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/PortionArray.hx:7: characters 11-38
+		#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/PortionArray.hx:7: characters 11-38
 		$_g1 = 0;
 		while ($_g1 < $this1->length) {
-			#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/PortionArray.hx:7: characters 15-16
+			#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/PortionArray.hx:7: characters 15-16
 			$p = ($this1->arr[$_g1] ?? null);
-			#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/PortionArray.hx:7: characters 11-38
+			#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/PortionArray.hx:7: characters 11-38
 			++$_g1;
-			#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/PortionArray.hx:7: characters 26-38
+			#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/PortionArray.hx:7: characters 26-38
 			$x = Portion_Impl_::toString($p);
 			$_g->arr[$_g->length++] = $x;
 		}
-		#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/PortionArray.hx:7: characters 10-39
+		#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/PortionArray.hx:7: characters 10-39
 		return $_g;
 	}
 }

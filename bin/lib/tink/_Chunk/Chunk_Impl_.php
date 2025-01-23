@@ -28,7 +28,7 @@ final class Chunk_Impl_ {
 	 * @return void
 	 */
 	public static function blitTo ($this1, $target, $offset) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:69: characters 12-39
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:69: characters 12-39
 		$this1->blitTo($target, $offset);
 	}
 
@@ -39,7 +39,7 @@ final class Chunk_Impl_ {
 	 * @return ChunkObject
 	 */
 	public static function catChunk ($a, $b) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:156: characters 5-23
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:156: characters 5-23
 		return Chunk_Impl_::concat($a, $b);
 	}
 
@@ -50,7 +50,7 @@ final class Chunk_Impl_ {
 	 * @return ChunkObject
 	 */
 	public static function concat ($this1, $that) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:54: characters 5-42
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:54: characters 5-42
 		return CompoundChunk::cons($this1, $that);
 	}
 
@@ -60,7 +60,7 @@ final class Chunk_Impl_ {
 	 * @return ChunkCursor
 	 */
 	public static function cursor ($this1) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:57: characters 5-28
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:57: characters 5-28
 		return $this1->getCursor();
 	}
 
@@ -71,7 +71,7 @@ final class Chunk_Impl_ {
 	 * @return bool
 	 */
 	public static function eqChunk ($a, $b) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:171: characters 5-40
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:171: characters 5-40
 		return $a->toString() === $b->toString();
 	}
 
@@ -82,7 +82,7 @@ final class Chunk_Impl_ {
 	 * @return int
 	 */
 	public static function getByte ($this1, $i) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:51: characters 5-27
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:51: characters 5-27
 		return $this1->getByte($i);
 	}
 
@@ -92,7 +92,7 @@ final class Chunk_Impl_ {
 	 * @return int
 	 */
 	public static function get_length ($this1) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:47: characters 7-30
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:47: characters 7-30
 		return $this1->getLength();
 	}
 
@@ -102,7 +102,7 @@ final class Chunk_Impl_ {
 	 * @return ChunkIterator
 	 */
 	public static function iterator ($this1) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:60: characters 5-47
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:60: characters 5-47
 		return new ChunkIterator($this1->getCursor());
 	}
 
@@ -112,38 +112,38 @@ final class Chunk_Impl_ {
 	 * @return ChunkObject
 	 */
 	public static function join ($chunks) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:94: lines 94-102
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:94: lines 94-102
 		if ($chunks === null) {
-			#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:95: characters 23-28
+			#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:95: characters 23-28
 			return Chunk_Impl_::$EMPTY;
 		} else {
-			#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:94: characters 19-25
+			#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:94: characters 19-25
 			$__hx__switch = ($chunks->length);
 			if ($__hx__switch === 0) {
-				#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:95: characters 23-28
+				#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:95: characters 23-28
 				return Chunk_Impl_::$EMPTY;
 			} else if ($__hx__switch === 1) {
-				#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:96: characters 13-14
+				#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:96: characters 13-14
 				$v = ($chunks->arr[0] ?? null);
-				#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:96: characters 17-18
+				#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:96: characters 17-18
 				return $v;
 			} else {
-				#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:97: characters 12-13
+				#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:97: characters 12-13
 				$v = $chunks;
-				#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:98: characters 9-31
+				#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:98: characters 9-31
 				$ret = Chunk_Impl_::concat(($v->arr[0] ?? null), ($v->arr[1] ?? null));
-				#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:99: characters 19-23
+				#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:99: characters 19-23
 				$_g = 2;
-				#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:99: characters 23-31
+				#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:99: characters 23-31
 				$_g1 = $v->length;
-				#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:99: lines 99-100
+				#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:99: lines 99-100
 				while ($_g < $_g1) {
-					#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:99: characters 19-31
+					#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:99: characters 19-31
 					$i = $_g++;
-					#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:100: characters 11-27
+					#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:100: characters 11-27
 					$ret = Chunk_Impl_::concat($ret, ($v->arr[$i] ?? null));
 				}
-				#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:101: characters 9-12
+				#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:101: characters 9-12
 				return $ret;
 			}
 		}
@@ -156,7 +156,7 @@ final class Chunk_Impl_ {
 	 * @return ChunkObject
 	 */
 	public static function lcatBytes ($a, $b) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:165: characters 12-26
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:165: characters 12-26
 		return Chunk_Impl_::concat(ByteChunk::of($a), $b);
 	}
 
@@ -167,9 +167,9 @@ final class Chunk_Impl_ {
 	 * @return ChunkObject
 	 */
 	public static function lcatString ($a, $b) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:162: characters 21-22
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:162: characters 21-22
 		$b1 = \strlen($a);
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:162: characters 12-26
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:162: characters 12-26
 		return Chunk_Impl_::concat(ByteChunk::of(new Bytes($b1, new Container($a))), $b);
 	}
 
@@ -180,7 +180,7 @@ final class Chunk_Impl_ {
 	 * @return bool
 	 */
 	public static function leqBytes ($a, $b) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:180: characters 5-40
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:180: characters 5-40
 		return $a->toString() === $b->toString();
 	}
 
@@ -191,7 +191,7 @@ final class Chunk_Impl_ {
 	 * @return bool
 	 */
 	public static function leqString ($a, $b) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:177: characters 5-40
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:177: characters 5-40
 		return $a === $b->toString();
 	}
 
@@ -201,11 +201,11 @@ final class Chunk_Impl_ {
 	 * @return ChunkObject
 	 */
 	public static function ofByte ($byte) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:133: characters 5-32
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:133: characters 5-32
 		$bytes = Bytes::alloc(1);
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:134: characters 5-23
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:134: characters 5-23
 		$bytes->b->s[0] = \chr($byte);
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:135: characters 5-17
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:135: characters 5-17
 		return ByteChunk::of($bytes);
 	}
 
@@ -215,22 +215,22 @@ final class Chunk_Impl_ {
 	 * @return ChunkObject
 	 */
 	public static function ofByteArray ($a) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:105: characters 5-41
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:105: characters 5-41
 		$bytes = Bytes::alloc($a->length);
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:106: characters 19-20
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:106: characters 19-20
 		$_g_current = 0;
 		$_g_array = $a;
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:106: characters 5-37
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:106: characters 5-37
 		while ($_g_current < $_g_array->length) {
-			#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:106: characters 19-20
+			#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:106: characters 19-20
 			$_g_value = ($_g_array->arr[$_g_current] ?? null);
 			$_g_key = $_g_current++;
 			$i = $_g_key;
 			$v = $_g_value;
-			#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:106: characters 22-37
+			#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:106: characters 22-37
 			$bytes->b->s[$i] = \chr($v);
 		}
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:107: characters 5-26
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:107: characters 5-26
 		return ByteChunk::of($bytes);
 	}
 
@@ -240,7 +240,7 @@ final class Chunk_Impl_ {
 	 * @return ChunkObject
 	 */
 	public static function ofBytes ($b) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:111: characters 5-43
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:111: characters 5-43
 		return ByteChunk::of($b);
 	}
 
@@ -250,23 +250,23 @@ final class Chunk_Impl_ {
 	 * @return ChunkObject
 	 */
 	public static function ofHex ($s) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:139: characters 5-32
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:139: characters 5-32
 		$length = mb_strlen($s) >> 1;
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:140: characters 5-37
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:140: characters 5-37
 		$bytes = Bytes::alloc($length);
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:141: characters 14-18
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:141: characters 14-18
 		$_g = 0;
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:141: characters 18-24
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:141: characters 18-24
 		$_g1 = $length;
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:141: characters 5-68
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:141: characters 5-68
 		while ($_g < $_g1) {
-			#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:141: characters 14-24
+			#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:141: characters 14-24
 			$i = $_g++;
-			#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:141: characters 26-68
+			#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:141: characters 26-68
 			$v = \Std::parseInt("0x" . (\mb_substr($s, $i * 2, 2)??'null'));
 			$bytes->b->s[$i] = \chr($v);
 		}
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:142: characters 5-17
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:142: characters 5-17
 		return ByteChunk::of($bytes);
 	}
 
@@ -276,9 +276,9 @@ final class Chunk_Impl_ {
 	 * @return ChunkObject
 	 */
 	public static function ofString ($s) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:114: characters 20-37
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:114: characters 20-37
 		$b = \strlen($s);
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:114: characters 12-38
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:114: characters 12-38
 		return ByteChunk::of(new Bytes($b, new Container($s)));
 	}
 
@@ -288,7 +288,7 @@ final class Chunk_Impl_ {
 	 * @return int
 	 */
 	public static function parseHex ($v) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:151: characters 5-34
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:151: characters 5-34
 		return \Std::parseInt("0x" . ($v??'null'));
 	}
 
@@ -299,7 +299,7 @@ final class Chunk_Impl_ {
 	 * @return ChunkObject
 	 */
 	public static function rcatBytes ($a, $b) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:168: characters 12-26
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:168: characters 12-26
 		return Chunk_Impl_::concat($a, ByteChunk::of($b));
 	}
 
@@ -310,9 +310,9 @@ final class Chunk_Impl_ {
 	 * @return ChunkObject
 	 */
 	public static function rcatString ($a, $b) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:159: characters 24-25
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:159: characters 24-25
 		$b1 = \strlen($b);
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:159: characters 12-26
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:159: characters 12-26
 		return Chunk_Impl_::concat($a, ByteChunk::of(new Bytes($b1, new Container($b))));
 	}
 
@@ -323,7 +323,7 @@ final class Chunk_Impl_ {
 	 * @return bool
 	 */
 	public static function reqBytes ($a, $b) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:183: characters 5-40
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:183: characters 5-40
 		return $a->toString() === $b->toString();
 	}
 
@@ -334,7 +334,7 @@ final class Chunk_Impl_ {
 	 * @return bool
 	 */
 	public static function reqString ($a, $b) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:174: characters 5-40
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:174: characters 5-40
 		return $a->toString() === $b;
 	}
 
@@ -346,7 +346,7 @@ final class Chunk_Impl_ {
 	 * @return ChunkObject
 	 */
 	public static function slice ($this1, $from, $to) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:66: characters 5-32
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:66: characters 5-32
 		return $this1->slice($from, $to);
 	}
 
@@ -358,7 +358,7 @@ final class Chunk_Impl_ {
 	 * @return ChunkObject
 	 */
 	public static function sub ($this1, $pos, $len) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:63: characters 5-38
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:63: characters 5-38
 		return $this1->slice($pos, $pos + $len);
 	}
 
@@ -368,7 +368,7 @@ final class Chunk_Impl_ {
 	 * @return Bytes
 	 */
 	public static function toBytes ($this1) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:78: characters 5-26
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:78: characters 5-26
 		return $this1->toBytes();
 	}
 
@@ -378,7 +378,7 @@ final class Chunk_Impl_ {
 	 * @return string
 	 */
 	public static function toHex ($this1) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:72: characters 12-34
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:72: characters 12-34
 		return \bin2hex($this1->toBytes()->b->s);
 	}
 
@@ -388,7 +388,7 @@ final class Chunk_Impl_ {
 	 * @return string
 	 */
 	public static function toString ($this1) {
-		#/home/thehunter101/haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:75: characters 5-27
+		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/Chunk.hx:75: characters 5-27
 		return $this1->toString();
 	}
 

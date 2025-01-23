@@ -18,9 +18,9 @@ final class Combiner_Impl_ {
 	 * @return \Closure
 	 */
 	public static function ofSafe ($f) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Promise.hx:344: characters 5-47
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:344: characters 5-47
 		return function ($x1, $x2) use (&$f) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Promise.hx:344: characters 24-47
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:344: characters 24-47
 			return Future_Impl_::map($f($x1, $x2), Boot::getStaticClosure(Outcome::class, 'Success'));
 		};
 	}
@@ -31,9 +31,9 @@ final class Combiner_Impl_ {
 	 * @return \Closure
 	 */
 	public static function ofSafeSync ($f) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Promise.hx:347: characters 5-47
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:347: characters 5-47
 		return function ($x1, $x2) use (&$f) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Promise.hx:347: characters 24-47
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:347: characters 24-47
 			return new SyncFuture(new LazyConst(Outcome::Success($f($x1, $x2))));
 		};
 	}
@@ -44,9 +44,9 @@ final class Combiner_Impl_ {
 	 * @return \Closure
 	 */
 	public static function ofSync ($f) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Promise.hx:341: characters 5-47
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:341: characters 5-47
 		return function ($x1, $x2) use (&$f) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Promise.hx:341: characters 24-47
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:341: characters 24-47
 			return new SyncFuture(new LazyConst($f($x1, $x2)));
 		};
 	}

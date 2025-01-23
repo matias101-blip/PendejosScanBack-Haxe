@@ -18,13 +18,13 @@ class Helpers {
 	 * @return Option
 	 */
 	public static function checkScheme ($url) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:9: characters 17-27
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:9: characters 17-27
 		$_g = $url->scheme;
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:9: lines 9-10
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:9: lines 9-10
 		if ($_g === null) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:10: characters 20-43
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:10: characters 20-43
 			$tmp = "Missing Scheme (expected http/https) in URL: " . (Url_Impl_::toString($url)??'null');
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:10: characters 15-44
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:10: characters 15-44
 			return Option::Some(new TypedError(400, $tmp, new HxAnon([
 				"fileName" => "tink/http/clients/Helpers.hx",
 				"lineNumber" => 16,
@@ -32,17 +32,17 @@ class Helpers {
 				"methodName" => "missingSchemeError",
 			])));
 		} else {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:9: characters 17-27
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:9: characters 17-27
 			if ($_g === "http" || $_g === "https") {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:11: characters 27-31
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:11: characters 27-31
 				return Option::None();
 			} else {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:12: characters 9-10
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:12: characters 9-10
 				$v = $_g;
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:12: characters 17-38
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:12: characters 17-38
 				$url = Url_Impl_::fromString($v);
 				$tmp = "Invalid Scheme \"" . ($url->scheme??'null') . "\" (expected http/https) in URL: " . (Url_Impl_::toString($url)??'null');
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:12: characters 12-39
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:12: characters 12-39
 				return Option::Some(new TypedError(400, $tmp, new HxAnon([
 					"fileName" => "tink/http/clients/Helpers.hx",
 					"lineNumber" => 19,
@@ -59,9 +59,9 @@ class Helpers {
 	 * @return TypedError
 	 */
 	public static function invalidSchemeError ($url) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:19: characters 33-110
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:19: characters 33-110
 		$tmp = "Invalid Scheme \"" . ($url->scheme??'null') . "\" (expected http/https) in URL: " . (Url_Impl_::toString($url)??'null');
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:19: characters 3-113
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:19: characters 3-113
 		return new TypedError(400, $tmp, new HxAnon([
 			"fileName" => "tink/http/clients/Helpers.hx",
 			"lineNumber" => 19,
@@ -76,9 +76,9 @@ class Helpers {
 	 * @return TypedError
 	 */
 	public static function missingSchemeError ($url) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:16: characters 33-94
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:16: characters 33-94
 		$tmp = "Missing Scheme (expected http/https) in URL: " . (Url_Impl_::toString($url)??'null');
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:16: characters 3-97
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/Helpers.hx:16: characters 3-97
 		return new TypedError(400, $tmp, new HxAnon([
 			"fileName" => "tink/http/clients/Helpers.hx",
 			"lineNumber" => 16,

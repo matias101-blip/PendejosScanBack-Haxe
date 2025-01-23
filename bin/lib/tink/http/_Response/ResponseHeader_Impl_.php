@@ -20,7 +20,7 @@ final class ResponseHeader_Impl_ {
 	 * @return ResponseHeaderBase
 	 */
 	public static function _new ($statusCode, $reason = null, $fields = null, $protocol = "HTTP/1.1") {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Response.hx:16: character 3
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:16: character 3
 		if ($protocol === null) {
 			$protocol = "HTTP/1.1";
 		}
@@ -33,7 +33,7 @@ final class ResponseHeader_Impl_ {
 	 * @return ResponseHeaderBase
 	 */
 	public static function fromHeaderFields ($fields) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Response.hx:25: characters 12-42
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:25: characters 12-42
 		return new ResponseHeaderBase(200, null, $fields, "HTTP/1.1");
 	}
 
@@ -43,7 +43,7 @@ final class ResponseHeader_Impl_ {
 	 * @return ResponseHeaderBase
 	 */
 	public static function fromStatusCode ($code) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Response.hx:21: characters 12-36
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:21: characters 12-36
 		return new ResponseHeaderBase($code, null, null, "HTTP/1.1");
 	}
 
@@ -51,7 +51,7 @@ final class ResponseHeader_Impl_ {
 	 * @return StreamParserObject
 	 */
 	public static function parser () {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Response.hx:28: characters 5-39
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:28: characters 5-39
 		return ResponseHeaderBase::parser();
 	}
 }

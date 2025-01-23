@@ -17,7 +17,7 @@ final class Pair_Impl_ {
 	 * @return MPair
 	 */
 	public static function _new ($a, $b) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Pair.hx:9: character 3
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Pair.hx:9: character 3
 		return new MPair($a, $b);
 	}
 
@@ -27,7 +27,7 @@ final class Pair_Impl_ {
 	 * @return mixed
 	 */
 	public static function get_a ($this1) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Pair.hx:11: characters 29-42
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Pair.hx:11: characters 29-42
 		return $this1->a;
 	}
 
@@ -37,7 +37,7 @@ final class Pair_Impl_ {
 	 * @return mixed
 	 */
 	public static function get_b ($this1) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Pair.hx:12: characters 29-42
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Pair.hx:12: characters 29-42
 		return $this1->b;
 	}
 
@@ -47,7 +47,7 @@ final class Pair_Impl_ {
 	 * @return bool
 	 */
 	public static function isNil ($this1) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Pair.hx:18: characters 5-24
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Pair.hx:18: characters 5-24
 		return $this1 === null;
 	}
 
@@ -55,7 +55,7 @@ final class Pair_Impl_ {
 	 * @return MPair
 	 */
 	public static function nil () {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Pair.hx:21: characters 5-16
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Pair.hx:21: characters 5-16
 		return null;
 	}
 
@@ -65,7 +65,7 @@ final class Pair_Impl_ {
 	 * @return bool
 	 */
 	public static function toBool ($this1) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Pair.hx:15: characters 5-24
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Pair.hx:15: characters 5-24
 		return $this1 !== null;
 	}
 }

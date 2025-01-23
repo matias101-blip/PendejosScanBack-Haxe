@@ -15,7 +15,7 @@ final class Portion_Impl_ {
 	 * @return string
 	 */
 	public static function _new ($v) {
-		#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Portion.hx:21: character 3
+		#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Portion.hx:21: character 3
 		return $v;
 	}
 
@@ -25,7 +25,7 @@ final class Portion_Impl_ {
 	 * @return string
 	 */
 	public static function get_raw ($this1) {
-		#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Portion.hx:10: characters 7-18
+		#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Portion.hx:10: characters 7-18
 		return $this1;
 	}
 
@@ -35,20 +35,20 @@ final class Portion_Impl_ {
 	 * @return bool
 	 */
 	public static function isValid ($this1) {
-		#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Portion.hx:14: lines 14-19
+		#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Portion.hx:14: lines 14-19
 		if ($this1 !== null) {
-			#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Portion.hx:15: lines 15-19
+			#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Portion.hx:15: lines 15-19
 			try {
-				#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Portion.hx:16: characters 11-27
+				#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Portion.hx:16: characters 11-27
 				\urldecode($this1);
-				#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Portion.hx:17: characters 11-15
+				#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Portion.hx:17: characters 11-15
 				return true;
 			} catch(\Throwable $_g) {
-				#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Portion.hx:19: characters 27-32
+				#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Portion.hx:19: characters 27-32
 				return false;
 			}
 		} else {
-			#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Portion.hx:14: lines 14-19
+			#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Portion.hx:14: lines 14-19
 			return true;
 		}
 	}
@@ -59,7 +59,7 @@ final class Portion_Impl_ {
 	 * @return string
 	 */
 	public static function ofString ($s) {
-		#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Portion.hx:35: characters 12-61
+		#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Portion.hx:35: characters 12-61
 		return ($s === null ? "" : \rawurlencode($s));
 	}
 
@@ -69,7 +69,7 @@ final class Portion_Impl_ {
 	 * @return string
 	 */
 	public static function stringly ($this1) {
-		#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Portion.hx:25: characters 5-22
+		#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Portion.hx:25: characters 5-22
 		return Portion_Impl_::toString($this1);
 	}
 
@@ -79,17 +79,17 @@ final class Portion_Impl_ {
 	 * @return string
 	 */
 	public static function toString ($this1) {
-		#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Portion.hx:29: lines 29-32
+		#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Portion.hx:29: lines 29-32
 		if ($this1 === null) {
-			#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Portion.hx:29: characters 25-29
+			#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Portion.hx:29: characters 25-29
 			return null;
 		} else {
-			#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Portion.hx:31: lines 31-32
+			#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Portion.hx:31: lines 31-32
 			try {
-				#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Portion.hx:31: characters 13-29
+				#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Portion.hx:31: characters 13-29
 				return \urldecode($this1);
 			} catch(\Throwable $_g) {
-				#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Portion.hx:32: characters 27-29
+				#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Portion.hx:32: characters 27-29
 				return "";
 			}
 		}

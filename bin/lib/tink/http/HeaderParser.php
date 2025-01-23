@@ -44,11 +44,11 @@ class HeaderParser extends BytewiseParser {
 	 * @return void
 	 */
 	public function __construct ($makeHeader) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:303: characters 18-20
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:303: characters 18-20
 		$this->last = -1;
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:308: characters 5-31
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:308: characters 5-31
 		$this->buf = new \StringBuf();
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:309: characters 5-33
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:309: characters 5-33
 		$this->makeHeader = $makeHeader;
 	}
 
@@ -56,53 +56,53 @@ class HeaderParser extends BytewiseParser {
 	 * @return ParseStep
 	 */
 	public function nextLine () {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:350: characters 5-31
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:350: characters 5-31
 		$line = $this->buf->b;
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:352: characters 5-26
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:352: characters 5-26
 		$this->buf = new \StringBuf();
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:353: characters 5-14
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:353: characters 5-14
 		$this->last = -1;
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:356: lines 356-377
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:356: lines 356-377
 		if ($line === "") {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:358: lines 358-361
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:358: lines 358-361
 			if ($this->header === null) {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:359: characters 13-23
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:359: characters 13-23
 				return ParseStep::Progressed();
 			} else {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:361: characters 13-25
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:361: characters 13-25
 				return ParseStep::Done($this->header);
 			}
 		} else if ($this->header === null) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:364: characters 20-49
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:364: characters 20-49
 			$_g = ($this->makeHeader)($line, $this->fields = new \Array_hx());
 			$__hx__switch = ($_g->index);
 			if ($__hx__switch === 0) {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:367: characters 28-29
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:367: characters 28-29
 				$_g1 = $_g->params[0];
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:365: lines 365-369
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:365: lines 365-369
 				if ($_g1 === null) {
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:366: characters 17-41
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:366: characters 17-41
 					return ParseStep::Done($this->header = null);
 				} else {
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:367: characters 28-29
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:367: characters 28-29
 					$v = $_g1;
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:368: characters 17-32
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:368: characters 17-32
 					$this->header = $v;
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:369: characters 17-27
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:369: characters 17-27
 					return ParseStep::Progressed();
 				}
 			} else if ($__hx__switch === 1) {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:370: characters 28-29
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:370: characters 28-29
 				$e = $_g->params[0];
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:371: characters 17-26
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:371: characters 17-26
 				return ParseStep::Failed($e);
 			}
 		} else {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:374: characters 13-52
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:374: characters 13-52
 			$_this = $this->fields;
 			$x = HeaderField::ofString($line);
 			$_this->arr[$_this->length++] = $x;
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:375: characters 13-23
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:375: characters 13-23
 			return ParseStep::Progressed();
 		}
 	}
@@ -113,66 +113,66 @@ class HeaderParser extends BytewiseParser {
 	 * @return ParseStep
 	 */
 	public function read ($c) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:316: characters 15-19
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:316: characters 15-19
 		$_g = $this->last;
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:316: characters 21-22
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:316: characters 21-22
 		if ($c === -1) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:319: characters 11-21
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:319: characters 11-21
 			return $this->nextLine();
 		} else if ($c === 10) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:316: characters 15-19
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:316: characters 15-19
 			if ($_g === 13) {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:323: characters 11-21
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:323: characters 11-21
 				return $this->nextLine();
 			} else {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:342: characters 18-23
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:342: characters 18-23
 				$other = $c;
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:344: characters 11-23
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:344: characters 11-23
 				$this->last = $other;
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:345: characters 11-29
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:345: characters 11-29
 				$_this = $this->buf;
 				$_this->b = ($_this->b??'null') . (\mb_chr($other)??'null');
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:346: characters 11-21
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:346: characters 11-21
 				return ParseStep::Progressed();
 			}
 		} else if ($c === 13) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:316: characters 15-19
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:316: characters 15-19
 			if ($_g === 13) {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:327: characters 11-28
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:327: characters 11-28
 				$_this = $this->buf;
 				$_this->b = ($_this->b??'null') . (\mb_chr($this->last)??'null');
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:328: characters 11-21
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:328: characters 11-21
 				return ParseStep::Progressed();
 			} else {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:339: characters 11-27
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:339: characters 11-27
 				$this->last = 13;
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:340: characters 11-21
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:340: characters 11-21
 				return ParseStep::Progressed();
 			}
 		} else {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:316: characters 15-19
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:316: characters 15-19
 			if ($_g === 13) {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:330: characters 26-31
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:330: characters 26-31
 				$other = $c;
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:332: characters 11-28
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:332: characters 11-28
 				$_this = $this->buf;
 				$_this->b = ($_this->b??'null') . (\mb_chr($this->last)??'null');
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:333: characters 11-29
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:333: characters 11-29
 				$_this = $this->buf;
 				$_this->b = ($_this->b??'null') . (\mb_chr($other)??'null');
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:334: characters 11-20
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:334: characters 11-20
 				$this->last = -1;
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:335: characters 11-21
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:335: characters 11-21
 				return ParseStep::Progressed();
 			} else {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:342: characters 18-23
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:342: characters 18-23
 				$other = $c;
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:344: characters 11-23
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:344: characters 11-23
 				$this->last = $other;
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:345: characters 11-29
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:345: characters 11-29
 				$_this = $this->buf;
 				$_this->b = ($_this->b??'null') . (\mb_chr($other)??'null');
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Header.hx:346: characters 11-21
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:346: characters 11-21
 				return ParseStep::Progressed();
 			}
 		}

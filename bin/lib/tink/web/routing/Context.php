@@ -63,7 +63,7 @@ class Context {
 	 * @return bool
 	 */
 	public static function acceptsAll ($s) {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:167: characters 40-51
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:167: characters 40-51
 		return true;
 	}
 
@@ -74,19 +74,19 @@ class Context {
 	 * @return AuthedContext
 	 */
 	public static function authed ($request, $getSession) {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:150: characters 7-40
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:150: characters 7-40
 		$tmp = Context::parseAcceptHeader($request->header);
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:153: characters 7-38
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:153: characters 7-38
 		$tmp1 = Path_Impl_::parts($request->header->url->path);
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:154: characters 7-31
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:154: characters 7-31
 		$tmp2 = Query_Impl_::toMap($request->header->url->query);
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:155: characters 7-17
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:155: characters 7-17
 		$_g = $getSession;
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:155: characters 23-37
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:155: characters 23-37
 		$a1 = $request->header;
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:148: lines 148-156
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:148: lines 148-156
 		return new AuthedContext(null, $tmp, $request, 0, $tmp1, $tmp2, new LazyFunc(function () use (&$_g, &$a1) {
-			#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:155: characters 7-22
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:155: characters 7-22
 			return $_g($a1);
 		}));
 	}
@@ -97,11 +97,11 @@ class Context {
 	 * @return Context
 	 */
 	public static function ofRequest ($request) {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:140: characters 7-40
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:140: characters 7-40
 		$tmp = Context::parseAcceptHeader($request->header);
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:143: characters 7-38
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:143: characters 7-38
 		$tmp1 = Path_Impl_::parts($request->header->url->path);
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:138: lines 138-145
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:138: lines 138-145
 		return new Context(null, $tmp, $request, 0, $tmp1, Query_Impl_::toMap($request->header->url->query));
 	}
 
@@ -111,43 +111,43 @@ class Context {
 	 * @return \Closure
 	 */
 	public static function parseAcceptHeader ($h) {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:159: characters 19-32
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:159: characters 19-32
 		$_g = $h->get("accept");
 		if ($_g->length === 0) {
-			#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:160: characters 16-26
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:160: characters 16-26
 			return Boot::getStaticClosure(Context::class, 'acceptsAll');
 		} else {
-			#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:161: characters 12-18
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:161: characters 12-18
 			$values = $_g;
-			#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:162: characters 24-86
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:162: characters 24-86
 			$accepted_data = [];
-			#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:162: characters 25-85
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:162: characters 25-85
 			$_g = 0;
 			while ($_g < $values->length) {
-				#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:162: characters 30-31
+				#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:162: characters 30-31
 				$v = ($values->arr[$_g] ?? null);
-				#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:162: characters 25-85
+				#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:162: characters 25-85
 				++$_g;
-				#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:162: characters 43-85
+				#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:162: characters 43-85
 				$_g1 = 0;
 				$_g2 = HeaderValue_Impl_::parse($v);
 				while ($_g1 < $_g2->length) {
-					#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:162: characters 48-52
+					#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:162: characters 48-52
 					$part = ($_g2->arr[$_g1] ?? null);
-					#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:162: characters 43-85
+					#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:162: characters 43-85
 					++$_g1;
-					#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:162: characters 67-85
+					#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:162: characters 67-85
 					$accepted_data[$part->value] = true;
 				}
 			}
-			#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:163: lines 163-164
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:163: lines 163-164
 			if (($accepted_data["*/*"] ?? null)) {
-				#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:163: characters 30-40
+				#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:163: characters 30-40
 				return Boot::getStaticClosure(Context::class, 'acceptsAll');
 			} else {
-				#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:164: characters 14-52
+				#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:164: characters 14-52
 				return function ($t) use (&$accepted_data) {
-					#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:164: characters 27-52
+					#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:164: characters 27-52
 					return \array_key_exists($t, $accepted_data);
 				};
 			}
@@ -160,34 +160,34 @@ class Context {
 	 * @return string
 	 */
 	public static function toCamelCase ($header) {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:55: characters 5-32
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:55: characters 5-32
 		$header1 = $header;
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:56: lines 56-58
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:56: lines 56-58
 		$ret = new \StringBuf();
 		$pos = 0;
 		$max = mb_strlen($header1);
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:60: lines 60-68
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:60: lines 60-68
 		while ($pos < $max) {
-			#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:61: characters 14-38
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:61: characters 14-38
 			$_g = \StringTools::fastCodeAt($header1, $pos++);
 			if ($_g === 45) {
-				#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:63: lines 63-64
+				#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:63: lines 63-64
 				if ($pos < $max) {
-					#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:64: characters 35-40
+					#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:64: characters 35-40
 					$index = $pos++;
-					#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:64: characters 13-56
+					#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:64: characters 13-56
 					$ret->add(\mb_strtolower(($index < 0 ? "" : \mb_substr($header1, $index, 1))));
 				}
 			} else {
-				#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:65: characters 14-15
+				#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:65: characters 14-15
 				$v = $_g;
-				#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:66: characters 11-14
+				#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:66: characters 11-14
 				$ret1 = $ret;
-				#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:66: characters 11-25
+				#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:66: characters 11-25
 				$ret1->b = ($ret1->b??'null') . (\mb_chr($v)??'null');
 			}
 		}
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:70: characters 5-26
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:70: characters 5-26
 		return $ret->b;
 	}
 
@@ -202,17 +202,17 @@ class Context {
 	 * @return void
 	 */
 	public function __construct ($parent, $accepts, $request, $depth, $parts, $params) {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:126: characters 5-25
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:126: characters 5-25
 		$this->parent = $parent;
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:127: characters 5-27
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:127: characters 5-27
 		$this->accepts = $accepts;
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:128: characters 5-27
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:128: characters 5-27
 		$this->request = $request;
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:129: characters 5-23
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:129: characters 5-23
 		$this->depth = $depth;
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:130: characters 5-23
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:130: characters 5-23
 		$this->parts = $parts;
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:131: characters 5-25
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:131: characters 5-25
 		$this->params = $params;
 	}
 
@@ -220,7 +220,7 @@ class Context {
 	 * @return FutureObject
 	 */
 	public function allRaw () {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:41: characters 12-19
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:41: characters 12-19
 		$_g = $this->request->body;
 		$tmp = null;
 		if ($_g->index === 0) {
@@ -234,7 +234,7 @@ class Context {
 				"methodName" => "get_rawBody",
 			])));
 		}
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:41: characters 5-25
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:41: characters 5-25
 		return RealSourceTools::all($tmp);
 	}
 
@@ -242,7 +242,7 @@ class Context {
 	 * @return string[]|\Array_hx
 	 */
 	public function getPath () {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:114: characters 5-40
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:114: characters 5-40
 		return $this->parts->slice($this->depth);
 	}
 
@@ -250,7 +250,7 @@ class Context {
 	 * @return string[]|\Array_hx
 	 */
 	public function getPrefix () {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:111: characters 5-43
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:111: characters 5-43
 		return $this->parts->slice(0, $this->depth);
 	}
 
@@ -258,7 +258,7 @@ class Context {
 	 * @return IncomingRequestHeader
 	 */
 	public function get_header () {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:35: characters 7-28
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:35: characters 7-28
 		return $this->request->header;
 	}
 
@@ -266,7 +266,7 @@ class Context {
 	 * @return int
 	 */
 	public function get_pathLength () {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:108: characters 7-44
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:108: characters 7-44
 		return $this->parts->length - $this->depth;
 	}
 
@@ -274,15 +274,15 @@ class Context {
 	 * @return StreamObject
 	 */
 	public function get_rawBody () {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:45: characters 21-38
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:45: characters 21-38
 		$_g = $this->request->body;
 		if ($_g->index === 0) {
-			#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:46: characters 20-21
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:46: characters 20-21
 			$s = $_g->params[0];
-			#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:46: characters 24-25
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:46: characters 24-25
 			return $s;
 		} else {
-			#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:47: characters 9-62
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:47: characters 9-62
 			return Source_Impl_::ofError(new TypedError(501, "not implemented", new HxAnon([
 				"fileName" => "tink/web/routing/Context.hx",
 				"lineNumber" => 47,
@@ -298,7 +298,7 @@ class Context {
 	 * @return bool
 	 */
 	public function hasParam ($name) {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:117: characters 12-36
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:117: characters 12-36
 		return \array_key_exists($name, $this->params->data);
 	}
 
@@ -306,19 +306,19 @@ class Context {
 	 * @return object
 	 */
 	public function headers () {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:51: characters 12-58
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:51: characters 12-58
 		$_g = new \Array_hx();
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:51: characters 23-29
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:51: characters 23-29
 		$_g_current = 0;
 		$_g_array = $this->request->header->fields;
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:51: characters 13-57
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:51: characters 13-57
 		while ($_g_current < $_g_array->length) {
 			$f = ($_g_array->arr[$_g_current++] ?? null);
-			#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:51: characters 31-57
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:51: characters 31-57
 			$x = new NamedWith($f->name, $f->value);
 			$_g->arr[$_g->length++] = $x;
 		}
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:51: characters 5-58
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:51: characters 5-58
 		return Pairs_Impl_::ofIterable($_g);
 	}
 
@@ -328,7 +328,7 @@ class Context {
 	 * @return string
 	 */
 	public function param ($name) {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:123: characters 5-29
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:123: characters 5-29
 		return Portion_Impl_::stringly(($this->params->data[$name] ?? null));
 	}
 
@@ -336,38 +336,38 @@ class Context {
 	 * @return FutureObject
 	 */
 	public function parse () {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:74: characters 19-36
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:74: characters 19-36
 		$_g = $this->request->body;
 		$__hx__switch = ($_g->index);
 		if ($__hx__switch === 0) {
-			#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:76: characters 18-21
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:76: characters 18-21
 			$src = $_g->params[0];
-			#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:77: lines 77-80
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:77: lines 77-80
 			$parseForm = function () use (&$src) {
-				#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:78: lines 78-80
+				#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:78: lines 78-80
 				return Promise_Impl_::next(RealSourceTools::all($src), Next_Impl_::ofSafeSync(function ($chunk) {
-					#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:80: characters 63-145
+					#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:80: characters 63-145
 					$_g = new \Array_hx();
-					#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:80: characters 64-144
+					#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:80: characters 64-144
 					$part = new QueryStringParser($chunk->toString(), "&", "=", 0);
 					while ($part->hasNext()) {
 						$part1 = $part->next();
-						#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:80: characters 115-124
+						#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:80: characters 115-124
 						$part2 = $part1->name;
-						#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:80: characters 105-144
+						#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:80: characters 105-144
 						$x = new NamedWith($part2, BodyPart::Value(Portion_Impl_::toString($part1->value)));
 						$_g->arr[$_g->length++] = $x;
 					}
-					#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:80: characters 63-145
+					#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:80: characters 63-145
 					return $_g;
 				}));
 			};
-			#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:102: characters 11-22
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:102: characters 11-22
 			return $parseForm();
 		} else if ($__hx__switch === 1) {
-			#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:75: characters 19-24
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:75: characters 19-24
 			$parts = $_g->params[0];
-			#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:75: characters 7-32
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:75: characters 7-32
 			return new SyncFuture(new LazyConst(Outcome::Success($parts)));
 		}
 	}
@@ -378,12 +378,12 @@ class Context {
 	 * @return string
 	 */
 	public function part ($index) {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:120: characters 12-94
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:120: characters 12-94
 		if (($this->depth + $index) >= $this->parts->length) {
-			#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:120: characters 56-58
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:120: characters 56-58
 			return "";
 		} else {
-			#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:120: characters 64-94
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:120: characters 64-94
 			return Portion_Impl_::stringly(($this->parts->arr[$this->depth + $index] ?? null));
 		}
 	}
@@ -394,7 +394,7 @@ class Context {
 	 * @return Context
 	 */
 	public function sub ($descend) {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:135: characters 5-104
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:135: characters 5-104
 		return new Context($this, $this->accepts, $this->request, $this->depth + $descend, $this->parts, $this->params);
 	}
 }

@@ -26,12 +26,12 @@ final class Worker_Impl_ {
 	 * @return WorkerObject
 	 */
 	public static function ensure ($this1) {
-		#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Worker.hx:17: characters 12-45
+		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Worker.hx:17: characters 12-45
 		if ($this1 === null) {
-			#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Worker.hx:17: characters 30-35
+			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Worker.hx:17: characters 30-35
 			return Worker_Impl_::get();
 		} else {
-			#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Worker.hx:17: characters 41-45
+			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Worker.hx:17: characters 41-45
 			return $this1;
 		}
 	}
@@ -40,9 +40,9 @@ final class Worker_Impl_ {
 	 * @return WorkerObject
 	 */
 	public static function get () {
-		#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Worker.hx:20: characters 17-40
+		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Worker.hx:20: characters 17-40
 		$x = Worker_Impl_::$pool->length;
-		#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Worker.hx:20: characters 5-41
+		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Worker.hx:20: characters 5-41
 		return (Worker_Impl_::$pool->arr[($x <= 1 ? 0 : \mt_rand(0, $x - 1))] ?? null);
 	}
 
@@ -53,7 +53,7 @@ final class Worker_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function work ($this1, $task) {
-		#/home/thehunter101/haxe/tink_io/0,9,0/src/tink/io/Worker.hx:23: characters 5-27
+		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Worker.hx:23: characters 5-27
 		return $this1->work($task);
 	}
 

@@ -24,9 +24,9 @@ class NamedWith {
 	 * @return void
 	 */
 	public function __construct ($name, $value) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Named.hx:12: characters 5-21
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Named.hx:12: characters 5-21
 		$this->name = $name;
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Named.hx:13: characters 5-23
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Named.hx:13: characters 5-23
 		$this->value = $value;
 	}
 }

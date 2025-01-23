@@ -17,7 +17,7 @@ final class Response_Impl_ {
 	 * @return Message
 	 */
 	public static function _new ($header, $body) {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/Response.hx:10: character 2
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/Response.hx:10: character 2
 		return new Message($header, $body);
 	}
 
@@ -27,7 +27,7 @@ final class Response_Impl_ {
 	 * @return mixed
 	 */
 	public static function getData ($this1) {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/Response.hx:15: characters 3-19
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/Response.hx:15: characters 3-19
 		return $this1->body;
 	}
 }

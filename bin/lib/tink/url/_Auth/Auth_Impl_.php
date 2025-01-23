@@ -17,7 +17,7 @@ final class Auth_Impl_ {
 	 * @return string
 	 */
 	public static function _new ($user, $password) {
-		#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Auth.hx:11: character 3
+		#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Auth.hx:11: character 3
 		return "" . ($user??'null') . ":" . ($password??'null');
 	}
 
@@ -27,12 +27,12 @@ final class Auth_Impl_ {
 	 * @return string
 	 */
 	public static function get_password ($this1) {
-		#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Auth.hx:21: lines 21-22
+		#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Auth.hx:21: lines 21-22
 		if ($this1 === null) {
-			#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Auth.hx:21: characters 25-29
+			#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Auth.hx:21: characters 25-29
 			return null;
 		} else {
-			#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Auth.hx:22: characters 12-30
+			#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Auth.hx:22: characters 12-30
 			return (HxString::split($this1, ":")->arr[1] ?? null);
 		}
 	}
@@ -43,12 +43,12 @@ final class Auth_Impl_ {
 	 * @return string
 	 */
 	public static function get_user ($this1) {
-		#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Auth.hx:16: lines 16-17
+		#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Auth.hx:16: lines 16-17
 		if ($this1 === null) {
-			#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Auth.hx:16: characters 25-29
+			#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Auth.hx:16: characters 25-29
 			return null;
 		} else {
-			#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Auth.hx:17: characters 12-30
+			#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Auth.hx:17: characters 12-30
 			return (HxString::split($this1, ":")->arr[0] ?? null);
 		}
 	}
@@ -59,12 +59,12 @@ final class Auth_Impl_ {
 	 * @return string
 	 */
 	public static function toString ($this1) {
-		#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Auth.hx:25: characters 12-46
+		#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Auth.hx:25: characters 12-46
 		if ($this1 === null) {
-			#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Auth.hx:25: characters 30-32
+			#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Auth.hx:25: characters 30-32
 			return "";
 		} else {
-			#/home/thehunter101/haxe/tink_url/0,5,0/src/tink/url/Auth.hx:25: characters 39-45
+			#/home/thehunter101/.haxe/tink_url/0,5,0/src/tink/url/Auth.hx:25: characters 39-45
 			return "" . ($this1??'null') . "@";
 		}
 	}

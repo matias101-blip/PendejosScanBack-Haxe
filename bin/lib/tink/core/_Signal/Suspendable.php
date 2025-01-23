@@ -37,16 +37,16 @@ class Suspendable implements OwnedDisposable, SignalObject {
 	 * @return SignalObject
 	 */
 	public static function over ($s, $activate) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:201: lines 201-206
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:201: lines 201-206
 		if ($s->get_disposed()) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:201: characters 23-36
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:201: characters 23-36
 			return Signal_Impl_::dead();
 		} else {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:203: characters 9-50
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:203: characters 9-50
 			$ret = new Suspendable($activate);
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:204: characters 9-33
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:204: characters 9-33
 			$s->ondispose(Boot::getInstanceClosure($ret, 'dispose'));
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:205: characters 9-12
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:205: characters 9-12
 			return $ret;
 		}
 	}
@@ -58,34 +58,34 @@ class Suspendable implements OwnedDisposable, SignalObject {
 	 * @return void
 	 */
 	public function __construct ($activate, $init = null) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:165: characters 20-41
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:165: characters 20-41
 		$this->handlers = new CallbackList();
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:180: lines 180-194
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:180: lines 180-194
 		$_gthis = $this;
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:181: characters 5-29
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:181: characters 5-29
 		$this->activate = $activate;
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:182: characters 5-21
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:182: characters 5-21
 		$this->init = $init;
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:184: characters 5-57
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:184: characters 5-57
 		$this->handlers->ondrain = function () use (&$_gthis) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:184: characters 36-57
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:184: characters 36-57
 			$this1 = $_gthis->subscription;
 			if ($this1 !== null) {
 				$this1->cancel();
 			}
 		};
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:185: lines 185-193
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:185: lines 185-193
 		$this->handlers->onfill = function () use (&$activate, &$_gthis, &$init) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:186: lines 186-191
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:186: lines 186-191
 			if ($init !== null) {
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:188: characters 14-15
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:188: characters 14-15
 				$f = $init;
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:189: characters 11-22
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:189: characters 11-22
 				$init = null;
-				#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:190: characters 11-18
+				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:190: characters 11-18
 				$f($_gthis);
 			}
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:192: characters 7-47
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:192: characters 7-47
 			$_gthis->subscription = $activate(Boot::getInstanceClosure($_gthis->handlers, 'invoke'));
 		};
 	}
@@ -94,7 +94,7 @@ class Suspendable implements OwnedDisposable, SignalObject {
 	 * @return void
 	 */
 	public function dispose () {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:175: characters 5-23
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:175: characters 5-23
 		$this->handlers->dispose();
 	}
 
@@ -102,7 +102,7 @@ class Suspendable implements OwnedDisposable, SignalObject {
 	 * @return bool
 	 */
 	public function get_disposed () {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:172: characters 36-60
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:172: characters 36-60
 		return $this->handlers->disposeHandlers === null;
 	}
 
@@ -112,7 +112,7 @@ class Suspendable implements OwnedDisposable, SignalObject {
 	 * @return LinkObject
 	 */
 	public function listen ($cb) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:197: characters 12-28
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:197: characters 12-28
 		$_this = $this->handlers;
 		if ($_this->disposeHandlers === null) {
 			return null;
@@ -140,7 +140,7 @@ class Suspendable implements OwnedDisposable, SignalObject {
 	 * @return void
 	 */
 	public function ondispose ($handler) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:178: characters 5-32
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:178: characters 5-32
 		$this->handlers->ondispose($handler);
 	}
 }

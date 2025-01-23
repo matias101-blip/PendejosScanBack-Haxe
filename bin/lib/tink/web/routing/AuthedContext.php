@@ -34,30 +34,30 @@ class AuthedContext extends Context {
 	 * @return void
 	 */
 	public function __construct ($parent, $accepts, $request, $depth, $parts, $params, $session, $user = null) {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:179: characters 5-27
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:179: characters 5-27
 		$this->session = $session;
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:180: lines 180-184
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:180: lines 180-184
 		$tmp = null;
 		if ($user === null) {
-			#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:182: characters 9-53
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:182: characters 9-53
 			$this1 = $session;
 			$f = function ($s) {
-				#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:182: characters 34-52
+				#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:182: characters 34-52
 				return $s->getUser();
 			};
-			#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:180: lines 180-184
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:180: lines 180-184
 			$tmp = new LazyFunc(function () use (&$f, &$this1) {
-				#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:182: characters 9-53
+				#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:182: characters 9-53
 				return $f($this1->get());
 			}, $this1);
 		} else {
-			#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:183: characters 12-13
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:183: characters 12-13
 			$v = $user;
-			#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:180: lines 180-184
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:180: lines 180-184
 			$tmp = $v;
 		}
 		$this->user = $tmp;
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:186: characters 5-58
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:186: characters 5-58
 		parent::__construct($parent, $accepts, $request, $depth, $parts, $params);
 	}
 
@@ -67,7 +67,7 @@ class AuthedContext extends Context {
 	 * @return AuthedContext
 	 */
 	public function sub ($descend) {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:190: characters 5-100
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:190: characters 5-100
 		return new AuthedContext($this, $this->accepts, $this->request, $this->depth + $descend, $this->parts, $this->params, $this->session, $this->user);
 	}
 }

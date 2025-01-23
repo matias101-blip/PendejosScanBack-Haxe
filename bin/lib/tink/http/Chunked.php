@@ -24,7 +24,7 @@ class Chunked {
 	 * @return StreamObject
 	 */
 	public static function decode ($source) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Chunked.hx:31: characters 3-37
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Chunked.hx:31: characters 3-37
 		return Chunked::decoder()->transform($source);
 	}
 
@@ -32,12 +32,12 @@ class Chunked {
 	 * @return ChunkedDecoder
 	 */
 	public static function decoder () {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Chunked.hx:23: characters 3-55
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Chunked.hx:23: characters 3-55
 		if (Chunked::$_decoder === null) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Chunked.hx:23: characters 24-55
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Chunked.hx:23: characters 24-55
 			Chunked::$_decoder = new ChunkedDecoder();
 		}
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Chunked.hx:24: characters 3-23
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Chunked.hx:24: characters 3-23
 		return Chunked::$_decoder;
 	}
 
@@ -47,7 +47,7 @@ class Chunked {
 	 * @return StreamObject
 	 */
 	public static function encode ($source) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Chunked.hx:28: characters 3-37
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Chunked.hx:28: characters 3-37
 		return Chunked::encoder()->transform($source);
 	}
 
@@ -55,12 +55,12 @@ class Chunked {
 	 * @return ChunkedEncoder
 	 */
 	public static function encoder () {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Chunked.hx:18: characters 3-55
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Chunked.hx:18: characters 3-55
 		if (Chunked::$_encoder === null) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Chunked.hx:18: characters 24-55
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Chunked.hx:18: characters 24-55
 			Chunked::$_encoder = new ChunkedEncoder();
 		}
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Chunked.hx:19: characters 3-23
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Chunked.hx:19: characters 3-23
 		return Chunked::$_encoder;
 	}
 }

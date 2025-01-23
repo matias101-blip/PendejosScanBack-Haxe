@@ -25,13 +25,13 @@ class TJSON {
 	 * @return string
 	 */
 	public static function encode ($obj, $style = null, $useCache = true) {
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:22: lines 22-25
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:22: lines 22-25
 		if ($useCache === null) {
 			$useCache = true;
 		}
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:23: characters 3-38
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:23: characters 3-38
 		$t = new TJSONEncoder($useCache);
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:24: characters 3-31
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:24: characters 3-31
 		return $t->doEncode($obj, $style);
 	}
 
@@ -47,13 +47,13 @@ class TJSON {
 	 * @return mixed
 	 */
 	public static function parse ($json, $fileName = "JSON Data", $stringProcessor = null) {
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:12: lines 12-15
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:12: lines 12-15
 		if ($fileName === null) {
 			$fileName = "JSON Data";
 		}
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:13: characters 9-66
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:13: characters 9-66
 		$t = new TJSONParser($json, $fileName, $stringProcessor);
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:14: characters 3-21
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:14: characters 3-21
 		return $t->doParse();
 	}
 }

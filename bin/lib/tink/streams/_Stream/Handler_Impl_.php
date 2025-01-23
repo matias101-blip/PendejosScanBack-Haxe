@@ -17,7 +17,7 @@ final class Handler_Impl_ {
 	 * @return \Closure
 	 */
 	public static function _new ($f) {
-		#/home/thehunter101/haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:486: character 3
+		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:486: character 3
 		return $f;
 	}
 
@@ -28,7 +28,7 @@ final class Handler_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function apply ($this1, $item) {
-		#/home/thehunter101/haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:490: characters 5-22
+		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:490: characters 5-22
 		return $this1($item);
 	}
 
@@ -38,7 +38,7 @@ final class Handler_Impl_ {
 	 * @return \Closure
 	 */
 	public static function ofSafe ($f) {
-		#/home/thehunter101/haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:499: characters 12-26
+		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:499: characters 12-26
 		return $f;
 	}
 
@@ -48,9 +48,9 @@ final class Handler_Impl_ {
 	 * @return \Closure
 	 */
 	public static function ofSafeSync ($f) {
-		#/home/thehunter101/haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:493: characters 12-62
+		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:493: characters 12-62
 		return function ($i) use (&$f) {
-			#/home/thehunter101/haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:493: characters 44-61
+			#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:493: characters 44-61
 			return new SyncFuture(new LazyConst($f($i)));
 		};
 	}
@@ -61,7 +61,7 @@ final class Handler_Impl_ {
 	 * @return \Closure
 	 */
 	public static function ofUnknown ($f) {
-		#/home/thehunter101/haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:502: characters 12-26
+		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:502: characters 12-26
 		return $f;
 	}
 
@@ -71,9 +71,9 @@ final class Handler_Impl_ {
 	 * @return \Closure
 	 */
 	public static function ofUnknownSync ($f) {
-		#/home/thehunter101/haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:496: characters 12-62
+		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:496: characters 12-62
 		return function ($i) use (&$f) {
-			#/home/thehunter101/haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:496: characters 44-61
+			#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:496: characters 44-61
 			return new SyncFuture(new LazyConst($f($i)));
 		};
 	}

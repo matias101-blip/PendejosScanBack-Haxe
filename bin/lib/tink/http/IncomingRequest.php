@@ -31,38 +31,38 @@ class IncomingRequest extends Message {
 	 * @return FutureObject
 	 */
 	public static function parse ($clientIp, $source) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Request.hx:159: lines 159-174
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:159: lines 159-174
 		return Promise_Impl_::next(RealSourceTools::parse($source, IncomingRequestHeader::parser()), function ($parts) use (&$clientIp) {
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Request.hx:162: characters 11-19
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:162: characters 11-19
 			$clientIp1 = $clientIp;
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Request.hx:163: characters 11-18
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:163: characters 11-18
 			$parts1 = $parts->a;
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Request.hx:164: characters 24-50
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:164: characters 24-50
 			$_g = $parts->a->getContentLength();
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Request.hx:164: lines 164-173
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:164: lines 164-173
 			$d = null;
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Request.hx:164: characters 24-50
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:164: characters 24-50
 			$__hx__switch = ($_g->index);
 			if ($__hx__switch === 0) {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Request.hx:165: characters 26-29
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:165: characters 26-29
 				$len = $_g->params[0];
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Request.hx:164: lines 164-173
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:164: lines 164-173
 				$d = Source_Impl_::limit($parts->b, $len);
 			} else if ($__hx__switch === 1) {
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Request.hx:167: characters 26-27
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:167: characters 26-27
 				$_g1 = $_g->params[0];
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Request.hx:168: characters 23-37
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:168: characters 23-37
 				$_g = $parts->a->method;
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Request.hx:168: characters 39-72
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:168: characters 39-72
 				$_g1 = $parts->a->byName("transfer-encoding");
-				#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Request.hx:168: characters 23-37
+				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:168: characters 23-37
 				if ($_g === "GET" || $_g === "OPTIONS") {
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Request.hx:164: lines 164-173
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:164: lines 164-173
 					$d = Source_Impl_::$EMPTY;
 				} else {
-					#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Request.hx:168: characters 39-72
+					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:168: characters 39-72
 					if ($_g1->index === 0) {
-						#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Request.hx:170: characters 34-77
+						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:170: characters 34-77
 						$f = Boot::getStaticClosure(\StringTools::class, 'trim');
 						$result = [];
 						$data = HxString::split($_g1->params[0], ",")->arr;
@@ -73,16 +73,16 @@ class IncomingRequest extends Message {
 							$item = $_g_data[$_g_current++];
 							$result[] = $f($item);
 						}
-						#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Request.hx:170: characters 81-90
+						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:170: characters 81-90
 						$encodings = \Array_hx::wrap($result);
-						#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Request.hx:170: lines 170-171
+						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:170: lines 170-171
 						if ($encodings->indexOf("chunked") !== -1) {
-							#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Request.hx:170: characters 133-156
+							#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:170: characters 133-156
 							$source = $parts->b;
-							#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Request.hx:164: lines 164-173
+							#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:164: lines 164-173
 							$d = Chunked::decoder()->transform($source);
 						} else {
-							#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Request.hx:171: characters 25-79
+							#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:171: characters 25-79
 							return new SyncFuture(new LazyConst(Outcome::Failure(new TypedError(411, "Content-Length header missing", new HxAnon([
 								"fileName" => "tink/http/Request.hx",
 								"lineNumber" => 171,
@@ -100,7 +100,7 @@ class IncomingRequest extends Message {
 					}
 				}
 			}
-			#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Request.hx:161: lines 161-174
+			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:161: lines 161-174
 			return new SyncFuture(new LazyConst(Outcome::Success(new IncomingRequest($clientIp1, $parts1, IncomingRequestBody::Plain($d)))));
 		});
 	}
@@ -113,9 +113,9 @@ class IncomingRequest extends Message {
 	 * @return void
 	 */
 	public function __construct ($clientIp, $header, $body) {
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Request.hx:154: characters 5-29
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:154: characters 5-29
 		$this->clientIp = $clientIp;
-		#/home/thehunter101/haxe/tink_http/0,10,0/src/tink/http/Request.hx:155: characters 5-24
+		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:155: characters 5-24
 		parent::__construct($header, $body);
 	}
 }

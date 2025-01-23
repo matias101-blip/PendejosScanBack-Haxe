@@ -14,7 +14,7 @@ final class Gather_Impl_ {
 	 * @return bool
 	 */
 	public static function _new ($v) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:9: character 3
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:9: character 3
 		return $v;
 	}
 
@@ -24,7 +24,7 @@ final class Gather_Impl_ {
 	 * @return bool
 	 */
 	public static function ofBool ($b) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Signal.hx:12: characters 12-25
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:12: characters 12-25
 		return $b;
 	}
 }

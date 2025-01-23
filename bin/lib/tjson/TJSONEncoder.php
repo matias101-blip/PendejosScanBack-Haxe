@@ -26,15 +26,15 @@ class TJSONEncoder {
 	 * @return void
 	 */
 	public function __construct ($useCache = true) {
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:358: lines 358-361
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:358: lines 358-361
 		if ($useCache === null) {
 			$useCache = true;
 		}
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:359: characters 3-20
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:359: characters 3-20
 		$this->uCache = $useCache;
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:360: characters 3-32
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:360: characters 3-32
 		if ($this->uCache) {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:360: characters 13-32
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:360: characters 13-32
 			$this->cache = new \Array_hx();
 		}
 	}
@@ -45,29 +45,29 @@ class TJSONEncoder {
 	 * @return string
 	 */
 	public function cacheEncode ($value) {
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:465: characters 3-25
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:465: characters 3-25
 		if (!$this->uCache) {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:465: characters 14-25
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:465: characters 14-25
 			return null;
 		}
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:467: characters 12-16
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:467: characters 12-16
 		$_g = 0;
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:467: characters 16-28
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:467: characters 16-28
 		$_g1 = $this->cache->length;
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:467: lines 467-471
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:467: lines 467-471
 		while ($_g < $_g1) {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:467: characters 12-28
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:467: characters 12-28
 			$c = $_g++;
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:468: lines 468-470
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:468: lines 468-470
 			if (Boot::equal(($this->cache->arr[$c] ?? null), $value)) {
-				#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:469: characters 5-51
+				#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:469: characters 5-51
 				return "\"" . (TJSON::$OBJECT_REFERENCE_PREFIX??'null') . ($c??'null') . "\"";
 			}
 		}
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:472: characters 3-20
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:472: characters 3-20
 		$_this = $this->cache;
 		$_this->arr[$_this->length++] = $value;
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:473: characters 3-14
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:473: characters 3-14
 		return null;
 	}
 
@@ -78,40 +78,40 @@ class TJSONEncoder {
 	 * @return string
 	 */
 	public function doEncode ($obj, $style = null) {
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:364: lines 364-366
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:364: lines 364-366
 		if (!\Reflect::isObject($obj)) {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:365: characters 4-9
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:365: characters 4-9
 			throw Exception::thrown("Provided object is not an object.");
 		}
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:367: characters 3-22
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:367: characters 3-22
 		$st = null;
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:368: lines 368-374
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:368: lines 368-374
 		if (($style instanceof EncodeStyle)) {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:369: characters 4-14
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:369: characters 4-14
 			$st = $style;
 		} else if ($style === "fancy") {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:372: characters 4-25
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:372: characters 4-25
 			$st = new FancyStyle();
 		} else {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:374: characters 8-30
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:374: characters 8-30
 			$st = new SimpleStyle();
 		}
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:375: characters 3-32
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:375: characters 3-32
 		$buffer = new \StringBuf();
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:376: lines 376-384
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:376: lines 376-384
 		if (($obj instanceof \Array_hx) || ($obj instanceof List_hx)) {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:377: characters 4-43
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:377: characters 4-43
 			$buffer->add($this->encodeIterable($obj, $st, 0));
 		} else if (($obj instanceof StringMap)) {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:380: characters 4-37
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:380: characters 4-37
 			$buffer->add($this->encodeMap($obj, $st, 0));
 		} else {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:382: characters 4-20
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:382: characters 4-20
 			$this->cacheEncode($obj);
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:383: characters 4-40
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:383: characters 4-40
 			$buffer->add($this->encodeObject($obj, $st, 0));
 		}
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:385: characters 3-27
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:385: characters 3-27
 		return $buffer->b;
 	}
 
@@ -123,31 +123,31 @@ class TJSONEncoder {
 	 * @return string
 	 */
 	public function encodeIterable ($obj, $style, $depth) {
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:451: characters 3-32
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:451: characters 3-32
 		$buffer = new \StringBuf();
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:452: characters 3-38
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:452: characters 3-38
 		$buffer->add($style->beginArray($depth));
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:453: characters 3-22
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:453: characters 3-22
 		$fieldCount = 0;
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:454: characters 17-20
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:454: characters 17-20
 		$value = $obj->iterator();
 		while ($value->hasNext()) {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:454: lines 454-459
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:454: lines 454-459
 			$value1 = $value->next();
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:455: lines 455-456
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:455: lines 455-456
 			if ($fieldCount++ > 0) {
-				#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:455: characters 24-63
+				#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:455: characters 24-63
 				$buffer->add($style->entrySeperator($depth));
 			} else {
-				#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:456: characters 9-44
+				#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:456: characters 9-44
 				$buffer->add($style->firstEntry($depth));
 			}
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:457: characters 4-49
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:457: characters 4-49
 			$buffer->add($this->encodeValue($value1, $style, $depth));
 		}
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:460: characters 3-36
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:460: characters 3-36
 		$buffer->add($style->endArray($depth));
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:461: characters 3-27
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:461: characters 3-27
 		return $buffer->b;
 	}
 
@@ -159,38 +159,38 @@ class TJSONEncoder {
 	 * @return string
 	 */
 	public function encodeMap ($obj, $style, $depth) {
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:435: characters 3-32
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:435: characters 3-32
 		$buffer = new \StringBuf();
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:436: characters 3-39
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:436: characters 3-39
 		$buffer->add($style->beginObject($depth));
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:437: characters 3-22
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:437: characters 3-22
 		$fieldCount = 0;
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:438: characters 17-27
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:438: characters 17-27
 		$data = \array_values(\array_map("strval", \array_keys($obj->data)));
 		$field_current = 0;
 		$field_length = \count($data);
 		$field_data = $data;
 		while ($field_current < $field_length) {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:438: lines 438-444
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:438: lines 438-444
 			$field = $field_data[$field_current++];
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:439: lines 439-440
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:439: lines 439-440
 			if ($fieldCount++ > 0) {
-				#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:439: characters 25-64
+				#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:439: characters 25-64
 				$buffer->add($style->entrySeperator($depth));
 			} else {
-				#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:440: characters 9-44
+				#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:440: characters 9-44
 				$buffer->add($style->firstEntry($depth));
 			}
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:441: characters 4-39
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:441: characters 4-39
 			$value = ($obj->data[$field] ?? null);
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:442: characters 4-60
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:442: characters 4-60
 			$buffer->add("\"" . ($field??'null') . "\"" . ($style->keyValueSeperator($depth)??'null'));
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:443: characters 4-48
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:443: characters 4-48
 			$buffer->add($this->encodeValue($value, $style, $depth));
 		}
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:445: characters 3-37
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:445: characters 3-37
 		$buffer->add($style->endObject($depth));
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:446: characters 3-27
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:446: characters 3-27
 		return $buffer->b;
 	}
 
@@ -202,82 +202,82 @@ class TJSONEncoder {
 	 * @return string
 	 */
 	public function encodeObject ($obj, $style, $depth) {
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:389: characters 3-32
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:389: characters 3-32
 		$buffer = new \StringBuf();
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:390: characters 3-39
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:390: characters 3-39
 		$buffer->add($style->beginObject($depth));
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:391: characters 3-22
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:391: characters 3-22
 		$fieldCount = 0;
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:392: characters 3-28
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:392: characters 3-28
 		$fields = null;
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:393: characters 3-45
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:393: characters 3-45
 		$dontEncodeFields = null;
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:394: characters 3-32
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:394: characters 3-32
 		$cls = \Type::getClass($obj);
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:395: lines 395-399
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:395: lines 395-399
 		if ($cls !== null) {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:396: characters 4-40
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:396: characters 4-40
 			$fields = \Type::getInstanceFields($cls);
 		} else {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:398: characters 4-32
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:398: characters 4-32
 			$fields = \Reflect::fields($obj);
 		}
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:402: characters 10-26
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:402: characters 10-26
 		$_g = \Type::typeof($obj);
 		if ($_g->index === 6) {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:403: characters 16-17
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:403: characters 16-17
 			$c = $_g->params[0];
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:404: lines 404-405
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:404: lines 404-405
 			if ($fieldCount++ > 0) {
-				#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:404: characters 26-65
+				#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:404: characters 26-65
 				$buffer->add($style->entrySeperator($depth));
 			} else {
-				#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:405: characters 10-45
+				#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:405: characters 10-45
 				$buffer->add($style->firstEntry($depth));
 			}
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:406: characters 5-58
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:406: characters 5-58
 			$buffer->add("\"_hxcls\"" . ($style->keyValueSeperator($depth)??'null'));
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:407: characters 5-65
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:407: characters 5-65
 			$buffer->add($this->encodeValue(\Type::getClassName($c), $style, $depth));
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:409: lines 409-411
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:409: lines 409-411
 			if (Boot::dynamicField($obj, 'TJ_noEncode') !== null) {
-				#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:410: characters 6-42
+				#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:410: characters 6-42
 				$dontEncodeFields = $obj->TJ_noEncode();
 			}
 		}
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:415: lines 415-425
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:415: lines 415-425
 		$_g = 0;
 		while ($_g < $fields->length) {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:415: characters 8-13
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:415: characters 8-13
 			$field = ($fields->arr[$_g] ?? null);
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:415: lines 415-425
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:415: lines 415-425
 			++$_g;
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:416: characters 4-76
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:416: characters 4-76
 			if (($dontEncodeFields !== null) && ($dontEncodeFields->indexOf($field) >= 0)) {
-				#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:416: characters 68-76
+				#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:416: characters 68-76
 				continue;
 			}
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:417: characters 4-49
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:417: characters 4-49
 			$value = \Reflect::field($obj, $field);
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:418: characters 4-55
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:418: characters 4-55
 			$vStr = $this->encodeValue($value, $style, $depth);
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:419: lines 419-423
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:419: lines 419-423
 			if ($vStr !== null) {
-				#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:420: lines 420-421
+				#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:420: lines 420-421
 				if ($fieldCount++ > 0) {
-					#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:420: characters 26-65
+					#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:420: characters 26-65
 					$buffer->add($style->entrySeperator($depth));
 				} else {
-					#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:421: characters 10-45
+					#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:421: characters 10-45
 					$buffer->add($style->firstEntry($depth));
 				}
-				#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:422: characters 5-66
+				#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:422: characters 5-66
 				$buffer->add("\"" . ($field??'null') . "\"" . ($style->keyValueSeperator($depth)??'null') . ($vStr??'null'));
 			}
 		}
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:429: characters 3-37
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:429: characters 3-37
 		$buffer->add($style->endObject($depth));
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:430: characters 3-27
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:430: characters 3-27
 		return $buffer->b;
 	}
 
@@ -289,44 +289,44 @@ class TJSONEncoder {
 	 * @return string
 	 */
 	public function encodeValue ($value, $style, $depth) {
-		#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:477: lines 477-509
+		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:477: lines 477-509
 		if (Boot::isOfType($value, Boot::getClass('Int')) || (is_float($value) || is_int($value))) {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:478: characters 5-18
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:478: characters 5-18
 			return $value;
 		} else if (($value instanceof \Array_hx) || ($value instanceof List_hx)) {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:481: characters 4-34
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:481: characters 4-34
 			$v = $value;
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:482: characters 4-42
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:482: characters 4-42
 			return $this->encodeIterable($v, $style, $depth + 1);
 		} else if (($value instanceof List_hx)) {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:485: characters 4-33
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:485: characters 4-33
 			$v = $value;
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:486: characters 4-42
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:486: characters 4-42
 			return $this->encodeIterable($v, $style, $depth + 1);
 		} else if (($value instanceof StringMap)) {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:490: characters 4-41
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:490: characters 4-41
 			return $this->encodeMap($value, $style, $depth + 1);
 		} else if (is_string($value)) {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:494: characters 4-117
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:494: characters 4-117
 			return "\"" . (\StringTools::replace(\StringTools::replace(\StringTools::replace(\StringTools::replace(\Std::string($value), "\\", "\\\\"), "\x0A", "\\n"), "\x0D", "\\r"), "\"", "\\\"")??'null') . "\"";
 		} else if (is_bool($value)) {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:497: characters 4-17
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:497: characters 4-17
 			return $value;
 		} else if (\Reflect::isObject($value)) {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:500: characters 4-33
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:500: characters 4-33
 			$ret = $this->cacheEncode($value);
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:501: characters 4-30
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:501: characters 4-30
 			if ($ret !== null) {
-				#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:501: characters 20-30
+				#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:501: characters 20-30
 				return $ret;
 			}
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:502: characters 4-44
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:502: characters 4-44
 			return $this->encodeObject($value, $style, $depth + 1);
 		} else if ($value === null) {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:505: characters 4-18
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:505: characters 4-18
 			return "null";
 		} else {
-			#/home/thehunter101/haxe/tjson/1,4,0/tjson/TJSON.hx:508: characters 4-15
+			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:508: characters 4-15
 			return null;
 		}
 	}

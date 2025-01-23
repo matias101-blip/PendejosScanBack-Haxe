@@ -27,14 +27,14 @@ class ListCell implements LinkObject {
 	 * @return void
 	 */
 	public function __construct ($cb, $list) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:143: characters 5-26
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:143: characters 5-26
 		if ($cb === null) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:143: characters 21-26
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:143: characters 21-26
 			throw Exception::thrown("callback expected but null received");
 		}
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:144: characters 5-17
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:144: characters 5-17
 		$this->cb = $cb;
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:145: characters 5-21
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:145: characters 5-21
 		$this->list = $list;
 	}
 
@@ -42,14 +42,14 @@ class ListCell implements LinkObject {
 	 * @return void
 	 */
 	public function cancel () {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:158: lines 158-162
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:158: lines 158-162
 		if ($this->list !== null) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:159: characters 7-28
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:159: characters 7-28
 			$list = $this->list;
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:160: characters 7-14
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:160: characters 7-14
 			$this->cb = null;
 			$this->list = null;
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:161: characters 23-37
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:161: characters 23-37
 			if (--$list->used <= ($list->cells->length >> 1)) {
 				$list->compact();
 			}
@@ -60,9 +60,9 @@ class ListCell implements LinkObject {
 	 * @return void
 	 */
 	public function clear () {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:153: characters 5-14
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:153: characters 5-14
 		$this->cb = null;
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:154: characters 5-16
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:154: characters 5-16
 		$this->list = null;
 	}
 
@@ -72,9 +72,9 @@ class ListCell implements LinkObject {
 	 * @return void
 	 */
 	public function invoke ($data) {
-		#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:149: lines 149-150
+		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:149: lines 149-150
 		if ($this->list !== null) {
-			#/home/thehunter101/haxe/tink_core/2,1,1/src/tink/core/Callback.hx:150: characters 7-15
+			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:150: characters 7-15
 			($this->cb)($data);
 		}
 	}

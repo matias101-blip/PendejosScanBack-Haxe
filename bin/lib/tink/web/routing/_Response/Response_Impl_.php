@@ -38,7 +38,7 @@ final class Response_Impl_ {
 	 * @return OutgoingResponseData
 	 */
 	public static function binary ($code, $contentType, $bytes, $headers = null) {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:54: characters 5-68
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:54: characters 5-68
 		if ($code === null) {
 			$code = 200;
 		}
@@ -51,15 +51,15 @@ final class Response_Impl_ {
 	 * @return OutgoingResponseData
 	 */
 	public static function empty ($code = 200) {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:58: characters 5-117
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:58: characters 5-117
 		if ($code === null) {
 			$code = 200;
 		}
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:58: characters 58-62
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:58: characters 58-62
 		$this1 = HttpStatusMessage_Impl_::fromCode($code);
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:58: characters 33-103
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:58: characters 33-103
 		$this2 = new ResponseHeaderBase($code, $this1, \Array_hx::wrap([new HeaderField("content-length", "0")]), "HTTP/1.1");
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:58: characters 12-117
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:58: characters 12-117
 		return new OutgoingResponseData($this2, new Single(new LazyConst(Chunk_Impl_::$EMPTY)));
 	}
 
@@ -69,7 +69,7 @@ final class Response_Impl_ {
 	 * @return OutgoingResponseData
 	 */
 	public static function fromChunk ($c) {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:25: characters 5-22
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:25: characters 5-22
 		return Response_Impl_::ofChunk($c);
 	}
 
@@ -79,7 +79,7 @@ final class Response_Impl_ {
 	 * @return OutgoingResponseData
 	 */
 	public static function fromIdealSource ($source) {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:37: characters 5-33
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:37: characters 5-33
 		return Response_Impl_::ofIdealSource($source);
 	}
 
@@ -89,9 +89,9 @@ final class Response_Impl_ {
 	 * @return OutgoingResponseData
 	 */
 	public static function fromRealSource ($source) {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:34: characters 5-74
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:34: characters 5-74
 		return Response_Impl_::ofRealSource(RealSourceTools::idealize($source, function ($_) {
-			#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:34: characters 53-72
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:34: characters 53-72
 			return Source_Impl_::$EMPTY;
 		}));
 	}
@@ -102,7 +102,7 @@ final class Response_Impl_ {
 	 * @return OutgoingResponseData
 	 */
 	public static function ofBytes ($b) {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:22: characters 5-29
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:22: characters 5-29
 		return Response_Impl_::binary(null, "application/octet-stream", $b);
 	}
 
@@ -113,7 +113,7 @@ final class Response_Impl_ {
 	 * @return OutgoingResponseData
 	 */
 	public static function ofChunk ($c, $contentType = "application/octet-stream") {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:16: characters 5-40
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:16: characters 5-40
 		if ($contentType === null) {
 			$contentType = "application/octet-stream";
 		}
@@ -127,13 +127,13 @@ final class Response_Impl_ {
 	 * @return OutgoingResponseData
 	 */
 	public static function ofIdealSource ($source, $contentType = "application/octet-stream") {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:31: characters 5-114
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:31: characters 5-114
 		if ($contentType === null) {
 			$contentType = "application/octet-stream";
 		}
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:31: characters 56-58
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:31: characters 56-58
 		$this1 = HttpStatusMessage_Impl_::fromCode(200);
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:31: characters 12-114
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:31: characters 12-114
 		return new OutgoingResponseData(new ResponseHeaderBase(200, $this1, \Array_hx::wrap([new HeaderField("content-type", $contentType)]), "HTTP/1.1"), $source);
 	}
 
@@ -144,17 +144,17 @@ final class Response_Impl_ {
 	 * @return OutgoingResponseData
 	 */
 	public static function ofRealSource ($source, $contentType = "application/octet-stream") {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:28: characters 5-156
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:28: characters 5-156
 		if ($contentType === null) {
 			$contentType = "application/octet-stream";
 		}
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:28: characters 56-58
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:28: characters 56-58
 		$this1 = HttpStatusMessage_Impl_::fromCode(200);
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:28: characters 33-105
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:28: characters 33-105
 		$this2 = new ResponseHeaderBase(200, $this1, \Array_hx::wrap([new HeaderField("content-type", $contentType)]), "HTTP/1.1");
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:28: characters 12-156
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:28: characters 12-156
 		return new OutgoingResponseData($this2, RealSourceTools::idealize($source, function ($_) {
-			#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:28: characters 135-154
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:28: characters 135-154
 			return Source_Impl_::$EMPTY;
 		}));
 	}
@@ -165,7 +165,7 @@ final class Response_Impl_ {
 	 * @return OutgoingResponseData
 	 */
 	public static function ofString ($s) {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:19: characters 5-36
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:19: characters 5-36
 		return Response_Impl_::textual(null, "text/plain", $s);
 	}
 
@@ -175,13 +175,13 @@ final class Response_Impl_ {
 	 * @return OutgoingResponseData
 	 */
 	public static function ofUrl ($u) {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:49: characters 59-64
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:49: characters 59-64
 		$this1 = HttpStatusMessage_Impl_::fromCode(302);
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:49: characters 84-92
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:49: characters 84-92
 		$this2 = \mb_strtolower("location");
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:49: characters 33-99
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:49: characters 33-99
 		$this3 = new ResponseHeaderBase(302, $this1, \Array_hx::wrap([new HeaderField($this2, Url_Impl_::toString($u))]), "HTTP/1.1");
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:49: characters 12-113
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:49: characters 12-113
 		return new OutgoingResponseData($this3, new Single(new LazyConst(Chunk_Impl_::$EMPTY)));
 	}
 
@@ -194,13 +194,13 @@ final class Response_Impl_ {
 	 * @return OutgoingResponseData
 	 */
 	public static function textual ($code, $contentType, $string, $headers = null) {
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:62: characters 5-70
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:62: characters 5-70
 		if ($code === null) {
 			$code = 200;
 		}
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:62: characters 38-60
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:62: characters 38-60
 		$tmp = \strlen($string);
-		#/home/thehunter101/haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:62: characters 5-70
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Response.hx:62: characters 5-70
 		return Response_Impl_::binary($code, $contentType, new Bytes($tmp, new Container($string)), $headers);
 	}
 }
