@@ -93,14 +93,14 @@ class Root {
     @:get('api/$nombre/$capitulo')
     public function Hojas(nombre:String,capitulo:String) {
         final Root = "/mnt/proyectos";
-        var hojas:Array<Int> = [];
+        var hojas:Array<String> = [];
         capitulo = StringTools.replace(capitulo, "-",".");
         nombre = StringTools.replace(nombre," ","_");
         final baseDir:String = Root + '/$nombre/$capitulo';
         if (Global.is_dir(baseDir)){
             var iterator = new FilesystemIterator(baseDir);
             while (iterator.valid()){
-               hojas.push(Std.parseInt(iterator.getFilename()));
+               hojas.push(iterator.getBasename());
                iterator.next();
             }
             hojas.sort((a,b) -> a-b);
