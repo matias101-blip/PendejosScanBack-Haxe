@@ -100,7 +100,7 @@ class Root {
         if (Global.is_dir(baseDir)){
             var iterator = new FilesystemIterator(baseDir);
             while (iterator.valid()){
-               hojas.push(Std.parseInt(iterator.getFilename().split(".")[0]));
+               hojas.push(Std.parseInt(iterator.getFilename()));
                iterator.next();
             }
             hojas.sort((a,b) -> a-b);
