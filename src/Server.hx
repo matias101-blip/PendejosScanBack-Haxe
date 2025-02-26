@@ -100,10 +100,15 @@ class Root {
         if (Global.is_dir(baseDir)){
             var iterator = new FilesystemIterator(baseDir);
             while (iterator.valid()){
-               hojas.push(iterator.getBasename());
+               hojas.push(iterator.getFilename());
                iterator.next();
             }
-            hojas.sort((a,b) -> a-b);
+            hojas.sort(function(a,b){
+                var A = Std.parseInt(a.split(".")[0]);
+                var B = Std.parseInt(b.split(".")[0]);
+                return A - B;
+            });
+
             final ListCaps = BaseData.ListCaps(StringTools.replace(nombre,"_"," "));
             return Json.stringify({"Succes":true,"Hojas":hojas,"name":nombre, "capitulos":ListCaps});
         }else{

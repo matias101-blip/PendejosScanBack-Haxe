@@ -39,7 +39,7 @@ class Router0 {
 	 * @return FutureObject
 	 */
 	public function Hojas ($ctx, $nombre, $capitulo) {
-		#src/Server.hx:94: lines 94-113
+		#src/Server.hx:94: lines 94-118
 		$d = $this->target;
 		$d1 = null;
 		$_g = function ($s) {
@@ -85,7 +85,7 @@ class Router0 {
 		}
 		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:541: lines 541-544
 		return Promise_Impl_::next(new SyncFuture(new LazyConst(Outcome::Success($d->Hojas($d1, $d2)))), function ($v) {
-			#src/Server.hx:94: lines 94-113
+			#src/Server.hx:94: lines 94-118
 			return new SyncFuture(new LazyConst(Outcome::Success(Response_Impl_::ofString($v))));
 		});
 	}

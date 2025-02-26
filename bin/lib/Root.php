@@ -26,7 +26,7 @@ class Root {
 	public function Hojas ($nombre, $capitulo) {
 		#src/Server.hx:95: characters 9-39
 		$Root = "/mnt/proyectos";
-		#src/Server.hx:96: characters 9-35
+		#src/Server.hx:96: characters 9-38
 		$hojas = new \Array_hx();
 		#src/Server.hx:97: characters 9-58
 		$capitulo = \StringTools::replace($capitulo, "-", ".");
@@ -34,26 +34,30 @@ class Root {
 		$nombre = \StringTools::replace($nombre, " ", "_");
 		#src/Server.hx:99: characters 9-60
 		$baseDir = ($Root??'null') . ("/" . ($nombre??'null') . "/" . ($capitulo??'null'));
-		#src/Server.hx:100: lines 100-111
+		#src/Server.hx:100: lines 100-116
 		if (is_dir($baseDir)) {
 			#src/Server.hx:101: characters 13-60
 			$iterator = new \FilesystemIterator($baseDir);
 			#src/Server.hx:102: lines 102-105
 			while ($iterator->valid()) {
-				#src/Server.hx:103: characters 16-78
-				$x = \Std::parseInt((HxString::split($iterator->getFilename(), ".")->arr[0] ?? null));
+				#src/Server.hx:103: characters 16-50
+				$x = $iterator->getFilename();
 				$hojas->arr[$hojas->length++] = $x;
 				#src/Server.hx:104: characters 16-31
 				$iterator->next();
 			}
-			#src/Server.hx:106: characters 13-37
+			#src/Server.hx:106: lines 106-110
 			usort($hojas->arr, function ($a, $b) {
-				#src/Server.hx:106: characters 33-36
-				return $a - $b;
+				#src/Server.hx:107: characters 17-55
+				$A = \Std::parseInt((HxString::split($a, ".")->arr[0] ?? null));
+				#src/Server.hx:108: characters 17-55
+				$B = \Std::parseInt((HxString::split($b, ".")->arr[0] ?? null));
+				#src/Server.hx:109: characters 17-29
+				return $A - $B;
 			});
-			#src/Server.hx:107: characters 13-85
+			#src/Server.hx:112: characters 13-85
 			$ListCaps = \BaseData::ListCaps(\StringTools::replace($nombre, "_", " "));
-			#src/Server.hx:108: characters 20-101
+			#src/Server.hx:113: characters 20-101
 			return Json::phpJsonEncode(new HxAnon([
 				"Succes" => true,
 				"Hojas" => $hojas,
@@ -61,7 +65,7 @@ class Root {
 				"capitulos" => $ListCaps,
 			]), null, null);
 		} else {
-			#src/Server.hx:110: characters 20-52
+			#src/Server.hx:115: characters 20-52
 			return Json::phpJsonEncode(new HxAnon(["Succes" => false]), null, null);
 		}
 	}
