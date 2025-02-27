@@ -7,9 +7,12 @@ namespace tink\web\routing;
 
 use \php\_Boot\HxAnon;
 use \tink\core\_Future\SyncFuture;
+use \tink\querystring\_Pairs\Pairs_Impl_;
 use \php\Boot;
 use \tink\core\TypedError;
 use \tink\core\Outcome;
+use \tink\querystring\Parser0 as QuerystringParser0;
+use \tink\json\Parser0;
 use \tink\core\_Lazy\LazyConst;
 use \tink\web\routing\_Response\Response_Impl_;
 use \tink\core\_Promise\Promise_Impl_;
@@ -281,10 +284,48 @@ class Router0 {
 	 * @return FutureObject
 	 */
 	public function recibirData ($ctx) {
-		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:541: lines 541-544
-		return Promise_Impl_::next(new SyncFuture(new LazyConst(Outcome::Success($this->target->recibirData()))), function ($v) {
-			#src/Server.hx:124: lines 124-126
-			return new SyncFuture(new LazyConst(Outcome::Success(Response_Impl_::ofString($v))));
+		#src/Server.hx:125: lines 125-127
+		$_gthis = $this;
+		$_g = null;
+		$_g1 = $ctx->request->header->contentType();
+		if ($_g1->index === 0) {
+			$v = $_g1->params[0];
+			$_g = "" . ($v->type??'null') . "/" . ($v->subtype??'null');
+		} else {
+			$_g = "application/json";
+		}
+		$tmp = null;
+		if ($_g === "application/json") {
+			$tmp = Promise_Impl_::next($ctx->allRaw(), function ($b) {
+				return new SyncFuture(new LazyConst((new Parser0())->tryParse($b->toString())));
+			});
+		} else if ($_g === "application/x-www-form-urlencoded") {
+			$tmp = Promise_Impl_::next($ctx->parse(), function ($pairs) {
+				return new SyncFuture(new LazyConst((new QuerystringParser0(null, new HxAnon([
+					"fileName" => "src/Server.hx",
+					"lineNumber" => 125,
+					"className" => "tink.web.routing.Router0",
+					"methodName" => "recibirData",
+				])))->tryParse(Pairs_Impl_::ofIterable($pairs))));
+			});
+		} else {
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:671: characters 22-29
+			$invalid = $_g;
+			#src/Server.hx:125: lines 125-127
+			$tmp = new SyncFuture(new LazyConst(Outcome::Failure(new TypedError(406, "Cannot process Content-Type " . ($invalid??'null'), new HxAnon([
+				"fileName" => "tink/web/macros/Routing.hx",
+				"lineNumber" => 672,
+				"className" => "tink.web.routing.Router0",
+				"methodName" => "recibirData",
+			])))));
+		}
+		return Promise_Impl_::next($tmp, function ($__body__) use (&$_gthis) {
+			#src/Server.hx:27: characters 26-38
+			$body = new HxAnon(["name" => $__body__->_0]);
+			#src/Server.hx:125: lines 125-127
+			return Promise_Impl_::next(new SyncFuture(new LazyConst(Outcome::Success($_gthis->target->recibirData($body)))), function ($v) {
+				return new SyncFuture(new LazyConst(Outcome::Success(Response_Impl_::ofString($v))));
+			});
 		});
 	}
 

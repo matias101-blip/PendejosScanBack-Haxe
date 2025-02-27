@@ -9,7 +9,6 @@ use \php\_Boot\HxAnon;
 use \php\Boot;
 use \tink\core\TypedError;
 use \tink\core\Outcome;
-use \haxe\ds\StringMap;
 use \tink\json\_Parser\JsonString_Impl_;
 
 class Parser0 extends BasicParser {
@@ -17,297 +16,23 @@ class Parser0 extends BasicParser {
 	 * @return void
 	 */
 	public function __construct () {
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/macros/Macro.hx:78: characters 29-36
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/Macro.hx:78: characters 29-36
 		parent::__construct();
 	}
 
 	/**
 	 * @param string $source
 	 * 
-	 * @return StringMap[]|\Array_hx
+	 * @return object
 	 */
 	public function parse ($source) {
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:260: lines 260-270
+		#src/Server.hx:125: lines 125-127
 		$_gthis = $this;
 		if ($_gthis->afterParsing->length > 0) {
 			$_gthis->afterParsing = new \Array_hx();
 		}
 		$this->init($source);
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:21: characters 9-29
-		while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
-			$this->pos++;
-		}
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
-		$tmp = null;
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:22: lines 22-28
-		if (($this->max > $this->pos) && (\ord($this->source->s[$this->pos]) === 91)) {
-			#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:23: characters 9-35
-			$this->pos += 1;
-			#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:25: characters 11-31
-			while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
-				$this->pos++;
-			}
-			#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
-			$tmp = true;
-		} else {
-			$tmp = false;
-		}
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:6: characters 18-160
-		if (!$tmp) {
-			#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:6: characters 76-114
-			$this->die("Expected " . "[");
-		}
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:262: characters 7-22
-		$__ret = new \Array_hx();
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:21: characters 9-29
-		while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
-			$this->pos++;
-		}
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
-		$tmp = null;
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:22: lines 22-28
-		if (($this->max > $this->pos) && (\ord($this->source->s[$this->pos]) === 93)) {
-			#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:23: characters 9-35
-			$this->pos += 1;
-			#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:25: characters 11-31
-			while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
-				$this->pos++;
-			}
-			#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
-			$tmp = true;
-		} else {
-			$tmp = false;
-		}
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:263: lines 263-268
-		if (!$tmp) {
-			#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:264: lines 264-266
-			while (true) {
-				#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:21: characters 9-29
-				while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
-					$this->pos++;
-				}
-				#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
-				$tmp = null;
-				#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:22: lines 22-28
-				if (($this->max > $this->pos) && (\ord($this->source->s[$this->pos]) === 91)) {
-					#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:23: characters 9-35
-					$this->pos += 1;
-					#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:25: characters 11-31
-					while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
-						$this->pos++;
-					}
-					#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
-					$tmp = true;
-				} else {
-					$tmp = false;
-				}
-				#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:6: characters 18-160
-				if (!$tmp) {
-					#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:6: characters 76-114
-					$this->die("Expected " . "[");
-				}
-				#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:54: characters 7-62
-				$__ret1 = new StringMap();
-				#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:21: characters 9-29
-				while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
-					$this->pos++;
-				}
-				#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
-				$tmp1 = null;
-				#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:22: lines 22-28
-				if (($this->max > $this->pos) && (\ord($this->source->s[$this->pos]) === 93)) {
-					#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:23: characters 9-35
-					$this->pos += 1;
-					#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:25: characters 11-31
-					while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
-						$this->pos++;
-					}
-					#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
-					$tmp1 = true;
-				} else {
-					$tmp1 = false;
-				}
-				#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:55: lines 55-59
-				if (!$tmp1) {
-					#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:56: lines 56-57
-					while (true) {
-						#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:21: characters 9-29
-						while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
-							$this->pos++;
-						}
-						#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
-						$tmp2 = null;
-						#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:22: lines 22-28
-						if (($this->max > $this->pos) && (\ord($this->source->s[$this->pos]) === 91)) {
-							#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:23: characters 9-35
-							$this->pos += 1;
-							#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:25: characters 11-31
-							while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
-								$this->pos++;
-							}
-							#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
-							$tmp2 = true;
-						} else {
-							$tmp2 = false;
-						}
-						#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:6: characters 18-160
-						if (!$tmp2) {
-							#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:6: characters 76-114
-							$this->die("Expected " . "[");
-						}
-						#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:70: characters 24-27
-						$_e0 = JsonString_Impl_::toString($this->parseString());
-						#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:21: characters 9-29
-						while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
-							$this->pos++;
-						}
-						#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
-						$e = null;
-						#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:22: lines 22-28
-						if (($this->max > $this->pos) && (\ord($this->source->s[$this->pos]) === 44)) {
-							#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:23: characters 9-35
-							$this->pos += 1;
-							#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:25: characters 11-31
-							while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
-								$this->pos++;
-							}
-							#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
-							$e = true;
-						} else {
-							$e = false;
-						}
-						#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:70: characters 57-78
-						$e1 = (!$e ? $this->die("Expected " . ",") : null);
-						#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:70: characters 24-27
-						$_e1 = $this->parseDynamic();
-						#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:56: characters 44-81
-						$__ret1->data[$_e0] = $_e1;
-						#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:21: characters 9-29
-						while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
-							$this->pos++;
-						}
-						#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
-						$tmp3 = null;
-						#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:22: lines 22-28
-						if (($this->max > $this->pos) && (\ord($this->source->s[$this->pos]) === 93)) {
-							#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:23: characters 9-35
-							$this->pos += 1;
-							#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:25: characters 11-31
-							while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
-								$this->pos++;
-							}
-							#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
-							$tmp3 = true;
-						} else {
-							$tmp3 = false;
-						}
-						#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:6: characters 18-160
-						if (!$tmp3) {
-							#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:6: characters 76-114
-							$this->die("Expected " . "]");
-						}
-						#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:21: characters 9-29
-						while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
-							$this->pos++;
-						}
-						#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
-						$tmp4 = null;
-						#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:22: lines 22-28
-						if (($this->max > $this->pos) && (\ord($this->source->s[$this->pos]) === 44)) {
-							#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:23: characters 9-35
-							$this->pos += 1;
-							#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:25: characters 11-31
-							while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
-								$this->pos++;
-							}
-							#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
-							$tmp4 = true;
-						} else {
-							$tmp4 = false;
-						}
-						#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:56: lines 56-57
-						if (!$tmp4) {
-							break;
-						}
-					}
-					#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:21: characters 9-29
-					while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
-						$this->pos++;
-					}
-					#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
-					$tmp5 = null;
-					#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:22: lines 22-28
-					if (($this->max > $this->pos) && (\ord($this->source->s[$this->pos]) === 93)) {
-						#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:23: characters 9-35
-						$this->pos += 1;
-						#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:25: characters 11-31
-						while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
-							$this->pos++;
-						}
-						#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
-						$tmp5 = true;
-					} else {
-						$tmp5 = false;
-					}
-					#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:6: characters 18-160
-					if (!$tmp5) {
-						#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:6: characters 76-114
-						$this->die("Expected " . "]");
-					}
-				}
-				#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:265: characters 11-25
-				$__ret->arr[$__ret->length++] = $__ret1;
-				#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:21: characters 9-29
-				while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
-					$this->pos++;
-				}
-				#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
-				$tmp6 = null;
-				#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:22: lines 22-28
-				if (($this->max > $this->pos) && (\ord($this->source->s[$this->pos]) === 44)) {
-					#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:23: characters 9-35
-					$this->pos += 1;
-					#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:25: characters 11-31
-					while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
-						$this->pos++;
-					}
-					#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
-					$tmp6 = true;
-				} else {
-					$tmp6 = false;
-				}
-				#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:264: lines 264-266
-				if (!$tmp6) {
-					break;
-				}
-			}
-			#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:21: characters 9-29
-			while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
-				$this->pos++;
-			}
-			#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
-			$tmp = null;
-			#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:22: lines 22-28
-			if (($this->max > $this->pos) && (\ord($this->source->s[$this->pos]) === 93)) {
-				#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:23: characters 9-35
-				$this->pos += 1;
-				#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:25: characters 11-31
-				while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
-					$this->pos++;
-				}
-				#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
-				$tmp = true;
-			} else {
-				$tmp = false;
-			}
-			#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:6: characters 18-160
-			if (!$tmp) {
-				#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:6: characters 76-114
-				$this->die("Expected " . "]");
-			}
-		}
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:260: lines 260-270
-		$ret = $__ret;
+		$ret = $this->process0();
 		$_g = 0;
 		$_g1 = $this->afterParsing;
 		while ($_g < $_g1->length) {
@@ -322,26 +47,231 @@ class Parser0 extends BasicParser {
 	}
 
 	/**
+	 * @return object
+	 */
+	public function process0 () {
+		$_gthis = $this;
+		$cur = 0;
+		$v__0 = null;
+		$hasv__0 = false;
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:233: characters 7-32
+		$__start__ = $this->pos;
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:234: characters 7-33
+		while (true) {
+			$_g = \ord($this->source->s[$this->pos++]);
+			$_hx_tmp = null;
+			if (($_g === 123) === true) {
+				break;
+			} else {
+				$_hx_tmp = $_g < 33;
+				if ($_hx_tmp !== true) {
+					$this->die("expected " . "{");
+				}
+			}
+		}
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:21: characters 9-29
+		while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
+			$this->pos++;
+		}
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
+		$tmp = null;
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:22: lines 22-28
+		if (($this->max > $this->pos) && (\ord($this->source->s[$this->pos]) === 125)) {
+			#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:23: characters 9-35
+			$this->pos += 1;
+			#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:25: characters 11-31
+			while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
+				$this->pos++;
+			}
+			#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
+			$tmp = true;
+		} else {
+			$tmp = false;
+		}
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:235: lines 235-249
+		if (!$tmp) {
+			#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:236: lines 236-247
+			while (true) {
+				#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:240: characters 11-37
+				while (true) {
+					$_g = \ord($this->source->s[$this->pos++]);
+					$_hx_tmp = null;
+					if (($_g === 34) === true) {
+						break;
+					} else {
+						$_hx_tmp = $_g < 33;
+						if ($_hx_tmp !== true) {
+							$this->die("expected " . "\"");
+						}
+					}
+				}
+				#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:210: characters 36-47
+				$cur = \ord($this->source->s[$this->pos++]);
+				#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:210: characters 30-47
+				if ($cur === 110) {
+					#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:210: characters 36-47
+					$cur = \ord($this->source->s[$this->pos++]);
+					#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:210: characters 30-47
+					if ($cur === 97) {
+						#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:210: characters 36-47
+						$cur = \ord($this->source->s[$this->pos++]);
+						#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:210: characters 30-47
+						if ($cur === 109) {
+							#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:210: characters 36-47
+							$cur = \ord($this->source->s[$this->pos++]);
+							#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:210: characters 30-47
+							if ($cur === 101) {
+								#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:210: characters 36-47
+								$cur = \ord($this->source->s[$this->pos++]);
+								#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:210: characters 30-47
+								if ($cur === 34) {
+									#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:204: characters 29-55
+									while (true) {
+										$_g1 = \ord($this->source->s[$this->pos++]);
+										$_hx_tmp1 = null;
+										if (($_g1 === 58) === true) {
+											break;
+										} else {
+											$_hx_tmp1 = $_g1 < 33;
+											if ($_hx_tmp1 !== true) {
+												$this->die("expected " . ":");
+											}
+										}
+									}
+									#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:204: characters 57-70
+									while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
+										$this->pos++;
+									}
+									#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:119: characters 23-41
+									$v__0 = JsonString_Impl_::toString($this->parseString());
+									#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:124: characters 24-40
+									$hasv__0 = true;
+									#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:21: characters 9-29
+									while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
+										$this->pos++;
+									}
+									#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
+									$tmp = null;
+									#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:22: lines 22-28
+									if (($this->max > $this->pos) && (\ord($this->source->s[$this->pos]) === 44)) {
+										#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:23: characters 9-35
+										$this->pos += 1;
+										#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
+										$tmp = true;
+									} else {
+										$tmp = false;
+									}
+									#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:236: lines 236-247
+									if (!$tmp) {
+										break;
+									} else {
+										#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:204: characters 76-84
+										continue;
+									}
+								}
+							}
+						}
+					}
+				}
+				#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:242: characters 11-44
+				if ($cur !== 34) {
+					#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:242: characters 32-44
+					$this->skipString();
+				}
+				#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:243: characters 11-37
+				while (true) {
+					$_g2 = \ord($this->source->s[$this->pos++]);
+					$_hx_tmp2 = null;
+					if (($_g2 === 58) === true) {
+						break;
+					} else {
+						$_hx_tmp2 = $_g2 < 33;
+						if ($_hx_tmp2 !== true) {
+							$this->die("expected " . ":");
+						}
+					}
+				}
+				#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:244: characters 11-29
+				while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
+					$this->pos++;
+				}
+				#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:245: characters 11-27
+				$this->skipValue();
+				#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:21: characters 9-29
+				while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
+					$this->pos++;
+				}
+				#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
+				$tmp1 = null;
+				#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:22: lines 22-28
+				if (($this->max > $this->pos) && (\ord($this->source->s[$this->pos]) === 44)) {
+					#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:23: characters 9-35
+					$this->pos += 1;
+					#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
+					$tmp1 = true;
+				} else {
+					$tmp1 = false;
+				}
+				#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:236: lines 236-247
+				if (!$tmp1) {
+					break;
+				}
+			}
+			#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:21: characters 9-29
+			while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
+				$this->pos++;
+			}
+			#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
+			$tmp = null;
+			#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:22: lines 22-28
+			if (($this->max > $this->pos) && (\ord($this->source->s[$this->pos]) === 125)) {
+				#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:23: characters 9-35
+				$this->pos += 1;
+				#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:25: characters 11-31
+				while (($this->pos < $this->max) && (\ord($this->source->s[$this->pos]) < 33)) {
+					$this->pos++;
+				}
+				#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:19: lines 19-29
+				$tmp = true;
+			} else {
+				$tmp = false;
+			}
+			#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:6: characters 18-160
+			if (!$tmp) {
+				#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.macro.hx:6: characters 76-114
+				$this->die("Expected " . "}");
+			}
+		}
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:251: lines 251-253
+		$__missing__ = function ($field) use (&$__start__, &$_gthis) {
+			#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:252: characters 9-68
+			return $_gthis->die("missing field \"" . ($field??'null') . "\"", $__start__);
+		};
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/GenReader.hx:255: characters 7-39
+		return new HxAnon(["_0" => ($hasv__0 ? $v__0 : $__missing__("name"))]);
+	}
+
+	/**
 	 * @param string $source
 	 * 
 	 * @return Outcome
 	 */
 	public function tryParse ($source) {
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/macros/Macro.hx:107: lines 107-113
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/Macro.hx:107: lines 107-113
 		$_gthis = $this;
 		return TypedError::catchExceptions(function () use (&$source, &$_gthis) {
-			#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/macros/Macro.hx:108: characters 11-35
+			#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/Macro.hx:108: characters 11-35
 			$ret = $_gthis->parse($source);
-			#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/macros/Macro.hx:109: characters 11-24
+			#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/Macro.hx:109: characters 11-24
 			while (($_gthis->pos < $_gthis->max) && (\ord($_gthis->source->s[$_gthis->pos]) < 33)) {
 				$_gthis->pos++;
 			}
-			#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/macros/Macro.hx:110: lines 110-111
+			#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/Macro.hx:110: lines 110-111
 			if ($_gthis->pos < $_gthis->max) {
-				#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/macros/Macro.hx:111: characters 13-52
+				#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/Macro.hx:111: characters 13-52
 				$_gthis->die("Invalid data after JSON document");
 			}
-			#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/macros/Macro.hx:112: characters 11-21
+			#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/macros/Macro.hx:112: characters 11-21
 			return $ret;
 		}, null, new HxAnon([
 			"fileName" => "tink/json/macros/Macro.hx",

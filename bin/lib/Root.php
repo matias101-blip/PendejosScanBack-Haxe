@@ -163,11 +163,13 @@ class Root {
 	}
 
 	/**
+	 * @param object $body
+	 * 
 	 * @return string
 	 */
-	public function recibirData () {
-		#src/Server.hx:125: characters 9-31
-		return "Complete 2 xd";
+	public function recibirData ($body) {
+		#src/Server.hx:126: characters 9-41
+		return "este es tu " . ($body->name??'null');
 	}
 }
 

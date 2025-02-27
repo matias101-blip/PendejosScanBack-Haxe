@@ -30,11 +30,11 @@ class SliceData {
 	 * @return void
 	 */
 	public function __construct ($source, $min, $max) {
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.hx:88: characters 5-25
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.hx:88: characters 5-25
 		$this->source = $source;
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.hx:89: characters 5-19
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.hx:89: characters 5-19
 		$this->min = $min;
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.hx:90: characters 5-19
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.hx:90: characters 5-19
 		$this->max = $max;
 	}
 }

@@ -19,15 +19,15 @@ final class RawData_Impl_ {
 	 * @return Container
 	 */
 	public static function _new ($s, $setLength) {
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.hx:16: characters 13-30
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.hx:16: characters 13-30
 		$b = \strlen($s);
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.hx:16: characters 5-31
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.hx:16: characters 5-31
 		$b1 = new Bytes($b, new Container($s));
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.hx:15: character 3
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.hx:15: character 3
 		$this1 = $b1->b;
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.hx:18: characters 5-24
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.hx:18: characters 5-24
 		$setLength($b1->length);
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.hx:15: character 3
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.hx:15: character 3
 		return $this1;
 	}
 
@@ -40,21 +40,21 @@ final class RawData_Impl_ {
 	 * @return int
 	 */
 	public static function charPos ($this1, $char, $start, $end) {
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.hx:31: characters 17-22
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.hx:31: characters 17-22
 		$_g = $start;
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.hx:31: characters 25-28
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.hx:31: characters 25-28
 		$_g1 = $end;
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.hx:31: lines 31-32
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.hx:31: lines 31-32
 		while ($_g < $_g1) {
-			#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.hx:31: characters 17-28
+			#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.hx:31: characters 17-28
 			$pos = $_g++;
-			#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.hx:32: characters 7-43
+			#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.hx:32: characters 7-43
 			if (\ord($this1->s[$pos]) === $char) {
-				#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.hx:32: characters 33-43
+				#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.hx:32: characters 33-43
 				return $pos;
 			}
 		}
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.hx:33: characters 5-14
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.hx:33: characters 5-14
 		return -1;
 	}
 
@@ -65,7 +65,7 @@ final class RawData_Impl_ {
 	 * @return int
 	 */
 	public static function getChar ($this1, $i) {
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.hx:28: characters 5-34
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.hx:28: characters 5-34
 		return \ord($this1->s[$i]);
 	}
 
@@ -77,7 +77,7 @@ final class RawData_Impl_ {
 	 * @return bool
 	 */
 	public static function hasBackslash ($this1, $min, $max) {
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.hx:25: characters 5-46
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.hx:25: characters 5-46
 		return RawData_Impl_::charPos($this1, 92, $min, $max) !== -1;
 	}
 
@@ -90,7 +90,7 @@ final class RawData_Impl_ {
 	 * @return bool
 	 */
 	public static function hasId ($this1, $s, $min, $max) {
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.hx:37: characters 5-36
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.hx:37: characters 5-36
 		return RawData_Impl_::substring($this1, $min, $max) === $s;
 	}
 
@@ -102,7 +102,7 @@ final class RawData_Impl_ {
 	 * @return string
 	 */
 	public static function substring ($this1, $min, $max) {
-		#/home/thehunter101/haxe/tink_json/0,11,0/src/tink/json/Parser.hx:22: characters 12-56
+		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Parser.hx:22: characters 12-56
 		$_this = new Bytes(\strlen($this1->s), $this1);
 		$len = $max - $min;
 		if (($min < 0) || ($len < 0) || (($min + $len) > $_this->length)) {
