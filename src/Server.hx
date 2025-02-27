@@ -122,7 +122,7 @@ class Root {
     //Post pata la base data
     @:post(api/InsertManga)
     public function recibirData(datos:{name:String,resumen:String}){
-        return "Complete";
+        return "Complete 2";
     }
 
 }
