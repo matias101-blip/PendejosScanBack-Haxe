@@ -60,4 +60,8 @@ class BaseData{
         +Nombre +"'");
         return consulta;
     }
+
+    public static function InserData(Nombre:String, Resumen:String,Generos:Array<String>,Status:String) {
+        
+    }
 }

@@ -1,3 +1,4 @@
+import tink.web.Response;
 import php.FilesystemIterator;
 import haxe.io.Bytes;
 import sys.io.File;
@@ -115,6 +116,13 @@ class Root {
             return Json.stringify({"Succes":false});
         }
 
+    }
+
+
+    //Post pata la base data
+    @:post(api/InsertManga)
+    public function recibirData(datos:{name:String,resumen:String}){
+        return "Complete";
     }
 
 }
