@@ -65,6 +65,17 @@ class BaseData {
 
 	/**
 	 * @param string $Nombre
+	 * @param string $Resumen
+	 * @param string[]|\Array_hx $Generos
+	 * @param string $Status
+	 * 
+	 * @return void
+	 */
+	public static function InserData ($Nombre, $Resumen, $Generos, $Status) {
+	}
+
+	/**
+	 * @param string $Nombre
 	 * 
 	 * @return mixed
 	 */

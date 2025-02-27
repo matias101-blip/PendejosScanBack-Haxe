@@ -39,7 +39,7 @@ class Router0 {
 	 * @return FutureObject
 	 */
 	public function Hojas ($ctx, $nombre, $capitulo) {
-		#src/Server.hx:94: lines 94-118
+		#src/Server.hx:95: lines 95-119
 		$d = $this->target;
 		$d1 = null;
 		$_g = function ($s) {
@@ -85,7 +85,7 @@ class Router0 {
 		}
 		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:541: lines 541-544
 		return Promise_Impl_::next(new SyncFuture(new LazyConst(Outcome::Success($d->Hojas($d1, $d2)))), function ($v) {
-			#src/Server.hx:94: lines 94-118
+			#src/Server.hx:95: lines 95-119
 			return new SyncFuture(new LazyConst(Outcome::Success(Response_Impl_::ofString($v))));
 		});
 	}
@@ -100,7 +100,7 @@ class Router0 {
 	 * @return FutureObject
 	 */
 	public function Leer ($ctx, $nombre, $capitulo = null, $pag = null, $portada = null) {
-		#src/Server.hx:54: lines 54-91
+		#src/Server.hx:55: lines 55-92
 		$d = $this->target;
 		$d1 = null;
 		$_g = function ($s) {
@@ -128,7 +128,7 @@ class Router0 {
 		if ($capitulo === null) {
 			$d2 = null;
 		} else {
-			#src/Server.hx:54: lines 54-91
+			#src/Server.hx:55: lines 55-92
 			$_g1 = function ($s) {
 				return $s;
 			};
@@ -147,7 +147,7 @@ class Router0 {
 				#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:320: lines 320-323
 				$d2 = $v;
 			} else if ($__hx__switch === 1) {
-				#src/Server.hx:54: lines 54-91
+				#src/Server.hx:55: lines 55-92
 				$e = $_g2->params[0];
 				return new SyncFuture(new LazyConst(Outcome::Failure($e)));
 			}
@@ -157,7 +157,7 @@ class Router0 {
 		if ($pag === null) {
 			$d3 = null;
 		} else {
-			#src/Server.hx:54: lines 54-91
+			#src/Server.hx:55: lines 55-92
 			$_g2 = function ($s) {
 				return $s;
 			};
@@ -176,7 +176,7 @@ class Router0 {
 				#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:320: lines 320-323
 				$d3 = $v;
 			} else if ($__hx__switch === 1) {
-				#src/Server.hx:54: lines 54-91
+				#src/Server.hx:55: lines 55-92
 				$e = $_g3->params[0];
 				return new SyncFuture(new LazyConst(Outcome::Failure($e)));
 			}
@@ -186,7 +186,7 @@ class Router0 {
 		if ($portada === null) {
 			$d4 = null;
 		} else {
-			#src/Server.hx:54: lines 54-91
+			#src/Server.hx:55: lines 55-92
 			$_g3 = function ($s) {
 				return $s;
 			};
@@ -205,14 +205,14 @@ class Router0 {
 				#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:320: lines 320-323
 				$d4 = $v;
 			} else if ($__hx__switch === 1) {
-				#src/Server.hx:54: lines 54-91
+				#src/Server.hx:55: lines 55-92
 				$e = $_g4->params[0];
 				return new SyncFuture(new LazyConst(Outcome::Failure($e)));
 			}
 		}
 		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:541: lines 541-544
 		return Promise_Impl_::next(new SyncFuture(new LazyConst(Outcome::Success($d->Leer($d1, $d2, $d3, $d4)))), function ($v) {
-			#src/Server.hx:54: lines 54-91
+			#src/Server.hx:55: lines 55-92
 			return new SyncFuture(new LazyConst(Outcome::Success(Response_Impl_::ofBytes($v))));
 		});
 	}
@@ -225,7 +225,7 @@ class Router0 {
 	public function home ($ctx) {
 		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:541: lines 541-544
 		return Promise_Impl_::next(new SyncFuture(new LazyConst(Outcome::Success($this->target->home()))), function ($v) {
-			#src/Server.hx:38: lines 38-42
+			#src/Server.hx:39: lines 39-43
 			return new SyncFuture(new LazyConst(Outcome::Success(Response_Impl_::ofString($v))));
 		});
 	}
@@ -237,14 +237,14 @@ class Router0 {
 	 * @return FutureObject
 	 */
 	public function manga ($ctx, $name = null) {
-		#src/Server.hx:48: lines 48-50
+		#src/Server.hx:49: lines 49-51
 		$d = $this->target;
 		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:320: lines 320-323
 		$d1 = null;
 		if ($name === null) {
 			$d1 = null;
 		} else {
-			#src/Server.hx:48: lines 48-50
+			#src/Server.hx:49: lines 49-51
 			$_g = function ($s) {
 				return $s;
 			};
@@ -263,14 +263,27 @@ class Router0 {
 				#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:320: lines 320-323
 				$d1 = $v;
 			} else if ($__hx__switch === 1) {
-				#src/Server.hx:48: lines 48-50
+				#src/Server.hx:49: lines 49-51
 				$e = $_g1->params[0];
 				return new SyncFuture(new LazyConst(Outcome::Failure($e)));
 			}
 		}
 		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:541: lines 541-544
 		return Promise_Impl_::next(new SyncFuture(new LazyConst(Outcome::Success($d->manga($d1)))), function ($v) {
-			#src/Server.hx:48: lines 48-50
+			#src/Server.hx:49: lines 49-51
+			return new SyncFuture(new LazyConst(Outcome::Success(Response_Impl_::ofString($v))));
+		});
+	}
+
+	/**
+	 * @param Context $ctx
+	 * 
+	 * @return FutureObject
+	 */
+	public function recibirData ($ctx) {
+		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:541: lines 541-544
+		return Promise_Impl_::next(new SyncFuture(new LazyConst(Outcome::Success($this->target->recibirData()))), function ($v) {
+			#src/Server.hx:124: lines 124-126
 			return new SyncFuture(new LazyConst(Outcome::Success(Response_Impl_::ofString($v))));
 		});
 	}
@@ -291,31 +304,32 @@ class Router0 {
 		$_g3 = $ctx->part(2);
 		$_g4 = $ctx->part(3);
 		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:136: characters 22-31
-		$_g5 = $l > 1;
-		$_g6 = $l > 2;
-		$_g7 = $l > 3;
-		$_g8 = $l > 4;
+		$_g5 = $l > 0;
+		$_g6 = $l > 1;
+		$_g7 = $l > 2;
+		$_g8 = $l > 3;
+		$_g9 = $l > 4;
 		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:130: characters 22-39
 		if ($_g === "GET") {
 			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:136: characters 22-31
-			if ($l > 0) {
+			if ($_g5) {
 				#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:133: characters 22-41
 				if ($_g1 === "api") {
 					#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:136: characters 22-31
-					if ($_g5 === true) {
-						if ($_g6 === true) {
-							if ($_g7 === false) {
+					if ($_g6 === true) {
+						if ($_g7 === true) {
+							if ($_g8 === false) {
 								#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:93: characters 19-25
 								$capitulo = $_g3;
 								$nombre = $_g2;
-								#src/Server.hx:93: characters 11-34
+								#src/Server.hx:94: characters 11-34
 								return $this->Hojas($ctx, $nombre, $capitulo);
 							} else {
-								#src/Server.hx:26: characters 26-38
+								#src/Server.hx:27: characters 26-38
 								$this1 = $ctx->request->header->url;
 								return new SyncFuture(new LazyConst(Outcome::Failure(new TypedError(404, "Not Found: [" . ($ctx->request->header->method??'null') . "] " . ((($this1->query === null ? $this1->path : ((($this1->path === null ? "null" : $this1->path))??'null') . "?" . ((($this1->query === null ? "null" : $this1->query))??'null')))??'null'), new HxAnon([
 									"fileName" => "src/Server.hx",
-									"lineNumber" => 26,
+									"lineNumber" => 27,
 									"className" => "tink.web.routing.Router0",
 									"methodName" => "route",
 								])))));
@@ -324,7 +338,7 @@ class Router0 {
 							$this1 = $ctx->request->header->url;
 							return new SyncFuture(new LazyConst(Outcome::Failure(new TypedError(404, "Not Found: [" . ($ctx->request->header->method??'null') . "] " . ((($this1->query === null ? $this1->path : ((($this1->path === null ? "null" : $this1->path))??'null') . "?" . ((($this1->query === null ? "null" : $this1->query))??'null')))??'null'), new HxAnon([
 								"fileName" => "src/Server.hx",
-								"lineNumber" => 26,
+								"lineNumber" => 27,
 								"className" => "tink.web.routing.Router0",
 								"methodName" => "route",
 							])))));
@@ -333,29 +347,29 @@ class Router0 {
 						$this1 = $ctx->request->header->url;
 						return new SyncFuture(new LazyConst(Outcome::Failure(new TypedError(404, "Not Found: [" . ($ctx->request->header->method??'null') . "] " . ((($this1->query === null ? $this1->path : ((($this1->path === null ? "null" : $this1->path))??'null') . "?" . ((($this1->query === null ? "null" : $this1->query))??'null')))??'null'), new HxAnon([
 							"fileName" => "src/Server.hx",
-							"lineNumber" => 26,
+							"lineNumber" => 27,
 							"className" => "tink.web.routing.Router0",
 							"methodName" => "route",
 						])))));
 					}
 				} else if ($_g1 === "img") {
 					#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:136: characters 22-31
-					if ($_g5 === true) {
-						if ($_g6 === true) {
-							if ($_g7) {
-								if ($_g8 === false) {
+					if ($_g6 === true) {
+						if ($_g7 === true) {
+							if ($_g8) {
+								if ($_g9 === false) {
 									#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:93: characters 19-25
 									$nombre = $_g2;
 									$capitulo = $_g3;
 									$pag = $_g4;
-									#src/Server.hx:53: characters 11-40
+									#src/Server.hx:54: characters 11-40
 									return $this->Leer($ctx, $nombre, $capitulo, $pag, null);
 								} else {
-									#src/Server.hx:26: characters 26-38
+									#src/Server.hx:27: characters 26-38
 									$this1 = $ctx->request->header->url;
 									return new SyncFuture(new LazyConst(Outcome::Failure(new TypedError(404, "Not Found: [" . ($ctx->request->header->method??'null') . "] " . ((($this1->query === null ? $this1->path : ((($this1->path === null ? "null" : $this1->path))??'null') . "?" . ((($this1->query === null ? "null" : $this1->query))??'null')))??'null'), new HxAnon([
 										"fileName" => "src/Server.hx",
-										"lineNumber" => 26,
+										"lineNumber" => 27,
 										"className" => "tink.web.routing.Router0",
 										"methodName" => "route",
 									])))));
@@ -364,15 +378,15 @@ class Router0 {
 								#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:93: characters 19-25
 								$portada = $_g3;
 								$nombre = $_g2;
-								#src/Server.hx:52: characters 11-34
+								#src/Server.hx:53: characters 11-34
 								return $this->Leer($ctx, $nombre, null, null, $portada);
 							}
 						} else {
-							#src/Server.hx:26: characters 26-38
+							#src/Server.hx:27: characters 26-38
 							$this1 = $ctx->request->header->url;
 							return new SyncFuture(new LazyConst(Outcome::Failure(new TypedError(404, "Not Found: [" . ($ctx->request->header->method??'null') . "] " . ((($this1->query === null ? $this1->path : ((($this1->path === null ? "null" : $this1->path))??'null') . "?" . ((($this1->query === null ? "null" : $this1->query))??'null')))??'null'), new HxAnon([
 								"fileName" => "src/Server.hx",
-								"lineNumber" => 26,
+								"lineNumber" => 27,
 								"className" => "tink.web.routing.Router0",
 								"methodName" => "route",
 							])))));
@@ -381,53 +395,108 @@ class Router0 {
 						$this1 = $ctx->request->header->url;
 						return new SyncFuture(new LazyConst(Outcome::Failure(new TypedError(404, "Not Found: [" . ($ctx->request->header->method??'null') . "] " . ((($this1->query === null ? $this1->path : ((($this1->path === null ? "null" : $this1->path))??'null') . "?" . ((($this1->query === null ? "null" : $this1->query))??'null')))??'null'), new HxAnon([
 							"fileName" => "src/Server.hx",
-							"lineNumber" => 26,
+							"lineNumber" => 27,
 							"className" => "tink.web.routing.Router0",
 							"methodName" => "route",
 						])))));
 					}
 				} else if ($_g1 === "proyectos") {
 					#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:136: characters 22-31
-					if ($_g5) {
-						if ($_g6 === false) {
+					if ($_g6) {
+						if ($_g7 === false) {
 							#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:93: characters 19-25
 							$name = $_g2;
-							#src/Server.hx:47: characters 11-29
+							#src/Server.hx:48: characters 11-29
 							return $this->manga($ctx, $name);
 						} else {
-							#src/Server.hx:26: characters 26-38
+							#src/Server.hx:27: characters 26-38
 							$this1 = $ctx->request->header->url;
 							return new SyncFuture(new LazyConst(Outcome::Failure(new TypedError(404, "Not Found: [" . ($ctx->request->header->method??'null') . "] " . ((($this1->query === null ? $this1->path : ((($this1->path === null ? "null" : $this1->path))??'null') . "?" . ((($this1->query === null ? "null" : $this1->query))??'null')))??'null'), new HxAnon([
 								"fileName" => "src/Server.hx",
-								"lineNumber" => 26,
+								"lineNumber" => 27,
 								"className" => "tink.web.routing.Router0",
 								"methodName" => "route",
 							])))));
 						}
 					} else {
-						#src/Server.hx:46: characters 11-23
+						#src/Server.hx:47: characters 11-23
 						return $this->manga($ctx, null);
 					}
 				} else {
-					#src/Server.hx:26: characters 26-38
+					#src/Server.hx:27: characters 26-38
 					$this1 = $ctx->request->header->url;
 					return new SyncFuture(new LazyConst(Outcome::Failure(new TypedError(404, "Not Found: [" . ($ctx->request->header->method??'null') . "] " . ((($this1->query === null ? $this1->path : ((($this1->path === null ? "null" : $this1->path))??'null') . "?" . ((($this1->query === null ? "null" : $this1->query))??'null')))??'null'), new HxAnon([
 						"fileName" => "src/Server.hx",
-						"lineNumber" => 26,
+						"lineNumber" => 27,
 						"className" => "tink.web.routing.Router0",
 						"methodName" => "route",
 					])))));
 				}
 			} else {
-				#src/Server.hx:37: characters 11-14
+				#src/Server.hx:38: characters 11-14
 				return $this->home($ctx);
 			}
+		} else if ($_g === "POST") {
+			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:133: characters 22-41
+			if ($_g1 === "api") {
+				if ($_g2 === "InsertManga") {
+					#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/macros/Routing.hx:136: characters 22-31
+					if ($_g5 === true) {
+						if ($_g6 === true) {
+							if ($_g7 === false) {
+								#src/Server.hx:123: characters 12-29
+								return $this->recibirData($ctx);
+							} else {
+								#src/Server.hx:27: characters 26-38
+								$this1 = $ctx->request->header->url;
+								return new SyncFuture(new LazyConst(Outcome::Failure(new TypedError(404, "Not Found: [" . ($ctx->request->header->method??'null') . "] " . ((($this1->query === null ? $this1->path : ((($this1->path === null ? "null" : $this1->path))??'null') . "?" . ((($this1->query === null ? "null" : $this1->query))??'null')))??'null'), new HxAnon([
+									"fileName" => "src/Server.hx",
+									"lineNumber" => 27,
+									"className" => "tink.web.routing.Router0",
+									"methodName" => "route",
+								])))));
+							}
+						} else {
+							$this1 = $ctx->request->header->url;
+							return new SyncFuture(new LazyConst(Outcome::Failure(new TypedError(404, "Not Found: [" . ($ctx->request->header->method??'null') . "] " . ((($this1->query === null ? $this1->path : ((($this1->path === null ? "null" : $this1->path))??'null') . "?" . ((($this1->query === null ? "null" : $this1->query))??'null')))??'null'), new HxAnon([
+								"fileName" => "src/Server.hx",
+								"lineNumber" => 27,
+								"className" => "tink.web.routing.Router0",
+								"methodName" => "route",
+							])))));
+						}
+					} else {
+						$this1 = $ctx->request->header->url;
+						return new SyncFuture(new LazyConst(Outcome::Failure(new TypedError(404, "Not Found: [" . ($ctx->request->header->method??'null') . "] " . ((($this1->query === null ? $this1->path : ((($this1->path === null ? "null" : $this1->path))??'null') . "?" . ((($this1->query === null ? "null" : $this1->query))??'null')))??'null'), new HxAnon([
+							"fileName" => "src/Server.hx",
+							"lineNumber" => 27,
+							"className" => "tink.web.routing.Router0",
+							"methodName" => "route",
+						])))));
+					}
+				} else {
+					$this1 = $ctx->request->header->url;
+					return new SyncFuture(new LazyConst(Outcome::Failure(new TypedError(404, "Not Found: [" . ($ctx->request->header->method??'null') . "] " . ((($this1->query === null ? $this1->path : ((($this1->path === null ? "null" : $this1->path))??'null') . "?" . ((($this1->query === null ? "null" : $this1->query))??'null')))??'null'), new HxAnon([
+						"fileName" => "src/Server.hx",
+						"lineNumber" => 27,
+						"className" => "tink.web.routing.Router0",
+						"methodName" => "route",
+					])))));
+				}
+			} else {
+				$this1 = $ctx->request->header->url;
+				return new SyncFuture(new LazyConst(Outcome::Failure(new TypedError(404, "Not Found: [" . ($ctx->request->header->method??'null') . "] " . ((($this1->query === null ? $this1->path : ((($this1->path === null ? "null" : $this1->path))??'null') . "?" . ((($this1->query === null ? "null" : $this1->query))??'null')))??'null'), new HxAnon([
+					"fileName" => "src/Server.hx",
+					"lineNumber" => 27,
+					"className" => "tink.web.routing.Router0",
+					"methodName" => "route",
+				])))));
+			}
 		} else {
-			#src/Server.hx:26: characters 26-38
 			$this1 = $ctx->request->header->url;
 			return new SyncFuture(new LazyConst(Outcome::Failure(new TypedError(404, "Not Found: [" . ($ctx->request->header->method??'null') . "] " . ((($this1->query === null ? $this1->path : ((($this1->path === null ? "null" : $this1->path))??'null') . "?" . ((($this1->query === null ? "null" : $this1->query))??'null')))??'null'), new HxAnon([
 				"fileName" => "src/Server.hx",
-				"lineNumber" => 26,
+				"lineNumber" => 27,
 				"className" => "tink.web.routing.Router0",
 				"methodName" => "route",
 			])))));

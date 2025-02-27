@@ -19,19 +19,19 @@ class Server {
 	 * @return void
 	 */
 	public static function main () {
-		#src/Server.hx:22: characters 9-56
+		#src/Server.hx:23: characters 9-56
 		header("Access-Control-Allow-Origin: *");
-		#src/Server.hx:23: characters 9-74
+		#src/Server.hx:24: characters 9-74
 		header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
-		#src/Server.hx:24: characters 9-83
+		#src/Server.hx:25: characters 9-83
 		header("Access-Control-Allow-Headers: Content-Type, Authorization");
-		#src/Server.hx:25: characters 9-43
+		#src/Server.hx:26: characters 9-43
 		$container = PhpContainer::$inst;
-		#src/Server.hx:26: characters 9-51
+		#src/Server.hx:27: characters 9-51
 		$router = new Router0(new \Root());
-		#src/Server.hx:27: lines 27-30
+		#src/Server.hx:28: lines 28-31
 		$container->run(new SimpleHandler(function ($req) use (&$router) {
-			#src/Server.hx:28: lines 28-29
+			#src/Server.hx:29: lines 29-30
 			$this1 = $router->route(Context::ofRequest($req));
 			$f = Recover_Impl_::ofSync(Boot::getStaticClosure(OutgoingResponse_Impl_::class, 'reportError'));
 			return Future_Impl_::flatMap($this1, function ($o) use (&$f) {
