@@ -321,7 +321,12 @@ class Router0 {
 		}
 		return Promise_Impl_::next($tmp, function ($__body__) use (&$_gthis) {
 			#src/Server.hx:27: characters 26-38
-			$body = new HxAnon(["name" => $__body__->_0]);
+			$body = new HxAnon([
+				"generos" => $__body__->_0,
+				"name" => $__body__->_1,
+				"resumen" => $__body__->_2,
+				"status" => $__body__->_3,
+			]);
 			#src/Server.hx:125: lines 125-127
 			return Promise_Impl_::next(new SyncFuture(new LazyConst(Outcome::Success($_gthis->target->recibirData($body)))), function ($v) {
 				return new SyncFuture(new LazyConst(Outcome::Success(Response_Impl_::ofString($v))));

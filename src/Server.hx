@@ -122,8 +122,8 @@ class Root {
     //Post pata la base data
     @:post('api/InsertManga')
     @:bodyParam
-    public function recibirData(body:{name:String}){
-        return 'Te amo ${body.name} UwU';
+    public function recibirData(body:{name:String,resumen:String, generos:Array<String>,status:Int}){
+        return 'Datos recibidos ${body.name + body.resumen + body.generos + body.generos} UwU';
     }
 
 }

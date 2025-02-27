@@ -8,6 +8,8 @@ namespace tink\querystring;
 use \php\_Boot\HxAnon;
 use \tink\core\NamedWith;
 use \php\Boot;
+use \tink\_Stringly\Stringly_Impl_;
+use \tink\core\OutcomeTools;
 use \tink\web\forms\_FormField\FormField_Impl_;
 use \tink\http\BodyPart;
 
@@ -69,13 +71,53 @@ class Parser0 extends ParserBase {
 		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:235: characters 7-35
 		$tree = FieldTools::getSub($field);
 		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:210: characters 26-29
+		$name = "generos";
+		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:220: characters 13-38
+		$field = ($tree->data[$name] ?? null);
+		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:244: characters 7-35
+		$tree1 = FieldTools::getSub($field);
+		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:245: characters 7-22
+		$ret = new \Array_hx();
+		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:246: characters 27-31
+		$map = $tree1;
+		$_g_map = $map;
+		$_g_keys = $map->keys();
+		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:246: lines 246-247
+		while ($_g_keys->hasNext()) {
+			#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:246: characters 27-31
+			$key = $_g_keys->next();
+			$_g_value = $_g_map->get($key);
+			$_g_key = $key;
+			$key1 = $_g_key;
+			$field = $_g_value;
+			#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:247: characters 9-39
+			$ret->offsetSet(OutcomeTools::sure(Stringly_Impl_::parseInt($key1)), FormField_Impl_::toString(FieldTools::getValue($field)));
+		}
+		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:210: characters 26-29
 		$name = "name";
 		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:220: characters 13-38
 		$field = ($tree->data[$name] ?? null);
+		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:226: lines 226-229
+		$__o = FormField_Impl_::toString(FieldTools::getValue($field));
+		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:210: characters 26-29
+		$name = "resumen";
+		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:220: characters 13-38
+		$field = ($tree->data[$name] ?? null);
+		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:226: lines 226-229
+		$__o1 = FormField_Impl_::toString(FieldTools::getValue($field));
+		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:210: characters 26-29
+		$name = "status";
+		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:220: characters 13-38
+		$field = ($tree->data[$name] ?? null);
 		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:236: characters 7-46
-		$__o = new HxAnon(["_0" => FormField_Impl_::toString(FieldTools::getValue($field))]);
+		$__o2 = new HxAnon([
+			"_0" => $ret,
+			"_1" => $__o,
+			"_2" => $__o1,
+			"_3" => FormField_Impl_::toInt(FieldTools::getValue($field)),
+		]);
 		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:238: characters 7-10
-		return $__o;
+		return $__o2;
 	}
 }
 
