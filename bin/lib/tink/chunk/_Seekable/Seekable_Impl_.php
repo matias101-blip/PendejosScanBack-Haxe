@@ -18,7 +18,7 @@ final class Seekable_Impl_ {
 	 * @return int[]|\Array_hx
 	 */
 	public static function _new ($a) {
-		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:7: character 3
+		#/home/sinherani/haxelib/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:7: character 3
 		return $a;
 	}
 
@@ -29,7 +29,7 @@ final class Seekable_Impl_ {
 	 * @return int
 	 */
 	public static function get ($this1, $index) {
-		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:14: characters 5-23
+		#/home/sinherani/haxelib/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:14: characters 5-23
 		return ($this1->arr[$index] ?? null);
 	}
 
@@ -39,7 +39,7 @@ final class Seekable_Impl_ {
 	 * @return int
 	 */
 	public static function get_length ($this1) {
-		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:11: characters 7-25
+		#/home/sinherani/haxelib/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:11: characters 7-25
 		return $this1->length;
 	}
 
@@ -49,21 +49,21 @@ final class Seekable_Impl_ {
 	 * @return int[]|\Array_hx
 	 */
 	public static function ofBytes ($b) {
-		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:20: characters 25-59
+		#/home/sinherani/haxelib/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:20: characters 25-59
 		$_g = new \Array_hx();
-		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:20: characters 36-40
+		#/home/sinherani/haxelib/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:20: characters 36-40
 		$_g1 = 0;
-		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:20: characters 40-48
+		#/home/sinherani/haxelib/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:20: characters 40-48
 		$_g2 = $b->length;
-		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:20: characters 26-58
+		#/home/sinherani/haxelib/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:20: characters 26-58
 		while ($_g1 < $_g2) {
-			#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:20: characters 36-48
+			#/home/sinherani/haxelib/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:20: characters 36-48
 			$i = $_g1++;
-			#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:20: characters 50-58
+			#/home/sinherani/haxelib/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:20: characters 50-58
 			$x = \ord($b->b->s[$i]);
 			$_g->arr[$_g->length++] = $x;
 		}
-		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:20: characters 12-60
+		#/home/sinherani/haxelib/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:20: characters 12-60
 		return $_g;
 	}
 
@@ -73,7 +73,7 @@ final class Seekable_Impl_ {
 	 * @return int[]|\Array_hx
 	 */
 	public static function ofChunk ($c) {
-		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:17: characters 5-22
+		#/home/sinherani/haxelib/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:17: characters 5-22
 		return Seekable_Impl_::ofBytes($c->toBytes());
 	}
 
@@ -83,9 +83,9 @@ final class Seekable_Impl_ {
 	 * @return int[]|\Array_hx
 	 */
 	public static function ofString ($s) {
-		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:23: characters 20-37
+		#/home/sinherani/haxelib/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:23: characters 20-37
 		$tmp = \strlen($s);
-		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:23: characters 5-38
+		#/home/sinherani/haxelib/tink_chunk/0,4,0/src/tink/chunk/Seekable.hx:23: characters 5-38
 		return Seekable_Impl_::ofBytes(new Bytes($tmp, new Container($s)));
 	}
 }

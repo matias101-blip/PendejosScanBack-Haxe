@@ -8,8 +8,6 @@ namespace tink\querystring;
 use \php\_Boot\HxAnon;
 use \tink\core\NamedWith;
 use \php\Boot;
-use \tink\_Stringly\Stringly_Impl_;
-use \tink\core\OutcomeTools;
 use \tink\web\forms\_FormField\FormField_Impl_;
 use \tink\http\BodyPart;
 
@@ -21,7 +19,7 @@ class Parser0 extends ParserBase {
 	 * @return void
 	 */
 	public function __construct ($onError = null, $pos = null) {
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:117: lines 117-129
+		#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:114: lines 114-125
 		parent::__construct($onError, $pos);
 	}
 
@@ -31,7 +29,7 @@ class Parser0 extends ParserBase {
 	 * @return string
 	 */
 	public function getName ($p) {
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:119: characters 58-71
+		#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:116: characters 58-71
 		return $p->name;
 	}
 
@@ -41,7 +39,7 @@ class Parser0 extends ParserBase {
 	 * @return BodyPart
 	 */
 	public function getValue ($p) {
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:120: characters 59-73
+		#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:117: characters 59-73
 		return $p->value;
 	}
 
@@ -51,72 +49,99 @@ class Parser0 extends ParserBase {
 	 * @return object
 	 */
 	public function parse ($input) {
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:123: characters 9-44
+		#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:120: characters 9-25
+		$prefix = "";
+		#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:121: characters 9-44
 		$this->init($input, Boot::getInstanceClosure($this, 'getName'), Boot::getInstanceClosure($this, 'getValue'));
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:124: characters 9-25
-		$name = "";
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:125: characters 9-63
-		$field = Field::Sub($this->root);
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:126: characters 9-29
-		return $this->process0($name, $field);
+		#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:122: characters 9-29
+		return $this->process0($prefix);
 	}
 
 	/**
-	 * @param string $name
-	 * @param Field $field
+	 * @param string $prefix
 	 * 
 	 * @return object
 	 */
-	public function process0 ($name, $field) {
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:235: characters 7-35
-		$tree = FieldTools::getSub($field);
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:210: characters 26-29
-		$name = "generos";
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:220: characters 13-38
-		$field = ($tree->data[$name] ?? null);
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:244: characters 7-35
-		$tree1 = FieldTools::getSub($field);
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:245: characters 7-22
-		$ret = new \Array_hx();
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:246: characters 27-31
-		$map = $tree1;
-		$_g_map = $map;
-		$_g_keys = $map->keys();
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:246: lines 246-247
-		while ($_g_keys->hasNext()) {
-			#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:246: characters 27-31
-			$key = $_g_keys->next();
-			$_g_value = $_g_map->get($key);
-			$_g_key = $key;
-			$key1 = $_g_key;
-			$field = $_g_value;
-			#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:247: characters 9-39
-			$ret->offsetSet(OutcomeTools::sure(Stringly_Impl_::parseInt($key1)), FormField_Impl_::toString(FieldTools::getValue($field)));
+	public function process0 ($prefix) {
+		#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:194: characters 26-29
+		$prefix1 = null;
+		#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:194: lines 194-197
+		if ($prefix === "") {
+			#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:194: characters 26-29
+			$prefix1 = "generos";
+		} else {
+			#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:196: characters 14-15
+			$v = $prefix;
+			#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:194: characters 26-29
+			$prefix1 = ($v??'null') . ".generos";
 		}
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:210: characters 26-29
-		$name = "name";
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:220: characters 13-38
-		$field = ($tree->data[$name] ?? null);
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:226: lines 226-229
-		$__o = FormField_Impl_::toString(FieldTools::getValue($field));
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:210: characters 26-29
-		$name = "resumen";
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:220: characters 13-38
-		$field = ($tree->data[$name] ?? null);
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:226: lines 226-229
-		$__o1 = FormField_Impl_::toString(FieldTools::getValue($field));
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:210: characters 26-29
-		$name = "status";
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:220: characters 13-38
-		$field = ($tree->data[$name] ?? null);
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:236: characters 7-46
+		#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:235: lines 235-236
+		$counter = 0;
+		$ret = new \Array_hx();
+		#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:238: lines 238-246
+		while (true) {
+			#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:239: characters 9-51
+			$prefix2 = ($prefix1??'null') . "[" . ($counter??'null') . "]";
+			#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:241: lines 241-245
+			if (($this->exists->data[$prefix2] ?? null)) {
+				#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:242: characters 11-23
+				$x = (($this->exists->data[$prefix2] ?? null) ? FormField_Impl_::toString(($this->params->data[$prefix2] ?? null)) : $this->missing($prefix2));
+				$ret->arr[$ret->length++] = $x;
+				#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:243: characters 11-20
+				++$counter;
+			} else {
+				#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:245: characters 14-19
+				break;
+			}
+		}
+		#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:194: characters 26-29
+		$prefix1 = null;
+		#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:194: lines 194-197
+		if ($prefix === "") {
+			#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:194: characters 26-29
+			$prefix1 = "name";
+		} else {
+			#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:196: characters 14-15
+			$v = $prefix;
+			#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:194: characters 26-29
+			$prefix1 = ($v??'null') . ".name";
+		}
+		#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:217: lines 217-220
+		$__o = (($this->exists->data[$prefix1] ?? null) ? FormField_Impl_::toString(($this->params->data[$prefix1] ?? null)) : $this->missing($prefix1));
+		#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:194: characters 26-29
+		$prefix1 = null;
+		#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:194: lines 194-197
+		if ($prefix === "") {
+			#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:194: characters 26-29
+			$prefix1 = "resumen";
+		} else {
+			#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:196: characters 14-15
+			$v = $prefix;
+			#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:194: characters 26-29
+			$prefix1 = ($v??'null') . ".resumen";
+		}
+		#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:217: lines 217-220
+		$__o1 = (($this->exists->data[$prefix1] ?? null) ? FormField_Impl_::toString(($this->params->data[$prefix1] ?? null)) : $this->missing($prefix1));
+		#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:194: characters 26-29
+		$prefix1 = null;
+		#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:194: lines 194-197
+		if ($prefix === "") {
+			#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:194: characters 26-29
+			$prefix1 = "status";
+		} else {
+			#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:196: characters 14-15
+			$v = $prefix;
+			#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:194: characters 26-29
+			$prefix1 = ($v??'null') . ".status";
+		}
+		#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:226: characters 7-46
 		$__o2 = new HxAnon([
 			"_0" => $ret,
 			"_1" => $__o,
 			"_2" => $__o1,
-			"_3" => FormField_Impl_::toInt(FieldTools::getValue($field)),
+			"_3" => (($this->exists->data[$prefix1] ?? null) ? FormField_Impl_::toInt(($this->params->data[$prefix1] ?? null)) : $this->missing($prefix1)),
 		]);
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:238: characters 7-10
+		#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/macros/GenParser.hx:228: characters 7-10
 		return $__o2;
 	}
 }

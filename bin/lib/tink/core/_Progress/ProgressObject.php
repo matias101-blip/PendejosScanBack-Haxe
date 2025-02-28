@@ -37,47 +37,43 @@ class ProgressObject {
 	 * @return void
 	 */
 	public function __construct ($changed, $getStatus) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:106: characters 5-27
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:106: characters 5-27
 		$this->changed = $changed;
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:107: lines 107-110
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:107: lines 107-110
 		$this->progressed = new Suspendable(function ($fire) use (&$changed) {
 			return $changed->listen(function ($s) use (&$fire) {
 				if ($s->index === 0) {
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:108: characters 23-24
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:108: characters 23-24
 					$v = $s->params[0];
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:108: characters 27-34
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:108: characters 27-34
 					$fire($v);
 				}
 			});
 		}, null);
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:111: characters 5-31
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:111: characters 5-31
 		$this->getStatus = $getStatus;
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:112: lines 112-119
-		$wakeup = function ($fire) use (&$changed, &$getStatus) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:112: characters 45-56
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:112: lines 112-119
+		$this->result = new SuspendableFuture(function ($fire) use (&$changed, &$getStatus) {
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:112: characters 45-56
 			$_g = $getStatus();
 			if ($_g->index === 1) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:113: characters 21-22
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:113: characters 21-22
 				$v = $_g->params[0];
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:113: characters 25-32
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:113: characters 25-32
 				$fire($v);
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:113: characters 34-38
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:113: characters 34-38
 				return null;
 			} else {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:115: lines 115-118
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:115: lines 115-118
 				return $changed->listen(function ($s) use (&$fire) {
 					if ($s->index === 1) {
-						#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:117: characters 25-26
+						#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:117: characters 25-26
 						$v = $s->params[0];
-						#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:117: characters 29-36
+						#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:117: characters 29-36
 						$fire($v);
 					}
 				});
 			}
-		};
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:112: lines 112-119
-		$this->result = new SuspendableFuture(function ($yield, $destroy) use (&$wakeup) {
-			return $wakeup($yield);
 		});
 	}
 
@@ -85,7 +81,7 @@ class ProgressObject {
 	 * @return ProgressStatus
 	 */
 	public function get_status () {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:97: characters 34-52
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:97: characters 34-52
 		return ($this->getStatus)();
 	}
 }

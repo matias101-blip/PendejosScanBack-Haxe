@@ -18,9 +18,9 @@ final class RequestReader_Impl_ {
 	 * @return \Closure
 	 */
 	public static function ofSafeStringReader ($read) {
-		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:203: characters 5-64
+		#/home/sinherani/haxelib/tink_web/0,3,0/src/tink/web/routing/Context.hx:203: characters 5-64
 		return RequestReader_Impl_::ofStringReader(function ($s) use (&$read) {
-			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:203: characters 40-63
+			#/home/sinherani/haxelib/tink_web/0,3,0/src/tink/web/routing/Context.hx:203: characters 40-63
 			return Outcome::Success($read($s));
 		});
 	}
@@ -31,11 +31,11 @@ final class RequestReader_Impl_ {
 	 * @return \Closure
 	 */
 	public static function ofStringReader ($read) {
-		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:197: lines 197-200
+		#/home/sinherani/haxelib/tink_web/0,3,0/src/tink/web/routing/Context.hx:197: lines 197-200
 		return function ($ctx) use (&$read) {
-			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:199: lines 199-200
+			#/home/sinherani/haxelib/tink_web/0,3,0/src/tink/web/routing/Context.hx:199: lines 199-200
 			return Promise_Impl_::next($ctx->allRaw(), function ($body) use (&$read) {
-				#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/routing/Context.hx:200: characters 45-73
+				#/home/sinherani/haxelib/tink_web/0,3,0/src/tink/web/routing/Context.hx:200: characters 45-73
 				return new SyncFuture(new LazyConst($read($body->toString())));
 			});
 		};

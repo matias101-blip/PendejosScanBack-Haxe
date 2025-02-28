@@ -20,7 +20,7 @@ final class SignalTrigger implements OwnedDisposable, SignalObject {
 	 * @return void
 	 */
 	public function __construct () {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:214: characters 20-41
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:214: characters 20-41
 		$this->handlers = new CallbackList();
 	}
 
@@ -28,7 +28,7 @@ final class SignalTrigger implements OwnedDisposable, SignalObject {
 	 * @return SignalObject
 	 */
 	public function asSignal () {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:246: characters 5-16
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:246: characters 5-16
 		return $this;
 	}
 
@@ -38,7 +38,7 @@ final class SignalTrigger implements OwnedDisposable, SignalObject {
 	 * @return void
 	 */
 	public function clear () {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:243: characters 5-21
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:243: characters 5-21
 		$this->handlers->clear();
 	}
 
@@ -46,7 +46,7 @@ final class SignalTrigger implements OwnedDisposable, SignalObject {
 	 * @return void
 	 */
 	public function dispose () {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:219: characters 5-23
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:219: characters 5-23
 		$this->handlers->dispose();
 	}
 
@@ -56,7 +56,7 @@ final class SignalTrigger implements OwnedDisposable, SignalObject {
 	 * @return int
 	 */
 	public function getLength () {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:234: characters 5-27
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:234: characters 5-27
 		return $this->handlers->used;
 	}
 
@@ -64,7 +64,7 @@ final class SignalTrigger implements OwnedDisposable, SignalObject {
 	 * @return bool
 	 */
 	public function get_disposed () {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:212: characters 7-31
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:212: characters 7-31
 		return $this->handlers->disposeHandlers === null;
 	}
 
@@ -74,7 +74,7 @@ final class SignalTrigger implements OwnedDisposable, SignalObject {
 	 * @return LinkObject
 	 */
 	public function listen ($cb) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:237: characters 12-28
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:237: characters 12-28
 		$_this = $this->handlers;
 		if ($_this->disposeHandlers === null) {
 			return null;
@@ -102,7 +102,7 @@ final class SignalTrigger implements OwnedDisposable, SignalObject {
 	 * @return void
 	 */
 	public function ondispose ($d) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:222: characters 5-26
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:222: characters 5-26
 		$this->handlers->ondispose($d);
 	}
 
@@ -114,7 +114,7 @@ final class SignalTrigger implements OwnedDisposable, SignalObject {
 	 * @return void
 	 */
 	public function trigger ($event) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:228: characters 5-27
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:228: characters 5-27
 		$this->handlers->invoke($event);
 	}
 }

@@ -30,18 +30,18 @@ class RealSourceTools {
 	 * @return FutureObject
 	 */
 	public static function all ($s) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:193: lines 193-196
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:192: lines 192-195
 		return Future_Impl_::map(Source_Impl_::concatAll($s), function ($o) {
 			$__hx__switch = ($o->index);
 			if ($__hx__switch === 1) {
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:195: characters 19-20
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:194: characters 19-20
 				$e = $o->params[0];
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:195: characters 23-33
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:194: characters 23-33
 				return Outcome::Failure($e);
 			} else if ($__hx__switch === 2) {
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:194: characters 20-21
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:193: characters 20-21
 				$c = $o->params[0];
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:194: characters 24-34
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:193: characters 24-34
 				return Outcome::Success($c);
 			}
 		});
@@ -54,7 +54,7 @@ class RealSourceTools {
 	 * @return StreamObject
 	 */
 	public static function idealize ($s, $rescue) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:224: characters 5-69
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:223: characters 5-69
 		return Source_Impl_::chunked($s)->idealize($rescue);
 	}
 
@@ -65,27 +65,27 @@ class RealSourceTools {
 	 * @return FutureObject
 	 */
 	public static function parse ($s, $p) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:199: lines 199-202
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:198: lines 198-201
 		return Future_Impl_::map(StreamParser_Impl_::parse($s, $p), function ($r) {
 			$__hx__switch = ($r->index);
 			if ($__hx__switch === 0) {
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:200: characters 19-23
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:199: characters 19-23
 				$data = $r->params[0];
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:200: characters 25-29
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:199: characters 25-29
 				$rest = $r->params[1];
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:200: characters 32-61
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:199: characters 32-61
 				return Outcome::Success(new MPair($data, $rest));
 			} else if ($__hx__switch === 1) {
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:201: characters 23-24
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:200: characters 23-24
 				$_g = $r->params[1];
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:201: characters 20-21
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:200: characters 20-21
 				$e = $r->params[0];
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:201: characters 38-48
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:200: characters 38-48
 				return Outcome::Failure($e);
 			} else if ($__hx__switch === 2) {
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:201: characters 34-35
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:200: characters 34-35
 				$e = $r->params[0];
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:201: characters 38-48
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:200: characters 38-48
 				return Outcome::Failure($e);
 			}
 		});
@@ -98,7 +98,7 @@ class RealSourceTools {
 	 * @return StreamObject
 	 */
 	public static function parseStream ($s, $p) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:221: characters 5-42
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:220: characters 5-42
 		return StreamParser_Impl_::parseStream($s, $p);
 	}
 
@@ -109,50 +109,49 @@ class RealSourceTools {
 	 * @return object
 	 */
 	public static function split ($src, $delim) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:205: characters 5-45
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:204: characters 5-45
 		$s = RealSourceTools::parse($src, new Splitter($delim));
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:208: lines 208-211
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:207: lines 207-210
 		$tmp = Stream_Impl_::promise(Promise_Impl_::next($s, Next_Impl_::ofSafeSync(function ($p) use (&$src) {
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:208: characters 116-119
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:207: characters 116-119
 			$_g = $p->a;
 			$__hx__switch = ($_g->index);
 			if ($__hx__switch === 0) {
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:209: characters 19-24
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:208: characters 19-24
 				$chunk = $_g->params[0];
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:209: characters 27-45
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:208: characters 27-45
 				return new Single(new LazyConst($chunk));
 			} else if ($__hx__switch === 1) {
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:210: characters 20-23
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:209: characters 20-23
 				return $src;
 			}
 		})));
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:212: lines 212-215
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:211: lines 211-214
 		$tmp1 = Promise_Impl_::next($s, function ($p) use (&$delim) {
-			$p1 = null;
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:212: characters 64-67
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:211: characters 51-54
 			$_g = $p->a;
 			$__hx__switch = ($_g->index);
 			if ($__hx__switch === 0) {
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:213: characters 19-20
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:212: characters 19-20
 				$_g1 = $_g->params[0];
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:212: lines 212-215
-				$p1 = new SyncFuture(new LazyConst(Outcome::Success($delim)));
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:212: characters 9-28
+				return new SyncFuture(new LazyConst(Outcome::Success($delim)));
 			} else if ($__hx__switch === 1) {
-				$p1 = new SyncFuture(new LazyConst(Outcome::Failure(new TypedError(404, "Delimiter not found", new HxAnon([
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:213: characters 9-62
+				return new SyncFuture(new LazyConst(Outcome::Failure(new TypedError(404, "Delimiter not found", new HxAnon([
 					"fileName" => "tink/io/Source.hx",
-					"lineNumber" => 214,
+					"lineNumber" => 213,
 					"className" => "tink.io.RealSourceTools",
 					"methodName" => "split",
 				])))));
 			}
-			return $p1;
 		});
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:207: lines 207-217
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:206: lines 206-216
 		return new HxAnon([
 			"before" => $tmp,
 			"delimiter" => $tmp1,
 			"after" => Stream_Impl_::promise(Promise_Impl_::next($s, Next_Impl_::ofSafeSync(function ($p) {
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:216: characters 101-111
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:215: characters 101-111
 				return $p->b;
 			}))),
 		]);

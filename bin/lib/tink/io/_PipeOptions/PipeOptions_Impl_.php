@@ -15,12 +15,12 @@ final class PipeOptions_Impl_ {
 	 * @return bool
 	 */
 	public static function get_destructive ($this1) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/PipeOptions.hx:16: characters 14-46
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/PipeOptions.hx:16: characters 14-46
 		if ($this1 !== null) {
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/PipeOptions.hx:16: characters 30-46
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/PipeOptions.hx:16: characters 30-46
 			return $this1->destructive;
 		} else {
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/PipeOptions.hx:16: characters 14-46
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/PipeOptions.hx:16: characters 14-46
 			return false;
 		}
 	}
@@ -31,12 +31,12 @@ final class PipeOptions_Impl_ {
 	 * @return bool
 	 */
 	public static function get_end ($this1) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/PipeOptions.hx:12: characters 14-38
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/PipeOptions.hx:12: characters 14-38
 		if ($this1 !== null) {
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/PipeOptions.hx:12: characters 30-38
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/PipeOptions.hx:12: characters 30-38
 			return $this1->end;
 		} else {
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/PipeOptions.hx:12: characters 14-38
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/PipeOptions.hx:12: characters 14-38
 			return false;
 		}
 	}

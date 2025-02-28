@@ -17,7 +17,7 @@ final class Regrouper_Impl_ {
 	 * @return object
 	 */
 	public static function ofFunc ($f) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:95: characters 5-22
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:95: characters 5-22
 		return new HxAnon(["apply" => $f]);
 	}
 
@@ -27,9 +27,9 @@ final class Regrouper_Impl_ {
 	 * @return object
 	 */
 	public static function ofFuncSync ($f) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:98: characters 5-63
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:98: characters 5-63
 		return new HxAnon(["apply" => function ($i, $s) use (&$f) {
-			#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:98: characters 42-62
+			#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:98: characters 42-62
 			return new SyncFuture(new LazyConst($f($i, $s)));
 		}]);
 	}
@@ -40,9 +40,9 @@ final class Regrouper_Impl_ {
 	 * @return object
 	 */
 	public static function ofIgnorance ($f) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:89: characters 5-47
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:89: characters 5-47
 		return new HxAnon(["apply" => function ($i, $_) use (&$f) {
-			#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:89: characters 35-46
+			#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:89: characters 35-46
 			return $f($i);
 		}]);
 	}
@@ -53,9 +53,9 @@ final class Regrouper_Impl_ {
 	 * @return object
 	 */
 	public static function ofIgnoranceSync ($f) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:92: characters 5-60
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:92: characters 5-60
 		return new HxAnon(["apply" => function ($i, $_) use (&$f) {
-			#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:92: characters 42-59
+			#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:92: characters 42-59
 			return new SyncFuture(new LazyConst($f($i)));
 		}]);
 	}

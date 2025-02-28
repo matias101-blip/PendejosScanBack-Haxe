@@ -19,53 +19,53 @@ class SuspendableProgress extends ProgressObject {
 	 * @return void
 	 */
 	public function __construct ($wakeup, $status = null) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:75: lines 75-76
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:75: lines 75-76
 		if ($status === null) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:76: characters 7-46
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:76: characters 7-46
 			$status = ProgressStatus::InProgress(ProgressValue_Impl_::$ZERO);
 		}
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:77: characters 5-43
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:77: characters 5-43
 		$disposable = AlreadyDisposed::$INST;
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:78: lines 78-86
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:78: lines 78-86
 		$changed = null;
 		$__hx__switch = ($status->index);
 		if ($__hx__switch === 0) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:81: characters 23-24
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:81: characters 23-24
 			$_g = $status->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:78: lines 78-86
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:78: lines 78-86
 			$changed = new Suspendable(function ($fire) use (&$wakeup, &$status) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:83: characters 19-48
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:83: characters 19-48
 				return $wakeup(function ($s) use (&$fire, &$status) {
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:83: characters 36-46
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:83: characters 36-46
 					$status = $s;
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:83: characters 31-47
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:83: characters 31-47
 					$fire($status);
 				});
 			}, function ($d) use (&$disposable) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:84: characters 16-30
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:84: characters 16-30
 				$disposable = $d;
 			});
 		} else if ($__hx__switch === 1) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:79: characters 21-22
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:79: characters 21-22
 			$_g = $status->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:78: lines 78-86
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:78: lines 78-86
 			$changed = Signal_Impl_::dead();
 		}
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:87: lines 87-90
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:87: lines 87-90
 		parent::__construct($changed, function () use (&$status) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:89: characters 13-19
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:89: characters 13-19
 			return $status;
 		});
 	}
 
 	/**
 	 * @param mixed $_
-	 * @param mixed $_b
+	 * @param mixed $_
 	 * 
 	 * @return mixed
 	 */
-	public function noop ($_, $_b) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:73: characters 24-35
+	public function noop ($_, $_1) {
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:73: characters 23-34
 		return null;
 	}
 }

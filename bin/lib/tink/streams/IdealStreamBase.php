@@ -12,7 +12,7 @@ class IdealStreamBase extends StreamBase {
 	 * @return void
 	 */
 	public function __construct () {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/IdealStream.hx:28: lines 28-31
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/IdealStream.hx:28: lines 28-31
 		parent::__construct();
 	}
 
@@ -22,7 +22,7 @@ class IdealStreamBase extends StreamBase {
 	 * @return StreamObject
 	 */
 	public function idealize ($rescue) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/IdealStream.hx:30: characters 5-16
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/IdealStream.hx:30: characters 5-16
 		return $this;
 	}
 }

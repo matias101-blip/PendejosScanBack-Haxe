@@ -24,9 +24,9 @@ class Annex {
 	 * @return void
 	 */
 	public function __construct ($target) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Annex.hx:12: characters 4-24
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Annex.hx:12: characters 4-24
 		$this->target = $target;
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Annex.hx:13: characters 5-49
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Annex.hx:13: characters 5-49
 		$this->registry = new ObjectMap();
 	}
 }

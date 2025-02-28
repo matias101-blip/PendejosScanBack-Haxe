@@ -28,7 +28,7 @@ final class OutgoingResponse_Impl_ {
 	 * @return OutgoingResponseData
 	 */
 	public static function _new ($header, $body) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:65: character 3
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:65: character 3
 		return new OutgoingResponseData($header, $body);
 	}
 
@@ -41,34 +41,34 @@ final class OutgoingResponse_Impl_ {
 	 * @return OutgoingResponseData
 	 */
 	public static function blob ($code, $chunk, $contentType, $headers = null) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:69: lines 69-82
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:69: lines 69-82
 		if ($code === null) {
 			$code = 200;
 		}
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:73: characters 13-17
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:73: characters 13-17
 		$this1 = HttpStatusMessage_Impl_::fromCode($code);
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:75: characters 15-59
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:75: characters 15-59
 		$fields = new HeaderField(\mb_strtolower("Content-Type"), $contentType);
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:76: characters 32-46
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:76: characters 32-46
 		$this2 = \mb_strtolower("Content-Length");
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:76: characters 49-73
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:76: characters 49-73
 		$fields1 = \Std::string($chunk->getLength());
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:77: lines 77-80
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:77: lines 77-80
 		$fields2 = null;
 		if ($headers === null) {
 			$fields2 = new \Array_hx();
 		} else {
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:79: characters 20-21
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:79: characters 20-21
 			$v = $headers;
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:77: lines 77-80
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:77: lines 77-80
 			$fields2 = $v;
 		}
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:71: lines 71-80
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:71: lines 71-80
 		$this3 = new ResponseHeaderBase($code, $this1, (\Array_hx::wrap([
 			$fields,
 			new HeaderField($this2, $fields1),
 		]))->concat($fields2), "HTTP/1.1");
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:70: lines 70-82
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:70: lines 70-82
 		return new OutgoingResponseData($this3, new Single(new LazyConst($chunk)));
 	}
 
@@ -88,7 +88,7 @@ final class OutgoingResponse_Impl_ {
 	 * @return OutgoingResponseData
 	 */
 	public static function ofChunk ($c) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:93: characters 5-47
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:93: characters 5-47
 		return OutgoingResponse_Impl_::blob(null, $c, "application/octet-stream");
 	}
 
@@ -98,9 +98,9 @@ final class OutgoingResponse_Impl_ {
 	 * @return OutgoingResponseData
 	 */
 	public static function ofString ($s) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:90: characters 17-18
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:90: characters 17-18
 		$b = \strlen($s);
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:90: characters 5-33
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:90: characters 5-33
 		return OutgoingResponse_Impl_::blob(null, ByteChunk::of(new Bytes($b, new Container($s))), "text/plain");
 	}
 
@@ -110,23 +110,23 @@ final class OutgoingResponse_Impl_ {
 	 * @return OutgoingResponseData
 	 */
 	public static function reportError ($e) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:96: characters 5-27
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:96: characters 5-27
 		$code = $e->code;
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:97: characters 5-44
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:97: characters 5-44
 		if (($code < 100) || ($code > 999)) {
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:97: characters 34-44
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:97: characters 34-44
 			$code = 500;
 		}
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:99: characters 7-92
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:99: characters 7-92
 		$reason = HttpStatusMessage_Impl_::fromCode($code);
 		$this1 = new ResponseHeaderBase($code, $reason, \Array_hx::wrap([new HeaderField(\mb_strtolower("Content-Type"), "application/json")]), "HTTP/1.1");
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:100: lines 100-104
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:100: lines 100-104
 		$s = Json::phpJsonEncode(new HxAnon([
 			"error" => $e->message,
 			"details" => $e->data,
 		]), null, null);
 		$b = \strlen($s);
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:98: lines 98-105
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:98: lines 98-105
 		return new OutgoingResponseData($this1, new Single(new LazyConst(ByteChunk::of(new Bytes($b, new Container($s))))));
 	}
 }

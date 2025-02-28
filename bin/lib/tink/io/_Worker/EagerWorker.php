@@ -26,7 +26,7 @@ class EagerWorker implements WorkerObject {
 	 * @return FutureObject
 	 */
 	public function work ($task) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Worker.hx:36: characters 12-35
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Worker.hx:36: characters 12-35
 		return new SyncFuture(new LazyConst(Lazy_Impl_::get($task)));
 	}
 }

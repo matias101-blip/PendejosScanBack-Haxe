@@ -26,7 +26,7 @@ final class Signal_Impl_ {
 	 * @return SignalObject
 	 */
 	public static function _new ($f, $init = null) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:22: character 3
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:22: character 3
 		return new Suspendable($f, $init);
 	}
 
@@ -36,7 +36,7 @@ final class Signal_Impl_ {
 	 * @return SignalObject
 	 */
 	public static function create ($f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:126: characters 12-28
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:126: characters 12-28
 		return new Suspendable($f, null);
 	}
 
@@ -44,7 +44,7 @@ final class Signal_Impl_ {
 	 * @return SignalObject
 	 */
 	public static function dead () {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:152: characters 5-30
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:152: characters 5-30
 		return Disposed::$INST;
 	}
 
@@ -58,13 +58,13 @@ final class Signal_Impl_ {
 	 * @return SignalObject
 	 */
 	public static function filter ($this1, $f, $gather = null) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:46: characters 5-74
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:46: characters 5-74
 		return Suspendable::over($this1, function ($fire) use (&$f, &$this1) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:46: characters 43-73
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:46: characters 43-73
 			return $this1->listen(function ($v) use (&$f, &$fire) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:46: characters 55-72
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:46: characters 55-72
 				if ($f($v)) {
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:46: characters 65-72
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:46: characters 65-72
 					$fire($v);
 				}
 			});
@@ -82,11 +82,11 @@ final class Signal_Impl_ {
 	 * @return SignalObject
 	 */
 	public static function flatMap ($this1, $f, $gather = null) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:40: characters 5-74
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:40: characters 5-74
 		return Suspendable::over($this1, function ($fire) use (&$f, &$this1) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:40: characters 43-73
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:40: characters 43-73
 			return $this1->listen(function ($v) use (&$f, &$fire) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:40: characters 55-72
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:40: characters 55-72
 				$f($v)->handle($fire);
 			});
 		});
@@ -102,7 +102,7 @@ final class Signal_Impl_ {
 	 * @return SignalObject
 	 */
 	public static function gather ($this1) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:122: characters 5-16
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:122: characters 5-16
 		return $this1;
 	}
 
@@ -116,11 +116,11 @@ final class Signal_Impl_ {
 	 * @return SignalObject
 	 */
 	public static function generate ($generator, $init = null) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:133: characters 12-67
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:133: characters 12-67
 		return new Suspendable(function ($fire) use (&$generator) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:133: characters 36-51
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:133: characters 36-51
 			$generator($fire);
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:133: characters 53-57
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:133: characters 53-57
 			return null;
 		}, $init);
 	}
@@ -132,7 +132,7 @@ final class Signal_Impl_ {
 	 * @return LinkObject
 	 */
 	public static function handle ($this1, $handler) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:26: characters 5-32
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:26: characters 5-32
 		return $this1->listen($handler);
 	}
 
@@ -147,33 +147,33 @@ final class Signal_Impl_ {
 	 * @return SignalObject
 	 */
 	public static function join ($this1, $that, $gather = null) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:60: lines 60-73
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:60: lines 60-73
 		if ($this1->get_disposed()) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:60: characters 26-30
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:60: characters 26-30
 			return $that;
 		} else if ($that->get_disposed()) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:61: characters 31-35
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:61: characters 31-35
 			return $this1;
 		} else {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:62: lines 62-73
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:62: lines 62-73
 			return new Suspendable(function ($fire) use (&$that, &$this1) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:64: characters 11-37
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:64: characters 11-37
 				$cb = $fire;
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:65: characters 11-39
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:65: characters 11-39
 				$this2 = $this1->listen($cb);
 				return new LinkPair($this2, $that->listen($cb));
 			}, function ($self) use (&$that, &$this1) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:68: lines 68-69
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:68: lines 68-69
 				$release = function () use (&$that, &$self, &$this1) {
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:69: characters 13-63
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:69: characters 13-63
 					if ($this1->get_disposed() && $that->get_disposed()) {
-						#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:69: characters 49-63
+						#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:69: characters 49-63
 						$self->dispose();
 					}
 				};
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:70: characters 11-34
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:70: characters 11-34
 				$this1->ondispose($release);
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:71: characters 11-34
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:71: characters 11-34
 				$that->ondispose($release);
 			});
 		}
@@ -190,11 +190,11 @@ final class Signal_Impl_ {
 	 * @return SignalObject
 	 */
 	public static function map ($this1, $f, $gather = null) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:33: characters 5-67
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:33: characters 5-67
 		return Suspendable::over($this1, function ($fire) use (&$f, &$this1) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:33: characters 43-66
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:33: characters 43-66
 			return $this1->listen(function ($v) use (&$f, &$fire) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:33: characters 55-65
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:33: characters 55-65
 				$fire($f($v));
 			});
 		});
@@ -207,7 +207,7 @@ final class Signal_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function next ($this1, $condition = null) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:107: characters 5-31
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:107: characters 5-31
 		return Signal_Impl_::nextTime($this1, $condition);
 	}
 
@@ -220,14 +220,14 @@ final class Signal_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function nextTime ($this1, $condition = null) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:79: characters 5-83
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:79: characters 5-83
 		return Signal_Impl_::pickNext($this1, function ($v) use (&$condition) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:79: characters 26-82
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:79: characters 26-82
 			if (($condition === null) || $condition($v)) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:79: characters 65-72
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:79: characters 65-72
 				return Option::Some($v);
 			} else {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:79: characters 78-82
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:79: characters 78-82
 				return Option::None();
 			}
 		});
@@ -241,9 +241,9 @@ final class Signal_Impl_ {
 	 * @return SignalObject
 	 */
 	public static function noise ($this1) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:113: characters 5-42
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:113: characters 5-42
 		return Signal_Impl_::map($this1, function ($_) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:113: characters 29-41
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:113: characters 29-41
 			return null;
 		});
 	}
@@ -259,17 +259,17 @@ final class Signal_Impl_ {
 	 * @return SignalObject
 	 */
 	public static function ofClassical ($add, $remove, $gather = null) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:146: lines 146-149
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:146: lines 146-149
 		return new Suspendable(function ($fire) use (&$remove, &$add) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:147: characters 7-16
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:147: characters 7-16
 			$add($fire);
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:148: characters 14-20
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:148: characters 14-20
 			$_g = $remove;
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:148: characters 26-30
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:148: characters 26-30
 			$a1 = $fire;
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:148: characters 7-31
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:148: characters 7-31
 			return new SimpleLink(function () use (&$_g, &$a1) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:148: characters 14-25
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:148: characters 14-25
 				$_g($a1);
 			});
 		});
@@ -284,23 +284,23 @@ final class Signal_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function pickNext ($this1, $selector) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:85: lines 85-86
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:85: lines 85-86
 		$ret = new FutureTrigger();
 		$link = null;
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:88: lines 88-92
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:88: lines 88-92
 		$link = $this1->listen(function ($v) use (&$selector, &$ret) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:88: characters 36-47
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:88: characters 36-47
 			$_g = $selector($v);
 			$__hx__switch = ($_g->index);
 			if ($__hx__switch === 0) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:90: characters 17-18
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:90: characters 17-18
 				$v = $_g->params[0];
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:91: characters 9-23
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:91: characters 9-23
 				$ret->trigger($v);
 			} else if ($__hx__switch === 1) {
 			}
 		});
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:94: characters 16-20
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:94: characters 16-20
 		$tmp = null;
 		if ($link === null) {
 			$tmp = function ($_) {
@@ -312,9 +312,9 @@ final class Signal_Impl_ {
 				$f();
 			};
 		}
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:94: characters 5-21
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:94: characters 5-21
 		$ret->handle($tmp);
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:96: characters 5-26
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:96: characters 5-26
 		return $ret;
 	}
 
@@ -326,15 +326,15 @@ final class Signal_Impl_ {
 	 * @return SignalObject
 	 */
 	public static function select ($this1, $selector, $gather = null) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:49: lines 49-52
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:49: lines 49-52
 		return Suspendable::over($this1, function ($fire) use (&$selector, &$this1) {
 			return $this1->listen(function ($v) use (&$selector, &$fire) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:49: characters 62-73
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:49: characters 62-73
 				$_g = $selector($v);
 				if ($_g->index === 0) {
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:50: characters 17-18
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:50: characters 17-18
 					$v = $_g->params[0];
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:50: characters 21-28
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:50: characters 21-28
 					$fire($v);
 				}
 			});
@@ -347,7 +347,7 @@ final class Signal_Impl_ {
 	 * @return SignalTrigger
 	 */
 	public static function trigger () {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:139: characters 5-31
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:139: characters 5-31
 		return new SignalTrigger();
 	}
 
@@ -358,17 +358,17 @@ final class Signal_Impl_ {
 	 * @return SignalObject
 	 */
 	public static function until ($this1, $end) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:100: lines 100-103
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:100: lines 100-103
 		return new Suspendable(function ($yield) use (&$this1) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:101: characters 16-34
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:101: characters 16-34
 			return $this1->listen($yield);
 		}, function ($self) use (&$end) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:102: characters 26-38
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:102: characters 26-38
 			$f = Boot::getInstanceClosure($self, 'dispose');
 			$tmp = function ($_) use (&$f) {
 				$f();
 			};
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Signal.hx:102: characters 15-39
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Signal.hx:102: characters 15-39
 			$end->handle($tmp);
 		});
 	}

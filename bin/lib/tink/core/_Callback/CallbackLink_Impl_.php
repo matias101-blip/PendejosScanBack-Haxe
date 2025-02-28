@@ -16,7 +16,7 @@ final class CallbackLink_Impl_ {
 	 * @return LinkObject
 	 */
 	public static function _new ($link) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:72: character 3
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:72: character 3
 		return new SimpleLink($link);
 	}
 
@@ -26,9 +26,9 @@ final class CallbackLink_Impl_ {
 	 * @return void
 	 */
 	public static function cancel ($this1) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:76: characters 5-36
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:76: characters 5-36
 		if ($this1 !== null) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:76: characters 23-36
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:76: characters 23-36
 			$this1->cancel();
 		}
 	}
@@ -39,7 +39,7 @@ final class CallbackLink_Impl_ {
 	 * @return void
 	 */
 	public static function dissolve ($this1) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:80: characters 5-13
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:80: characters 5-13
 		if ($this1 !== null) {
 			$this1->cancel();
 		}
@@ -51,7 +51,7 @@ final class CallbackLink_Impl_ {
 	 * @return LinkObject
 	 */
 	public static function fromFunction ($f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:91: characters 12-31
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:91: characters 12-31
 		return new SimpleLink($f);
 	}
 
@@ -61,24 +61,24 @@ final class CallbackLink_Impl_ {
 	 * @return LinkObject
 	 */
 	public static function fromMany ($callbacks) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:97: lines 97-102
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:97: lines 97-102
 		return new SimpleLink(function () use (&$callbacks) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:98: lines 98-101
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:98: lines 98-101
 			if ($callbacks !== null) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:99: characters 9-42
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:99: characters 9-42
 				$_g = 0;
 				while ($_g < $callbacks->length) {
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:99: characters 14-16
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:99: characters 14-16
 					$cb = ($callbacks->arr[$_g] ?? null);
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:99: characters 9-42
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:99: characters 9-42
 					++$_g;
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:99: characters 31-42
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:99: characters 31-42
 					if ($cb !== null) {
 						$cb->cancel();
 					}
 				}
 			} else {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:101: characters 9-25
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:101: characters 9-25
 				$callbacks = null;
 			}
 		});
@@ -91,7 +91,7 @@ final class CallbackLink_Impl_ {
 	 * @return LinkObject
 	 */
 	public static function join ($this1, $b) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:94: characters 5-33
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:94: characters 5-33
 		return new LinkPair($this1, $b);
 	}
 
@@ -107,14 +107,14 @@ final class CallbackLink_Impl_ {
 	 * @return \Closure
 	 */
 	public static function toCallback ($this1) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:88: characters 12-51
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:88: characters 12-51
 		if ($this1 === null) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:88: characters 30-34
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:88: characters 30-34
 			return function ($_) {
 				CallbackLink_Impl_::noop();
 			};
 		} else {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:88: characters 40-51
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:88: characters 40-51
 			$f = Boot::getInstanceClosure($this1, 'cancel');
 			return function ($_) use (&$f) {
 				$f();
@@ -128,12 +128,12 @@ final class CallbackLink_Impl_ {
 	 * @return \Closure
 	 */
 	public static function toFunction ($this1) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:85: characters 12-51
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:85: characters 12-51
 		if ($this1 === null) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:85: characters 30-34
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:85: characters 30-34
 			return Boot::getStaticClosure(CallbackLink_Impl_::class, 'noop');
 		} else {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:85: characters 40-51
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:85: characters 40-51
 			return Boot::getInstanceClosure($this1, 'cancel');
 		}
 	}

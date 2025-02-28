@@ -19,9 +19,9 @@ final class Next_Impl_ {
 	 * @return \Closure
 	 */
 	public static function _chain ($a, $b) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:325: characters 5-29
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:325: characters 5-29
 		return function ($v) use (&$b, &$a) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:325: characters 17-29
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:325: characters 17-29
 			return Promise_Impl_::next($a($v), $b);
 		};
 	}
@@ -32,9 +32,9 @@ final class Next_Impl_ {
 	 * @return \Closure
 	 */
 	public static function ofSafe ($f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:316: characters 5-35
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:316: characters 5-35
 		return function ($x) use (&$f) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:316: characters 17-35
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:316: characters 17-35
 			return new SyncFuture(new LazyConst($f($x)));
 		};
 	}
@@ -45,9 +45,9 @@ final class Next_Impl_ {
 	 * @return \Closure
 	 */
 	public static function ofSafeSync ($f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:322: characters 5-35
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:322: characters 5-35
 		return function ($x) use (&$f) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:322: characters 17-35
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:322: characters 17-35
 			return new SyncFuture(new LazyConst(Outcome::Success($f($x))));
 		};
 	}
@@ -58,9 +58,9 @@ final class Next_Impl_ {
 	 * @return \Closure
 	 */
 	public static function ofSync ($f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:319: characters 5-35
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:319: characters 5-35
 		return function ($x) use (&$f) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:319: characters 17-35
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:319: characters 17-35
 			return Future_Impl_::map($f($x), Boot::getStaticClosure(Outcome::class, 'Success'));
 		};
 	}

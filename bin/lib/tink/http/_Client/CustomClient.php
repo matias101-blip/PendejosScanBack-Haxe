@@ -35,19 +35,19 @@ class CustomClient implements ClientObject {
 	 * @return mixed[]|\Array_hx
 	 */
 	public static function concat ($a, $b) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:72: lines 72-75
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:72: lines 72-75
 		if ($a === null) {
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:73: characters 19-20
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:73: characters 19-20
 			$v = $b;
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:73: characters 35-36
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:73: characters 35-36
 			return $v;
 		} else if ($b === null) {
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:73: characters 25-26
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:73: characters 25-26
 			$v = $a;
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:73: characters 35-36
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:73: characters 35-36
 			return $v;
 		} else {
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:74: characters 16-27
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:74: characters 16-27
 			return $a->concat($b);
 		}
 	}
@@ -60,20 +60,20 @@ class CustomClient implements ClientObject {
 	 * @return CustomClient
 	 */
 	public static function create ($c, $preprocessors, $postprocessors) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:78: characters 19-44
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:78: characters 19-44
 		$_g = (($c instanceof CustomClient) ? $c : null);
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:79: lines 79-80
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:79: lines 79-80
 		if ($_g === null) {
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:79: characters 18-68
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:79: characters 18-68
 			return new CustomClient($preprocessors, $postprocessors, $c);
 		} else {
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:80: characters 12-13
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:80: characters 12-13
 			$v = $_g;
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:80: characters 32-70
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:80: characters 32-70
 			$tmp = CustomClient::concat($preprocessors, $v->preprocessors);
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:80: characters 72-112
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:80: characters 72-112
 			$tmp1 = CustomClient::concat($v->postprocessors, $postprocessors);
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:80: characters 15-121
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:80: characters 15-121
 			return new CustomClient($tmp, $tmp1, $v->real);
 		}
 	}
@@ -86,11 +86,11 @@ class CustomClient implements ClientObject {
 	 * @return void
 	 */
 	public function __construct ($preprocessors, $postprocessors, $real) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:50: characters 5-39
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:50: characters 5-39
 		$this->preprocessors = $preprocessors;
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:51: characters 5-41
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:51: characters 5-41
 		$this->postprocessors = $postprocessors;
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:52: characters 5-21
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:52: characters 5-21
 		$this->real = $real;
 	}
 
@@ -102,25 +102,25 @@ class CustomClient implements ClientObject {
 	 * @return FutureObject
 	 */
 	public function pipe ($value, $transforms, $index = 0) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:57: lines 57-61
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:57: lines 57-61
 		if ($index === null) {
 			$index = 0;
 		}
 		if (($transforms !== null) && ($index < $transforms->length)) {
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:59: characters 17-21
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:59: characters 17-21
 			$_g = $this;
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:59: characters 30-40
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:59: characters 30-40
 			$transforms1 = $transforms;
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:59: characters 42-51
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:59: characters 42-51
 			$index1 = $index + 1;
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:59: characters 17-26
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:59: characters 17-26
 			$tmp = function ($value) use (&$transforms1, &$index1, &$_g) {
 				return $_g->pipe($value, $transforms1, $index1);
 			};
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:58: lines 58-59
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:58: lines 58-59
 			return Promise_Impl_::next(($transforms->arr[$index] ?? null)($value), $tmp);
 		} else {
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:61: characters 9-14
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:61: characters 9-14
 			return new SyncFuture(new LazyConst(Outcome::Success($value)));
 		}
 	}
@@ -131,38 +131,38 @@ class CustomClient implements ClientObject {
 	 * @return FutureObject
 	 */
 	public function request ($req) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:64: lines 64-69
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:64: lines 64-69
 		$_gthis = $this;
 		return Promise_Impl_::next($this->pipe($req, $this->preprocessors), function ($req) use (&$_gthis) {
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:67: characters 18-35
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:67: characters 18-35
 			$tmp = $_gthis->real->request($req);
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:68: characters 19-23
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:68: characters 19-23
 			$_g = $_gthis;
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:68: characters 32-98
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:68: characters 32-98
 			$transforms = null;
 			if ($_gthis->postprocessors === null) {
 				$transforms = null;
 			} else {
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:68: characters 64-98
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:68: characters 64-98
 				$_g1 = new \Array_hx();
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:68: characters 65-97
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:68: characters 65-97
 				$_g2 = 0;
 				$_g3 = $_gthis->postprocessors;
 				while ($_g2 < $_g3->length) {
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:68: characters 70-71
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:68: characters 70-71
 					$p = ($_g3->arr[$_g2] ?? null);
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:68: characters 65-97
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:68: characters 65-97
 					++$_g2;
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:68: characters 91-97
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:68: characters 91-97
 					$x = $p($req);
 					$_g1->arr[$_g1->length++] = $x;
 				}
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:68: characters 32-98
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:68: characters 32-98
 				$transforms = $_g1;
 			}
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:67: lines 67-68
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:67: lines 67-68
 			return Promise_Impl_::next($tmp, function ($value) use (&$transforms, &$_g) {
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Client.hx:68: characters 19-28
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Client.hx:68: characters 19-28
 				return $_g->pipe($value, $transforms);
 			});
 		});

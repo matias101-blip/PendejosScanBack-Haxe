@@ -29,11 +29,11 @@ class IncomingResponse extends Message {
 	 * @return FutureObject
 	 */
 	public static function readAll ($res) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:112: lines 112-118
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:112: lines 112-118
 		return Promise_Impl_::next(RealSourceTools::all($res->body), function ($b) use (&$res) {
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:114: lines 114-117
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:114: lines 114-117
 			if ($res->header->statusCode >= 400) {
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:115: characters 11-90
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:115: characters 11-90
 				return new SyncFuture(new LazyConst(Outcome::Failure(TypedError::withData($res->header->statusCode, $res->header->reason, $b->toString(), new HxAnon([
 					"fileName" => "tink/http/Response.hx",
 					"lineNumber" => 115,
@@ -41,7 +41,7 @@ class IncomingResponse extends Message {
 					"methodName" => "readAll",
 				])))));
 			} else {
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:117: characters 11-21
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:117: characters 11-21
 				return new SyncFuture(new LazyConst(Outcome::Success($b)));
 			}
 		});
@@ -53,17 +53,17 @@ class IncomingResponse extends Message {
 	 * @return IncomingResponse
 	 */
 	public static function reportError ($e) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:122: characters 7-96
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:122: characters 7-96
 		$statusCode = $e->code;
 		$reason = HttpStatusMessage_Impl_::fromCode($e->code);
 		$this1 = new ResponseHeaderBase($statusCode, $reason, \Array_hx::wrap([new HeaderField(\mb_strtolower("Content-Type"), "application/json")]), "HTTP/1.1");
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:123: lines 123-127
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:123: lines 123-127
 		$s = Json::phpJsonEncode(new HxAnon([
 			"error" => $e->message,
 			"details" => $e->data,
 		]), null, null);
 		$b = \strlen($s);
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:121: lines 121-128
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:121: lines 121-128
 		return new IncomingResponse($this1, new Single(new LazyConst(ByteChunk::of(new Bytes($b, new _BytesDataContainer($s))))));
 	}
 
@@ -74,7 +74,7 @@ class IncomingResponse extends Message {
 	 * @return void
 	 */
 	public function __construct ($header, $body) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:109: lines 109-131
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:109: lines 109-131
 		parent::__construct($header, $body);
 	}
 }

@@ -34,25 +34,25 @@ class Blackhole extends SinkBase {
 	 * @return FutureObject
 	 */
 	public function consume ($source, $options) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:73: lines 73-77
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Sink.hx:73: lines 73-77
 		return Future_Impl_::map($source->forEach(Handler_Impl_::ofSafeSync(function ($_) {
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:73: characters 39-52
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Sink.hx:73: characters 39-52
 			return Handled::Resume();
 		})), function ($o) {
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:73: lines 73-77
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Sink.hx:73: lines 73-77
 			$__hx__switch = ($o->index);
 			if ($__hx__switch === 0) {
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:75: characters 19-20
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Sink.hx:75: characters 19-20
 				$_g = $o->params[0];
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:75: characters 23-28
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Sink.hx:75: characters 23-28
 				throw Exception::thrown("unreachable");
 			} else if ($__hx__switch === 2) {
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:76: characters 19-20
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Sink.hx:76: characters 19-20
 				$e = $o->params[0];
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:76: characters 23-38
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Sink.hx:76: characters 23-38
 				return PipeResult::SourceFailed($e);
 			} else if ($__hx__switch === 3) {
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:74: characters 22-32
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Sink.hx:74: characters 22-32
 				return PipeResult::AllWritten();
 			}
 		});

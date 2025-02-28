@@ -16,7 +16,7 @@ final class ReadonlyMap_Impl_ {
 	 * @return bool
 	 */
 	public static function exists ($this1, $key) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:17: characters 5-28
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Header.hx:17: characters 5-28
 		return $this1->exists($key);
 	}
 
@@ -27,7 +27,7 @@ final class ReadonlyMap_Impl_ {
 	 * @return mixed
 	 */
 	public static function get ($this1, $key) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:14: characters 5-25
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Header.hx:14: characters 5-25
 		return $this1->get($key);
 	}
 
@@ -37,7 +37,7 @@ final class ReadonlyMap_Impl_ {
 	 * @return object
 	 */
 	public static function iterator ($this1) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:20: characters 5-27
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Header.hx:20: characters 5-27
 		return $this1->iterator();
 	}
 
@@ -47,7 +47,7 @@ final class ReadonlyMap_Impl_ {
 	 * @return object
 	 */
 	public static function keys ($this1) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Header.hx:23: characters 5-23
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Header.hx:23: characters 5-23
 		return $this1->keys();
 	}
 }

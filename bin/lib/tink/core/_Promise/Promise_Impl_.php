@@ -38,21 +38,16 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function _new ($f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:32: characters 12-73
-		$wakeup = function ($cb) use (&$f) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:32: characters 29-72
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:31: character 3
+		return new SuspendableFuture(function ($cb) use (&$f) {
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:32: characters 29-72
 			return $f(function ($v) use (&$cb) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:32: characters 36-50
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:32: characters 36-50
 				$cb(Outcome::Success($v));
 			}, function ($e) use (&$cb) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:32: characters 57-71
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:32: characters 57-71
 				$cb(Outcome::Failure($e));
 			});
-		};
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:31: character 3
-		return new SuspendableFuture(function ($yield, $destroy) use (&$wakeup) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:32: characters 12-73
-			return $wakeup($yield);
 		});
 	}
 
@@ -63,9 +58,9 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function and ($a, $b) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:107: characters 5-48
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:107: characters 5-48
 		return Promise_Impl_::merge($a, $b, function ($a, $b) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:107: characters 33-47
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:107: characters 33-47
 			return new SyncFuture(new LazyConst(Outcome::Success(new MPair($a, $b))));
 		});
 	}
@@ -76,7 +71,7 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function asFuture ($this1) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:244: characters 5-16
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:244: characters 5-16
 		return $this1;
 	}
 
@@ -86,42 +81,42 @@ final class Promise_Impl_ {
 	 * @return \Closure
 	 */
 	public static function cache ($gen) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:264: characters 5-18
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:264: characters 5-18
 		$p = null;
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:265: lines 265-282
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:265: lines 265-282
 		return function () use (&$gen, &$p) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:266: characters 7-19
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:266: characters 7-19
 			$ret = $p;
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:267: lines 267-277
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:267: lines 267-277
 			if ($ret === null) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:268: characters 9-26
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:268: characters 9-26
 				$sync = false;
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:269: lines 269-275
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:269: lines 269-275
 				$ret = Promise_Impl_::next($gen(), function ($o) use (&$sync, &$p) {
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:270: lines 270-273
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:270: lines 270-273
 					$o->b->handle(function ($_) use (&$sync, &$p) {
-						#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:271: characters 13-24
+						#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:271: characters 13-24
 						$sync = true;
-						#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:272: characters 13-21
+						#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:272: characters 13-21
 						$p = null;
 					});
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:274: characters 11-21
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:274: characters 11-21
 					return new SyncFuture(new LazyConst(Outcome::Success($o->a)));
 				});
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:276: characters 9-26
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:276: characters 9-26
 				if (!$sync) {
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:276: characters 19-26
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:276: characters 19-26
 					$p = $ret;
 				}
 			}
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:278: lines 278-281
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:278: lines 278-281
 			return Future_Impl_::map($ret, function ($o) use (&$p) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:279: characters 9-36
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:279: characters 9-36
 				if (!OutcomeTools::isSuccess($o)) {
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:279: characters 28-36
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:279: characters 28-36
 					$p = null;
 				}
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:280: characters 9-17
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:280: characters 9-17
 				return $o;
 			});
 		};
@@ -133,9 +128,9 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function eager ($this1) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:35: characters 12-24
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:35: characters 12-24
 		$this1->eager();
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:35: characters 5-24
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:35: characters 5-24
 		return $this1;
 	}
 
@@ -146,7 +141,7 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function flatMap ($this1, $f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:41: characters 5-27
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:41: characters 5-27
 		return Future_Impl_::flatMap($this1, $f);
 	}
 
@@ -156,7 +151,7 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function fromNever ($l) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:223: characters 5-18
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:223: characters 5-18
 		return $l;
 	}
 
@@ -167,7 +162,7 @@ final class Promise_Impl_ {
 	 * @return LinkObject
 	 */
 	public static function handle ($this1, $cb) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:74: characters 5-27
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:74: characters 5-27
 		return $this1->handle($cb);
 	}
 
@@ -178,7 +173,7 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function inParallel ($a, $concurrency = null) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:252: characters 5-32
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:252: characters 5-32
 		return Promise_Impl_::many($a, $concurrency);
 	}
 
@@ -188,7 +183,7 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function inSequence ($a) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:259: characters 5-22
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:259: characters 5-22
 		return Promise_Impl_::many($a, 1);
 	}
 
@@ -198,23 +193,20 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function irreversible ($f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:103: characters 12-59
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:103: characters 12-59
 		$f1 = function ($res, $rej) use (&$f) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:103: characters 39-50
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:103: characters 39-50
 			$f($res, $rej);
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:103: characters 52-56
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:103: characters 52-56
 			return null;
 		};
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:103: characters 12-59
-		$wakeup = function ($cb) use (&$f1) {
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:103: characters 12-59
+		return new SuspendableFuture(function ($cb) use (&$f1) {
 			return $f1(function ($v) use (&$cb) {
 				$cb(Outcome::Success($v));
 			}, function ($e) use (&$cb) {
 				$cb(Outcome::Failure($e));
 			});
-		};
-		return new SuspendableFuture(function ($yield, $destroy) use (&$wakeup) {
-			return $wakeup($yield);
 		});
 	}
 
@@ -224,9 +216,9 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function isSuccess ($this1) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:82: characters 5-55
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:82: characters 5-55
 		return Future_Impl_::map($this1, function ($o) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:82: characters 34-54
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:82: characters 34-54
 			return OutcomeTools::isSuccess($o);
 		});
 	}
@@ -257,66 +249,66 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function iterate ($promises, $yield, $fallback, $fallThroughOnError = false) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:129: lines 129-148
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:129: lines 129-148
 		if ($fallThroughOnError === null) {
 			$fallThroughOnError = false;
 		}
 		return Future_Impl_::irreversible(function ($cb) use (&$yield, &$fallback, &$fallThroughOnError, &$promises) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:130: characters 7-38
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:130: characters 7-38
 			$iter = $promises->iterator();
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:131: lines 131-146
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:131: lines 131-146
 			$next = null;
 			$next = function () use (&$yield, &$next, &$iter, &$fallback, &$fallThroughOnError, &$cb) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:132: lines 132-145
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:132: lines 132-145
 				if ($iter->hasNext()) {
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:133: lines 133-143
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:133: lines 133-143
 					$iter->next()->handle(function ($o) use (&$yield, &$next, &$fallThroughOnError, &$cb) {
 						$__hx__switch = ($o->index);
 						if ($__hx__switch === 0) {
-							#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:134: characters 26-27
+							#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:134: characters 26-27
 							$v = $o->params[0];
-							#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:135: lines 135-139
+							#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:135: lines 135-139
 							$yield($v)->handle(function ($o) use (&$next, &$cb) {
 								$__hx__switch = ($o->index);
 								if ($__hx__switch === 0) {
-									#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:137: characters 30-34
+									#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:137: characters 30-34
 									$_g = $o->params[0];
 									$__hx__switch = ($_g->index);
 									if ($__hx__switch === 0) {
-										#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:136: characters 35-38
+										#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:136: characters 35-38
 										$ret = $_g->params[0];
-										#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:136: characters 42-58
+										#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:136: characters 42-58
 										$cb(Outcome::Success($ret));
 									} else if ($__hx__switch === 1) {
-										#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:137: characters 37-43
+										#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:137: characters 37-43
 										$next();
 									}
 								} else if ($__hx__switch === 1) {
-									#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:138: characters 30-31
+									#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:138: characters 30-31
 									$e = $o->params[0];
-									#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:138: characters 34-48
+									#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:138: characters 34-48
 									$cb(Outcome::Failure($e));
 								}
 							});
 						} else if ($__hx__switch === 1) {
-							#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:140: characters 26-27
+							#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:140: characters 26-27
 							$e = $o->params[0];
-							#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:141: lines 141-142
+							#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:141: lines 141-142
 							if ($fallThroughOnError) {
-								#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:141: characters 38-44
+								#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:141: characters 38-44
 								$next();
 							} else {
-								#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:142: characters 20-34
+								#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:142: characters 20-34
 								$cb(Outcome::Failure($e));
 							}
 						}
 					});
 				} else {
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:145: characters 11-30
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:145: characters 11-30
 					$fallback->handle($cb);
 				}
 			};
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:147: characters 7-13
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:147: characters 7-13
 			$next();
 		});
 	}
@@ -327,14 +319,10 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function lazy ($p) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:248: characters 12-48
-		$wakeup = function ($cb) use (&$p) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:248: characters 29-47
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:248: characters 12-48
+		return new SuspendableFuture(function ($cb) use (&$p) {
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:248: characters 29-47
 			return Lazy_Impl_::get($p)->handle($cb);
-		};
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:248: characters 12-48
-		return new SuspendableFuture(function ($yield, $destroy) use (&$wakeup) {
-			return $wakeup($yield);
 		});
 	}
 
@@ -344,7 +332,7 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function lift ($p) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:288: characters 5-13
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:288: characters 5-13
 		return $p;
 	}
 
@@ -355,12 +343,12 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function many ($a, $concurrency = null) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:255: characters 5-111
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:255: characters 5-111
 		return Future_Impl_::processMany($a, $concurrency, function ($o) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:255: characters 101-102
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:255: characters 101-102
 			return $o;
 		}, function ($o) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:255: characters 109-110
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:255: characters 109-110
 			return $o;
 		});
 	}
@@ -372,7 +360,7 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function map ($this1, $f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:38: characters 5-23
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:38: characters 5-23
 		return Future_Impl_::map($this1, $f);
 	}
 
@@ -383,18 +371,18 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function mapError ($this1, $f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:56: lines 56-59
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:56: lines 56-59
 		return Future_Impl_::map($this1, function ($o) use (&$f) {
 			$__hx__switch = ($o->index);
 			if ($__hx__switch === 0) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:57: characters 20-21
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:57: characters 20-21
 				$_g = $o->params[0];
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:57: characters 24-25
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:57: characters 24-25
 				return $o;
 			} else if ($__hx__switch === 1) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:58: characters 20-21
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:58: characters 20-21
 				$e = $o->params[0];
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:58: characters 24-37
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:58: characters 24-37
 				return Outcome::Failure($f($e));
 			}
 		});
@@ -409,35 +397,35 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function merge ($this1, $other, $merger, $gather = null) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:97: lines 97-100
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:97: lines 97-100
 		return Future_Impl_::flatMap(Future_Impl_::merge($this1, $other, function ($a, $b) use (&$merger) {
 			$__hx__switch = ($a->index);
 			if ($__hx__switch === 0) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:98: characters 21-22
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:98: characters 21-22
 				$_g = $a->params[0];
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:97: characters 51-52
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:97: characters 51-52
 				$__hx__switch = ($b->index);
 				if ($__hx__switch === 0) {
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:98: characters 33-34
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:98: characters 33-34
 					$b1 = $b->params[0];
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:98: characters 21-22
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:98: characters 21-22
 					$a1 = $_g;
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:98: characters 38-50
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:98: characters 38-50
 					return $merger($a1, $b1);
 				} else if ($__hx__switch === 1) {
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:99: characters 42-43
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:99: characters 42-43
 					$e = $b->params[0];
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:99: characters 47-64
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:99: characters 47-64
 					return new SyncFuture(new LazyConst(Outcome::Failure($e)));
 				}
 			} else if ($__hx__switch === 1) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:99: characters 21-22
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:99: characters 21-22
 				$e = $a->params[0];
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:99: characters 47-64
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:99: characters 47-64
 				return new SyncFuture(new LazyConst(Outcome::Failure($e)));
 			}
 		}), function ($o) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:100: characters 21-22
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:100: characters 21-22
 			return $o;
 		});
 	}
@@ -446,7 +434,7 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function never () {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:29: characters 5-26
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:29: characters 5-26
 		return Future_Impl_::never();
 	}
 
@@ -458,18 +446,18 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function next ($this1, $f, $gather = null) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:85: lines 85-88
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:85: lines 85-88
 		return Future_Impl_::flatMap($this1, function ($o) use (&$f) {
 			$__hx__switch = ($o->index);
 			if ($__hx__switch === 0) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:86: characters 20-21
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:86: characters 20-21
 				$d = $o->params[0];
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:86: characters 24-28
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:86: characters 24-28
 				return $f($d);
 			} else if ($__hx__switch === 1) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:87: characters 20-21
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:87: characters 20-21
 				$f1 = $o->params[0];
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:87: characters 24-47
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:87: characters 24-47
 				return new SyncFuture(new LazyConst(Outcome::Failure($f1)));
 			}
 		});
@@ -481,14 +469,14 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function noise ($this1) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:78: lines 78-79
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:78: lines 78-79
 		if ($this1->getStatus()->index === 4) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:78: characters 41-48
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:78: characters 41-48
 			return Promise_Impl_::never();
 		} else {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:79: characters 12-61
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:79: characters 12-61
 			return Promise_Impl_::next($this1, function ($v) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:79: characters 48-60
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:79: characters 48-60
 				return new SyncFuture(new LazyConst(Outcome::Success(null)));
 			});
 		}
@@ -500,7 +488,7 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function ofData ($d) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:241: characters 12-33
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:241: characters 12-33
 		return new SyncFuture(new LazyConst(Outcome::Success($d)));
 	}
 
@@ -510,7 +498,7 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function ofError ($e) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:238: characters 12-33
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:238: characters 12-33
 		return new SyncFuture(new LazyConst(Outcome::Failure($e)));
 	}
 
@@ -520,7 +508,7 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function ofFuture ($f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:232: characters 5-26
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:232: characters 5-26
 		return Future_Impl_::map($f, Boot::getStaticClosure(Outcome::class, 'Success'));
 	}
 
@@ -530,7 +518,7 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function ofHappyTrigger ($f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:229: characters 5-34
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:229: characters 5-34
 		return Future_Impl_::map($f, Boot::getStaticClosure(Outcome::class, 'Success'));
 	}
 
@@ -540,7 +528,7 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function ofOutcome ($o) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:235: characters 5-26
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:235: characters 5-26
 		return new SyncFuture(new LazyConst($o));
 	}
 
@@ -550,7 +538,7 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function ofSpecific ($s) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:220: characters 5-41
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:220: characters 5-41
 		return $s;
 	}
 
@@ -560,7 +548,7 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function ofTrigger ($f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:226: characters 5-24
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:226: characters 5-24
 		return $f;
 	}
 
@@ -571,18 +559,18 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function recover ($this1, $f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:50: lines 50-53
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:50: lines 50-53
 		return Future_Impl_::flatMap($this1, function ($o) use (&$f) {
 			$__hx__switch = ($o->index);
 			if ($__hx__switch === 0) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:51: characters 20-21
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:51: characters 20-21
 				$d = $o->params[0];
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:51: characters 24-38
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:51: characters 24-38
 				return new SyncFuture(new LazyConst($d));
 			} else if ($__hx__switch === 1) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:52: characters 20-21
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:52: characters 20-21
 				$e = $o->params[0];
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:52: characters 24-28
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:52: characters 24-28
 				return $f($e);
 			}
 		});
@@ -594,7 +582,7 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function reject ($e) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:303: characters 12-35
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:303: characters 12-35
 		return new SyncFuture(new LazyConst(Outcome::Failure($e)));
 	}
 
@@ -604,7 +592,7 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function resolve ($v) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:299: characters 12-35
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:299: characters 12-35
 		return new SyncFuture(new LazyConst(Outcome::Success($v)));
 	}
 
@@ -652,31 +640,31 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function retry ($gen, $next) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:191: characters 5-54
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:191: characters 5-54
 		$stamp = function () {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:191: characters 22-54
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:191: characters 22-54
 			return \microtime(true) * 1000;
 		};
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:192: characters 5-25
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:192: characters 5-25
 		$start = $stamp();
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:193: lines 193-200
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:193: lines 193-200
 		$attempt = null;
 		$attempt = function ($count) use (&$next, &$stamp, &$start, &$gen, &$attempt) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:194: lines 194-199
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:194: lines 194-199
 			$f = function ($error) use (&$count, &$next, &$stamp, &$start, &$attempt) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:196: characters 34-39
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:196: characters 34-39
 				$count1 = $count;
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:196: lines 196-197
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:196: lines 196-197
 				return Promise_Impl_::next($next(new HxAnon([
 					"attempt" => $count1,
 					"error" => $error,
 					"elapsed" => $stamp() - $start,
 				])), function ($_) use (&$count, &$attempt) {
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:197: characters 32-57
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:197: characters 32-57
 					return $attempt($count + 1);
 				});
 			};
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:194: lines 194-199
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:194: lines 194-199
 			return Future_Impl_::flatMap($gen(), function ($o) use (&$f) {
 				$__hx__switch = ($o->index);
 				if ($__hx__switch === 0) {
@@ -688,7 +676,7 @@ final class Promise_Impl_ {
 				}
 			});
 		};
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:193: lines 193-200
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:193: lines 193-200
 		return $attempt(1);
 	}
 
@@ -699,9 +687,9 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function swap ($this1, $v) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:91: characters 5-24
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:91: characters 5-24
 		return Promise_Impl_::next($this1, function ($_) use (&$v) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:91: characters 22-23
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:91: characters 22-23
 			return new SyncFuture(new LazyConst(Outcome::Success($v)));
 		});
 	}
@@ -713,9 +701,9 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function swapError ($this1, $e) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:94: characters 5-28
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:94: characters 5-28
 		return Promise_Impl_::mapError($this1, function ($_) use (&$e) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:94: characters 26-27
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:94: characters 26-27
 			return $e;
 		});
 	}
@@ -726,7 +714,7 @@ final class Promise_Impl_ {
 	 * @return FutureTrigger
 	 */
 	public static function trigger () {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:295: characters 12-32
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:295: characters 12-32
 		return new FutureTrigger();
 	}
 
@@ -737,18 +725,18 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function tryRecover ($this1, $f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:44: lines 44-47
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:44: lines 44-47
 		return Future_Impl_::flatMap($this1, function ($o) use (&$f) {
 			$__hx__switch = ($o->index);
 			if ($__hx__switch === 0) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:45: characters 20-21
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:45: characters 20-21
 				$d = $o->params[0];
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:45: characters 24-38
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:45: characters 24-38
 				return new SyncFuture(new LazyConst($o));
 			} else if ($__hx__switch === 1) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:46: characters 20-21
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:46: characters 20-21
 				$e = $o->params[0];
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:46: characters 24-28
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:46: characters 24-28
 				return $f($e);
 			}
 		});
@@ -765,16 +753,16 @@ final class Promise_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function withSideEffect ($this1, $c) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:67: lines 67-70
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:67: lines 67-70
 		$c1 = function ($o) use (&$c) {
 			if ($o->index === 0) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:68: characters 20-24
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:68: characters 20-24
 				$data = $o->params[0];
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:68: characters 27-41
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:68: characters 27-41
 				Callback_Impl_::invoke($c, $data);
 			}
 		};
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Promise.hx:67: lines 67-70
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Promise.hx:67: lines 67-70
 		return Future_Impl_::map($this1, function ($v) use (&$c1) {
 			Callback_Impl_::invoke($c1, $v);
 			return $v;

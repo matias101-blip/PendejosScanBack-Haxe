@@ -19,33 +19,33 @@ class OutgoingRequestHeader extends RequestHeader {
 	 * @return Option
 	 */
 	public static function extractAuth ($url) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:129: characters 19-27
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Request.hx:129: characters 19-27
 		$_g = $url->auth;
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:130: lines 130-140
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Request.hx:130: lines 130-140
 		if ($_g === null) {
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:130: characters 18-22
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Request.hx:130: characters 18-22
 			return Option::None();
 		} else {
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:131: characters 12-13
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Request.hx:131: characters 12-13
 			$v = $_g;
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:133: characters 20-95
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Request.hx:133: characters 20-95
 			$tmp = \Array_hx::wrap([new HeaderField("authorization", HeaderValue_Impl_::basicAuth(($v === null ? null : (HxString::split($v, ":")->arr[0] ?? null)), ($v === null ? null : (HxString::split($v, ":")->arr[1] ?? null))))]);
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:135: characters 21-31
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Request.hx:135: characters 21-31
 			$url1 = $url->scheme;
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:136: characters 20-49
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Request.hx:136: characters 20-49
 			$_g = new \Array_hx();
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:136: characters 21-48
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Request.hx:136: characters 21-48
 			$_g1 = 0;
 			$_g2 = $url->hosts;
 			while ($_g1 < $_g2->length) {
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:136: characters 25-29
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Request.hx:136: characters 25-29
 				$host = ($_g2->arr[$_g1] ?? null);
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:136: characters 21-48
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Request.hx:136: characters 21-48
 				++$_g1;
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:136: characters 44-48
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Request.hx:136: characters 44-48
 				$_g->arr[$_g->length++] = $host;
 			}
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:132: lines 132-140
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Request.hx:132: lines 132-140
 			return Option::Some(new HxAnon([
 				"headers" => $tmp,
 				"url" => Url_Impl_::make(new HxAnon([
@@ -67,21 +67,21 @@ class OutgoingRequestHeader extends RequestHeader {
 	 * @return void
 	 */
 	public function __construct ($method, $url, $protocol, $fields) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:118: lines 118-126
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Request.hx:118: lines 118-126
 		if ($protocol === null) {
 			$protocol = "HTTP/1.1";
 		}
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:119: characters 13-29
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Request.hx:119: characters 13-29
 		$_g = OutgoingRequestHeader::extractAuth($url);
 		if ($_g->index === 0) {
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:120: characters 17-18
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Request.hx:120: characters 17-18
 			$v = $_g->params[0];
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:121: characters 9-20
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Request.hx:121: characters 9-20
 			$url = $v->url;
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:122: characters 35-59
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Request.hx:122: characters 35-59
 			$fields = ($fields !== null ? $fields->concat($v->headers) : $v->headers);
 		}
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:125: characters 5-41
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Request.hx:125: characters 5-41
 		parent::__construct($method, $url, $protocol, $fields);
 	}
 
@@ -91,13 +91,13 @@ class OutgoingRequestHeader extends RequestHeader {
 	 * @return OutgoingRequestHeader
 	 */
 	public function concat ($fields) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:144: characters 38-44
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Request.hx:144: characters 38-44
 		$tmp = $this->method;
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:144: characters 46-49
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Request.hx:144: characters 46-49
 		$tmp1 = $this->url;
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:144: characters 51-59
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Request.hx:144: characters 51-59
 		$tmp2 = $this->protocol;
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:144: characters 5-88
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Request.hx:144: characters 5-88
 		return new OutgoingRequestHeader($tmp, $tmp1, $tmp2, $this->fields->concat($fields));
 	}
 }

@@ -23,7 +23,7 @@ final class Filter_Impl_ {
 	 * @return object
 	 */
 	public static function _new ($o) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:312: character 3
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:312: character 3
 		return $o;
 	}
 
@@ -33,11 +33,11 @@ final class Filter_Impl_ {
 	 * @return object
 	 */
 	public static function ofAsync ($f) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:321: lines 321-323
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:321: lines 321-323
 		return new HxAnon(["apply" => function ($i, $_) use (&$f) {
-			#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:322: characters 39-146
+			#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:322: characters 39-146
 			return Future_Impl_::map($f(($i->arr[0] ?? null)), function ($matched) use (&$i) {
-				#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:322: characters 77-145
+				#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:322: characters 77-145
 				return RegroupResult::Converted(($matched ? Stream_Impl_::single(($i->arr[0] ?? null)) : Empty_hx::$inst));
 			});
 		}]);
@@ -49,14 +49,14 @@ final class Filter_Impl_ {
 	 * @return object
 	 */
 	public static function ofNext ($n) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:316: lines 316-318
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:316: lines 316-318
 		return new HxAnon(["apply" => function ($i, $_) use (&$n) {
-			#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:317: characters 46-164
+			#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:317: characters 46-164
 			$this1 = Promise_Impl_::next($n(($i->arr[0] ?? null)), function ($matched) use (&$i) {
-				#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:317: characters 78-146
+				#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:317: characters 78-146
 				return new SyncFuture(new LazyConst(Outcome::Success(RegroupResult::Converted(($matched ? Stream_Impl_::single(($i->arr[0] ?? null)) : Empty_hx::$inst)))));
 			});
-			#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:317: characters 46-164
+			#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:317: characters 46-164
 			$f = Recover_Impl_::ofSync(Boot::getStaticClosure(RegroupResult::class, 'Errored'));
 			return Future_Impl_::flatMap($this1, function ($o) use (&$f) {
 				$__hx__switch = ($o->index);
@@ -77,9 +77,9 @@ final class Filter_Impl_ {
 	 * @return object
 	 */
 	public static function ofPlain ($f) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:334: lines 334-336
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:334: lines 334-336
 		return new HxAnon(["apply" => function ($i, $_) use (&$f) {
-			#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:335: characters 46-120
+			#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:335: characters 46-120
 			return new SyncFuture(new LazyConst(RegroupResult::Converted(($f(($i->arr[0] ?? null)) ? Stream_Impl_::single(($i->arr[0] ?? null)) : Empty_hx::$inst))));
 		}]);
 	}
@@ -90,22 +90,22 @@ final class Filter_Impl_ {
 	 * @return object
 	 */
 	public static function ofSync ($f) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:326: lines 326-331
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:326: lines 326-331
 		return new HxAnon(["apply" => function ($i, $_) use (&$f) {
-			#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:327: lines 327-330
+			#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:327: lines 327-330
 			$v = null;
-			#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:327: characters 65-72
+			#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:327: characters 65-72
 			$_g = $f(($i->arr[0] ?? null));
 			$__hx__switch = ($_g->index);
 			if ($__hx__switch === 0) {
-				#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:328: characters 22-23
+				#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:328: characters 22-23
 				$v1 = $_g->params[0];
-				#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:327: lines 327-330
+				#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:327: lines 327-330
 				$v = RegroupResult::Converted(($v1 ? Stream_Impl_::single(($i->arr[0] ?? null)) : Empty_hx::$inst));
 			} else if ($__hx__switch === 1) {
-				#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:329: characters 22-23
+				#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:329: characters 22-23
 				$e = $_g->params[0];
-				#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:327: lines 327-330
+				#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:327: lines 327-330
 				$v = RegroupResult::Errored($e);
 			}
 			return new SyncFuture(new LazyConst($v));

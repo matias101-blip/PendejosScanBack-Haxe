@@ -19,7 +19,7 @@ class LazyConst implements LazyObject {
 	 * @return void
 	 */
 	public function __construct ($value) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Lazy.hx:52: characters 5-23
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Lazy.hx:52: characters 5-23
 		$this->value = $value;
 	}
 
@@ -33,7 +33,7 @@ class LazyConst implements LazyObject {
 	 * @return mixed
 	 */
 	public function get () {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Lazy.hx:55: characters 5-17
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Lazy.hx:55: characters 5-17
 		return $this->value;
 	}
 
@@ -41,7 +41,7 @@ class LazyConst implements LazyObject {
 	 * @return bool
 	 */
 	public function isComputed () {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Lazy.hx:49: characters 5-16
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Lazy.hx:49: characters 5-16
 		return true;
 	}
 
@@ -49,7 +49,7 @@ class LazyConst implements LazyObject {
 	 * @return Computable
 	 */
 	public function underlying () {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Lazy.hx:60: characters 5-16
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Lazy.hx:60: characters 5-16
 		return null;
 	}
 }

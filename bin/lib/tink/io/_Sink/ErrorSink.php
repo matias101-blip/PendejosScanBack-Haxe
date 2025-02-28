@@ -26,7 +26,7 @@ class ErrorSink extends SinkBase {
 	 * @return void
 	 */
 	public function __construct ($error) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:94: characters 5-23
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Sink.hx:94: characters 5-23
 		$this->error = $error;
 	}
 
@@ -37,7 +37,7 @@ class ErrorSink extends SinkBase {
 	 * @return FutureObject
 	 */
 	public function consume ($source, $options) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:100: characters 12-66
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Sink.hx:100: characters 12-66
 		return new SyncFuture(new LazyConst(PipeResult::SinkFailed($this->error, $source)));
 	}
 
@@ -45,7 +45,7 @@ class ErrorSink extends SinkBase {
 	 * @return bool
 	 */
 	public function get_sealed () {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:97: characters 5-17
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Sink.hx:97: characters 5-17
 		return false;
 	}
 }

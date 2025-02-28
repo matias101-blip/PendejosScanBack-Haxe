@@ -23,9 +23,9 @@ class ChunkIterator {
 	 * @return void
 	 */
 	public function __construct ($target) {
-		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/chunk/ChunkIterator.hx:12: characters 5-25
+		#/home/sinherani/haxelib/tink_chunk/0,4,0/src/tink/chunk/ChunkIterator.hx:12: characters 5-25
 		$this->target = $target;
-		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/chunk/ChunkIterator.hx:13: characters 5-54
+		#/home/sinherani/haxelib/tink_chunk/0,4,0/src/tink/chunk/ChunkIterator.hx:13: characters 5-54
 		$this->_hasNext = $target->length > $target->currentPos;
 	}
 
@@ -33,7 +33,7 @@ class ChunkIterator {
 	 * @return bool
 	 */
 	public function hasNext () {
-		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/chunk/ChunkIterator.hx:17: characters 5-20
+		#/home/sinherani/haxelib/tink_chunk/0,4,0/src/tink/chunk/ChunkIterator.hx:17: characters 5-20
 		return $this->_hasNext;
 	}
 
@@ -41,11 +41,11 @@ class ChunkIterator {
 	 * @return int
 	 */
 	public function next () {
-		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/chunk/ChunkIterator.hx:20: characters 5-34
+		#/home/sinherani/haxelib/tink_chunk/0,4,0/src/tink/chunk/ChunkIterator.hx:20: characters 5-34
 		$ret = $this->target->currentByte;
-		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/chunk/ChunkIterator.hx:21: characters 5-29
+		#/home/sinherani/haxelib/tink_chunk/0,4,0/src/tink/chunk/ChunkIterator.hx:21: characters 5-29
 		$this->_hasNext = $this->target->next();
-		#/home/thehunter101/.haxe/tink_chunk/0,4,0/src/tink/chunk/ChunkIterator.hx:22: characters 5-15
+		#/home/sinherani/haxelib/tink_chunk/0,4,0/src/tink/chunk/ChunkIterator.hx:22: characters 5-15
 		return $ret;
 	}
 }

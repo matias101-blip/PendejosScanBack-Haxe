@@ -19,11 +19,11 @@ class BytewiseParser implements StreamParserObject {
 	 * @return Outcome
 	 */
 	public function eof ($rest) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/StreamParser.hx:179: characters 19-28
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/StreamParser.hx:179: characters 19-28
 		$_g = $this->read(-1);
 		$__hx__switch = ($_g->index);
 		if ($__hx__switch === 0) {
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/StreamParser.hx:180: characters 24-90
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/StreamParser.hx:180: characters 24-90
 			return Outcome::Failure(new TypedError(422, "Unexpected end of input", new HxAnon([
 				"fileName" => "tink/io/StreamParser.hx",
 				"lineNumber" => 180,
@@ -31,14 +31,14 @@ class BytewiseParser implements StreamParserObject {
 				"methodName" => "eof",
 			])));
 		} else if ($__hx__switch === 1) {
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/StreamParser.hx:181: characters 17-18
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/StreamParser.hx:181: characters 17-18
 			$r = $_g->params[0];
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/StreamParser.hx:181: characters 21-31
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/StreamParser.hx:181: characters 21-31
 			return Outcome::Success($r);
 		} else if ($__hx__switch === 2) {
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/StreamParser.hx:182: characters 19-20
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/StreamParser.hx:182: characters 19-20
 			$e = $_g->params[0];
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/StreamParser.hx:182: characters 23-33
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/StreamParser.hx:182: characters 23-33
 			return Outcome::Failure($e);
 		}
 	}
@@ -49,27 +49,27 @@ class BytewiseParser implements StreamParserObject {
 	 * @return ParseStep
 	 */
 	public function progress ($cursor) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/StreamParser.hx:166: lines 166-173
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/StreamParser.hx:166: lines 166-173
 		do {
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/StreamParser.hx:166: characters 15-39
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/StreamParser.hx:166: characters 15-39
 			$_g = $this->read($cursor->currentByte);
 			$__hx__switch = ($_g->index);
 			if ($__hx__switch === 0) {
 			} else if ($__hx__switch === 1) {
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/StreamParser.hx:168: characters 17-18
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/StreamParser.hx:168: characters 17-18
 				$r = $_g->params[0];
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/StreamParser.hx:169: characters 9-22
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/StreamParser.hx:169: characters 9-22
 				$cursor->next();
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/StreamParser.hx:170: characters 9-23
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/StreamParser.hx:170: characters 9-23
 				return ParseStep::Done($r);
 			} else if ($__hx__switch === 2) {
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/StreamParser.hx:171: characters 19-20
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/StreamParser.hx:171: characters 19-20
 				$e = $_g->params[0];
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/StreamParser.hx:172: characters 9-25
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/StreamParser.hx:172: characters 9-25
 				return ParseStep::Failed($e);
 			}
 		} while ($cursor->next());
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/StreamParser.hx:175: characters 5-22
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/StreamParser.hx:175: characters 5-22
 		return ParseStep::Progressed();
 	}
 
@@ -79,7 +79,7 @@ class BytewiseParser implements StreamParserObject {
 	 * @return ParseStep
 	 */
 	public function read ($char) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/StreamParser.hx:161: characters 12-17
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/StreamParser.hx:161: characters 12-17
 		throw Exception::thrown("abstract");
 	}
 }

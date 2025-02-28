@@ -31,24 +31,24 @@ class ResponseHeaderBase extends Header {
 	 * @return StreamParserObject
 	 */
 	public static function parser () {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:51: lines 51-58
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:51: lines 51-58
 		return new HeaderParser(function ($line, $headers) {
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:53: characters 14-15
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:53: characters 14-15
 			$v = HxString::split($line, " ");
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:53: lines 53-56
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:53: lines 53-56
 			if ($v->length >= 3) {
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:54: characters 19-94
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:54: characters 19-94
 				$statusCode = \Std::parseInt(($v->arr[1] ?? null));
 				$reason = $v->slice(2)->join(" ");
 				$protocol = ($v->arr[0] ?? null);
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:54: characters 89-93
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:54: characters 89-93
 				if ($protocol === null) {
 					$protocol = "HTTP/1.1";
 				}
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:54: characters 11-95
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:54: characters 11-95
 				return Outcome::Success(new ResponseHeaderBase($statusCode, $reason, $headers, $protocol));
 			} else {
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:56: characters 11-82
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:56: characters 11-82
 				return Outcome::Failure(new TypedError(422, "Invalid HTTP response header", new HxAnon([
 					"fileName" => "tink/http/Response.hx",
 					"lineNumber" => 56,
@@ -68,17 +68,17 @@ class ResponseHeaderBase extends Header {
 	 * @return void
 	 */
 	public function __construct ($statusCode, $reason = null, $fields = null, $protocol = "HTTP/1.1") {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:37: lines 37-42
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:37: lines 37-42
 		if ($protocol === null) {
 			$protocol = "HTTP/1.1";
 		}
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:38: characters 5-33
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:38: characters 5-33
 		$this->statusCode = $statusCode;
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:39: characters 5-55
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:39: characters 5-55
 		$this->reason = ($reason === null ? HttpStatusMessage_Impl_::fromCode($statusCode) : $reason);
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:40: characters 5-29
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:40: characters 5-29
 		$this->protocol = $protocol;
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:41: characters 5-18
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:41: characters 5-18
 		parent::__construct($fields);
 	}
 
@@ -88,16 +88,16 @@ class ResponseHeaderBase extends Header {
 	 * @return ResponseHeaderBase
 	 */
 	public function concat ($fields) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:45: characters 12-88
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:45: characters 12-88
 		$statusCode = $this->statusCode;
 		$reason = $this->reason;
 		$fields1 = $this->fields->concat($fields);
 		$protocol = $this->protocol;
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:45: characters 79-87
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:45: characters 79-87
 		if ($protocol === null) {
 			$protocol = "HTTP/1.1";
 		}
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:45: characters 12-88
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:45: characters 12-88
 		return new ResponseHeaderBase($statusCode, $reason, $fields1, $protocol);
 	}
 
@@ -105,7 +105,7 @@ class ResponseHeaderBase extends Header {
 	 * @return string
 	 */
 	public function toString () {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:48: characters 5-82
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:48: characters 5-82
 		return "" . ($this->protocol??'null') . " " . ($this->statusCode??'null') . " " . ($this->reason??'null') . "\x0D\x0A" . (parent::toString()??'null');
 	}
 

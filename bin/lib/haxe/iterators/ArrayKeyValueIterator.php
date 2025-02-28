@@ -5,7 +5,6 @@
 
 namespace haxe\iterators;
 
-use \php\_Boot\HxAnon;
 use \php\Boot;
 
 class ArrayKeyValueIterator {
@@ -13,10 +12,6 @@ class ArrayKeyValueIterator {
 	 * @var mixed[]|\Array_hx
 	 */
 	public $array;
-	/**
-	 * @var int
-	 */
-	public $current;
 
 	/**
 	 * @param mixed[]|\Array_hx $array
@@ -24,31 +19,8 @@ class ArrayKeyValueIterator {
 	 * @return void
 	 */
 	public function __construct ($array) {
-		#/usr/share/haxe/std/haxe/iterators/ArrayKeyValueIterator.hx:27: characters 20-21
-		$this->current = 0;
 		#/usr/share/haxe/std/haxe/iterators/ArrayKeyValueIterator.hx:31: characters 3-21
 		$this->array = $array;
-	}
-
-	/**
-	 * @return bool
-	 */
-	public function hasNext () {
-		#/usr/share/haxe/std/haxe/iterators/ArrayKeyValueIterator.hx:35: characters 3-32
-		return $this->current < $this->array->length;
-	}
-
-	/**
-	 * @return object
-	 */
-	public function next () {
-		#/usr/share/haxe/std/haxe/iterators/ArrayKeyValueIterator.hx:39: characters 17-31
-		$tmp = ($this->array->arr[$this->current] ?? null);
-		#/usr/share/haxe/std/haxe/iterators/ArrayKeyValueIterator.hx:39: characters 3-47
-		return new HxAnon([
-			"value" => $tmp,
-			"key" => $this->current++,
-		]);
 	}
 }
 

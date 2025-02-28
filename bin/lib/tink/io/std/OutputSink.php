@@ -48,11 +48,11 @@ class OutputSink extends SinkBase {
 	 * @return void
 	 */
 	public function __construct ($name, $target, $worker) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:15: characters 5-21
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:15: characters 5-21
 		$this->name = $name;
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:16: characters 5-25
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:16: characters 5-25
 		$this->target = $target;
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:17: characters 5-25
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:17: characters 5-25
 		$this->worker = $worker;
 	}
 
@@ -63,46 +63,46 @@ class OutputSink extends SinkBase {
 	 * @return FutureObject
 	 */
 	public function consume ($source, $options) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:20: lines 20-68
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:20: lines 20-68
 		$_gthis = $this;
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:21: characters 5-28
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:21: characters 5-28
 		$rest = Chunk_Impl_::$EMPTY;
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:23: lines 23-62
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:23: lines 23-62
 		$ret = $source->forEach(Handler_Impl_::ofUnknown(function ($c) use (&$rest, &$_gthis) {
 			return Future_Impl_::async(function ($cb) use (&$c, &$rest, &$_gthis) {
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:25: lines 25-26
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:25: lines 25-26
 				$pos = 0;
 				$bytes = $c->toBytes();
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:28: lines 28-59
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:28: lines 28-59
 				$write = null;
 				$write = function () use (&$pos, &$write, &$bytes, &$rest, &$_gthis, &$cb) {
-					#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:29: lines 29-58
+					#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:29: lines 29-58
 					if ($pos === $bytes->length) {
-						#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:29: characters 34-44
+						#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:29: characters 34-44
 						$cb(Handled::Resume());
 					} else {
-						#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:30: lines 30-58
+						#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:30: lines 30-58
 						Worker_Impl_::work($_gthis->worker, new LazyFunc(function () use (&$pos, &$bytes, &$_gthis) {
-							#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:32: lines 32-47
+							#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:32: lines 32-47
 							try {
-								#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:33: characters 15-73
+								#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:33: characters 15-73
 								return Outcome::Success($_gthis->target->writeBytes($bytes, $pos, $bytes->length - $pos));
 							} catch(\Throwable $_g) {
-								#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:35: characters 20-21
+								#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:35: characters 20-21
 								$_g1 = Exception::caught($_g)->unwrap();
-								#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:32: lines 32-47
+								#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:32: lines 32-47
 								if (($_g1 instanceof Eof)) {
-									#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:36: characters 15-26
+									#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:36: characters 15-26
 									return Outcome::Success(-1);
 								} else if (Boot::isOfType($_g1, Boot::getClass(Error::class))) {
-									#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:38: characters 20-21
+									#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:38: characters 20-21
 									$e = $_g1;
-									#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:38: lines 38-41
+									#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:38: lines 38-41
 									if ($e->index === 0) {
-										#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:39: characters 29-39
+										#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:39: characters 29-39
 										return Outcome::Success(0);
 									} else {
-										#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:40: characters 24-76
+										#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:40: characters 24-76
 										return Outcome::Failure(TypedError::withData(null, "Error writing to " . ($_gthis->name??'null'), $e, new HxAnon([
 											"fileName" => "tink/io/std/OutputSink.hx",
 											"lineNumber" => 40,
@@ -111,14 +111,14 @@ class OutputSink extends SinkBase {
 										])));
 									}
 								} else if (($_g1 instanceof TypedError)) {
-									#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:42: characters 20-21
+									#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:42: characters 20-21
 									$e = $_g1;
-									#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:43: characters 15-30
+									#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:43: characters 15-30
 									return Outcome::Failure($e);
 								} else {
-									#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:45: characters 20-21
+									#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:45: characters 20-21
 									$e = $_g1;
-									#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:46: characters 15-67
+									#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:46: characters 15-67
 									return Outcome::Failure(TypedError::withData(null, "Error writing to " . ($_gthis->name??'null'), $e, new HxAnon([
 										"fileName" => "tink/io/std/OutputSink.hx",
 										"lineNumber" => 46,
@@ -128,58 +128,58 @@ class OutputSink extends SinkBase {
 								}
 							}
 						}))->handle(function ($o) use (&$pos, &$write, &$bytes, &$rest, &$cb) {
-							#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:48: lines 48-58
+							#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:48: lines 48-58
 							$__hx__switch = ($o->index);
 							if ($__hx__switch === 0) {
-								#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:52: characters 24-25
+								#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:52: characters 24-25
 								$_g = $o->params[0];
 								if ($_g === -1) {
-									#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:50: characters 20-58
+									#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:50: characters 20-58
 									$rest = ByteChunk::of($bytes)->slice($pos, $bytes->length);
-									#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:51: characters 13-23
+									#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:51: characters 13-23
 									$cb(Handled::Finish());
 								} else {
-									#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:52: characters 24-25
+									#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:52: characters 24-25
 									$v = $_g;
-									#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:53: characters 13-21
+									#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:53: characters 13-21
 									$pos += $v;
-									#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:54: lines 54-55
+									#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:54: lines 54-55
 									if ($pos === $bytes->length) {
-										#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:54: characters 38-48
+										#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:54: characters 38-48
 										$cb(Handled::Resume());
 									} else {
-										#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:55: characters 18-25
+										#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:55: characters 18-25
 										$write();
 									}
 								}
 							} else if ($__hx__switch === 1) {
-								#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:56: characters 24-25
+								#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:56: characters 24-25
 								$e = $o->params[0];
-								#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:57: characters 13-24
+								#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:57: characters 13-24
 								$cb(Handled::Clog($e));
 							}
 						});
 					}
 				};
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:61: characters 7-14
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:61: characters 7-14
 				$write();
 			});
 		}));
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:64: lines 64-65
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:64: lines 64-65
 		if (($options !== null) && $options->end) {
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:65: characters 7-73
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:65: characters 7-73
 			$ret->handle(function ($end) use (&$_gthis) {
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:65: characters 33-72
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:65: characters 33-72
 				try {
-					#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:65: characters 37-51
+					#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:65: characters 37-51
 					$_gthis->target->close();
 				} catch(\Throwable $_g) {
 				}
 			});
 		}
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:67: characters 5-64
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:67: characters 5-64
 		return Future_Impl_::map($ret, function ($c) use (&$rest) {
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:67: characters 33-63
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/std/OutputSink.hx:67: characters 33-63
 			return PipeResultTools::toResult($c, null, $rest);
 		});
 	}

@@ -24,9 +24,9 @@ class Message {
 	 * @return void
 	 */
 	public function __construct ($header, $body) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Message.hx:9: characters 5-25
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Message.hx:9: characters 5-25
 		$this->header = $header;
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Message.hx:10: characters 5-21
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Message.hx:10: characters 5-21
 		$this->body = $body;
 	}
 }

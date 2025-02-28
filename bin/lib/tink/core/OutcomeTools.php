@@ -26,14 +26,14 @@ class OutcomeTools {
 	 * @return Outcome
 	 */
 	public static function attempt ($f, $report) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:142: lines 142-144
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:142: lines 142-144
 		try {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:142: characters 11-23
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:142: characters 11-23
 			return Outcome::Success($f());
 		} catch(\Throwable $_g) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:143: characters 14-15
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:143: characters 14-15
 			$e = Exception::caught($_g)->unwrap();
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:144: characters 9-27
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:144: characters 9-27
 			return Outcome::Failure($report($e));
 		}
 	}
@@ -47,17 +47,17 @@ class OutcomeTools {
 	 * @return bool
 	 */
 	public static function equals ($outcome, $to) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:82: lines 82-85
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:82: lines 82-85
 		$__hx__switch = ($outcome->index);
 		if ($__hx__switch === 0) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:83: characters 22-26
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:83: characters 22-26
 			$data = $outcome->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:83: characters 29-39
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:83: characters 29-39
 			return Boot::equal($data, $to);
 		} else if ($__hx__switch === 1) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:84: characters 22-23
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:84: characters 22-23
 			$_g = $outcome->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:84: characters 26-31
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:84: characters 26-31
 			return false;
 		}
 	}
@@ -72,7 +72,7 @@ class OutcomeTools {
 	 * @return Outcome
 	 */
 	public static function flatMap ($o, $mapper) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:115: characters 5-27
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:115: characters 5-27
 		return OutcomeMapper_Impl_::apply($mapper, $o);
 	}
 
@@ -82,27 +82,27 @@ class OutcomeTools {
 	 * @return Outcome
 	 */
 	public static function flatten ($o) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:156: lines 156-159
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:156: lines 156-159
 		$__hx__switch = ($o->index);
 		if ($__hx__switch === 0) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:158: characters 20-30
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:158: characters 20-30
 			$_g = $o->params[0];
 			$__hx__switch = ($_g->index);
 			if ($__hx__switch === 0) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:157: characters 28-29
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:157: characters 28-29
 				$d = $_g->params[0];
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:157: characters 33-43
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:157: characters 33-43
 				return Outcome::Success($d);
 			} else if ($__hx__switch === 1) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:158: characters 28-29
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:158: characters 28-29
 				$f = $_g->params[0];
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:158: characters 46-56
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:158: characters 46-56
 				return Outcome::Failure($f);
 			}
 		} else if ($__hx__switch === 1) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:158: characters 42-43
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:158: characters 42-43
 			$f = $o->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:158: characters 46-56
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:158: characters 46-56
 			return Outcome::Failure($f);
 		}
 	}
@@ -115,14 +115,14 @@ class OutcomeTools {
 	 * @return bool
 	 */
 	public static function isSuccess ($outcome) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:104: lines 104-107
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:104: lines 104-107
 		if ($outcome->index === 0) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:105: characters 22-23
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:105: characters 22-23
 			$_g = $outcome->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:105: characters 26-30
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:105: characters 26-30
 			return true;
 		} else {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:106: characters 18-23
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:106: characters 18-23
 			return false;
 		}
 	}
@@ -137,17 +137,17 @@ class OutcomeTools {
 	 * @return Outcome
 	 */
 	public static function map ($outcome, $transform) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:92: lines 92-97
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:92: lines 92-97
 		$__hx__switch = ($outcome->index);
 		if ($__hx__switch === 0) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:93: characters 22-23
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:93: characters 22-23
 			$a = $outcome->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:94: characters 11-32
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:94: characters 11-32
 			return Outcome::Success($transform($a));
 		} else if ($__hx__switch === 1) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:95: characters 22-23
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:95: characters 22-23
 			$f = $outcome->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:96: characters 11-21
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:96: characters 11-21
 			return Outcome::Failure($f);
 		}
 	}
@@ -159,17 +159,17 @@ class OutcomeTools {
 	 * @return FutureObject
 	 */
 	public static function next ($outcome, $f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:131: lines 131-134
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:131: lines 131-134
 		$__hx__switch = ($outcome->index);
 		if ($__hx__switch === 0) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:132: characters 20-21
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:132: characters 20-21
 			$v = $outcome->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:132: characters 24-28
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:132: characters 24-28
 			return $f($v);
 		} else if ($__hx__switch === 1) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:133: characters 20-21
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:133: characters 20-21
 			$e = $outcome->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:133: characters 7-25
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:133: characters 7-25
 			return new SyncFuture(new LazyConst(Outcome::Failure($e)));
 		}
 	}
@@ -183,17 +183,17 @@ class OutcomeTools {
 	 * @return mixed
 	 */
 	public static function or ($outcome, $fallback) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:63: lines 63-66
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:63: lines 63-66
 		$__hx__switch = ($outcome->index);
 		if ($__hx__switch === 0) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:64: characters 22-26
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:64: characters 22-26
 			$data = $outcome->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:64: characters 29-33
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:64: characters 29-33
 			return $data;
 		} else if ($__hx__switch === 1) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:65: characters 22-23
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:65: characters 22-23
 			$_g = $outcome->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:65: characters 26-40
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:65: characters 26-40
 			return Lazy_Impl_::get($fallback);
 		}
 	}
@@ -206,17 +206,17 @@ class OutcomeTools {
 	 * @return mixed
 	 */
 	public static function orNull ($outcome) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:49: lines 49-52
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:49: lines 49-52
 		$__hx__switch = ($outcome->index);
 		if ($__hx__switch === 0) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:50: characters 22-26
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:50: characters 22-26
 			$data = $outcome->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:50: characters 29-33
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:50: characters 29-33
 			return $data;
 		} else if ($__hx__switch === 1) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:51: characters 22-23
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:51: characters 22-23
 			$_g = $outcome->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:51: characters 26-30
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:51: characters 26-30
 			return null;
 		}
 	}
@@ -230,17 +230,17 @@ class OutcomeTools {
 	 * @return Outcome
 	 */
 	public static function orTry ($outcome, $fallback) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:73: lines 73-76
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:73: lines 73-76
 		$__hx__switch = ($outcome->index);
 		if ($__hx__switch === 0) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:74: characters 22-23
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:74: characters 22-23
 			$_g = $outcome->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:74: characters 26-33
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:74: characters 26-33
 			return $outcome;
 		} else if ($__hx__switch === 1) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:75: characters 22-23
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:75: characters 22-23
 			$_g = $outcome->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:75: characters 26-40
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:75: characters 26-40
 			return Lazy_Impl_::get($fallback);
 		}
 	}
@@ -252,7 +252,7 @@ class OutcomeTools {
 	 * @return mixed
 	 */
 	public static function orUse ($outcome, $fallback) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:56: characters 5-33
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:56: characters 5-33
 		return OutcomeTools::or($outcome, $fallback);
 	}
 
@@ -265,14 +265,14 @@ class OutcomeTools {
 	 * @return bool
 	 */
 	public static function satisfies ($o, $f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:150: lines 150-153
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:150: lines 150-153
 		if ($o->index === 0) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:151: characters 20-21
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:151: characters 20-21
 			$d = $o->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:151: characters 24-28
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:151: characters 24-28
 			return $f($d);
 		} else {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:152: characters 16-21
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:152: characters 16-21
 			return false;
 		}
 	}
@@ -285,26 +285,26 @@ class OutcomeTools {
 	 * @return mixed
 	 */
 	public static function sure ($outcome) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:24: lines 24-32
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:24: lines 24-32
 		$__hx__switch = ($outcome->index);
 		if ($__hx__switch === 0) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:25: characters 22-26
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:25: characters 22-26
 			$data = $outcome->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:26: characters 11-15
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:26: characters 11-15
 			return $data;
 		} else if ($__hx__switch === 1) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:27: characters 22-29
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:27: characters 22-29
 			$failure = $outcome->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:28: characters 18-40
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:28: characters 18-40
 			$_g = TypedError::asError($failure);
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:29: lines 29-30
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:29: lines 29-30
 			if ($_g === null) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:29: characters 24-29
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:29: characters 24-29
 				throw Exception::thrown($failure);
 			} else {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:30: characters 18-19
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:30: characters 18-19
 				$e = $_g;
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:30: characters 21-34
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:30: characters 21-34
 				return $e->throwSelf();
 			}
 		}
@@ -319,17 +319,17 @@ class OutcomeTools {
 	 * @return Outcome
 	 */
 	public static function swap ($outcome, $v) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:123: lines 123-128
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:123: lines 123-128
 		$__hx__switch = ($outcome->index);
 		if ($__hx__switch === 0) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:124: characters 22-23
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:124: characters 22-23
 			$a = $outcome->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:125: characters 11-21
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:125: characters 11-21
 			return Outcome::Success($v);
 		} else if ($__hx__switch === 1) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:126: characters 22-23
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:126: characters 22-23
 			$f = $outcome->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:127: characters 11-21
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:127: characters 11-21
 			return Outcome::Failure($f);
 		}
 	}
@@ -342,17 +342,17 @@ class OutcomeTools {
 	 * @return DsOption
 	 */
 	public static function toOption ($outcome) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:39: lines 39-42
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:39: lines 39-42
 		$__hx__switch = ($outcome->index);
 		if ($__hx__switch === 0) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:40: characters 22-26
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:40: characters 22-26
 			$data = $outcome->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:40: characters 29-46
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:40: characters 29-46
 			return DsOption::Some($data);
 		} else if ($__hx__switch === 1) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:41: characters 22-23
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:41: characters 22-23
 			$_g = $outcome->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Outcome.hx:41: characters 26-37
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Outcome.hx:41: characters 26-37
 			return DsOption::None();
 		}
 	}

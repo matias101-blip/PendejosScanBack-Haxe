@@ -30,7 +30,7 @@ final class Progress_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function asFuture ($this1) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:38: characters 5-23
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:38: characters 5-23
 		return $this1->result;
 	}
 
@@ -40,28 +40,28 @@ final class Progress_Impl_ {
 	 * @return ProgressObject
 	 */
 	public static function flatten ($v) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:54: lines 54-57
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:54: lines 54-57
 		return Progress_Impl_::map(Progress_Impl_::promise($v), function ($o) {
 			$__hx__switch = ($o->index);
 			if ($__hx__switch === 0) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:56: characters 33-43
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:56: characters 33-43
 				$_g = $o->params[0];
 				$__hx__switch = ($_g->index);
 				if ($__hx__switch === 0) {
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:55: characters 28-29
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:55: characters 28-29
 					$v = $_g->params[0];
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:55: characters 33-43
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:55: characters 33-43
 					return Outcome::Success($v);
 				} else if ($__hx__switch === 1) {
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:56: characters 41-42
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:56: characters 41-42
 					$e = $_g->params[0];
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:56: characters 46-56
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:56: characters 46-56
 					return Outcome::Failure($e);
 				}
 			} else if ($__hx__switch === 1) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:56: characters 20-21
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:56: characters 20-21
 				$e = $o->params[0];
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:56: characters 46-56
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:56: characters 46-56
 				return Outcome::Failure($e);
 			}
 		});
@@ -73,13 +73,13 @@ final class Progress_Impl_ {
 	 * @return ProgressObject
 	 */
 	public static function future ($v) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:61: lines 61-64
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:61: lines 61-64
 		return new SuspendableProgress(function ($fire) use (&$v) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:62: characters 7-43
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:62: characters 7-43
 			$inner = new CallbackLinkRef();
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:63: characters 7-65
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:63: characters 7-65
 			$this1 = $v->handle(function ($p) use (&$inner, &$fire) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:63: characters 21-56
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:63: characters 21-56
 				$param = $p->changed->listen($fire);
 				$this1 = $inner->link;
 				if ($this1 !== null) {
@@ -87,7 +87,7 @@ final class Progress_Impl_ {
 				}
 				$inner->link = $param;
 			});
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:63: characters 7-65
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:63: characters 7-65
 			return new LinkPair($this1, $inner);
 		});
 	}
@@ -99,7 +99,7 @@ final class Progress_Impl_ {
 	 * @return LinkObject
 	 */
 	public static function handle ($this1, $cb) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:21: characters 12-34
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:21: characters 12-34
 		return $this1->result->handle($cb);
 	}
 
@@ -110,7 +110,7 @@ final class Progress_Impl_ {
 	 * @return LinkObject
 	 */
 	public static function listen ($this1, $cb) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:18: characters 12-38
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:18: characters 12-38
 		return $this1->progressed->listen($cb);
 	}
 
@@ -120,13 +120,13 @@ final class Progress_Impl_ {
 	 * @return ProgressObject
 	 */
 	public static function make ($f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:28: lines 28-31
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:28: lines 28-31
 		return new SuspendableProgress(function ($fire) use (&$f) {
 			return $f(function ($value, $total) use (&$fire) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:29: characters 25-74
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:29: characters 25-74
 				$fire(ProgressStatus::InProgress(new MPair($value, $total)));
 			}, function ($result) use (&$fire) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:30: characters 17-39
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:30: characters 17-39
 				$fire(ProgressStatus::Finished($result));
 			});
 		});
@@ -139,12 +139,12 @@ final class Progress_Impl_ {
 	 * @return ProgressObject
 	 */
 	public static function map ($this1, $f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:34: characters 5-89
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:34: characters 5-89
 		return new ProgressObject(Signal_Impl_::map($this1->changed, function ($s) use (&$f) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:34: characters 53-61
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:34: characters 53-61
 			return ProgressStatusTools::map($s, $f);
 		}), function () use (&$f, &$this1) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:34: characters 70-88
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:34: characters 70-88
 			return ProgressStatusTools::map(($this1->getStatus)(), $f);
 		});
 	}
@@ -156,7 +156,7 @@ final class Progress_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function next ($this1, $f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:67: characters 12-30
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:67: characters 12-30
 		return Future_Impl_::flatMap($this1->result, $f);
 	}
 
@@ -166,35 +166,35 @@ final class Progress_Impl_ {
 	 * @return ProgressObject
 	 */
 	public static function promise ($v) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:42: lines 42-50
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:42: lines 42-50
 		return new SuspendableProgress(function ($fire) use (&$v) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:43: characters 7-43
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:43: characters 7-43
 			$inner = new CallbackLinkRef();
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:44: lines 44-49
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:44: lines 44-49
 			$this1 = $v->handle(function ($o) use (&$inner, &$fire) {
 				$__hx__switch = ($o->index);
 				if ($__hx__switch === 0) {
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:45: characters 22-23
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:45: characters 22-23
 					$p = $o->params[0];
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:46: characters 11-67
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:46: characters 11-67
 					$param = $p->changed->listen(function ($s) use (&$fire) {
-						#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:46: characters 46-66
+						#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:46: characters 46-66
 						$fire(ProgressStatusTools::map($s, Boot::getStaticClosure(Outcome::class, 'Success')));
 					});
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:46: characters 11-67
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:46: characters 11-67
 					$this1 = $inner->link;
 					if ($this1 !== null) {
 						$this1->cancel();
 					}
 					$inner->link = $param;
 				} else if ($__hx__switch === 1) {
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:47: characters 22-23
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:47: characters 22-23
 					$e = $o->params[0];
-					#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:48: characters 11-37
+					#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:48: characters 11-37
 					$fire(ProgressStatus::Finished(Outcome::Failure($e)));
 				}
 			});
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:44: lines 44-49
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:44: lines 44-49
 			return new LinkPair($this1, $inner);
 		});
 	}
@@ -203,7 +203,7 @@ final class Progress_Impl_ {
 	 * @return ProgressTrigger
 	 */
 	public static function trigger () {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Progress.hx:24: characters 5-36
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Progress.hx:24: characters 5-36
 		return new ProgressTrigger();
 	}
 

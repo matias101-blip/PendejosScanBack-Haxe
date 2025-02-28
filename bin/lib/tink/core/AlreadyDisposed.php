@@ -30,7 +30,7 @@ class AlreadyDisposed implements OwnedDisposable {
 	 * @return bool
 	 */
 	public function get_disposed () {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:80: characters 29-40
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Disposable.hx:80: characters 29-40
 		return true;
 	}
 
@@ -40,7 +40,7 @@ class AlreadyDisposed implements OwnedDisposable {
 	 * @return void
 	 */
 	public function ondispose ($d) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Disposable.hx:82: characters 41-44
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Disposable.hx:82: characters 41-44
 		$d();
 	}
 

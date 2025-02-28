@@ -19,7 +19,7 @@ class SimpleLink implements LinkObject {
 	 * @return void
 	 */
 	public function __construct ($f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:109: characters 5-15
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:109: characters 5-15
 		$this->f = $f;
 	}
 
@@ -27,11 +27,11 @@ class SimpleLink implements LinkObject {
 	 * @return void
 	 */
 	public function cancel () {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:112: lines 112-115
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:112: lines 112-115
 		if ($this->f !== null) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:113: characters 7-10
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:113: characters 7-10
 			($this->f)();
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:114: characters 7-15
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:114: characters 7-15
 			$this->f = null;
 		}
 	}

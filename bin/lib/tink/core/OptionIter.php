@@ -24,16 +24,16 @@ class OptionIter {
 	 * @return void
 	 */
 	public function __construct ($o) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:128: characters 15-19
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:127: characters 15-19
 		$this->alive = true;
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:131: lines 131-134
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:130: lines 130-133
 		if ($o->index === 0) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:132: characters 17-18
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:131: characters 17-18
 			$v = $o->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:132: characters 21-30
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:131: characters 21-30
 			$this->value = $v;
 		} else {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:133: characters 16-29
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:132: characters 16-29
 			$this->alive = false;
 		}
 	}
@@ -42,7 +42,7 @@ class OptionIter {
 	 * @return bool
 	 */
 	public function hasNext () {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:137: characters 5-17
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:136: characters 5-17
 		return $this->alive;
 	}
 
@@ -50,9 +50,9 @@ class OptionIter {
 	 * @return mixed
 	 */
 	public function next () {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:140: characters 5-18
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:139: characters 5-18
 		$this->alive = false;
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:142: characters 5-17
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:141: characters 5-17
 		return $this->value;
 	}
 }

@@ -14,7 +14,7 @@ final class Representation_Impl_ {
 	 * @return mixed
 	 */
 	public static function _new ($v) {
-		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Representation.hx:9: character 3
+		#/home/sinherani/haxelib/tink_json/0,11,0/src/tink/json/Representation.hx:9: character 3
 		return $v;
 	}
 
@@ -24,7 +24,7 @@ final class Representation_Impl_ {
 	 * @return mixed
 	 */
 	public static function get ($this1) {
-		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Representation.hx:7: characters 5-16
+		#/home/sinherani/haxelib/tink_json/0,11,0/src/tink/json/Representation.hx:7: characters 5-16
 		return $this1;
 	}
 
@@ -34,7 +34,7 @@ final class Representation_Impl_ {
 	 * @return mixed
 	 */
 	public static function of ($v) {
-		#/home/thehunter101/.haxe/tink_json/0,11,0/src/tink/json/Representation.hx:13: characters 5-13
+		#/home/sinherani/haxelib/tink_json/0,11,0/src/tink/json/Representation.hx:13: characters 5-13
 		return $v;
 	}
 }

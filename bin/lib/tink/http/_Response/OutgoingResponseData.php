@@ -18,7 +18,7 @@ class OutgoingResponseData extends Message {
 	 * @return void
 	 */
 	public function __construct ($header, $body) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Response.hx:61: characters 9-83
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Response.hx:61: characters 9-83
 		parent::__construct($header, $body);
 	}
 }

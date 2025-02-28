@@ -23,13 +23,13 @@ class FancyStyle implements EncodeStyle {
 	 * @return void
 	 */
 	public function __construct ($tab = "    ") {
-		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:558: lines 558-561
+		#/home/sinherani/haxelib/tjson/1,4,0/tjson/TJSON.hx:558: lines 558-561
 		if ($tab === null) {
 			$tab = "    ";
 		}
-		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:559: characters 3-17
+		#/home/sinherani/haxelib/tjson/1,4,0/tjson/TJSON.hx:559: characters 3-17
 		$this->tab = $tab;
-		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:560: characters 3-25
+		#/home/sinherani/haxelib/tjson/1,4,0/tjson/TJSON.hx:560: characters 3-25
 		$this->charTimesNCache = \Array_hx::wrap([""]);
 	}
 
@@ -39,7 +39,7 @@ class FancyStyle implements EncodeStyle {
 	 * @return string
 	 */
 	public function beginArray ($depth) {
-		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:569: characters 3-15
+		#/home/sinherani/haxelib/tjson/1,4,0/tjson/TJSON.hx:569: characters 3-15
 		return "[\x0A";
 	}
 
@@ -49,7 +49,7 @@ class FancyStyle implements EncodeStyle {
 	 * @return string
 	 */
 	public function beginObject ($depth) {
-		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:563: characters 3-15
+		#/home/sinherani/haxelib/tjson/1,4,0/tjson/TJSON.hx:563: characters 3-15
 		return "{\x0A";
 	}
 
@@ -59,14 +59,14 @@ class FancyStyle implements EncodeStyle {
 	 * @return string
 	 */
 	public function charTimesN ($n) {
-		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:585: lines 585-589
+		#/home/sinherani/haxelib/tjson/1,4,0/tjson/TJSON.hx:585: lines 585-589
 		if ($n < $this->charTimesNCache->length) {
-			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:586: characters 4-22
+			#/home/sinherani/haxelib/tjson/1,4,0/tjson/TJSON.hx:586: characters 4-22
 			return ($this->charTimesNCache->arr[$n] ?? null);
 		} else {
-			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:588: characters 25-40
+			#/home/sinherani/haxelib/tjson/1,4,0/tjson/TJSON.hx:588: characters 25-40
 			$tmp = $this->charTimesN($n - 1);
-			#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:588: characters 4-46
+			#/home/sinherani/haxelib/tjson/1,4,0/tjson/TJSON.hx:588: characters 4-46
 			return $this->charTimesNCache->offsetSet($n, ($tmp??'null') . ($this->tab??'null'));
 		}
 	}
@@ -77,7 +77,7 @@ class FancyStyle implements EncodeStyle {
 	 * @return string
 	 */
 	public function endArray ($depth) {
-		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:572: characters 3-36
+		#/home/sinherani/haxelib/tjson/1,4,0/tjson/TJSON.hx:572: characters 3-36
 		return "\x0A" . ($this->charTimesN($depth)??'null') . "]";
 	}
 
@@ -87,7 +87,7 @@ class FancyStyle implements EncodeStyle {
 	 * @return string
 	 */
 	public function endObject ($depth) {
-		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:566: characters 3-36
+		#/home/sinherani/haxelib/tjson/1,4,0/tjson/TJSON.hx:566: characters 3-36
 		return "\x0A" . ($this->charTimesN($depth)??'null') . "}";
 	}
 
@@ -97,7 +97,7 @@ class FancyStyle implements EncodeStyle {
 	 * @return string
 	 */
 	public function entrySeperator ($depth) {
-		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:578: characters 3-38
+		#/home/sinherani/haxelib/tjson/1,4,0/tjson/TJSON.hx:578: characters 3-38
 		return "\x0A" . ($this->charTimesN($depth + 1)??'null') . ",";
 	}
 
@@ -107,7 +107,7 @@ class FancyStyle implements EncodeStyle {
 	 * @return string
 	 */
 	public function firstEntry ($depth) {
-		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:575: characters 3-33
+		#/home/sinherani/haxelib/tjson/1,4,0/tjson/TJSON.hx:575: characters 3-33
 		return ($this->charTimesN($depth + 1)??'null') . " ";
 	}
 
@@ -117,7 +117,7 @@ class FancyStyle implements EncodeStyle {
 	 * @return string
 	 */
 	public function keyValueSeperator ($depth) {
-		#/home/thehunter101/.haxe/tjson/1,4,0/tjson/TJSON.hx:581: characters 3-15
+		#/home/sinherani/haxelib/tjson/1,4,0/tjson/TJSON.hx:581: characters 3-15
 		return " : ";
 	}
 }

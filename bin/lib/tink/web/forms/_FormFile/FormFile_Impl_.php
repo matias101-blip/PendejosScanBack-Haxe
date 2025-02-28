@@ -22,7 +22,7 @@ final class FormFile_Impl_ {
 	 * @return object
 	 */
 	public static function _new ($v) {
-		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:20: character 3
+		#/home/sinherani/haxelib/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:20: character 3
 		return $v;
 	}
 
@@ -34,7 +34,7 @@ final class FormFile_Impl_ {
 	 * @return object
 	 */
 	public static function ofBlob ($name, $type, $data) {
-		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:46: characters 5-49
+		#/home/sinherani/haxelib/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:46: characters 5-49
 		return UploadedFile_Impl_::ofBlob($name, $type, $data);
 	}
 
@@ -44,9 +44,9 @@ final class FormFile_Impl_ {
 	 * @return object
 	 */
 	public static function ofJson ($rep) {
-		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:41: characters 5-26
+		#/home/sinherani/haxelib/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:41: characters 5-26
 		$data = Representation_Impl_::get($rep);
-		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:42: characters 12-76
+		#/home/sinherani/haxelib/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:42: characters 12-76
 		return UploadedFile_Impl_::ofBlob($data->fileName, $data->mimeType, $data->content);
 	}
 
@@ -56,33 +56,33 @@ final class FormFile_Impl_ {
 	 * @return object
 	 */
 	public static function toJson ($this1) {
-		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:24: characters 17-30
+		#/home/sinherani/haxelib/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:24: characters 17-30
 		$this2 = $this1->fileName;
-		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:25: characters 17-30
+		#/home/sinherani/haxelib/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:25: characters 17-30
 		$this3 = $this1->mimeType;
-		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:27: characters 9-31
+		#/home/sinherani/haxelib/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:27: characters 9-31
 		$src = $this1->read();
-		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:28: characters 9-26
+		#/home/sinherani/haxelib/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:28: characters 9-26
 		$chunk = null;
-		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:29: characters 9-68
+		#/home/sinherani/haxelib/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:29: characters 9-68
 		$write = RealSourceTools::all($src)->handle(function ($c) use (&$chunk) {
-			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:29: characters 50-66
+			#/home/sinherani/haxelib/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:29: characters 50-66
 			$chunk = OutcomeTools::sure($c);
 		});
-		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:26: lines 26-36
+		#/home/sinherani/haxelib/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:26: lines 26-36
 		$v = null;
-		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:30: lines 30-35
+		#/home/sinherani/haxelib/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:30: lines 30-35
 		if ($chunk !== null) {
-			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:26: lines 26-36
+			#/home/sinherani/haxelib/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:26: lines 26-36
 			$v = $chunk->toBytes();
 		} else {
-			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:33: characters 11-27
+			#/home/sinherani/haxelib/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:33: characters 11-27
 			if ($write !== null) {
 				$write->cancel();
 			}
-			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:34: characters 44-121
+			#/home/sinherani/haxelib/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:34: characters 44-121
 			$v1 = "Can only upload files through JSON backed by with sync sources but got a " . \Std::string($src);
-			#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:34: characters 11-16
+			#/home/sinherani/haxelib/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:34: characters 11-16
 			throw Exception::thrown(new TypedError(501, $v1, new HxAnon([
 				"fileName" => "tink/web/forms/FormFile.hx",
 				"lineNumber" => 34,
@@ -90,7 +90,7 @@ final class FormFile_Impl_ {
 				"methodName" => "toJson",
 			])));
 		}
-		#/home/thehunter101/.haxe/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:23: lines 23-37
+		#/home/sinherani/haxelib/tink_web/0,3,0/src/tink/web/forms/FormFile.hx:23: lines 23-37
 		return new HxAnon([
 			"fileName" => $this2,
 			"mimeType" => $this3,

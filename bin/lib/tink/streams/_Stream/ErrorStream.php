@@ -26,7 +26,7 @@ class ErrorStream extends StreamBase {
 	 * @return void
 	 */
 	public function __construct ($error) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:196: characters 5-23
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:196: characters 5-23
 		parent::__construct();
 		$this->error = $error;
 	}
@@ -37,7 +37,7 @@ class ErrorStream extends StreamBase {
 	 * @return FutureObject
 	 */
 	public function forEach ($handler) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:202: characters 12-49
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:202: characters 12-49
 		return new SyncFuture(new LazyConst(Conclusion::Failed($this->error)));
 	}
 
@@ -45,7 +45,7 @@ class ErrorStream extends StreamBase {
 	 * @return FutureObject
 	 */
 	public function next () {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:199: characters 12-41
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:199: characters 12-41
 		return new SyncFuture(new LazyConst(Step::Fail($this->error)));
 	}
 }

@@ -23,7 +23,7 @@ class FutureSink extends SinkBase {
 	 * @return void
 	 */
 	public function __construct ($f) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:83: characters 5-15
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Sink.hx:83: characters 5-15
 		$this->f = $f;
 	}
 
@@ -34,9 +34,9 @@ class FutureSink extends SinkBase {
 	 * @return FutureObject
 	 */
 	public function consume ($source, $options) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:86: characters 5-75
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Sink.hx:86: characters 5-75
 		return Future_Impl_::flatMap($this->f, function ($sink) use (&$source, &$options) {
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Sink.hx:86: characters 38-74
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Sink.hx:86: characters 38-74
 			return $sink->consume($source, $options);
 		});
 	}

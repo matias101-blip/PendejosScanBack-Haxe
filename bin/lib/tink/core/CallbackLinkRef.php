@@ -23,7 +23,7 @@ class CallbackLinkRef implements LinkObject {
 	 * @return void
 	 */
 	public function cancel () {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:67: characters 5-18
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:67: characters 5-18
 		$this1 = $this->link;
 		if ($this1 !== null) {
 			$this1->cancel();
@@ -36,12 +36,12 @@ class CallbackLinkRef implements LinkObject {
 	 * @return LinkObject
 	 */
 	public function set_link ($param) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:62: characters 7-20
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:62: characters 7-20
 		$this1 = $this->link;
 		if ($this1 !== null) {
 			$this1->cancel();
 		}
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Callback.hx:63: characters 7-26
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Callback.hx:63: characters 7-26
 		return $this->link = $param;
 	}
 }

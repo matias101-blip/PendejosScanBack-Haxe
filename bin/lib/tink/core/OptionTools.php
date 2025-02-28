@@ -22,13 +22,13 @@ class OptionTools {
 	 * @return bool
 	 */
 	public static function equals ($o, $v) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:85: characters 12-60
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:84: characters 12-60
 		if ($o->index === 0) {
 			$v1 = $o->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:85: characters 49-59
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:84: characters 49-59
 			return Boot::equal($v1, $v);
 		} else {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:85: characters 12-60
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:84: characters 12-60
 			return false;
 		}
 	}
@@ -42,14 +42,14 @@ class OptionTools {
 	 * @return DsOption
 	 */
 	public static function filter ($o, $f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:67: lines 67-70
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:66: lines 66-69
 		if ($o->index === 0) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:68: characters 17-21
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:67: characters 17-21
 			if ($f($o->params[0]) === false) {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:68: characters 33-37
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:67: characters 33-37
 				return DsOption::None();
 			} else {
-				#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:69: characters 16-17
+				#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:68: characters 16-17
 				return $o;
 			}
 		} else {
@@ -67,14 +67,14 @@ class OptionTools {
 	 * @return DsOption
 	 */
 	public static function flatMap ($o, $f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:102: lines 102-105
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:101: lines 101-104
 		if ($o->index === 0) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:103: characters 17-18
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:102: characters 17-18
 			$v = $o->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:103: characters 21-25
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:102: characters 21-25
 			return $f($v);
 		} else {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:104: characters 16-20
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:103: characters 16-20
 			return DsOption::None();
 		}
 	}
@@ -86,7 +86,7 @@ class OptionTools {
 	 * @return mixed
 	 */
 	public static function force ($o, $pos = null) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:10: characters 12-24
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:9: characters 12-24
 		if ($o->index === 0) {
 			$v = $o->params[0];
 			return $v;
@@ -104,7 +104,7 @@ class OptionTools {
 	 * @return OptionIter
 	 */
 	public static function iterator ($o) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:112: characters 5-29
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:111: characters 5-29
 		return new OptionIter($o);
 	}
 
@@ -118,14 +118,14 @@ class OptionTools {
 	 * @return DsOption
 	 */
 	public static function map ($o, $f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:92: lines 92-95
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:91: lines 91-94
 		if ($o->index === 0) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:93: characters 17-18
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:92: characters 17-18
 			$v = $o->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:93: characters 21-31
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:92: characters 21-31
 			return DsOption::Some($f($v));
 		} else {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:94: characters 16-20
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:93: characters 16-20
 			return DsOption::None();
 		}
 	}
@@ -139,14 +139,14 @@ class OptionTools {
 	 * @return mixed
 	 */
 	public static function or ($o, $l) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:40: lines 40-43
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:39: lines 39-42
 		if ($o->index === 0) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:41: characters 17-18
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:40: characters 17-18
 			$v = $o->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:41: characters 21-22
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:40: characters 21-22
 			return $v;
 		} else {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:42: characters 16-23
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:41: characters 16-23
 			return Lazy_Impl_::get($l);
 		}
 	}
@@ -159,20 +159,20 @@ class OptionTools {
 	 * @return mixed
 	 */
 	public static function orNull ($o) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:58: lines 58-61
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:57: lines 57-60
 		if ($o->index === 0) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:59: characters 17-18
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:58: characters 17-18
 			$v = $o->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:59: characters 21-22
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:58: characters 21-22
 			return $v;
 		} else {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:60: characters 16-20
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:59: characters 16-20
 			return null;
 		}
 	}
 
 	/**
-	 *  Returns the option if it is `Some`, otherwise the fallback option
+	 *  Extracts the value if the option is `Some`, uses the fallback value otherwise
 	 * 
 	 * @param DsOption $o
 	 * @param LazyObject $fallback
@@ -180,14 +180,14 @@ class OptionTools {
 	 * @return DsOption
 	 */
 	public static function orTry ($o, $fallback) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:49: lines 49-52
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:48: lines 48-51
 		if ($o->index === 0) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:50: characters 17-18
-			$_g = $o->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:50: characters 21-22
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:49: characters 17-18
+			$v = $o->params[0];
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:49: characters 21-22
 			return $o;
 		} else {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:51: characters 16-30
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:50: characters 16-30
 			return Lazy_Impl_::get($fallback);
 		}
 	}
@@ -201,14 +201,14 @@ class OptionTools {
 	 * @return bool
 	 */
 	public static function satisfies ($o, $f) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:76: lines 76-79
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:75: lines 75-78
 		if ($o->index === 0) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:77: characters 17-18
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:76: characters 17-18
 			$v = $o->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:77: characters 21-25
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:76: characters 21-25
 			return $f($v);
 		} else {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:78: characters 16-21
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:77: characters 16-21
 			return false;
 		}
 	}
@@ -222,14 +222,14 @@ class OptionTools {
 	 * @return mixed
 	 */
 	public static function sure ($o, $pos = null) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:16: lines 16-21
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:15: lines 15-20
 		if ($o->index === 0) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:17: characters 17-18
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:16: characters 17-18
 			$v = $o->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:18: characters 9-10
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:17: characters 9-10
 			return $v;
 		} else {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:20: characters 9-14
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:19: characters 9-14
 			throw Exception::thrown(new TypedError(404, "Some value expected but none found", $pos));
 		}
 	}
@@ -243,14 +243,14 @@ class OptionTools {
 	 * @return mixed[]|\Array_hx
 	 */
 	public static function toArray ($o) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:119: lines 119-122
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:118: lines 118-121
 		if ($o->index === 0) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:120: characters 17-18
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:119: characters 17-18
 			$v = $o->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:120: characters 21-24
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:119: characters 21-24
 			return \Array_hx::wrap([$v]);
 		} else {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:121: characters 16-18
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:120: characters 16-18
 			return new \Array_hx();
 		}
 	}
@@ -264,18 +264,18 @@ class OptionTools {
 	 * @return Outcome
 	 */
 	public static function toOutcome ($o, $pos = null) {
-		#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:28: lines 28-33
+		#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:27: lines 27-32
 		$__hx__switch = ($o->index);
 		if ($__hx__switch === 0) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:29: characters 19-24
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:28: characters 19-24
 			$value = $o->params[0];
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:30: characters 11-25
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:29: characters 11-25
 			return Outcome::Success($value);
 		} else if ($__hx__switch === 1) {
-			#/home/thehunter101/.haxe/tink_core/2,1,1/src/tink/core/Option.hx:32: characters 11-124
+			#/home/sinherani/haxelib/tink_core/2,1,1/src/tink/core/Option.hx:31: characters 11-124
 			return Outcome::Failure(new TypedError(404, "Some value expected but none found in " . ($pos->fileName??'null') . "@line " . ($pos->lineNumber??'null'), new HxAnon([
 				"fileName" => "tink/core/Option.hx",
-				"lineNumber" => 32,
+				"lineNumber" => 31,
 				"className" => "tink.core.OptionTools",
 				"methodName" => "toOutcome",
 			])));

@@ -46,7 +46,7 @@ final class Source_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function append ($this1, $that) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:111: characters 5-29
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:110: characters 5-29
 		return $this1->append($that);
 	}
 
@@ -56,7 +56,7 @@ final class Source_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function chunked ($this1) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:102: characters 5-16
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:101: characters 5-16
 		return $this1;
 	}
 
@@ -66,9 +66,9 @@ final class Source_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function concatAll ($s) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:105: characters 5-93
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:104: characters 5-93
 		return $s->reduce(Chunk_Impl_::$EMPTY, Reducer_Impl_::ofSafeSync(function ($res, $cur) {
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:105: characters 66-92
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:104: characters 66-92
 			return ReductionStep::Progress(Chunk_Impl_::concat($res, $cur));
 		}));
 	}
@@ -79,7 +79,7 @@ final class Source_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function dirty ($this1) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:24: characters 5-21
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:23: characters 5-21
 		return $this1;
 	}
 
@@ -89,7 +89,7 @@ final class Source_Impl_ {
 	 * @return bool
 	 */
 	public static function get_depleted ($this1) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:27: characters 36-56
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:26: characters 36-56
 		return $this1->get_depleted();
 	}
 
@@ -100,27 +100,27 @@ final class Source_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function limit ($this1, $len) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:131: characters 5-42
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:130: characters 5-42
 		if ($len === 0) {
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:131: characters 18-42
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:130: characters 18-42
 			return Source_Impl_::$EMPTY;
 		}
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:132: lines 132-143
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:131: lines 131-142
 		return $this1->regroup(Regrouper_Impl_::ofIgnoranceSync(function ($chunks) use (&$len) {
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:133: characters 7-43
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:132: characters 7-43
 			if ($len <= 0) {
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:133: characters 20-43
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:132: characters 20-43
 				return RegroupResult::Terminated(Option::None());
 			}
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:134: characters 7-29
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:133: characters 7-29
 			$chunk = ($chunks->arr[0] ?? null);
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:135: characters 7-33
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:134: characters 7-33
 			$length = $chunk->getLength();
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:136: lines 136-140
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:135: lines 135-139
 			$out = ($len === $length ? RegroupResult::Terminated(Option::Some(Stream_Impl_::single($chunk))) : RegroupResult::Converted(Stream_Impl_::single(($len < $length ? $chunk->slice(0, $len) : $chunk))));
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:141: characters 7-20
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:140: characters 7-20
 			$len -= $length;
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:142: characters 7-17
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:141: characters 7-17
 			return $out;
 		}));
 	}
@@ -131,7 +131,7 @@ final class Source_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function ofBytes ($b) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:165: characters 12-22
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:164: characters 12-22
 		return new Single(new LazyConst(ByteChunk::of($b)));
 	}
 
@@ -141,7 +141,7 @@ final class Source_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function ofChunk ($chunk) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:159: characters 5-29
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:158: characters 5-29
 		return new Single(new LazyConst($chunk));
 	}
 
@@ -151,7 +151,7 @@ final class Source_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function ofError ($e) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:147: characters 5-38
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:146: characters 5-38
 		return Stream_Impl_::ofError($e);
 	}
 
@@ -161,7 +161,7 @@ final class Source_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function ofFuture ($f) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:150: characters 5-64
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:149: characters 5-64
 		return Stream_Impl_::future($f);
 	}
 
@@ -171,7 +171,7 @@ final class Source_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function ofFutureBytes ($b) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:174: characters 5-41
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:173: characters 5-41
 		return Source_Impl_::ofFuture(Future_Impl_::map($b, Boot::getStaticClosure(Source_Impl_::class, 'ofBytes')));
 	}
 
@@ -181,7 +181,7 @@ final class Source_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function ofFutureChunk ($chunk) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:168: characters 5-45
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:167: characters 5-45
 		return Source_Impl_::ofFuture(Future_Impl_::map($chunk, Boot::getStaticClosure(Source_Impl_::class, 'ofChunk')));
 	}
 
@@ -191,7 +191,7 @@ final class Source_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function ofFutureString ($s) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:171: characters 5-42
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:170: characters 5-42
 		return Source_Impl_::ofFuture(Future_Impl_::map($s, Boot::getStaticClosure(Source_Impl_::class, 'ofString')));
 	}
 
@@ -203,25 +203,25 @@ final class Source_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function ofInput ($name, $input, $options = null) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:93: lines 93-94
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:92: lines 92-93
 		if ($options === null) {
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:94: characters 7-19
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:93: characters 7-19
 			$options = new HxAnon();
 		}
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:95: characters 53-76
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:94: characters 53-76
 		$tmp = Worker_Impl_::ensure($options->worker);
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:95: characters 105-122
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:94: characters 105-122
 		$_g = $options->chunkSize;
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:95: lines 95-98
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:94: lines 94-97
 		$tmp1 = null;
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:96: lines 96-97
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:95: lines 95-96
 		if ($_g === null) {
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:95: lines 95-98
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:94: lines 94-97
 			$tmp1 = 65536;
 		} else {
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:97: characters 12-13
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:96: characters 12-13
 			$v = $_g;
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:95: lines 95-98
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:94: lines 94-97
 			$tmp1 = $v;
 		}
 		return new InputSource($name, $input, $tmp, Bytes::alloc($tmp1), 0);
@@ -233,7 +233,7 @@ final class Source_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function ofPromiseBytes ($b) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:183: characters 5-39
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:182: characters 5-39
 		return Source_Impl_::ofPromised(Promise_Impl_::next($b, Next_Impl_::ofSafeSync(Boot::getStaticClosure(Source_Impl_::class, 'ofBytes'))));
 	}
 
@@ -243,7 +243,7 @@ final class Source_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function ofPromiseChunk ($chunk) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:177: characters 5-43
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:176: characters 5-43
 		return Source_Impl_::ofPromised(Promise_Impl_::next($chunk, Next_Impl_::ofSafeSync(Boot::getStaticClosure(Source_Impl_::class, 'ofChunk'))));
 	}
 
@@ -253,7 +253,7 @@ final class Source_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function ofPromiseString ($s) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:180: characters 5-40
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:179: characters 5-40
 		return Source_Impl_::ofPromised(Promise_Impl_::next($s, Next_Impl_::ofSafeSync(Boot::getStaticClosure(Source_Impl_::class, 'ofString'))));
 	}
 
@@ -263,18 +263,18 @@ final class Source_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function ofPromised ($p) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:153: lines 153-156
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:152: lines 152-155
 		return Stream_Impl_::future(Future_Impl_::map($p, function ($o) {
 			$__hx__switch = ($o->index);
 			if ($__hx__switch === 0) {
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:154: characters 20-21
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:153: characters 20-21
 				$s = $o->params[0];
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:154: characters 24-47
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:153: characters 24-47
 				return $s;
 			} else if ($__hx__switch === 1) {
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:155: characters 20-21
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:154: characters 20-21
 				$e = $o->params[0];
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:155: characters 24-34
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:154: characters 24-34
 				return Source_Impl_::ofError($e);
 			}
 		}));
@@ -286,9 +286,9 @@ final class Source_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function ofString ($s) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:162: characters 20-21
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:161: characters 20-21
 		$b = \strlen($s);
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:162: characters 12-22
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:161: characters 12-22
 		return new Single(new LazyConst(ByteChunk::of(new Bytes($b, new Container($s)))));
 	}
 
@@ -300,7 +300,7 @@ final class Source_Impl_ {
 	 * @return FutureObject
 	 */
 	public static function pipeTo ($this1, $target, $options = null) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:108: characters 5-41
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:107: characters 5-41
 		return $target->consume($this1, $options);
 	}
 
@@ -311,7 +311,7 @@ final class Source_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function prepend ($this1, $that) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:114: characters 5-30
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:113: characters 5-30
 		return $this1->prepend($that);
 	}
 
@@ -322,22 +322,22 @@ final class Source_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function skip ($this1, $len) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:120: lines 120-127
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:119: lines 119-126
 		return $this1->regroup(Regrouper_Impl_::ofIgnoranceSync(function ($chunks) use (&$len) {
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:121: characters 7-29
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:120: characters 7-29
 			$chunk = ($chunks->arr[0] ?? null);
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:122: characters 7-58
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:121: characters 7-58
 			if ($len <= 0) {
-				#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:122: characters 20-58
+				#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:121: characters 20-58
 				return RegroupResult::Converted(Stream_Impl_::single($chunk));
 			}
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:123: characters 7-33
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:122: characters 7-33
 			$length = $chunk->getLength();
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:124: characters 7-103
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:123: characters 7-103
 			$out = RegroupResult::Converted(($len < $length ? Stream_Impl_::single($chunk->slice($len, $length)) : Empty_hx::$inst));
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:125: characters 7-20
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:124: characters 7-20
 			$len -= $length;
-			#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:126: characters 7-17
+			#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:125: characters 7-17
 			return $out;
 		}));
 	}
@@ -349,7 +349,7 @@ final class Source_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function transform ($this1, $transformer) {
-		#/home/thehunter101/.haxe/tink_io/0,9,0/src/tink/io/Source.hx:117: characters 5-39
+		#/home/sinherani/haxelib/tink_io/0,9,0/src/tink/io/Source.hx:116: characters 5-39
 		return $transformer->transform($this1);
 	}
 

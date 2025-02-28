@@ -48,7 +48,7 @@ class SocketClient implements ClientObject {
 	 * @return void
 	 */
 	public function __construct ($worker = null) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:18: characters 5-34
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:18: characters 5-34
 		$this->worker = Worker_Impl_::ensure($worker);
 	}
 
@@ -58,98 +58,98 @@ class SocketClient implements ClientObject {
 	 * @return FutureObject
 	 */
 	public function request ($req) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:21: lines 21-93
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:21: lines 21-93
 		$_gthis = $this;
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:22: lines 22-92
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:22: lines 22-92
 		return Future_Impl_::irreversible(function ($cb) use (&$req, &$_gthis) {
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:23: characters 14-49
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:23: characters 14-49
 			$_g = Helpers::checkScheme($req->header->url);
 			$__hx__switch = ($_g->index);
 			if ($__hx__switch === 0) {
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:24: characters 19-20
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:24: characters 19-20
 				$e = $_g->params[0];
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:25: characters 11-25
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:25: characters 11-25
 				$cb(Outcome::Failure($e));
 			} else if ($__hx__switch === 1) {
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:28: lines 28-29
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:28: lines 28-29
 				$addHeaders = function ($headers) use (&$req) {
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:29: characters 39-65
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:29: characters 39-65
 					$req1 = $req->header->concat($headers);
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:29: characters 13-76
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:29: characters 13-76
 					$req = new OutgoingRequest($req1, $req->body);
 				};
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:31: characters 18-49
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:31: characters 18-49
 				$_g = $req->header->byName(\mb_strtolower("connection"));
 				$__hx__switch = ($_g->index);
 				if ($__hx__switch === 0) {
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:34: characters 26-27
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:34: characters 26-27
 					$_g1 = $_g->params[0];
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:32: characters 26-50
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:32: characters 26-50
 					if (\mb_strtolower($_g1) !== "close") {
-						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:34: characters 26-27
+						#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:34: characters 26-27
 						$v = $_g1;
-						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:35: characters 15-101
+						#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:35: characters 15-101
 						$cb(Outcome::Failure(new TypedError(null, "Only \"Connection: Close\" is supported. But specified as \"" . ($v??'null') . "\"", new HxAnon([
 							"fileName" => "tink/http/clients/SocketClient.hx",
 							"lineNumber" => 35,
 							"className" => "tink.http.clients.SocketClient",
 							"methodName" => "request",
 						]))));
-						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:36: characters 15-21
+						#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:36: characters 15-21
 						return;
 					}
 				} else if ($__hx__switch === 1) {
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:37: characters 26-27
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:37: characters 26-27
 					$_g1 = $_g->params[0];
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:38: characters 15-67
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:38: characters 15-67
 					$addHeaders(\Array_hx::wrap([new HeaderField(\mb_strtolower("connection"), "close")]));
 				}
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:41: characters 18-43
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:41: characters 18-43
 				$_g = $req->header->byName(\mb_strtolower("host"));
 				$__hx__switch = ($_g->index);
 				if ($__hx__switch === 0) {
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:42: characters 26-27
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:42: characters 26-27
 					$_g1 = $_g->params[0];
 				} else if ($__hx__switch === 1) {
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:43: characters 26-27
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:43: characters 26-27
 					$_g1 = $_g->params[0];
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:43: characters 30-40
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:43: characters 30-40
 					$addHeaders1 = $addHeaders;
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:43: characters 59-63
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:43: characters 59-63
 					$this1 = \mb_strtolower("host");
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:43: characters 30-93
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:43: characters 30-93
 					$addHeaders1(\Array_hx::wrap([new HeaderField($this1, Host_Impl_::get_name(($req->header->url->hosts->arr[0] ?? null)))]));
 				}
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:46: lines 46-55
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:46: lines 46-55
 				$socket = ($req->header->url->scheme === "https" ? new SslSocket() : new Socket());
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:57: lines 57-60
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:57: lines 57-60
 				$port = null;
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:57: characters 29-53
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:57: characters 29-53
 				$_g = Host_Impl_::get_port(($req->header->url->hosts->arr[0] ?? null));
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:58: lines 58-59
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:58: lines 58-59
 				if ($_g === null) {
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:57: lines 57-60
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:57: lines 57-60
 					$port = ($req->header->url->scheme === "https" ? 443 : 80);
 				} else {
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:59: characters 18-19
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:59: characters 18-19
 					$v = $_g;
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:57: lines 57-60
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:57: lines 57-60
 					$port = $v;
 				}
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:62: lines 62-90
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:62: lines 62-90
 				Worker_Impl_::work($_gthis->worker, new LazyFunc(function () use (&$port, &$req, &$socket) {
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:63: lines 63-64
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:63: lines 63-64
 					try {
-						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:63: characters 26-91
+						#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:63: characters 26-91
 						$socket->connect(new Host(Host_Impl_::get_name(($req->header->url->hosts->arr[0] ?? null))), $port);
-						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:63: characters 93-107
+						#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:63: characters 93-107
 						return Outcome::Success(null);
 					} catch(\Throwable $_g) {
-						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:64: characters 20-21
+						#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:64: characters 20-21
 						$e = Exception::caught($_g)->unwrap();
-						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:64: characters 49-62
+						#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:64: characters 49-62
 						$this1 = \Std::string($e);
-						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:64: characters 31-64
+						#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:64: characters 31-64
 						return Outcome::Failure(new TypedError(null, $this1, new HxAnon([
 							"fileName" => "tink/http/clients/SocketClient.hx",
 							"lineNumber" => 64,
@@ -158,24 +158,24 @@ class SocketClient implements ClientObject {
 						])));
 					}
 				}))->handle(function ($outcome) use (&$req, &$_gthis, &$cb, &$socket) {
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:66: lines 66-69
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:66: lines 66-69
 					$__hx__switch = ($outcome->index);
 					if ($__hx__switch === 0) {
-						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:67: characters 30-31
+						#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:67: characters 30-31
 						$_g = $outcome->params[0];
 					} else if ($__hx__switch === 1) {
-						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:68: characters 30-31
+						#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:68: characters 30-31
 						$e = $outcome->params[0];
-						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:68: characters 41-55
+						#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:68: characters 41-55
 						$cb(Outcome::Failure($e));
-						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:68: characters 34-55
+						#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:68: characters 34-55
 						return;
 					}
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:71: characters 13-103
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:71: characters 13-103
 					$sink = SinkYielding_Impl_::ofOutput("Request to " . ((($req->header->url === null ? "null" : Url_Impl_::toString($req->header->url)))??'null'), $socket->output, new HxAnon(["worker" => $_gthis->worker]));
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:72: characters 58-72
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:72: characters 58-72
 					$name = ($req->header->url === null ? "null" : Url_Impl_::toString($req->header->url));
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:72: characters 26-107
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:72: characters 26-107
 					$input = $socket->input;
 					$options = new HxAnon(["worker" => $_gthis->worker]);
 					if ($options === null) {
@@ -190,56 +190,56 @@ class SocketClient implements ClientObject {
 						$v = $_g;
 						$source1 = $v;
 					}
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:72: characters 13-108
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:72: characters 13-108
 					$source2 = new InputSource("Response from " . ($name??'null'), $input, $source, Bytes::alloc($source1), 0);
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:74: characters 13-52
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:74: characters 13-52
 					$this1 = $req->body;
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:74: characters 30-51
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:74: characters 30-51
 					$s = $req->header->toString();
 					$b = \strlen($s);
-					#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:74: lines 74-89
+					#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:74: lines 74-89
 					Source_Impl_::pipeTo($this1->prepend(new Single(new LazyConst(ByteChunk::of(new Bytes($b, new Container($s)))))), $sink)->handle(function ($r) use (&$source2, &$cb) {
-						#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:75: lines 75-88
+						#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:75: lines 75-88
 						$__hx__switch = ($r->index);
 						if ($__hx__switch === 0) {
-							#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:77: lines 77-84
+							#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:77: lines 77-84
 							RealSourceTools::parse($source2, ResponseHeaderBase::parser())->handle(function ($o) use (&$cb) {
 								$__hx__switch = ($o->index);
 								if ($__hx__switch === 0) {
-									#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:78: characters 34-40
+									#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:78: characters 34-40
 									$parsed = $o->params[0];
-									#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:79: characters 30-57
+									#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:79: characters 30-57
 									$_g = $parsed->a->getContentLength();
 									$__hx__switch = ($_g->index);
 									if ($__hx__switch === 0) {
-										#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:80: characters 38-41
+										#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:80: characters 38-41
 										$len = $_g->params[0];
-										#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:80: characters 76-84
+										#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:80: characters 76-84
 										$parsed1 = $parsed->a;
-										#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:80: characters 44-108
+										#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:80: characters 44-108
 										$cb(Outcome::Success(new IncomingResponse($parsed1, Source_Impl_::limit($parsed->b, $len))));
 									} else if ($__hx__switch === 1) {
-										#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:81: characters 38-39
+										#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:81: characters 38-39
 										$_g1 = $_g->params[0];
-										#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:81: characters 74-82
+										#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:81: characters 74-82
 										$parsed1 = $parsed->a;
-										#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:81: characters 84-108
+										#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:81: characters 84-108
 										$source = $parsed->b;
-										#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:81: characters 42-111
+										#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:81: characters 42-111
 										$cb(Outcome::Success(new IncomingResponse($parsed1, Chunked::decoder()->transform($source))));
 									}
 								} else if ($__hx__switch === 1) {
-									#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:83: characters 34-35
+									#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:83: characters 34-35
 									$e = $o->params[0];
-									#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:83: characters 38-52
+									#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:83: characters 38-52
 									$cb(Outcome::Failure($e));
 								}
 							});
 						} else if ($__hx__switch === 1) {
-							#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:86: characters 32-33
+							#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:86: characters 32-33
 							$_g = $r->params[0];
 							$_g = $r->params[1];
-							#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:86: characters 36-85
+							#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:86: characters 36-85
 							$cb(Outcome::Failure(new TypedError(null, "Sink ended unexpectedly", new HxAnon([
 								"fileName" => "tink/http/clients/SocketClient.hx",
 								"lineNumber" => 86,
@@ -247,11 +247,11 @@ class SocketClient implements ClientObject {
 								"methodName" => "request",
 							]))));
 						} else if ($__hx__switch === 2) {
-							#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:87: characters 36-37
+							#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:87: characters 36-37
 							$_g = $r->params[1];
-							#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:87: characters 33-34
+							#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:87: characters 33-34
 							$e = $r->params[0];
-							#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:87: characters 40-54
+							#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/clients/SocketClient.hx:87: characters 40-54
 							$cb(Outcome::Failure($e));
 						}
 					});

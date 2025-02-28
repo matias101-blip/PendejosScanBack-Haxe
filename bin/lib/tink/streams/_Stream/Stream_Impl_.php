@@ -25,7 +25,7 @@ final class Stream_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function dirty ($this1) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:15: characters 5-21
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:15: characters 5-21
 		return $this1;
 	}
 
@@ -35,9 +35,9 @@ final class Stream_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function flatten ($stream) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:25: characters 5-66
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:25: characters 5-66
 		return $stream->regroup(Regrouper_Impl_::ofIgnoranceSync(function ($arr) {
-			#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:25: characters 41-65
+			#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:25: characters 41-65
 			return RegroupResult::Converted(($arr->arr[0] ?? null));
 		}));
 	}
@@ -48,7 +48,7 @@ final class Stream_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function future ($f) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:37: characters 5-31
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:37: characters 5-31
 		return new FutureStream($f);
 	}
 
@@ -58,7 +58,7 @@ final class Stream_Impl_ {
 	 * @return bool
 	 */
 	public static function get_depleted ($this1) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:12: characters 7-27
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:12: characters 7-27
 		return $this1->get_depleted();
 	}
 
@@ -68,7 +68,7 @@ final class Stream_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function ofError ($e) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:63: characters 5-30
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:63: characters 5-30
 		return new ErrorStream($e);
 	}
 
@@ -78,23 +78,23 @@ final class Stream_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function ofIterator ($i) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:21: characters 29-118
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:21: characters 29-118
 		$next = null;
 		$next = function ($step) use (&$next, &$i) {
-			#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:21: characters 54-117
+			#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:21: characters 54-117
 			$next1 = null;
 			if ($i->hasNext()) {
-				#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:21: characters 75-83
+				#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:21: characters 75-83
 				$next2 = $i->next();
-				#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:21: characters 54-117
+				#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:21: characters 54-117
 				$next1 = Step::Link($next2, Generator::stream($next));
 			} else {
 				$next1 = Step::End();
 			}
-			#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:21: characters 49-118
+			#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:21: characters 49-118
 			$step($next1);
 		};
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:21: characters 5-119
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:21: characters 5-119
 		return Generator::stream($next);
 	}
 
@@ -104,18 +104,18 @@ final class Stream_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function promise ($f) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:57: lines 57-60
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:57: lines 57-60
 		return Stream_Impl_::future(Future_Impl_::map($f, function ($o) {
 			$__hx__switch = ($o->index);
 			if ($__hx__switch === 0) {
-				#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:58: characters 20-21
+				#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:58: characters 20-21
 				$s = $o->params[0];
-				#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:58: characters 24-33
+				#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:58: characters 24-33
 				return Stream_Impl_::dirty($s);
 			} else if ($__hx__switch === 1) {
-				#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:59: characters 20-21
+				#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:59: characters 20-21
 				$e = $o->params[0];
-				#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:59: characters 24-34
+				#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:59: characters 24-34
 				return Stream_Impl_::ofError($e);
 			}
 		}));
@@ -127,7 +127,7 @@ final class Stream_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function promiseIdeal ($f) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:51: characters 5-27
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:51: characters 5-27
 		return Stream_Impl_::promise($f);
 	}
 
@@ -137,7 +137,7 @@ final class Stream_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function promiseReal ($f) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:54: characters 5-27
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:54: characters 5-27
 		return Stream_Impl_::promise($f);
 	}
 
@@ -147,7 +147,7 @@ final class Stream_Impl_ {
 	 * @return StreamObject
 	 */
 	public static function single ($i) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:18: characters 5-25
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:18: characters 5-25
 		return new Single(new LazyConst($i));
 	}
 }

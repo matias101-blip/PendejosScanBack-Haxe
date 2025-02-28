@@ -25,7 +25,7 @@ class Single extends StreamBase {
 	 * @return void
 	 */
 	public function __construct ($value) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:467: characters 5-23
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:467: characters 5-23
 		parent::__construct();
 		$this->value = $value;
 	}
@@ -36,23 +36,23 @@ class Single extends StreamBase {
 	 * @return FutureObject
 	 */
 	public function forEach ($handle) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:473: lines 473-482
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:473: lines 473-482
 		$_gthis = $this;
 		return Future_Impl_::map($handle(Lazy_Impl_::get($this->value)), function ($step) use (&$_gthis) {
 			$__hx__switch = ($step->index);
 			if ($__hx__switch === 0) {
-				#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:475: characters 9-21
+				#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:475: characters 9-21
 				return Conclusion::Halted($_gthis);
 			} else if ($__hx__switch === 1) {
-				#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:477: characters 9-29
+				#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:477: characters 9-29
 				return Conclusion::Halted(Empty_hx::$inst);
 			} else if ($__hx__switch === 2) {
-				#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:479: characters 9-17
+				#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:479: characters 9-17
 				return Conclusion::Depleted();
 			} else if ($__hx__switch === 3) {
-				#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:480: characters 17-18
+				#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:480: characters 17-18
 				$e = $step->params[0];
-				#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:481: characters 9-25
+				#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:481: characters 9-25
 				return Conclusion::Clogged($e, $_gthis);
 			}
 		});
@@ -62,9 +62,9 @@ class Single extends StreamBase {
 	 * @return FutureObject
 	 */
 	public function next () {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:470: characters 29-40
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:470: characters 29-40
 		$v = Lazy_Impl_::get($this->value);
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:470: characters 12-56
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:470: characters 12-56
 		return new SyncFuture(new LazyConst(Step::Link($v, Empty_hx::$inst)));
 	}
 }

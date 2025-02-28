@@ -16,7 +16,7 @@ class OutgoingRequest extends Message {
 	 * @return void
 	 */
 	public function __construct ($header, $body) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Request.hx:147: characters 1-77
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Request.hx:147: characters 1-77
 		parent::__construct($header, $body);
 	}
 }

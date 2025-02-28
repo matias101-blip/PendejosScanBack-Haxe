@@ -25,14 +25,14 @@ class ChunkedDecoder implements Transformer {
 	 * @return StreamObject
 	 */
 	public function transform ($source) {
-		#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Chunked.hx:48: lines 48-52
+		#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Chunked.hx:48: lines 48-52
 		return RealSourceTools::parseStream($source, new ChunkedParser())->map(Mapping_Impl_::ofPlain(function ($v) {
-			#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Chunked.hx:50: characters 15-98
+			#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Chunked.hx:50: characters 15-98
 			if ($v !== null) {
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Chunked.hx:50: characters 83-84
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Chunked.hx:50: characters 83-84
 				return $v;
 			} else {
-				#/home/thehunter101/.haxe/tink_http/0,10,0/src/tink/http/Chunked.hx:50: characters 87-98
+				#/home/sinherani/haxelib/tink_http/0,10,0/src/tink/http/Chunked.hx:50: characters 87-98
 				return Chunk_Impl_::$EMPTY;
 			}
 		}));

@@ -15,7 +15,7 @@ final class Pairs_Impl_ {
 	 * @return object
 	 */
 	public static function ofIterable ($i) {
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/Pairs.hx:16: characters 5-24
+		#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/Pairs.hx:16: characters 5-24
 		return $i->iterator();
 	}
 
@@ -25,7 +25,7 @@ final class Pairs_Impl_ {
 	 * @return object
 	 */
 	public static function portions ($s) {
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/Pairs.hx:10: characters 5-61
+		#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/Pairs.hx:10: characters 5-61
 		return new QueryStringParser($s, "&", "=", 0);
 	}
 
@@ -35,7 +35,7 @@ final class Pairs_Impl_ {
 	 * @return object
 	 */
 	public static function portionsOfUrl ($u) {
-		#/home/thehunter101/.haxe/tink_querystring/0,7,0/src/tink/querystring/Pairs.hx:13: characters 5-29
+		#/home/sinherani/haxelib/tink_querystring/0,7,0/src/tink/querystring/Pairs.hx:13: characters 5-29
 		return Pairs_Impl_::portions($u->query);
 	}
 }

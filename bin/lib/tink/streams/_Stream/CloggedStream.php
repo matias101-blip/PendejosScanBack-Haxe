@@ -32,11 +32,11 @@ class CloggedStream extends StreamBase {
 	 * @return void
 	 */
 	public function __construct ($rest, $error) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:178: lines 178-181
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:178: lines 178-181
 		parent::__construct();
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:179: characters 5-21
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:179: characters 5-21
 		$this->rest = $rest;
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:180: characters 5-23
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:180: characters 5-23
 		$this->error = $error;
 	}
 
@@ -46,7 +46,7 @@ class CloggedStream extends StreamBase {
 	 * @return FutureObject
 	 */
 	public function forEach ($handler) {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:187: characters 12-61
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:187: characters 12-61
 		return new SyncFuture(new LazyConst(Conclusion::Clogged($this->error, $this->rest)));
 	}
 
@@ -54,7 +54,7 @@ class CloggedStream extends StreamBase {
 	 * @return FutureObject
 	 */
 	public function next () {
-		#/home/thehunter101/.haxe/tink_streams/0,4,0/src/tink/streams/Stream.hx:184: characters 12-41
+		#/home/sinherani/haxelib/tink_streams/0,4,0/src/tink/streams/Stream.hx:184: characters 12-41
 		return new SyncFuture(new LazyConst(Step::Fail($this->error)));
 	}
 }
