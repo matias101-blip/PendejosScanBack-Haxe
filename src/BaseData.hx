@@ -63,13 +63,13 @@ class BaseData{
         return consulta;
     }
 
-    public static function InserData(dataManga:MangaData) {
-        final query = 'INSERT INTO Proyectos (Nombre, Resumen, Generos,Status) VALUES (${dataManga.name}, ${dataManga.resumen}, ${dataManga.generos},${dataManga.status})';
+    public static function InserData(dataManga:MangaData):Bool {
+        final query = 'INSERT INTO Proyectos (Nombre, Resumen, Generos,Status,Capitulos,Vistas,Portada) VALUES (${dataManga.name}, ${dataManga.resumen}, ${dataManga.generos},${dataManga.status},"[]",0,${dataManga.portada})';
         final Execute = dbProyectos.exec(query);
         if(Execute){
-            return "Save query :3";
+            return true;
         }else{
-            return "no save query :(";
+            return false;
         }
     }
 }

@@ -1,3 +1,4 @@
+import haxe.zip.Tools;
 import tink.web.Response;
 import php.FilesystemIterator;
 import haxe.io.Bytes;
@@ -23,6 +24,7 @@ typedef MangaData ={
     var resumen:String;
     var generos:Array<String>;
     var status:Int;
+    var portada:String;
 } 
 
 class Server{
@@ -131,7 +133,13 @@ class Root {
     @:bodyParam
     public function recibirData(body:MangaData){
         final Insert = BaseData.InserData(body);
-        return Insert;
+        if(Insert){
+            final nameFolder:String = StringTools.replace(body.name," ","-");
+            Global.mkdir('/mnt/proyectos/${nameFolder}');
+            return "Mission Complete UwU";
+        }else{
+            return "Hey tu codigo de mrd no funkaaaa!!!";
+        }
     }
 
 }
