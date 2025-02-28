@@ -64,7 +64,7 @@ class BaseData{
     }
 
     public static function InserData(dataManga:MangaData):Bool {
-        final query = 'INSERT INTO Proyectos (Nombre, Resumen, Generos,Status,Capitulos,Vistas,Portada) VALUES (${dataManga.name}, ${dataManga.resumen}, ${dataManga.generos},${dataManga.status},"[]",0,${dataManga.portada})';
+        final query = 'INSERT INTO Proyectos (Nombre, Resumen, Generos,Status,Capitulos,Vistas,Portada) VALUES ("${dataManga.name}", "${dataManga.resumen}", "${dataManga.generos}",${dataManga.status},"[]",0,"${dataManga.portada}")';
         final Execute = dbProyectos.exec(query);
         if(Execute){
             return true;
