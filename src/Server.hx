@@ -139,7 +139,6 @@ class Root {
     }
 
     @:delete('api/DeleteManga')
-    @:param
     public function Delate(query:{name:String, folder:Bool}) {
         final delete = BaseData.DelateData(query.name);
         final nameFolder = StringTools.replace(query.name," ","-");
