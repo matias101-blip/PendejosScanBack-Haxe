@@ -21,7 +21,7 @@ typedef Proyectos = {
 typedef MangaData ={
     var name:String;
     var resumen:String;
-    var generos:Array<String>
+    var generos:Array<String>;
     var status:Int;
 } 
 
