@@ -140,7 +140,7 @@ class Root {
         }
     }
 
-    @:delate('api/DeleteManga/name=$name?rmFolder=$folder')
+    @:delete('api/DeleteManga/name=$name?rmFolder=$folder')
     public function Delate(name:String,folder:Bool) {
         final delete = BaseData.DelateData(name);
         final nameFolder = StringTools.replace(name," ","-");
