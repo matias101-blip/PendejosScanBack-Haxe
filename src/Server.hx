@@ -130,7 +130,7 @@ class Root {
     @:post('api/InsertManga')
     @:bodyParam
     public function recibirData(body:MangaData){
-            return 'Todo piola bb, nada fallo mas alla de tus nalgas UwU';
+            return 'Todo piola bb, nada fallo mas alla de tus nalgas jsjsjsj';
     }
 
 }
