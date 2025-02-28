@@ -64,7 +64,8 @@ class BaseData{
     }
 
     public static function InserData(dataManga:MangaData):Bool {
-        final query = 'INSERT INTO Proyectos (Nombre, Resumen, Generos,Status,Capitulos,Vistas,Portada) VALUES ("${dataManga.name}", "${dataManga.resumen}", "${dataManga.generos}",${dataManga.status},"[]",0,"${dataManga.portada}")';
+        final Generos = Json.stringify(dataManga.generos);
+        final query = 'INSERT INTO Proyectos (Nombre, Resumen, Generos,Status,Capitulos,Vistas,Portada) VALUES ("${dataManga.name}", "${dataManga.resumen}", "${Generos}",${dataManga.status},"[]",0,"${dataManga.portada}")';
         final escapeQuery = SQLite3.escapeString(query);
         final Execute = dbProyectos.exec(escapeQuery);
         if(Execute){
