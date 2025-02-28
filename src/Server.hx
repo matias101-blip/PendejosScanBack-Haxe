@@ -1,13 +1,9 @@
-import haxe.zip.Tools;
 import tink.web.Response;
 import php.FilesystemIterator;
 import haxe.io.Bytes;
 import sys.io.File;
-import php.Const;
 import php.Global;
 import haxe.Json;
-import tjson.TJSON;
-import tink.http.Client;
 import tink.http.containers.*;
 import tink.http.Response;
 import tink.web.routing.*;
@@ -25,6 +21,7 @@ typedef MangaData ={
     var generos:Array<String>;
     var status:Int;
     var portada:String;
+    var folder:Bool;
 } 
 
 class Server{
@@ -135,10 +132,24 @@ class Root {
         final Insert = BaseData.InserData(body);
         if(Insert){
             final nameFolder:String = StringTools.replace(body.name," ","-");
-            Global.mkdir('/mnt/proyectos/${nameFolder}');
+            if (body.folder)
+                Global.mkdir('/mnt/proyectos/${nameFolder}');
             return "Mission Complete UwU";
         }else{
             return "Hey tu codigo de mrd no funkaaaa!!!";
+        }
+    }
+
+    @:delate('api/DeleteManga/name=$name?rmFolder=$folder')
+    public function Delate(name:String,folder:Bool) {
+        final delete = BaseData.DelateData(name);
+        final nameFolder = StringTools.replace(name," ","-");
+        if(delete){
+            if(folder)
+                Global.rmdir('/mnt/proyectos/${nameFolder}'); 
+            return "Borrado del mapa UnU";
+        }else{
+            return "no se borro nada, no se encontro UnU";
         }
     }
 

@@ -72,4 +72,10 @@ class BaseData{
             return false;
         }
     }
+
+    public static function DelateData(name:String) {
+       final query:String = 'DELETE FROM Proyectos WHERE Nombre = "${name}";';
+       final Execute = dbProyectos.exec(query);
+       return Execute;
+    }
 }
