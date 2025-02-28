@@ -141,11 +141,12 @@ class Root {
     }
 
     @:delete('api/DeleteManga')
-    public function Delate(@:query name:String, @:query folder:Bool) {
-        final delete = BaseData.DelateData(name);
-        final nameFolder = StringTools.replace(name," ","-");
+    @:param
+    public function Delate(query:{name:String, folder:Bool}) {
+        final delete = BaseData.DelateData(query.name);
+        final nameFolder = StringTools.replace(query.name," ","-");
         if(delete){
-            if(folder)
+            if(query.folder)
                 Global.rmdir('/mnt/proyectos/${nameFolder}'); 
             return "Borrado del mapa UnU";
         }else{
