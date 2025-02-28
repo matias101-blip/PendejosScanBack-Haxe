@@ -129,12 +129,8 @@ class Root {
     //Post pata la base data
     @:post('api/InsertManga/$user/$paswd')
     @:bodyParam
-    public function recibirData(paswd:String,user:String, body:MangaData){
-        if (user == "hunter" && paswd=="kya"){
+    public function recibirData(body:MangaData){
             return 'Datos recibidos ${body.name + body.resumen + body.generos + body.status} UwU';
-        }else{
-            return "Oyes tu que mrd quieres >:v"
-        }
     }
 
 }
