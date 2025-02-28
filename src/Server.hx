@@ -43,9 +43,7 @@ class Root {
 
     @:get('/')
     public function home() {
-        final Root = "/mnt/proyectos";
-        var exist = Global.file_exists(Root + "/Moscow_2160/1");
-        return "Esta carpeta existe? " + Std.string(exist);
+        return 'Holis, mi corazon de melon, ando en un servidor todo pedorro, que hice, bueno, tqm UwU *saluda con intenciones reproductivas*';
     }
   
 
