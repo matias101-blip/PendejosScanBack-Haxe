@@ -64,18 +64,17 @@ class BaseData{
     }
 
     public static function InserData(dataManga:MangaData):Bool {
-        final Generos = Json.stringify(dataManga.generos);
         final query = 'INSERT INTO Proyectos (Nombre, Resumen, Generos,Status,Capitulos,Vistas,Portada) VALUES (?,?,?,?,?,?,?)';
         final stmt = dbProyectos.prepare(query);
-        stmt.bindParam(1,dataManga.name);
-        stmt.bindParam(2,dataManga.resumen);
-        final escapeQuery = SQLite3.escapeString(query);
-        final Execute = dbProyectos.exec(escapeQuery);
-        if(Execute){
-            return true;
-        }else{
-            return false;
-        }
+        stmt.bindValue(1,dataManga.name);
+        stmt.bindValue(2,dataManga.resumen);
+        stmt.bindValue(3,dataManga.generos);
+        stmt.bindValue(4,dataManga.status);
+        stmt.bindValue(5,[]);
+        stmt.bindValue(6,0);
+        stmt.bindValue(7,dataManga.portada);
+        stmt.execute();
+        return true;
     }
 
     public static function DelateData(name:String) {
