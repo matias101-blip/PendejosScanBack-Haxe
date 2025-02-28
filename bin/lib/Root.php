@@ -168,8 +168,8 @@ class Root {
 	 * @return string
 	 */
 	public function recibirData ($body) {
-		#src/Server.hx:126: characters 9-94
-		return "Datos recibidos " . (($body->name??'null') . ($body->resumen??'null') . \Std::string($body->generos) . ($body->status??'null')) . " UwU";
+		#src/Server.hx:126: characters 9-101
+		return "Datos recibidos " . (($body->name??'null') . ($body->resumen??'null') . \Std::string($body->generos) . ($body->status??'null')) . " hey hellow";
 	}
 }
 

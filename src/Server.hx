@@ -18,6 +18,13 @@ typedef Proyectos = {
     var resumen:String;
 } 
 
+typedef MangaData ={
+    var name:String;
+    var resumen:String;
+    var generos:Array<String>
+    var status:Int;
+} 
+
 class Server{
     static function main() {
         Global.header("Access-Control-Allow-Origin: *");
@@ -120,10 +127,14 @@ class Root {
 
 
     //Post pata la base data
-    @:post('api/InsertManga')
+    @:post('api/InsertManga/$user/$paswd')
     @:bodyParam
-    public function recibirData(body:{name:String,resumen:String, generos:Array<String>,status:Int}){
-        return 'Datos recibidos ${body.name + body.resumen + body.generos + body.status} hey hellow';
+    public function recibirData(paswd:String,user:String, body:MangaData){
+        if (user == "hunter" && paswd=="kya"){
+            return 'Datos recibidos ${body.name + body.resumen + body.generos + body.status} UwU';
+        }else{
+            return "Oyes tu que mrd quieres >:v"
+        }
     }
 
 }
