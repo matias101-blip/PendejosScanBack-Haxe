@@ -130,7 +130,7 @@ class Root {
     @:post('api/InsertManga')
     @:bodyParam
     public function recibirData(body:MangaData){
-            return 'Datos recibidos ${body.name + body.resumen + body.generos + body.status} UwU 33';
+            return 'Datos recibidos ${body.name + body.resumen + body.generos + body.status} UwU';
     }
 
 }
