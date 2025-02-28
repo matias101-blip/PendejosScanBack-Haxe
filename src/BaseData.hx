@@ -68,7 +68,7 @@ class BaseData{
         final stmt = dbProyectos.prepare(query);
         stmt.bindValue(1,dataManga.name);
         stmt.bindValue(2,dataManga.resumen);
-        stmt.bindValue(3,dataManga.generos);
+        stmt.bindValue(3,Json.stringify(dataManga.generos));
         stmt.bindValue(4,dataManga.status);
         stmt.bindValue(5,[]);
         stmt.bindValue(6,0);
