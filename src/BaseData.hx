@@ -90,8 +90,7 @@ class BaseData{
         if(Response == null){
             return 'La informacion solicitada no existe...';
         }else{
-            final Info = Json.parse(Response);
-            return Std.string(Type.typeof(Info));
+            return Std.string(Type.typeof(Response));
         }
     }
 }
