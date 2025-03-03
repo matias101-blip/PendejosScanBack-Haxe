@@ -90,8 +90,8 @@ class BaseData{
         if(Response == null){
             return 'La informacion solicitada no existe...';
         }else{
-            final Info = Json.stringify(Response);
-            return Info;
+            final Info = Json.parse(Response);
+            return Type.getClassName(Info);
         }
     }
 }
