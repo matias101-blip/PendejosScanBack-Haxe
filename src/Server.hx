@@ -22,6 +22,12 @@ typedef MangaData ={
     var status:Int;
     var portada:String;
     var folder:Bool;
+}
+
+typedef InfoUpdate = {
+    var name:String;
+    var filter:String;
+    var value:String;
 } 
 
 class Server{
@@ -149,6 +155,12 @@ class Root {
         }else{
             return "no se borro nada, no se encontro UnU";
         }
+    }
+
+    @:patch('api/updateInfo')
+    @:bodyParam
+    public function Update(body:InfoUpdate) {
+        return 'hey aqui se updea el ${body.name}';
     }
 
 }
