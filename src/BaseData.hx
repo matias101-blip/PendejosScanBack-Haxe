@@ -90,7 +90,7 @@ class BaseData{
         if(Response == null){
             return 'La informacion solicitada no existe...';
         }else{
-            return Std.string(Type.typeof(Response));
+            return 'value:${Response}, type:${Std.string(Type.typeof(Response))}';
         }
     }
 }
