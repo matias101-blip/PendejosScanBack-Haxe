@@ -91,7 +91,7 @@ class BaseData{
             return 'La informacion solicitada no existe...';
         }else{
             final Info = Json.parse(Response);
-            return Type.getClassName(Info);
+            return Std.string(Type.typeof(Info));
         }
     }
 }
