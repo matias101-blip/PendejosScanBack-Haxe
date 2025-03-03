@@ -85,7 +85,12 @@ class BaseData{
     }
 
     public static function UpdateData(data:InfoUpdate) {
-        final query:String = 'SELECT "${data.filter}" FROM Proyectos WHERE Nombre = "${data.name}"';
-        return dbProyectos.querySingle(query);
+        final query:String = 'SELECT "${data.filter}" FROM Proyectos WHERE Nombre = "${data.name}"'; 
+        final Response = dbProyectos.querySingle(query);
+        if(Response == null){
+            return 'La informacion solicitada no existe...';
+        }else{
+            return 'Hola quieres una info UwU';
+        }
     }
 }
