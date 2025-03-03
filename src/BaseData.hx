@@ -1,3 +1,4 @@
+import Server.InfoUpdate;
 import Server.MangaData;
 import php.NativeAssocArray;
 import haxe.extern.EitherType;
@@ -81,5 +82,10 @@ class BaseData{
        final query:String = 'DELETE FROM Proyectos WHERE Nombre = "${name}";';
        final Execute = dbProyectos.exec(query);
        return Execute;
+    }
+
+    public static function UpdateData(data:InfoUpdate) {
+        final query:String = 'SELECT "${data.filter}" FROM Proyectos WHERE Nombre = "${data.name}"';
+        return dbProyectos.querySingle(query);
     }
 }

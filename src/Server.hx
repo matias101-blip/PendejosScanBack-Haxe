@@ -160,7 +160,7 @@ class Root {
     @:patch('api/updateInfo')
     @:bodyParam
     public function Update(body:InfoUpdate) {
-        return 'hey aqui se updatea el ${body.value}';
+        return BaseData.UpdateData(body);
     }
 
 }
