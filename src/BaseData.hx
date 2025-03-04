@@ -91,7 +91,8 @@ class BaseData{
         if(Response == null){
             return 'La informacion solicitada no existe...';
         }else{
-            return '${Type.typeof(Response)}';
+            final ResponseString = Std.string(Response);
+            return '${Type.typeof(ResponseString)}';
         }
     }
 }
