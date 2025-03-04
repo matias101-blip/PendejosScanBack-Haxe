@@ -92,7 +92,7 @@ class BaseData{
         }else{
             final Data = TJSON.parse(Response);
 
-            return 'value:${Response}, type:${Std.string(Type.typeof(Response))}';
+            return 'value:${Data}, type:${Std.string(Type.typeof(Data))}';
         }
     }
 }
