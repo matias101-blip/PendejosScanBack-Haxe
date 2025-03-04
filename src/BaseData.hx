@@ -91,7 +91,8 @@ class BaseData{
             return 'La informacion solicitada no existe...';
         }else{
             final Data = TJSON.encode(Response);
-            return 'value:${Response.value}, type:${Std.string(Type.typeof(Data))}';
+
+            return 'value:${Response}, type:${Std.string(Type.typeof(Data))}';
         }
     }
 }
