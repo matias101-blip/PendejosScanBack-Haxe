@@ -92,10 +92,14 @@ class BaseData{
             return 'La informacion solicitada no existe...';
         }else{
             if(data.filter == 'Capitulos'){
-                final Caps:Array<String> = Json.parse(Response);
-                final upDate:Array<String> = Json.parse(data.value);
+                final Caps:Array<Int> = Json.parse(Response);
+                final upDate:Array<Int> = Json.parse(data.value);
                 final newValue = Std.string(Caps.concat(upDate));
-                return newValue;
+                final query = dbProyectos.prepare('UPDATE Proyectos SET Capitulos = :capitulos WHERE Nombre = :name');
+                query.bindValue(':capitulos',newValue);
+                query.bindValue(':name',data.name);
+                query.execute();
+                return 'Capitulos update';
             }
             return Response;
         }
