@@ -28,6 +28,7 @@ typedef InfoUpdate = {
     var name:String;
     var filter:String;
     var value:String;
+    var clear:Bool;
 } 
 
 class Server{
