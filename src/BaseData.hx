@@ -1,3 +1,4 @@
+import haxe.zip.Tools;
 import Server.InfoUpdate;
 import Server.MangaData;
 import php.NativeAssocArray;
@@ -90,7 +91,7 @@ class BaseData{
         if(Response == null){
             return 'La informacion solicitada no existe...';
         }else{
-            final Data = TJSON.parse(Response);
+            final Data = TJSON.parse(Std.string(Response));
 
             return 'value:${Data}, type:${Std.string(Type.typeof(Data))}';
         }
