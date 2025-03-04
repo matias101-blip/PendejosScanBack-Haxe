@@ -92,7 +92,7 @@ class BaseData{
             return 'La informacion solicitada no existe...';
         }else{
             final ResponseString = Std.string(Response);
-            return '${Type.typeof(ResponseString)}';
+            return '${Type.typeof(ResponseString)} xd';
         }
     }
 }
