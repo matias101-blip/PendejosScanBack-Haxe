@@ -91,10 +91,7 @@ class BaseData{
         if(Response == null){
             return 'La informacion solicitada no existe...';
         }else{
-            final ResponseString = Std.string(Response);
-            final Data = tink.Json.parse(ResponseString);
-
-            return 'value:${Std.string(Data)}, type:${Std.string(Type.typeof(Data))}';
+            return '${Type.typeof(Response)}';
         }
     }
 }
