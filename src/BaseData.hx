@@ -91,8 +91,13 @@ class BaseData{
         if(Response == null){
             return 'La informacion solicitada no existe...';
         }else{
-            final ResponseString = Std.string(Response);
-            return '${Type.typeof(ResponseString)} xd';
+            if(data.filter == 'Capitulos'){
+                final Caps:Array<String> = Json.parse(Response);
+                final upDate:Array<String> = Json.parse(data.value);
+                final newValue = Std.string(Caps.concat(upDate));
+                return newValue;
+            }
+            return Response;
         }
     }
 }
