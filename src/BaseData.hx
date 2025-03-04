@@ -90,9 +90,9 @@ class BaseData{
         if(Response == null){
             return 'La informacion solicitada no existe...';
         }else{
-            final Data = TJSON.encode(Response);
+            final Data = TJSON.parse(Response);
 
-            return 'value:${Response}, type:${Std.string(Type.typeof(Data))}';
+            return 'value:${Data}, type:${Std.string(Type.typeof(Data))}';
         }
     }
 }
