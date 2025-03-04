@@ -94,7 +94,7 @@ class BaseData{
             final ResponseString = Std.string(Response);
             final Data = TJSON.parse(ResponseString);
 
-            return 'value:${Data}, type:${Std.string(Type.typeof(Data))}';
+            return 'value:${Std.string(Data)}, type:${Std.string(Type.typeof(Data))}';
         }
     }
 }
