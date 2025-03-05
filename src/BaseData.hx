@@ -89,8 +89,8 @@ class BaseData{
         if(Response == null){
             return 'La informacion solicitada no existe...';
         }else{
-            final Caps:Array<Int> = Json.parse(Response);
-            final upDate:Array<Int> = Json.parse(data.value);
+            final Caps:Array<Int> = TJSON.parse(Response);
+            final upDate:Array<Int> = TJSON.parse(data.value);
             final query = dbProyectos.prepare('UPDATE Proyectos SET "${data.filter}" = :filter WHERE Nombre = :name');
             if(data.filter == 'Capitulos' || data.filter == 'Generos'){
                 if(!data.clear){
