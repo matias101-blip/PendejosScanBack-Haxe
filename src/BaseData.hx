@@ -91,19 +91,25 @@ class BaseData{
         }else{
             final Caps:Array<Int> = Json.parse(Response);
             final upDate:Array<Int> = Json.parse(data.value);
-            final query = dbProyectos.prepare('UPDATE Proyectos SET "${data.filter}" = :capitulos WHERE Nombre = :name');
-            if(data.filter == 'Capitulos' && !data.clear){
-                final newValue = Std.string(Caps.concat(upDate));
-                query.bindValue(':capitulos',newValue);
-                query.bindValue(':name',data.name);
-                query.execute();
-                return 'Capitulos update';
+            final query = dbProyectos.prepare('UPDATE Proyectos SET "${data.filter}" = :filter WHERE Nombre = :name');
+            if(data.filter == 'Capitulos' || data.filter == 'Generos'){
+                if(!data.clear){
+                    final newValue = Std.string(Caps.concat(upDate));
+                    query.bindValue(':filter',newValue);
+                    query.bindValue(':name',data.name);
+                    query.execute();
+                    return 'Capitulos update';
+                }else{
+                    final newValue = Caps.filter(x -> upDate.indexOf(x)==-1);
+                    query.bindValue(':filter',newValue);
+                    query.bindValue(':name',data.name);
+                    query.execute();
+                    return 'Capitulos Delete';
+                }
             }else{
-                final newValue = Caps.filter(x -> upDate.indexOf(x)==-1);
-                query.bindValue(':capitulos',newValue);
+                query.bindValue(':filter',Std.string(data.value));
                 query.bindValue(':name',data.name);
-                query.execute();
-                return 'Capitulos Delete';
+                return 'update param';
             }
             return Response;
         }
