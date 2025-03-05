@@ -109,6 +109,7 @@ class BaseData{
             }else{
                 query.bindValue(':filter',Std.string(data.value));
                 query.bindValue(':name',data.name);
+                query.execute();
                 return 'update param';
             }
             return Response;
