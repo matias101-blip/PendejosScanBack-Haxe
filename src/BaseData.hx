@@ -1,4 +1,3 @@
-import haxe.zip.Tools;
 import Server.InfoUpdate;
 import Server.MangaData;
 import php.NativeAssocArray;
@@ -6,7 +5,6 @@ import haxe.extern.EitherType;
 import php.db.SQLite3Result;
 import php.Global;
 import haxe.Json;
-import php.Const;
 import php.db.SQLite3;
 import tjson.TJSON;
 
@@ -91,20 +89,17 @@ class BaseData{
         if(Response == null){
             return 'La informacion solicitada no existe...';
         }else{
+            final Caps:Array<Int> = Json.parse(Response);
+            final upDate:Array<Int> = Json.parse(data.value);
+            final query = dbProyectos.prepare('UPDATE Proyectos SET "${data.filter}" = :capitulos WHERE Nombre = :name');
             if(data.filter == 'Capitulos' && !data.clear){
-                final Caps:Array<Int> = Json.parse(Response);
-                final upDate:Array<Int> = Json.parse(data.value);
                 final newValue = Std.string(Caps.concat(upDate));
-                final query = dbProyectos.prepare('UPDATE Proyectos SET Capitulos = :capitulos WHERE Nombre = :name');
                 query.bindValue(':capitulos',newValue);
                 query.bindValue(':name',data.name);
                 query.execute();
                 return 'Capitulos update';
             }else{
-                final Caps:Array<Int> = Json.parse(Response);
-                final upDate:Array<Int> = Json.parse(data.value);
                 final newValue = Caps.filter(x -> upDate.indexOf(x)==-1);
-                final query = dbProyectos.prepare('UPDATE Proyectos SET Capitulos = :capitulos WHERE Nombre = :name');
                 query.bindValue(':capitulos',newValue);
                 query.bindValue(':name',data.name);
                 query.execute();
