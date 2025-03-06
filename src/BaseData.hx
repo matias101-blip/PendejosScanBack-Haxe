@@ -44,7 +44,7 @@ class BaseData{
         var consulta:SQLite3Result = dbProyectos.query('SELECT * FROM Proyectos WHERE Nombre = "$name"');
         var data:EitherType<Bool, NativeAssocArray<String>> = consulta.fetchArray(1);
         if(!data){
-            return '${data}';
+            return Json.stringify({"Succes":false});
         }else{
             var dataString: NativeAssocArray<String> = data;
             var Item:Map<String,Any> = new Map();
