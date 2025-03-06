@@ -44,7 +44,7 @@ class BaseData{
         var consulta:SQLite3Result = dbProyectos.query('SELECT * FROM Proyectos WHERE Nombre = "$name"');
         var data:NativeAssocArray<String> = consulta.fetchArray(1);
         if(consulta.finalize()){
-            return '${consulta}';
+            return '${data}';
         }
         var Item:Map<String,Any> = new Map();
         var iteratorKey = data.keyValueIterator();
