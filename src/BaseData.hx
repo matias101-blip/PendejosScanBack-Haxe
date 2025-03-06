@@ -43,7 +43,9 @@ class BaseData{
     public static function getProyect(name:String) {
         var consulta:SQLite3Result = dbProyectos.query('SELECT * FROM Proyectos WHERE Nombre = "$name"');
         var data:NativeAssocArray<String> = consulta.fetchArray(1);
-        consulta.finalize();
+        if(consulta.finalize()){
+            return 'Finalizo';
+        }
         var Item:Map<String,Any> = new Map();
         var iteratorKey = data.keyValueIterator();
         while (iteratorKey.hasNext()){
@@ -110,7 +112,7 @@ class BaseData{
                 query.bindValue(':filter',Std.string(data.value));
                 query.bindValue(':name',data.name);
                 query.execute();
-                return 'update param';
+                return 'update Other';
             }
             return Response;
         }
