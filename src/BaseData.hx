@@ -46,8 +46,9 @@ class BaseData{
         if(!data){
             return '${data}';
         }else{
+            var dataString: NativeAssocArray<String> = data;
             var Item:Map<String,Any> = new Map();
-            var iteratorKey = data.keyValueIterator();
+            var iteratorKey = dataString.keyValueIterator();
             while (iteratorKey.hasNext()){
                 var pair = iteratorKey.next();
                 if (pair.key == "Capitulos"|| pair.key == "Generos"){
