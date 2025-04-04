@@ -92,4 +92,6 @@ RUN set -ex \
 	&& rm -rf ~/.opam \
 	&& rm -rf /usr/src/neko /usr/src/haxe
 
+RUN haxelib install tink_web && haxelib install tjson
+
 CMD ["haxe"]
