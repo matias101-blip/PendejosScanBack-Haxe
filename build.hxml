@@ -1,5 +1,5 @@
 -main Server
--php /home/sinherani/bin
+-php bin
 -cp src
 -lib tink_web
 -lib tjson

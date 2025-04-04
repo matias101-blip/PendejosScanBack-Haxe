@@ -8,6 +8,7 @@ import tink.http.containers.*;
 import tink.http.Response;
 import tink.web.routing.*;
 import BaseData;
+import haxe.Template;
 
 typedef Proyectos = {
     var nombre:String;
@@ -50,7 +51,7 @@ class Root {
 
     @:get('/')
     public function home() {
-        return 'Holis, mi corazon de melon, ando en un servidor todo pedorro, que hice, bueno, tqm UwU *saluda con intenciones reproductivas*';
+        return "Hola";
     }
   
 
@@ -64,7 +65,7 @@ class Root {
     @:get('/img/$nombre/$portada')
     @:get('/img/$nombre/$capitulo/$pag')
     public function Leer(nombre:String,capitulo:String = null,pag:String = null,portada:String = null) { 
-        final Root = "/mnt/proyectos";
+        final Root = "/home/thehunter101/Documents/Developer-Software/Haxe/Pendejos-Back/ignorar/proyectos";
         var imgDir:String = "";
         var dataImg:Bytes;
         nombre = StringTools.replace(nombre," ","_");
@@ -104,7 +105,7 @@ class Root {
 
     @:get('api/$nombre/$capitulo')
     public function Hojas(nombre:String,capitulo:String) {
-        final Root = "/mnt/proyectos";
+        final Root = "/home/thehunter101/Documents/Developer-Software/Haxe/Pendejos-Back/ignorar/proyectos";
         var hojas:Array<String> = [];
         capitulo = StringTools.replace(capitulo, "-",".");
         nombre = StringTools.replace(nombre," ","_");
@@ -138,7 +139,7 @@ class Root {
         if(Insert){
             final nameFolder:String = StringTools.replace(body.name," ","-");
             if (body.folder)
-                Global.mkdir('/mnt/proyectos/${nameFolder}');
+                Global.mkdir('/home/thehunter101/Documents/Developer-Software/Haxe/Pendejos-Back/ignorar/proyectos/${nameFolder}');
             return "Mission Complete UwU";
         }else{
             return "Hey tu codigo de mrd no funkaaaa!!!";
@@ -151,7 +152,7 @@ class Root {
         final nameFolder = StringTools.replace(query.name," ","-");
         if(delete){
             if(query.folder)
-                Global.rmdir('/mnt/proyectos/${nameFolder}'); 
+                Global.rmdir('/home/thehunter101/Documents/Developer-Software/Haxe/Pendejos-Back/ignorar/proyectos/${nameFolder}'); 
             return "Borrado del mapa UnU";
         }else{
             return "no se borro nada, no se encontro UnU";
