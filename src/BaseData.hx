@@ -11,7 +11,7 @@ import tjson.TJSON;
 
 
 class BaseData{
-    static final dbProyectos = new SQLite3("/home/thehunter101/Documents/Developer-Software/Haxe/Pendejos-Back/ignorar/Proyectos.db");
+    static final dbProyectos = new SQLite3("/home/thehunter101/baseDate/Proyectos.db");
     public static function Select() {
         var resultado:SQLite3Result = dbProyectos.querySingle("SELECT Capitulos FROM Proyectos WHERE Nombre ='Aizawa Koharu tiene prisa por morir'");
         Global.error_log(Std.string(resultado));
