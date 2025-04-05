@@ -51,7 +51,7 @@ class Root {
 
     @:get('/')
     public function home() {
-        return "Hola";
+        return "chao";
     }
   
 
