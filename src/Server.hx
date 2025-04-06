@@ -8,7 +8,6 @@ import tink.http.containers.*;
 import tink.http.Response;
 import tink.web.routing.*;
 import BaseData;
-import haxe.Template;
 
 typedef Proyectos = {
     var nombre:String;
@@ -47,6 +46,7 @@ class Server{
 }
 
 class Root {
+    final rootImages:String = "/home/thehunter101/Proyecto";
     public function new() {}
 
     @:get('/')
@@ -65,7 +65,7 @@ class Root {
     @:get('/img/$nombre/$portada')
     @:get('/img/$nombre/$capitulo/$pag')
     public function Leer(nombre:String,capitulo:String = null,pag:String = null,portada:String = null) { 
-        final Root = "/home/thehunter101/Documents/Developer-Software/Haxe/Pendejos-Back/ignorar/proyectos";
+        final Root = rootImages;
         var imgDir:String = "";
         var dataImg:Bytes;
         nombre = StringTools.replace(nombre," ","_");
@@ -105,7 +105,7 @@ class Root {
 
     @:get('api/$nombre/$capitulo')
     public function Hojas(nombre:String,capitulo:String) {
-        final Root = "/home/thehunter101/Documents/Developer-Software/Haxe/Pendejos-Back/ignorar/proyectos";
+        final Root = rootImages;
         var hojas:Array<String> = [];
         capitulo = StringTools.replace(capitulo, "-",".");
         nombre = StringTools.replace(nombre," ","_");
@@ -139,7 +139,7 @@ class Root {
         if(Insert){
             final nameFolder:String = StringTools.replace(body.name," ","-");
             if (body.folder)
-                Global.mkdir('/home/thehunter101/Documents/Developer-Software/Haxe/Pendejos-Back/ignorar/proyectos/${nameFolder}');
+                Global.mkdir('${rootImages}/${nameFolder}');
             return "Mission Complete UwU";
         }else{
             return "Hey tu codigo de mrd no funkaaaa!!!";
@@ -152,7 +152,7 @@ class Root {
         final nameFolder = StringTools.replace(query.name," ","-");
         if(delete){
             if(query.folder)
-                Global.rmdir('/home/thehunter101/Documents/Developer-Software/Haxe/Pendejos-Back/ignorar/proyectos/${nameFolder}'); 
+                Global.rmdir('${rootImages}/${nameFolder}'); 
             return "Borrado del mapa UnU";
         }else{
             return "no se borro nada, no se encontro UnU";
