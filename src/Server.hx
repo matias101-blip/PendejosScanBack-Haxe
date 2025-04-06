@@ -46,7 +46,7 @@ class Server{
 }
 
 class Root {
-    final rootImages:String = "/home/thehunter101/Proyecto";
+    final rootImages:String = "/home/thehunter101/Proyectos";
     public function new() {}
 
     @:get('/')
